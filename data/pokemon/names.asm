@@ -157,23 +157,23 @@ PokemonNames::
 	db "CYNDAQUIL@"
 	db "QUILAVA@@@"
 	db "TYPHLOSION"
-	db "TOTODILE@@"
+	db "TOTODILE@@" 
 	db "CROCONAW@@"
 	db "FERALIGATR"
-	db "SENTRET@@@"
+	db "SENTRET@@@" ;rimpiazzo
 	db "FURRET@@@@"
-	db "HOOTHOOT@@"
-	db "NOCTOWL@@@"
-	db "LEDYBA@@@@"
+	db "HOOTHOOT@@" ;beta
+	db "NOCTOWL@@@" ;beta
+	db "LEDYBA@@@@" ;migliorare
 	db "LEDIAN@@@@"
 	db "SPINARAK@@"
-	db "ARIADOS@@@"
+	db "ARIADOS@@@" ;tuhead
 	db "CROBAT@@@@"
 	db "CHINCHOU@@"
-	db "LANTURN@@@"
+	db "LANTURN@@@" ;PANGSHI EVIS
 	db "PICHU@@@@@"
 	db "CLEFFA@@@@"
-	db "IGGLYBUFF@"
+	db "IGGLYBUFF@" ;CHINCHOU
 	db "TOGEPI@@@@"
 	db "TOGETIC@@@"
 	db "NATU@@@@@@"
@@ -184,47 +184,47 @@ PokemonNames::
 	db "BELLOSSOM@"
 	db "MARILL@@@@"
 	db "AZUMARILL@"
-	db "SUDOWOODO@"
+	db "SUDOWOODO@" 
 	db "POLITOED@@"
 	db "HOPPIP@@@@"
 	db "SKIPLOOM@@"
 	db "JUMPLUFF@@"
 	db "AIPOM@@@@@"
-	db "SUNKERN@@@"
-	db "SUNFLORA@@"
+	db "SUNKERN@@@"  ;sunflora qua
+	db "SUNFLORA@@"  ;RAITORA KOTORA
 	db "YANMA@@@@@"
-	db "WOOPER@@@@"
-	db "QUAGSIRE@@"
+	db "WOOPER@@@@" ;quagsire
+	db "QUAGSIRE@@" ;leafeon
 	db "ESPEON@@@@"
 	db "UMBREON@@@"
 	db "MURKROW@@@"
 	db "SLOWKING@@"
-	db "MISDREAVUS"
-	db "UNOWN@@@@@"
-	db "WOBBUFFET@"
+	db "MISDREAVUS"  ;gorochu
+	db "UNOWN@@@@@" 
+	db "WOBBUFFET@"  ;GIRAFARIG EVO
 	db "GIRAFARIG@"
 	db "PINECO@@@@"
 	db "FORRETRESS"
-	db "DUNSPARCE@"
+	db "DUNSPARCE@" ;gligar gliscor
 	db "GLIGAR@@@@"
 	db "STEELIX@@@"
 	db "SNUBBULL@@"
 	db "GRANBULL@@"
-	db "QWILFISH@@"
+	db "QWILFISH@@"  ;gelania
 	db "SCIZOR@@@@"
-	db "SHUCKLE@@@"
+	db "SHUCKLE@@@" ;EXEGGUTORAKOL
 	db "HERACROSS@"
-	db "SNEASEL@@@"
+	db "SNEASEL@@@" 
 	db "TEDDIURSA@"
 	db "URSARING@@"
-	db "SLUGMA@@@@"
-	db "MAGCARGO@@"
+	db "SLUGMA@@@@" 
+	db "MAGCARGO@@" 
 	db "SWINUB@@@@"
 	db "PILOSWINE@"
-	db "CORSOLA@@@"
+	db "CORSOLA@@@" ;mamoswine
 	db "REMORAID@@"
 	db "OCTILLERY@"
-	db "DELIBIRD@@"
+	db "DELIBIRD@@"  
 	db "MANTINE@@@"
 	db "SKARMORY@@"
 	db "HOUNDOUR@@"
@@ -233,7 +233,7 @@ PokemonNames::
 	db "PHANPY@@@@"
 	db "DONPHAN@@@"
 	db "PORYGON2@@"
-	db "STANTLER@@"
+	db "STANTLER@@" ;sir
 	db "SMEARGLE@@"
 	db "TYROGUE@@@"
 	db "HITMONTOP@"
@@ -245,8 +245,8 @@ PokemonNames::
 	db "RAIKOU@@@@"
 	db "ENTEI@@@@@"
 	db "SUICUNE@@@"
-	db "LARVITAR@@"
-	db "PUPITAR@@@"
+	db "LARVITAR@@" ;wolfman 
+	db "PUPITAR@@@"  ;TAUROS
 	db "TYRANITAR@"
 	db "LUGIA@@@@@"
 	db "HO-OH@@@@@"

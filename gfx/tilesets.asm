@@ -335,3 +335,12 @@ INCBIN "data/tilesets/omanyte_word_room_metatiles.bin"
 
 TilesetAerodactylWordRoomMeta::
 INCBIN "data/tilesets/aerodactyl_word_room_metatiles.bin"
+
+TilesetSafariGFX::
+INCBIN "gfx/tilesets/safari.2bpp.lz"
+
+TilesetSafariMeta::
+INCBIN "data/tilesets/safari_metatiles.bin"
+
+TilesetSafariColl::
+INCLUDE "data/tilesets/safari_collision.asm"
