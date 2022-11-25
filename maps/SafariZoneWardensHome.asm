@@ -1,12 +1,10 @@
-const_value set 2
+	object_const_def
 	const SAFARIZONEWARDENSHOME_LASS
 
-SafariZoneWardensHome_MapScriptHeader:
-.MapTriggers:
-	db 0
+SafariZoneWardensHome_MapScripts:
+	def_scene_scripts
 
-.MapCallbacks:
-	db 0
+	def_callbacks
 
 WardensGranddaughter:
 	faceplayer
@@ -31,12 +29,12 @@ SafariZonePhoto:
 	jumptext SafariZonePhotoText
 
 WardensHomeBookshelf:
-	jumpstd picturebookshelf
+	jumpstd PictureBookshelfScript
 
 WardensGranddaughterText1:
 	text "My grandpa is the"
-	line "Safari Zone War-"
-	cont "den."
+	line "SAFARI ZONE WAR-"
+	cont "DEN."
 
 	para "At least he was…"
 
@@ -47,7 +45,7 @@ WardensGranddaughterText1:
 	line "all by himself."
 
 	para "He quit running"
-	line "Safari Zone just"
+	line "SAFARI ZONE just"
 	cont "like that."
 	done
 
@@ -55,7 +53,7 @@ WardensGranddaughterText2:
 	text "Many people were"
 	line "disappointed that"
 
-	para "Safari Zone closed"
+	para "SAFARI ZONE closed"
 	line "down, but Grandpa"
 	cont "is so stubborn…"
 	done
@@ -65,36 +63,31 @@ WardenPhotoText:
 	line "grinning old man"
 
 	para "who's surrounded"
-	line "by #mon."
+	line "by #MON."
 	done
 
 SafariZonePhotoText:
 	text "It's a photo of a"
 	line "huge grassy plain"
 
-	para "with rare #mon"
+	para "with rare #MON"
 	line "frolicking in it."
 	done
 
-SafariZoneWardensHome_MapEventHeader:
-	; filler
-	db 0, 0
+SafariZoneWardensHome_MapEvents:
+	db 0, 0 ; filler
 
-.Warps:
-	db 2
-	warp_def $7, $2, 6, FUCHSIA_CITY
-	warp_def $7, $3, 6, FUCHSIA_CITY
+	def_warp_events
+	warp_event  2,  7, FUCHSIA_CITY, 6
+	warp_event  3,  7, FUCHSIA_CITY, 6
 
-.XYTriggers:
-	db 0
+	def_coord_events
 
-.Signposts:
-	db 4
-	signpost 1, 0, SIGNPOST_READ, WardensHomeBookshelf
-	signpost 1, 1, SIGNPOST_READ, WardensHomeBookshelf
-	signpost 0, 7, SIGNPOST_READ, WardenPhoto
-	signpost 0, 9, SIGNPOST_READ, SafariZonePhoto
+	def_bg_events
+	bg_event  0,  1, BGEVENT_READ, WardensHomeBookshelf
+	bg_event  1,  1, BGEVENT_READ, WardensHomeBookshelf
+	bg_event  7,  0, BGEVENT_READ, WardenPhoto
+	bg_event  9,  0, BGEVENT_READ, SafariZonePhoto
 
-.PersonEvents:
-	db 1
-	person_event SPRITE_LASS, 4, 2, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_SCRIPT, 0, WardensGranddaughter, -1
+	def_object_events
+	object_event  2,  4, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, WardensGranddaughter, -1
