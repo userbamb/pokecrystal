@@ -348,12 +348,13 @@ ENDM
 	map_const FUCHSIA_CITY,                                20, 18 ;  5
 	map_const FUCHSIA_MART,                                 6,  4 ;  6
 	map_const SAFARI_ZONE_MAIN_OFFICE,                      4,  4 ;  7
-	map_const FUCHSIA_GYM,                                  5,  9 ;  8
-	map_const BILLS_BROTHERS_HOUSE,                         4,  4 ;  9
-	map_const FUCHSIA_POKECENTER_1F,                        5,  4 ; 10
-	map_const FUCHSIA_POKECENTER_2F_BETA,                   8,  4 ; 11
-	map_const SAFARI_ZONE_WARDENS_HOME,                     5,  4 ; 12
-	map_const ROUTE_15_FUCHSIA_GATE,                        5,  4 ; 13
+	map_const SAFARI_ZONE_FUCHSIA_GATE,                     5,  4 ;  8
+	map_const FUCHSIA_GYM,                                  5,  9 ;  9
+	map_const BILLS_BROTHERS_HOUSE,                         4,  4 ; 10
+	map_const FUCHSIA_POKECENTER_1F,                        5,  4 ; 11
+	map_const FUCHSIA_POKECENTER_2F_BETA,                   8,  4 ; 12
+	map_const SAFARI_ZONE_WARDENS_HOME,                     5,  4 ; 13
+	map_const ROUTE_15_FUCHSIA_GATE,                        5,  4 ; 14
 	endgroup
 
 	newgroup LAVENDER                                             ; 18
@@ -501,4 +502,16 @@ ENDM
 	map_const ROUTE_31_VIOLET_GATE,                         5,  4 ; 11
 	endgroup
 
-DEF NUM_MAP_GROUPS EQU const_value ; 26
+	newgroup SAFARI                                               ; 27
+	map_const SAFARI_ZONE_HUB,                            17, 16 ;  1
+	map_const SAFARI_ZONE_EAST,                           17, 15 ;  2
+	map_const SAFARI_ZONE_NORTH,                          22, 20 ;  3
+	map_const SAFARI_ZONE_WEST,                           17, 15 ;  4
+	map_const SAFARI_ZONE_HUB_REST_HOUSE,                  4,  4 ;  5
+	map_const SAFARI_ZONE_EAST_REST_HOUSE,                 4,  4 ;  6
+	map_const SAFARI_ZONE_NORTH_REST_HOUSE,                4,  4 ;  7
+	map_const SAFARI_ZONE_WEST_REST_HOUSE_1,               4,  4 ;  8
+	map_const SAFARI_ZONE_WEST_REST_HOUSE_2,               4,  4 ;  9
+
+
+DEF NUM_MAP_GROUPS EQU const_value ; 27

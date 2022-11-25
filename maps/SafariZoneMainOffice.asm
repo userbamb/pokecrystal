@@ -1,17 +1,24 @@
-SafariZoneMainOffice_MapScripts:
-	def_scene_scripts
+SafariZoneMainOffice_MapScriptHeader:
+.MapTriggers:
+	db 0
 
-	def_callbacks
+.MapCallbacks:
+	db 0
 
-SafariZoneMainOffice_MapEvents:
-	db 0, 0 ; filler
+SafariZoneMainOffice_MapEventHeader:
+	; filler
+	db 0, 0
 
-	def_warp_events
-	warp_event  2,  7, FUCHSIA_CITY, 2
-	warp_event  3,  7, FUCHSIA_CITY, 2
+.Warps:
+	db 2
+	warp_def $7, $2, 2, FUCHSIA_CITY
+	warp_def $7, $3, 2, FUCHSIA_CITY
 
-	def_coord_events
+.XYTriggers:
+	db 0
 
-	def_bg_events
+.Signposts:
+	db 0
 
-	def_object_events
+.PersonEvents:
+	db 0
