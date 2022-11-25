@@ -501,4 +501,13 @@ ENDM
 	map_const ROUTE_31_VIOLET_GATE,                         5,  4 ; 11
 	endgroup
 
-DEF NUM_MAP_GROUPS EQU const_value ; 26
+    newgroup SAFARI                                              ; 27
+	map_const SAFARI_ZONE_HUB,                            15, 15 ;  1
+	map_const SAFARI_ZONE_EAST,                           17, 15 ;  2
+	map_const SAFARI_ZONE_NORTH,                          15, 16 ;  3
+	map_const SAFARI_ZONE_HUB_REST_HOUSE,                  4,  4 ;  4
+	map_const SAFARI_ZONE_EAST_REST_HOUSE,                 4,  4 ;  5
+	map_const SAFARI_ZONE_NORTH_REST_HOUSE,                4,  4 ;  6
+
+
+DEF NUM_MAP_GROUPS EQU const_value ; 27
