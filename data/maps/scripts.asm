@@ -484,3 +484,7 @@ SECTION "Map Scripts 25", ROMX
 
 INCLUDE "maps/SilverCaveOutside.asm"
 INCLUDE "maps/Route10North.asm"
+INCLUDE "maps/SafariZoneFuchsiaGate.asm"
+INCLUDE "maps/SafariZoneHub.asm"
+INCLUDE "maps/SafariZoneEast.asm"
+INCLUDE "maps/SafariZoneNorth.asm"
