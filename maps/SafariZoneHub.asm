@@ -44,7 +44,6 @@ SafariZoneHub_MapEventHeader:
 	warp_def $0, $5, 4, SAFARI_ZONE_NORTH
 	warp_def $0, $e, 5, SAFARI_ZONE_NORTH
 	warp_def $0, $f, 6, SAFARI_ZONE_NORTH
-	warp_def $13, $11, 1, SAFARI_ZONE_HUB_REST_HOUSE
 
 .XYTriggers:
 	db 0
