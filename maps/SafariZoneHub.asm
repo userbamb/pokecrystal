@@ -1,4 +1,4 @@
-object_const_def
+    object_const_def
 	const SAFARIZONEHUB_POKE_BALL1
 	const SAFARIZONEHUB_POKE_BALL2
 
@@ -47,6 +47,6 @@ SafariZoneHub_MapEvents:
 	bg_event 14, 22, BGEVENT_READ, SafariZoneHubAreaSign
 	bg_event 18, 20, BGEVENT_READ, SafariZoneHubRestHouseSign
 	
-def_object_events
+    def_object_events
     object_event 13, 10, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SafariZoneHubNugget, EVENT_SAFARI_ZONE_HUB_NUGGET
 	object_event 3, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SafariZoneHubUltraBall, EVENT_SAFARI_ZONE_HUB_ULTRA_BALL

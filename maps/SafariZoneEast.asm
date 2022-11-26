@@ -1,10 +1,12 @@
-object_const_def
+    object_const_def
 	const SAFARIZONEEAST_POKE_BALL1
 	const SAFARIZONEEAST_POKE_BALL2
 	const SAFARIZONEEAST_POKE_BALL3
 
 SafariZoneEast_MapScripts:
+    def_scene_scripts
 
+	def_callbacks
 
 SafariZoneEastAreaSign:
 	jumptext SafariZoneEastAreaSignText
@@ -57,7 +59,7 @@ SafariZoneEast_MapEvents:
 	bg_event 26, 10, BGEVENT_READ, SafariZoneEastRestHouseSign
     bg_event 6, 4, BGEVENT_READ, SafariZoneEastTrainerTipsSign
 	
-def_object_events
+    def_object_events
     object_event 20, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SafariZoneEastCarbos, EVENT_SAFARI_ZONE_EAST_CARBOS
 	object_event 5, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SafariZoneEastSilverPowder, EVENT_SAFARI_ZONE_EAST_SILVERPOWDER
     object_event 3, 1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SafariZoneEastFullRestore, EVENT_SAFARI_ZONE_FULL_RESTORE

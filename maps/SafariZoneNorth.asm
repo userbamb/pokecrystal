@@ -1,4 +1,4 @@
-object_const_def
+    object_const_def
 	const SAFARIZONENORTH_POKE_BALL1
 	const SAFARIZONENORTH_POKE_BALL2
 
@@ -65,9 +65,9 @@ SafariZoneNorth_MapEvents:
 	warp_event 29, 26, SAFARI_ZONE_EAST, 3
 	warp_event 29, 27, SAFARI_ZONE_EAST, 4
 	warp_event 4, 31, SAFARI_ZONE_HUB, 5
-	warp_event 5, 31, SAFARI_ZONE_HUB
-	warp_event 14,31, SAFARI_ZONE_HUB,7
-	warp_event 15, 31, SAFARI_ZONE_HUB,8
+	warp_event 5, 31, SAFARI_ZONE_HUB, 6
+	warp_event 14, 31, SAFARI_ZONE_HUB, 7
+	warp_event 15, 31, SAFARI_ZONE_HUB, 8
 
     def_coord_events
 
