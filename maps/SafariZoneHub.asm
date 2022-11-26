@@ -1,13 +1,11 @@
-const_value set 2
+object_const_def
 	const SAFARIZONEHUB_POKE_BALL1
 	const SAFARIZONEHUB_POKE_BALL2
 
-SafariZoneHub_MapScriptHeader:
-.MapTriggers:
-	db 0
+SafariZoneHub_MapScripts:
+	def_scene_scripts
 
-.MapCallbacks:
-	db 0
+	def_callbacks
 
 SafariZoneHubAreaSign:
 	jumptext SafariZoneHubAreaSignText
@@ -30,30 +28,25 @@ SafariZoneHubRestHouseSignText:
 	text "Rest House"
 	done
 
-SafariZoneHub_MapEventHeader:
-	; filler
-	db 0, 0
+SafariZoneHub_MapEvents:
+	db 0, 0 ; filler
 
-.Warps:
-	db 9
-	warp_def $19, $e, 1, SAFARI_ZONE_FUCHSIA_GATE
-	warp_def $19, $f, 2, SAFARI_ZONE_FUCHSIA_GATE
-	warp_def $a, $1d, 1, SAFARI_ZONE_EAST
-	warp_def $b, $1d, 2, SAFARI_ZONE_EAST
-	warp_def $0, $4, 3, SAFARI_ZONE_NORTH
-	warp_def $0, $5, 4, SAFARI_ZONE_NORTH
-	warp_def $0, $e, 5, SAFARI_ZONE_NORTH
-	warp_def $0, $f, 6, SAFARI_ZONE_NORTH
+    def_warp_events
+	warp_event 14, 25, SAFARI_ZONE_FUCHSIA_GATE, 1
+	warp_event 15, 25, SAFARI_ZONE_FUCHSIA_GATE, 2
+	warp_event 29, 10, SAFARI_ZONE_EAST, 1
+	warp_event 29, 11, SAFARI_ZONE_EAST, 2
+	warp_event 4, 0, SAFARI_ZONE_NORTH, 3
+	warp_event 5, 0, SAFARI_ZONE_NORTH, 4
+	warp_event 14, 0, SAFARI_ZONE_NORTH, 5
+	warp_event 15, 0, SAFARI_ZONE_NORTH, 6
 
-.XYTriggers:
-	db 0
+	def_coord_events
 
-.Signposts:
-	db 2
-	signpost 22, 14, SIGNPOST_READ, SafariZoneHubAreaSign
-	signpost 20, 18, SIGNPOST_READ, SafariZoneHubRestHouseSign
-
-.PersonEvents:
-	db 2
-	person_event SPRITE_POKE_BALL, 10, 13, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, SafariZoneHubNugget, EVENT_SAFARI_ZONE_HUB_NUGGET
-	person_event SPRITE_POKE_BALL, 19, 6, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, SafariZoneHubUltraBall, EVENT_SAFARI_ZONE_HUB_ULTRA_BALL
+    def_bg_events
+	bg_event 14, 22, BGEVENT_READ, SafariZoneHubAreaSign
+	bg_event 18, 20, BGEVENT_READ, SafariZoneHubRestHouseSign
+	
+def_object_events
+    object_event 13, 10, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SafariZoneHubNugget, EVENT_SAFARI_ZONE_HUB_NUGGET
+	object_event 3, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SafariZoneHubUltraBall, EVENT_SAFARI_ZONE_HUB_ULTRA_BALL

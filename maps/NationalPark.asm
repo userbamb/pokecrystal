@@ -1,4 +1,4 @@
-	object_const_def
+	object_const_def 
 	const NATIONALPARK_LASS1
 	const NATIONALPARK_POKEFAN_F1
 	const NATIONALPARK_TEACHER1

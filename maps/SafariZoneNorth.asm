@@ -1,65 +1,12 @@
-const_value set 2
-	const SAFARIZONENORTH_BATTLE_GIRL
-	const SAFARIZONENORTH_COOLTRAINER_F
+object_const_def
 	const SAFARIZONENORTH_POKE_BALL1
 	const SAFARIZONENORTH_POKE_BALL2
 
-SafariZoneNorth_MapScriptHeader:
-.MapTriggers:
-	db 0
+SafariZoneNorth_MapScripts:
+    def_scene_scripts
 
-.MapCallbacks:
-	db 0
+	def_callbacks
 
-TrainerBattleGirlPadma:
-	trainer EVENT_BEAT_BATTLE_GIRL_PADMA, BATTLE_GIRL, PADMA, BattleGirlPadmaSeenText, BattleGirlPadmaBeatenText, 0, BattleGirlPadmaScript
-
-BattleGirlPadmaScript:
-	end_if_just_battled
-	opentext
-	writetext BattleGirlPadmaAfterText
-	waitbutton
-	closetext
-	end
-
-SafariZoneNorthCooltrainerFScript:
-	faceplayer
-	opentext
-	checkevent EVENT_LISTENED_TO_DOUBLE_EDGE_INTRO
-	iftrue SafariZoneNorthTutorDoubleEdgeScript
-	writetext SafariZoneNorthCooltrainerFText
-	waitbutton
-	setevent EVENT_LISTENED_TO_DOUBLE_EDGE_INTRO
-SafariZoneNorthTutorDoubleEdgeScript:
-	writetext Text_SafariZoneNorthTutorDoubleEdge
-	waitbutton
-	checkitem SILVER_LEAF
-	iffalse .NoSilverLeaf
-	writetext Text_SafariZoneNorthTutorQuestion
-	yesorno
-	iffalse .TutorRefused
-	writebyte DOUBLE_EDGE
-	writetext Text_SafariZoneNorthTutorClear
-	special Special_MoveTutor
-	if_equal $0, .TeachMove
-.TutorRefused
-	writetext Text_SafariZoneNorthTutorRefused
-	waitbutton
-	closetext
-	end
-
-.NoSilverLeaf
-	writetext Text_SafariZoneNorthTutorNoSilverLeaf
-	waitbutton
-	closetext
-	end
-
-.TeachMove
-	takeitem SILVER_LEAF
-	writetext Text_SafariZoneNorthTutorTaught
-	waitbutton
-	closetext
-	end
 
 SafariZoneNorthAreaSign:
 	jumptext SafariZoneNorthAreaSignText
@@ -74,81 +21,13 @@ SafariZoneNorthTrainerTips2Sign:
 	jumptext SafariZoneNorthTrainerTips2SignText
 
 SafariZoneNorthEviolite:
-	itemball EVIOLITE
+	itemball RARE_CANDY
 
 SafariZoneNorthProtein:
 	itemball PROTEIN
 
 SafariZoneNorthHiddenLuckyPunch:
-	dwb EVENT_SAFARI_ZONE_NORTH_HIDDEN_LUCKY_PUNCH, LUCKY_PUNCH
-
-BattleGirlPadmaSeenText:
-	text "I spar with my"
-	line "#mon to improve"
-	cont "as a team!"
-	done
-
-BattleGirlPadmaBeatenText:
-	text "We'll have to"
-	line "train harder!"
-	done
-
-BattleGirlPadmaAfterText:
-	text "If you throw your"
-	line "emotions into"
-
-	para "training, you'll"
-	line "become strong!"
-	done
-
-SafariZoneNorthCooltrainerFText:
-	text "I caught a"
-	line "Chansey!"
-
-	para "I'm so lucky!"
-	line "I'm going to teach"
-
-	para "it to do a really"
-	line "powerful tackle."
-
-	para "Let me share my"
-	line "luck with you!"
-	done
-
-Text_SafariZoneNorthTutorDoubleEdge:
-	text "I'll teach your"
-	line "#mon how to"
-
-	para "use Double-Edge"
-	line "for a Silver Leaf."
-	done
-
-Text_SafariZoneNorthTutorNoSilverLeaf:
-	text "You don't have any"
-	line "Silver Leaves…"
-	done
-
-Text_SafariZoneNorthTutorQuestion:
-	text "Should I teach"
-	line "your #mon"
-	cont "Double-Edge?"
-	done
-
-Text_SafariZoneNorthTutorRefused:
-	text "Oh well."
-	done
-
-Text_SafariZoneNorthTutorClear:
-	text ""
-	done
-
-Text_SafariZoneNorthTutorTaught:
-	text "There!"
-	line "Now your #mon"
-
-	para "knows how to use"
-	cont "Double-Edge!"
-	done
+    hiddenitem LUCKY_PUNCH, EVENT_SAFARI_ZONE_NORTH_HIDDEN_LUCKY_PUNCH
 
 SafariZoneNorthAreaSignText:
 	text "Safari Zone"
@@ -179,33 +58,26 @@ SafariZoneNorthTrainerTips2SignText:
 	cont "flush them out."
 	done
 
-SafariZoneNorth_MapEventHeader:
-	; filler
-	db 0, 0
+SafariZoneNorth_MapEvents:
+	db 0, 0; filler
 
-.Warps:
-	db 7
-	warp_def $1a, $1d, 3, SAFARI_ZONE_EAST
-	warp_def $1b, $1d, 4, SAFARI_ZONE_EAST
-	warp_def $1f, $4, 5, SAFARI_ZONE_HUB
-	warp_def $1f, $5, 6, SAFARI_ZONE_HUB
-	warp_def $1f, $e, 7, SAFARI_ZONE_HUB
-	warp_def $1f, $f, 8, SAFARI_ZONE_HUB
+    def_warp_events
+	warp_event 29, 26, SAFARI_ZONE_EAST, 3
+	warp_event 29, 27, SAFARI_ZONE_EAST, 4
+	warp_event 4, 31, SAFARI_ZONE_HUB, 5
+	warp_event 5, 31, SAFARI_ZONE_HUB
+	warp_event 14,31, SAFARI_ZONE_HUB,7
+	warp_event 15, 31, SAFARI_ZONE_HUB,8
 
-.XYTriggers:
-	db 0
+    def_coord_events
 
-.Signposts:
-	db 5
-	signpost 27, 9, SIGNPOST_READ, SafariZoneNorthAreaSign
-	signpost 4, 26, SIGNPOST_READ, SafariZoneNorthRestHouseSign
-	signpost 24, 20, SIGNPOST_READ, SafariZoneNorthTrainerTips1Sign
-	signpost 29, 13, SIGNPOST_READ, SafariZoneNorthTrainerTips2Sign
-	signpost 13, 23, SIGNPOST_ITEM, SafariZoneNorthHiddenLuckyPunch
-
-.PersonEvents:
-	db 4
-	person_event SPRITE_COOLTRAINER_F, 17, 10, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, (1 << 3) | PAL_OW_BLUE, PERSONTYPE_TRAINER, 4, TrainerBattleGirlPadma, -1
-	person_event SPRITE_COOLTRAINER_F, 8, 9, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, SafariZoneNorthCooltrainerFScript, -1
-	person_event SPRITE_POKE_BALL, 12, 18, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, SafariZoneNorthEviolite, EVENT_SAFARI_ZONE_NORTH_EVIOLITE
-	person_event SPRITE_POKE_BALL, 3, 11, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, SafariZoneNorthProtein, EVENT_SAFARI_ZONE_NORTH_PROTEIN
+    def_bg_events
+	bg_event 13, 23, BGEVENT_ITEM, SafariZoneNorthHiddenLuckyPunch
+	bg_event 9, 27, BGEVENT_READ, SafariZoneNorthAreaSign
+	bg_event 26, 4, BGEVENT_READ, SafariZoneNorthRestHouseSign
+	bg_event 24, 20, BGEVENT_READ, SafariZoneNorthTrainerTips1Sign
+	bg_event 13, 29, BGEVENT_READ, SafariZoneNorthTrainerTips2Sign
+	
+	def_object_events
+    object_event 18, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SafariZoneNorthRareCandy, EVENT_SAFARI_ZONE_NORTH_RARE_CANDY
+	object_event 11, 3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SafariZoneNorthProtein, EVENT_SAFARI_ZONE_NORTH_PROTEIN
