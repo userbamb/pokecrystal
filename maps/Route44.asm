@@ -16,7 +16,7 @@ Route44_MapScripts:
 
 	def_callbacks
 
-TrainerBirdKeeperVance1:
+TrainerBirdKeeperVance1: 
 	trainer BIRD_KEEPER, VANCE1, EVENT_BEAT_BIRD_KEEPER_VANCE, BirdKeeperVance1SeenText, BirdKeeperVance1BeatenText, 0, .Script
 
 .Script:

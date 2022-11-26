@@ -696,9 +696,8 @@ ENDM
 	map_attributes Route30BerryHouse, ROUTE_30_BERRY_HOUSE, $00, 0
 	map_attributes MrPokemonsHouse, MR_POKEMONS_HOUSE, $00, 0
 	map_attributes Route31VioletGate, ROUTE_31_VIOLET_GATE, $00, 0
-    map_attributes SafariZone, SAFARI_ZONE_HUB, $00, 0
-	map_attributes SafariZoneHubRestHouse, SAFARI_ZONE_HUB_REST_HOUSE, $00, 0
+	map_attributes SafariZoneFuchsiaGate, SAFARI_ZONE_FUCHSIA_GATE, $00, 0
+    map_attributes SafariZoneHub, SAFARI_ZONE_HUB, $00, 0
     map_attributes SafariZoneNorth, SAFARI_ZONE_NORTH, $00, 0
-	map_attributes SafariZoneNorthRestHouse, SAFARI_ZONE_NORTH_REST_HOUSE, $00, 0
 	map_attributes SafariZoneEast, SAFARI_ZONE_EAST, $00, 0
-	map_attributes SafariZoneEastRestHouse, SAFARI_ZONE_EAST_REST_HOUSE, $00, 0
+	

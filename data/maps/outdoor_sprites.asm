@@ -30,6 +30,7 @@ OutdoorSprites:
 	dw NewBarkGroupSprites
 	dw SaffronGroupSprites
 	dw CherrygroveGroupSprites
+	dw SafariSprites
 	assert_table_length NUM_MAP_GROUPS
 
 PalletGroupSprites:
@@ -257,6 +258,7 @@ VermilionGroupSprites:
 	db SPRITE_POKE_BALL
 	db SPRITE_FRUIT_TREE
 
+SafariSprites:
 FuchsiaGroupSprites:
 	db SPRITE_SUICUNE
 	db SPRITE_SILVER_TROPHY
