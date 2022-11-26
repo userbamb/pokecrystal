@@ -77,16 +77,16 @@ TilesetForestAnim:
 	dw NULL,  StandingTileFrame8
 	dw NULL,  DoneTileAnimation
 
-TilesetSafariAnim::
+TilesetSafariAnim:
 	dw vTiles2 tile $14, AnimateWaterTile
-	dw NULL,  DoNothing
-	dw NULL,  DoNothing
-	dw NULL,  DoNothing
-	dw NULL,  DoNothing
-	dw NULL,  DoNothing
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
 	dw NULL,  AnimateFlowerTile
-	dw NULL,  DoNothing
-	dw NULL,  DoNothing
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
 	dw NULL,  StandingTileFrame8
 	dw NULL,  DoneTileAnimation
 

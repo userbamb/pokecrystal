@@ -20,7 +20,7 @@ SafariZoneNorthTrainerTips1Sign:
 SafariZoneNorthTrainerTips2Sign:
 	jumptext SafariZoneNorthTrainerTips2SignText
 
-SafariZoneNorthEviolite:
+SafariZoneNorthRareCandy:
 	itemball RARE_CANDY
 
 SafariZoneNorthProtein:
