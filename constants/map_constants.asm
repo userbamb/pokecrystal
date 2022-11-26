@@ -506,9 +506,7 @@ ENDM
 	map_const SAFARI_ZONE_HUB,                            15, 15 ;  1
 	map_const SAFARI_ZONE_EAST,                           15, 13 ;  2
 	map_const SAFARI_ZONE_NORTH,                          15, 16 ;  3
-	map_const SAFARI_ZONE_HUB_REST_HOUSE,                  4,  4 ;  4
-	map_const SAFARI_ZONE_EAST_REST_HOUSE,                 4,  4 ;  5
-	map_const SAFARI_ZONE_NORTH_REST_HOUSE,                4,  4 ;  6
+	endgroup
 
 
 DEF NUM_MAP_GROUPS EQU const_value ; 27

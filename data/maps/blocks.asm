@@ -1047,3 +1047,14 @@ BetaBlank_Blocks: ; unreferenced
 
 GoldenrodDeptStoreRoof_Blocks:
 	INCBIN "maps/GoldenrodDeptStoreRoof.blk"
+
+SECTION "Map Blocks 4", ROMX
+
+SafariZoneHub_Blocks:
+    INCBIN "maps/SafariZoneHub.blk"
+	
+SafariZoneEast_Blocks:
+    INCBIN "maps/SafariZoneEast.blk"
+
+SafariZoneNorth_Blocks:
+    INCBIN "maps/SafariZoneNorth.blk"
