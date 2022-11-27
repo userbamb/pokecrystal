@@ -695,6 +695,6 @@ ENDM
 	map_attributes Route31VioletGate, ROUTE_31_VIOLET_GATE, $00, 0
 	map_attributes SafariZoneFuchsiaGate, SAFARI_ZONE_FUCHSIA_GATE, $00, 0
     map_attributes SafariZoneHub, SAFARI_ZONE_HUB, $00, 0
-    map_attributes SafariZoneNorth, SAFARI_ZONE_NORTH, $00, 0
 	map_attributes SafariZoneEast, SAFARI_ZONE_EAST, $00, 0
+	map_attributes SafariZoneNorth, SAFARI_ZONE_NORTH, $00, 0
 	
