@@ -1,6 +1,6 @@
 	object_const_def
 	const SAFARIZONEWARDENSHOME_LASS
-
+ 
 SafariZoneWardensHome_MapScripts:
 	def_scene_scripts
 
@@ -13,6 +13,11 @@ WardensGranddaughter:
 	iftrue .AlreadyMet
 	writetext WardensGranddaughterText1
 	waitbutton
+	closetext
+	opentext
+	writetext WardensGranddaughterAfter
+	promptbutton
+	verbosegiveitem HUB_KEY
 	closetext
 	setevent EVENT_TALKED_TO_WARDENS_GRANDDAUGHTER
 	end
@@ -47,6 +52,16 @@ WardensGranddaughterText1:
 	para "He quit running"
 	line "SAFARI ZONE just"
 	cont "like that."
+	done
+
+WardensGranddaughterAfter:
+	text "W-wait but you"
+	line "are the new"
+	cont "CHAMPION?!?"
+
+	para "I can trust you"
+	line "to have those"
+	cont "then."
 	done
 
 WardensGranddaughterText2:

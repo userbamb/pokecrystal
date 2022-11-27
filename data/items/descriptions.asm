@@ -141,7 +141,7 @@ ItemDescriptions:
 	dw CharcoalDesc
 	dw BerryJuiceDesc
 	dw ScopeLensDesc
-	dw TeruSama12Desc
+	dw HubKeyDesc
 	dw TeruSama13Desc
 	dw MetalCoatDesc
 	dw DragonFangDesc
@@ -802,8 +802,9 @@ ScopeLensDesc:
 	db   "Raises critical"
 	next "hit ratio. (HOLD)@"
 
-TeruSama12Desc:
-	db   "?@"
+HubKey:
+	db   "Opens Safari Zone@"
+    next "gates. (LUCKY!)@"
 
 TeruSama13Desc:
 	db   "?@"

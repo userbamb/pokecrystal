@@ -154,7 +154,7 @@ ItemEffects:
 	dw NoEffect            ; CHARCOAL
 	dw RestoreHPEffect     ; BERRY_JUICE
 	dw NoEffect            ; SCOPE_LENS
-	dw NoEffect            ; ITEM_8D
+	dw HubKeyEffect        ; HUB_KEY
 	dw NoEffect            ; ITEM_8E
 	dw NoEffect            ; METAL_COAT
 	dw NoEffect            ; DRAGON_FANG
@@ -2542,6 +2542,10 @@ CardKeyEffect:
 
 BasementKeyEffect:
 	farcall _BasementKey
+	ret
+
+HubKeyEffect:
+	farcall _HubKey
 	ret
 
 SacredAshEffect:
