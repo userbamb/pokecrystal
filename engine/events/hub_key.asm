@@ -1,7 +1,7 @@
 _HubKey:
 ; Are we even in the right map to use this?
 	ld a, [wMapGroup]
-	cp GROUP_SAFARI
+	cp GROUP_SAFARI_ZONE_FUCHSIA_GATE
 	jr nz, .nope
 
 	ld a, [wMapNumber]
@@ -15,7 +15,7 @@ _HubKey:
 	ld a, e
 	cp 10
 	jr nz, .nope
-; Let's use the Basement Key
+; Let's use the Hub Key
 	ld hl, .HubKeyScript
 	call QueueScript
 	ld a, TRUE
@@ -29,4 +29,4 @@ _HubKey:
 
 .HubKeyScript:
 	closetext
-	farsjump HubDoorScript
+	farsjump SafariDoorScript

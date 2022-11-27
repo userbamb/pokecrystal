@@ -53,7 +53,7 @@ SafariHubIsOpenText:
 	text "The door is open."
 	done
 
-SafariHubKeyKeyOpenedDoorText:
+SafariHubKeyOpenedDoorText:
 	text "The HUB KEY"
 	line "opened the door."
 	done

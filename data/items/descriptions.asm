@@ -802,7 +802,7 @@ ScopeLensDesc:
 	db   "Raises critical"
 	next "hit ratio. (HOLD)@"
 
-HubKey:
+HubKeyDesc:
 	db   "Opens Safari Zone@"
     next "gates. (LUCKY!)@"
 
