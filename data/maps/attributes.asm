@@ -269,11 +269,10 @@ ENDM
 	connection north, FuchsiaCity, FUCHSIA_CITY, 0
 	connection west, Route20, ROUTE_20, 9
 
-	map_attributes FuchsiaCity, FUCHSIA_CITY, $0f, NORTH | SOUTH | WEST | EAST
+	map_attributes FuchsiaCity, FUCHSIA_CITY, $0f, SOUTH | WEST | EAST
 	connection south, Route19, ROUTE_19, 0
 	connection west, Route18, ROUTE_18, 7
 	connection east, Route15, ROUTE_15, 9
-	connection north, SafariZoneHub, SAFARI_ZONE_HUB, 0
 
 	map_attributes Route18, ROUTE_18, $43, WEST | EAST
 	connection west, Route17, ROUTE_17, -38
