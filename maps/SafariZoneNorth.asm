@@ -19,7 +19,6 @@ MewFoundScript:
 	special InitRoamMons
 	refreshscreen
 	reloadmappart
-	closetext
     end
 
 MewMovement:
