@@ -12,8 +12,6 @@ LoadSpecialMapPalette:
 	jr z, .radio_tower
 	cp TILESET_MANSION
 	jr z, .mansion_mobile
-	cp TILESET_SAFARI
-	jr z, .safari
 	jr .do_nothing
 
 .pokecom_2f
@@ -47,11 +45,6 @@ LoadSpecialMapPalette:
 
 .mansion_mobile
 	call LoadMansionPalette
-	scf
-	ret
-
-.safari
-	call LoadSafariPalette
 	scf
 	ret
 
@@ -143,13 +136,3 @@ LoadMansionPalette:
 MansionPalette2:
 INCLUDE "gfx/tilesets/mansion_2.pal"
 
-LoadSafariPalette:
-	ld a, BANK(wBGPals1)
-	ld de, wBGPals1
-	ld hl, SafariPalette
-	ld bc, 8 palettes
-	call FarCopyWRAM
-	ret
-
-SafariPalette:
-INCLUDE "gfx/tilesets/safari.pal"
