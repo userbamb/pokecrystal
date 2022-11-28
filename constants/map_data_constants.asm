@@ -137,5 +137,4 @@ DEF KANTO_FLYPOINT EQU const_value
 	const FLY_CINNABAR
 	const FLY_INDIGO
 DEF NUM_FLYPOINTS EQU const_value
-
-DEF 
+ 
