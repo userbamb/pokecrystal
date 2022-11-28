@@ -260,7 +260,7 @@ VermilionGroupSprites:
 
 SafariSprites:
 FuchsiaGroupSprites:
-	db SPRITE_SUICUNE
+	db SPRITE_MEW
 	db SPRITE_SILVER_TROPHY
 	db SPRITE_FAMICOM
 	db SPRITE_POKEDEX

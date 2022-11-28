@@ -1710,4 +1710,60 @@ JohtoGrassWildMons:
 	db 44, GOLBAT
 	end_grass_wildmons
 
+	def_grass_wildmons SAFARI_ZONE_HUB
+    db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 41, TANGELA
+	db 42, PONYTA
+	db 42, ARBOK
+	db 44, RAPIDASH
+	db 41, DODUO
+	db 43, DODRIO
+	db 43, DODRIO
+	; day
+	db 41, TANGELA
+	db 42, PONYTA
+	db 42, ARBOK
+	db 44, RAPIDASH
+	db 41, DODUO
+	db 43, DODRIO
+	db 43, DODRIO
+	; nite
+	db 41, TANGELA
+	db 42, POLIWHIRL
+	db 42, GOLBAT
+	db 44, POLIWHIRL
+	db 40, GOLBAT
+	db 44, GOLBAT
+	db 44, GOLBAT
+	end_grass_wildmons
+
+	def_grass_wildmons SAFARI_ZONE_EAST
+    db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 41, TANGELA
+	db 42, PONYTA
+	db 42, ARBOK
+	db 44, RAPIDASH
+	db 41, DODUO
+	db 43, DODRIO
+	db 43, DODRIO
+	; day
+	db 41, TANGELA
+	db 42, PONYTA
+	db 42, ARBOK
+	db 44, RAPIDASH
+	db 41, DODUO
+	db 43, DODRIO
+	db 43, DODRIO
+	; nite
+	db 41, TANGELA
+	db 42, POLIWHIRL
+	db 42, GOLBAT
+	db 44, POLIWHIRL
+	db 40, GOLBAT
+	db 44, GOLBAT
+	db 44, GOLBAT
+	end_grass_wildmons
+
 	db -1 ; end
