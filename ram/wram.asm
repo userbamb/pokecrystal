@@ -3369,6 +3369,7 @@ wFishingSwarmFlag:: db
 wRoamMon1:: roam_struct wRoamMon1
 wRoamMon2:: roam_struct wRoamMon2
 wRoamMon3:: roam_struct wRoamMon3
+wRoamMon4:: roam_struct wRoamMon4
 
 wRoamMons_CurMapNumber:: db
 wRoamMons_CurMapGroup:: db

@@ -43,6 +43,7 @@ FindNest:
 	call .FindWater
 	call .RoamMon1
 	call .RoamMon2
+	call .RoamMon3
 	ret
 
 .kanto
@@ -166,6 +167,22 @@ FindNest:
 	ld a, [wRoamMon2MapGroup]
 	ld b, a
 	ld a, [wRoamMon2MapNumber]
+	ld c, a
+	call .AppendNest
+	ret nc
+	ld [de], a
+	inc de
+	ret
+
+.RoamMon3:
+	ld a, [wRoamMon3Species]
+	ld b, a
+	ld a, [wNamedObjectIndex]
+	cp b
+	ret nz
+	ld a, [wRoamMon3MapGroup]
+	ld b, a
+	ld a, [wRoamMon3MapNumber]
 	ld c, a
 	call .AppendNest
 	ret nc
@@ -498,11 +515,14 @@ InitRoamMons:
 	ld [wRoamMon1Species], a
 	ld a, ENTEI
 	ld [wRoamMon2Species], a
+	ld a, MEW
+	ld [wRoamMon3Species], a
 
 ; level
 	ld a, 40
 	ld [wRoamMon1Level], a
 	ld [wRoamMon2Level], a
+	ld [wRoamMon3Level], a
 
 ; raikou starting map
 	ld a, GROUP_ROUTE_42
@@ -516,10 +536,18 @@ InitRoamMons:
 	ld a, MAP_ROUTE_37
 	ld [wRoamMon2MapNumber], a
 
+; mew starting map
+	ld a, GROUP_ROUTE_15
+	ld [wRoamMon3MapGroup], a
+	ld a, MAP_ROUTE_15
+	ld [wRoamMon3MapNumber], a
+
 ; hp
 	xor a ; generate new stats
 	ld [wRoamMon1HP], a
 	ld [wRoamMon2HP], a
+	ld [wRoamMon3HP], a
+
 
 	ret
 
@@ -608,6 +636,19 @@ UpdateRoamMons:
 	ld [wRoamMon3MapGroup], a
 	ld a, c
 	ld [wRoamMon3MapNumber], a
+
+.SkipMew:
+	ld a, [wRoamMon4MapGroup]
+	cp GROUP_N_A
+	jr z, .Finished
+	ld b, a
+	ld a, [wRoamMon4MapNumber]
+	ld c, a
+	call .Update
+	ld a, b
+	ld [wRoamMon4MapGroup], a
+	ld a, c
+	ld [wRoamMon4MapNumber], a
 
 .Finished:
 	jp _BackUpMapIndices
@@ -698,6 +739,16 @@ JumpRoamMons:
 	ld [wRoamMon3MapGroup], a
 	ld a, c
 	ld [wRoamMon3MapNumber], a
+
+.SkipMew:
+	ld a, [wRoamMon4MapGroup]
+	cp GROUP_N_A
+	jr z, .Finished
+	call JumpRoamMon
+	ld a, b
+	ld [wRoamMon4MapGroup], a
+	ld a, c
+	ld [wRoamMon4MapNumber], a
 
 .Finished:
 	jp _BackUpMapIndices
