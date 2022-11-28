@@ -1,41 +1,35 @@
     object_const_def
-	const SAFARIZONENORTH_MEW1
+	const SAFARIZONENORTH_MEW
 	const SAFARIZONENORTH_POKE_BALL1
 	const SAFARIZONENORTH_POKE_BALL2
 
 SafariZoneNorth_MapScripts:
     def_scene_scripts
-    scene_script MewNoop1Scene, SCENE_MEW_NOOP
-
+    
 	def_callbacks
 
-MewNoop1Scene:
-    end
-
-MewFound:
-    showemote EMOTE_SHOCK, SAFARIZONENORTH_MEW1, 15
+MewFoundScript:
+    showemote EMOTE_SHOCK, SAFARIZONENORTH_MEW, 15
 	cry MEW
 	waitsfx
 	playsound SFX_WARP_FROM
-	applymovement SAFARIZONENORTH_MEW1, MewMovement
-	disappear SAFARIZONENORTH_MEW1
+	applymovement SAFARIZONENORTH_MEW, MewMovement
+	disappear SAFARIZONENORTH_MEW
 	setevent EVENT_SAFARI_ZONE_NORTH_MEW
-	setscene SCENE_MEW_NOOP
 	special InitRoamMons
 	refreshscreen
 	reloadmappart
 	closetext
-	
-	end
+    end
 
 MewMovement:
     set_sliding
-	fast_jump_step DOWN
-	fast_jump_step DOWN
-	fast_jump_step DOWN
-	fast_jump_step RIGHT
-	fast_jump_step RIGHT
-	fast_jump_step RIGHT
+	fast_jump_step UP
+	fast_jump_step UP
+	fast_jump_step LEFT
+	fast_jump_step LEFT
+	fast_jump_step LEFT
+	fast_jump_step LEFT
 	remove_sliding
 	step_end
 
@@ -110,6 +104,6 @@ SafariZoneNorth_MapEvents:
 	bg_event 13, 29, BGEVENT_READ, SafariZoneNorthTrainerTips2Sign
 	
 	def_object_events
-	object_event  2, 10, SPRITE_MEW, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, MewFound, EVENT_SAFARI_ZONE_NORTH_MEW
+	object_event 5, 10, SPRITE_MEW, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, MewFoundScript, EVENT_SAFARI_ZONE_NORTH_MEW
     object_event 18, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SafariZoneNorthRareCandy, EVENT_SAFARI_ZONE_NORTH_RARE_CANDY
 	object_event 11, 3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SafariZoneNorthProtein, EVENT_SAFARI_ZONE_NORTH_PROTEIN
