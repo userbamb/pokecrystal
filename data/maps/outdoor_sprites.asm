@@ -266,4 +266,3 @@ CableClubGroupSprites:
 ; (no outdoor maps)
 	; 0 of max 9 walking sprites
 	db 0 ; end
-	
