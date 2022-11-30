@@ -163,6 +163,27 @@ KantoWaterWildMons:
 	db 10, MAGIKARP
 	end_water_wildmons
 
+	def_water_wildmons SAFARI_ZONE_HUB
+	db 2 percent ; encounter rate
+	db 20, MAGIKARP
+	db 15, MAGIKARP
+	db 10, MAGIKARP
+	end_water_wildmons
+
+	def_water_wildmons SAFARI_ZONE_EAST
+	db 2 percent ; encounter rate
+	db 20, MAGIKARP
+	db 15, MAGIKARP
+	db 10, MAGIKARP
+	end_water_wildmons
+
+	def_water_wildmons SAFARI_ZONE_NORTH
+	db 2 percent ; encounter rate
+	db 20, MAGIKARP
+	db 15, MAGIKARP
+	db 10, MAGIKARP
+	end_water_wildmons
+
 	def_water_wildmons CINNABAR_ISLAND
 	db 6 percent ; encounter rate
 	db 35, TENTACOOL

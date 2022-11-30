@@ -38,6 +38,9 @@ TreeMonMaps:
 	treemon_map BLACKTHORN_CITY,           TREEMON_SET_CITY
 	treemon_map SILVER_CAVE_OUTSIDE,       TREEMON_SET_CITY
 	treemon_map ILEX_FOREST,               TREEMON_SET_FOREST
+	treemon_map SAFARI_ZONE_HUB,           TREEMON_SET_LAKE
+	treemon_map SAFARI_ZONE_EAST,          TREEMON_SET_LAKE
+	treemon_map SAFARI_ZONE_NORTH,         TREEMON_SET_LAKE
 	db -1
 
 RockMonMaps:
