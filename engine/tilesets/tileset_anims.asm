@@ -190,6 +190,7 @@ UnusedTilesetAnim4: ; unreferenced
 	dw vTiles2 tile $54, WriteTileFromAnimBuffer
 	dw NULL,  DoneTileAnimation
 
+TilesetCerucaveAnim:
 TilesetCaveAnim:
 TilesetDarkCaveAnim:
 	dw vTiles2 tile $14, ReadTileToAnimBuffer

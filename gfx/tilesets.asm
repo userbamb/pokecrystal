@@ -344,3 +344,12 @@ INCBIN "data/tilesets/safari_metatiles.bin"
 
 TilesetSafariColl::
 INCLUDE "data/tilesets/safari_collision.asm"
+
+TilesetCerucaveGFX::
+INCBIN "gfx/tilesets/cerucave.2bpp.lz"
+
+TilesetCerucaveMeta::
+INCBIN "data/tilesets/cerucave_metatiles.bin"
+
+TilesetCerucaveColl::
+INCLUDE "data/tilesets/cerucave_collision.asm"

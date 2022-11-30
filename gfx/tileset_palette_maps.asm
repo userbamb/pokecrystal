@@ -111,6 +111,9 @@ INCLUDE "gfx/tilesets/battle_tower_outside_palette_map.asm"
 TilesetSafariPalMap:
 INCLUDE "gfx/tilesets/safari_palette_map.asm"
 
+TilesetCerucavePalMap:
+INCLUDE "gfx/tilesets/cerucave_palette_map.asm"
+
 
 
 MapGroupPalettes: ; unreferenced

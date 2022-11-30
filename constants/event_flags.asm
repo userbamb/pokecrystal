@@ -269,7 +269,10 @@
 	const EVENT_DANA_GAVE_THUNDERSTONE
 	const EVENT_TULLY_GAVE_WATER_STONE
 	const EVENT_TIFFANY_GAVE_PINK_BOW
-; Unused: next 339 events
+	const EVENT_GOT_CHARMANDER
+	const EVENT_GOT_SQUIRTLE
+	const EVENT_GOT_BULBASAUR
+; Unused: next 335 events
 
 	const_next 600
 ; Kurt Apricorn events
@@ -1470,7 +1473,8 @@
 	const EVENT_SAFARI_ZONE_NORTH_HIDDEN_LUCKY_PUNCH
 	const EVENT_SAFARI_ZONE_NORTH_MEW
 	const EVENT_VERMILION_HUB_KEYS
-; Unused: next 38 events
+	const EVENT_VIRIDIAN_FOUND_LUCKY_LEAF
+; Unused: next 37 events
 
 	const_next 2048
 DEF NUM_EVENTS EQU const_value ; 800

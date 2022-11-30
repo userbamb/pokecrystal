@@ -37,6 +37,7 @@
 	const TILESET_OMANYTE_WORD_ROOM    ; 23
 	const TILESET_AERODACTYL_WORD_ROOM ; 24
 	const TILESET_SAFARI               ; 25
+	const TILESET_CERUCAVE             ; 26
 
 DEF NUM_TILESETS EQU const_value - 1
 
