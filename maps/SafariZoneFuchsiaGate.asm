@@ -13,7 +13,6 @@ SafariZoneFuchsiaGateCheckHubKeyCallback:
 
 .LockSafariDoor:
 	changeblock 4, 0, $3d ; locked door
-	changeblock 5, 0, $3d ; locked door
 	endcallback
 
 SafariDoorScript::
@@ -33,7 +32,6 @@ SafariDoorScript::
 	waitbutton
 	closetext
 	changeblock 4, 0, $2e ; unlocked door
-	changeblock 5, 0, $2e ; unlocked door
 	reloadmappart
 	closetext
 	setevent EVENT_USED_HUB_KEY
@@ -46,7 +44,8 @@ SafariDoorScript::
 	end
 
 SafariHubTheDoorsLockedText:
-	text "The door's locked…"
+	text "The WARDEN locked"
+	line "the door…"
 	done
 
 SafariHubIsOpenText:
@@ -63,7 +62,6 @@ SafariZoneFuchsiaGate_MapEvents:
  
 	def_warp_events
 	warp_event  4,  0, SAFARI_ZONE_HUB, 1
-	warp_event  5,  0, SAFARI_ZONE_HUB, 2
 	warp_event  4,  7, FUCHSIA_CITY, 7
 	warp_event  5,  7, FUCHSIA_CITY, 7
 

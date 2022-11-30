@@ -33,7 +33,7 @@ SafariZoneHub_MapEvents:
 
     def_warp_events
 	warp_event 14, 25, SAFARI_ZONE_FUCHSIA_GATE, 1
-	warp_event 15, 25, SAFARI_ZONE_FUCHSIA_GATE, 2
+	warp_event 15, 25, SAFARI_ZONE_FUCHSIA_GATE, 1
 	warp_event 29, 10, SAFARI_ZONE_EAST, 1
 	warp_event 29, 11, SAFARI_ZONE_EAST, 2
 	warp_event 4, 0, SAFARI_ZONE_NORTH, 3

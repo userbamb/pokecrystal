@@ -80,6 +80,7 @@ DEF NUM_SPRITEANIMDICT_ENTRIES EQU 10
 	const SPRITE_ANIM_INDEX_INTRO_UNOWN_F             ; 2a
 	const SPRITE_ANIM_INDEX_INTRO_SUICUNE_AWAY        ; 2b
 	const SPRITE_ANIM_INDEX_CELEBI                    ; 2c
+	const SPRITE_ANIM_INDEX_GREEN_WALK
 DEF NUM_SPRITE_ANIM_INDEXES EQU const_value
 
 ; DoAnimFrame.Jumptable indexes (see engine/gfx/sprite_anims.asm)
