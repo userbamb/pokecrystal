@@ -184,6 +184,9 @@ VermilionPortSailorScript:
 	closetext
 	end
 
+VermilionHiddenHubKeys:
+    hiddenitem HUB_KEY, EVENT_VERMILION_HUB_KEYS
+	
 VermilionPortSuperNerdScript:
 	faceplayer
 	opentext
@@ -308,6 +311,7 @@ VermilionPort_MapEvents:
 
 	def_bg_events
 	bg_event 16, 13, BGEVENT_ITEM, VermilionPortHiddenIron
+	bg_event 14, 10, BGEVENT_ITEM, VermilionHiddenHubKeys
 
 	def_object_events
 	object_event  7, 17, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionPortSailorAtGangwayScript, EVENT_VERMILION_PORT_SAILOR_AT_GANGWAY

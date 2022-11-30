@@ -1469,7 +1469,8 @@
 	const EVENT_SAFARI_ZONE_HUB_ULTRA_BALL
 	const EVENT_SAFARI_ZONE_NORTH_HIDDEN_LUCKY_PUNCH
 	const EVENT_SAFARI_ZONE_NORTH_MEW
-; Unused: next 40 events
+	const EVENT_VERMILION_HUB_KEYS
+; Unused: next 38 events
 
 	const_next 2048
 DEF NUM_EVENTS EQU const_value ; 800

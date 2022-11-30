@@ -803,7 +803,7 @@ ScopeLensDesc:
 	next "hit ratio. (HOLD)@"
 
 HubKeyDesc:
-	db   "Opens Safari Zone@"
+	db   "Opens SAFARI ZONE@"
     next "gates. (LUCKY!)@"
 
 TeruSama13Desc:
