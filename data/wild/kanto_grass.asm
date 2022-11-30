@@ -846,15 +846,17 @@ KantoGrassWildMons:
     db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 31, TANGELA
-	db 32, PONYTA
-	db 32, ARBOK
-	db 31, DODUO
+	db 42, PONYTA
+	db 42, ARBOK
+	db 44, RAPIDASH
+	db 41, DODUO
 	db 43, DODRIO
 	db 43, DODRIO
 	; day
 	db 41, TANGELA
 	db 42, PONYTA
 	db 42, ARBOK
+	db 44, RAPIDASH
 	db 41, DODUO
 	db 43, DODRIO
 	db 43, DODRIO
