@@ -123,6 +123,7 @@ Route4_MapEvents:
 
 	def_warp_events
 	warp_event  2,  5, MOUNT_MOON, 2
+	warp_event 38,  3, CERULEAN_CAVE_1F, 1
 
 	def_coord_events
 
