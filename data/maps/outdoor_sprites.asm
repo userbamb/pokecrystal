@@ -58,6 +58,7 @@ PalletGroupSprites:
 	db SPRITE_POKE_BALL
 	db SPRITE_FRUIT_TREE
 
+ViridianforSprites:
 ViridianGroupSprites:
 	db SPRITE_SUICUNE
 	db SPRITE_SILVER_TROPHY
@@ -133,6 +134,7 @@ CinnabarGroupSprites:
 	db SPRITE_POKE_BALL
 	db SPRITE_FRUIT_TREE
 
+CerucaveSprites:
 CeruleanGroupSprites:
 	db SPRITE_SUICUNE
 	db SPRITE_SILVER_TROPHY

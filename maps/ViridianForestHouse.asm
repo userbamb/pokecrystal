@@ -14,6 +14,7 @@ ViridianForestLadyScript:
 	opentext
 	checkevent EVENT_GOT_BULBASAUR
 	iffalse .GiveBulbasaur
+	writetext LadyBasicText
 	waitbutton
 	closetext
 	end
@@ -40,11 +41,6 @@ ViridianForestLadyScript:
 	closetext
 	end
 
-.ReceivedBulbasaur:
-	writetext LadyBasicText
-	waitbutton
-	closetext
-	end
 
 ViridianForestMon1Script:
 	opentext
@@ -122,8 +118,8 @@ ViridianForestHouse_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, VIRIDIAN_FOREST, 1
-	warp_event  3,  7, VIRIDIAN_FOREST, 1
+	warp_event  4,  7, VIRIDIAN_FOREST, 1
+	warp_event  5,  7, VIRIDIAN_FOREST, 1
 
 	def_coord_events
 
@@ -131,6 +127,6 @@ ViridianForestHouse_MapEvents:
 
 	def_object_events
 	object_event  0,  4, SPRITE_DAISY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianForestLadyScript, -1
-	object_event  4,  5, SPRITE_ODDISH, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ViridianForestMon1Script, -1
-    object_event  3,  2, SPRITE_BUTTERFREE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, ViridianForestMon2Script, -1
-	object_event  0,  6, SPRITE_PIKACHU, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianForestMon3Script, -1
+	object_event  8,  5, SPRITE_ODDISH, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ViridianForestMon1Script, -1
+	object_event  4,  2, SPRITE_BUTTERFREE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, ViridianForestMon2Script, -1
+	object_event  2,  5, SPRITE_PIKACHU, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianForestMon3Script, -1

@@ -59,11 +59,13 @@ Landmarks:
 	landmark  52,  92, Route1Name
 	landmark  52,  76, ViridianCityName
 	landmark  52,  64, Route2Name
+	landmark  52,  64, ViridianForestName
 	landmark  52,  52, PewterCityName
 	landmark  64,  52, Route3Name
 	landmark  76,  52, MtMoonName
 	landmark  88,  52, Route4Name
 	landmark 100,  52, CeruleanCityName
+	landmark  95,  54, CeruleanCaveName
 	landmark 100,  44, Route24Name
 	landmark 108,  36, Route25Name
 	landmark 100,  60, Route5Name
@@ -151,7 +153,7 @@ LavRadioTowerName:   db "LAV¯RADIO TOWER@"
 SilphCoName:         db "SILPH CO.@" ; unreferenced
 SeafoamIslandsName:  db "SEAFOAM¯ISLANDS@"
 PokemonMansionName:  db "#MON¯MANSION@" ; unreferenced
-CeruleanCaveName:    db "CERULEAN¯CAVE@" ; unreferenced
+CeruleanCaveName:    db "CERULEAN¯CAVE@" ;added
 Route1Name:          db "ROUTE 1@"
 Route2Name:          db "ROUTE 2@"
 Route3Name:          db "ROUTE 3@"
@@ -202,7 +204,7 @@ DarkCaveName:        db "DARK CAVE@"
 IlexForestName:      db "ILEX¯FOREST@"
 BurnedTowerName:     db "BURNED¯TOWER@"
 FastShipName:        db "FAST SHIP@"
-ViridianForestName:  db "VIRIDIAN¯FOREST@" ; unreferenced
+ViridianForestName:  db "VIRIDIAN¯FOREST@" ; added
 DiglettsCaveName:    db "DIGLETT'S¯CAVE@"
 TohjoFallsName:      db "TOHJO FALLS@"
 UndergroundName:     db "UNDERGROUND@"

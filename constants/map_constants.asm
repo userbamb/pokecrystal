@@ -506,5 +506,20 @@ ENDM
 	map_const SAFARI_ZONE_NORTH,                          15, 16 ;  4
 	endgroup
 
+    newgroup CERUCAVE                                             ;28
+	map_const CERULEAN_CAVE_1F,                            20, 14 ;  1
+	map_const CERULEAN_CAVE_2F,                            20, 14 ;  2
+	map_const CERULEAN_CAVE_B1F,                           20, 14 ;  3
+	map_const CERULEAN_MEWTWO,                              5,  4 ;  4
+	endgroup
 
-DEF NUM_MAP_GROUPS EQU const_value ; 27
+    newgroup VIRIDIANFOR                                          ;29
+	map_const VIRIDIAN_FOREST,                             28, 17 ;  1
+	map_const VIRIDIAN_GATE_SOUTH,                          5,  4 ;  2
+	map_const VIRIDIAN_GATE_NORTH,                          5,  4 ;  3
+	map_const VIRIDIAN_FOREST_HOUSE,                        5,  4 ;  4
+	endgroup
+
+
+
+DEF NUM_MAP_GROUPS EQU const_value ; 29

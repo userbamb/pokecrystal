@@ -23,10 +23,35 @@ VermilionPokecenter1FFishingGuruScript:
 	end
 
 .FoughtSnorlax:
+	checkevent EVENT_GOT_SQUIRTLE
+	iffalse .GiveSquirtle
 	writetext VermilionPokecenter1FFishingGuruText_FoughtSnorlax
 	waitbutton
 	closetext
 	end
+
+.GiveSquirtle:
+	writetext GiveSquirtleText
+	waitbutton
+	readvar VAR_PARTYCOUNT
+	ifequal PARTY_LENGTH, .PartyFull
+	writetext PlayerReceivedSquirtleText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	givepoke SQUIRTLE, 5
+	special GiveSquirtle
+	setevent EVENT_GOT_SQUIRTLE
+	writetext VermilionPokecenter1FFishingGuruText_FoughtSnorlax
+	waitbutton
+	closetext
+	end
+
+.PartyFull:
+	writetext SquirtlePartyFullText
+	waitbutton
+	closetext
+	end
+	
 
 VermilionPokecenter1FSailorScript:
 	jumptextfaceplayer VermilionPokecenter1FSailorText
@@ -46,15 +71,29 @@ VermilionPokecenter1FFishingGuruText:
 	line "wake it up?"
 	done
 
+
+GiveSquirtleText:
+    text "W-WHAT?! You are"
+	line "the one who fought"
+	cont "that SNORLAX?!"
+
+	para "It's fantastic,"
+	line "you are such a pro"
+
+	para "trainer, you can"
+	line "rise this SQUIRTLE"
+
+	para "well for sure,"
+	line "Take it!"
+	done
+
+SquirtlePartyFullText:
+    text "You don't want it?"
+	done
+    
 VermilionPokecenter1FFishingGuruText_FoughtSnorlax:
-	text "There used to be a"
-	line "sleeping #MON"
-
-	para "lying in front of"
-	line "DIGLETT'S CAVE."
-
-	para "But it seems to"
-	line "have disappeared."
+	text "Go CHAMPION!"
+	line "GO!!"
 	done
 
 VermilionPokecenter1FSailorText:
