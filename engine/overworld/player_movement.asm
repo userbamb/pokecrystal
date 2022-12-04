@@ -275,6 +275,8 @@ DoPlayerMovement::
 	jr nc, .ice
 
 ; Downhill riding is slower when not moving down.
+    call .RunCheck
+	jr z, .fast
 	call .BikeCheck
 	jr nz, .walk
 
@@ -732,6 +734,15 @@ ENDM
 	cp PLAYER_SKATE
 	ret
 
+.RunCheck
+    ld a, [wPlayerState]
+	cp PLAYER_NORMAL
+	ret nz
+	ldh a, [wJoypadDown]
+	and B_BUTTON
+	cp B_BUTTON
+	ret
+	
 .CheckWalkable:
 ; Return 0 if tile a is land. Otherwise, return carry.
 
