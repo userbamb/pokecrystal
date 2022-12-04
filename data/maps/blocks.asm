@@ -203,6 +203,8 @@ Route30BerryHouse_Blocks:
 SafariZoneFuchsiaGate_Blocks:
     INCBIN "maps/SafariZoneFuchsiaGate.blk"
 	
+ViridianGateSouth_Blocks:
+ViridianGateNorth_Blocks:
 Route19FuchsiaGate_Blocks:
 Route43MahoganyGate_Blocks:
 Route43Gate_Blocks:
@@ -1055,3 +1057,21 @@ SafariZoneEast_Blocks:
 
 SafariZoneNorth_Blocks:
     INCBIN "maps/SafariZoneNorth.blk"
+
+CeruleanCave1F_Blocks:
+    INCBIN "maps/CeruleanCave1F.blk"
+
+CeruleanCave2F_Blocks:
+    INCBIN "maps/CeruleanCave2F.blk"
+
+CeruleanCaveB1F_Blocks:
+    INCBIN "maps/CeruleanCaveB1F.blk"
+
+CeruleanMewtwo_Blocks:
+    INCBIN "maps/CeruleanMewtwo.blk"
+
+ViridianForest_Blocks:
+    INCBIN "maps/ViridianForest.blk"
+
+ViridianForestHouse_Blocks:
+    INCBIN "maps/ViridianForestHouse.blk"
