@@ -1,4 +1,4 @@
-object_const_def
+    object_const_def
 	const CERULEANCAVE2F_POKE_BALL1
     const CERULEANCAVE2F_ROCK1
 	const CERULEANCAVE2F_ROCK2

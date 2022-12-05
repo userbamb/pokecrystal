@@ -31,6 +31,8 @@ OutdoorSprites:
 	dw SaffronGroupSprites
 	dw CherrygroveGroupSprites
 	dw SafariSprites
+	dw CerucaveSprites
+	dw ViridianforSprites
 	assert_table_length NUM_MAP_GROUPS
 
 PalletGroupSprites:

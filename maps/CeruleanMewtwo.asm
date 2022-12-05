@@ -1,7 +1,7 @@
-object_const_def
-    const CERULEANCAVEB1F_MEWTWO
+    object_const_def
+    const CERULEANMEWTWO_MEWTWO
 
-CeruleanCaveB1F_MapScripts:
+CeruleanMewtwo_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
@@ -10,11 +10,11 @@ CeruleanCaveB1F_MapScripts:
 CeruleanMewtwoCallback:
 	checkevent EVENT_FOUGHT_MEWTWO
 	iftrue .NoAppear
-	appear CERULEANCAVEB1F_MEWTWO
+	appear CERULEANMEWTWO_MEWTWO
 	endcallback
 
 .NoAppear:
-	disappear CERULEANCAVEB1F_MEWTWO
+	disappear CERULEANMEWTWO_MEWTWO
 	endcallback
 
 Mewtwo:
@@ -28,7 +28,7 @@ Mewtwo:
 	loadvar VAR_BATTLETYPE,
 	loadwildmon MEWTWO, 90
 	startbattle
-	disappear CERULEANCAVEB1F_MEWTWO
+	disappear CERULEANMEWTWO_MEWTWO
 	reloadmapafterbattle
 	end
 
@@ -36,7 +36,7 @@ MewtwoText:
 	text "YOU SURE?!"
 	done
 
-CeruleanCaveB1F_MapEvents:
+CeruleanMewtwo_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events

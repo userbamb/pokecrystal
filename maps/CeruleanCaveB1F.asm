@@ -1,12 +1,12 @@
-object_const_def
+    object_const_def
 
-CeruleanCave2F_MapScripts:
+CeruleanCaveB1F_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
 
 
-CeruleanCave2F_MapEvents:
+CeruleanCaveB1F_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events

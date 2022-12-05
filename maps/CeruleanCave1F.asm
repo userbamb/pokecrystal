@@ -1,4 +1,4 @@
-object_const_def
+    object_const_def
 	const CERULEANCAVE1F_POKE_BALL1
     const CERULEANCAVE1F_ROCK1
 	const CERULEANCAVE1F_ROCK2
@@ -38,7 +38,7 @@ CeruleanCave1F_MapEvents:
 	warp_event  7,  9, CERULEAN_CAVE_2F, 3
 	warp_event 25,  9, CERULEAN_CAVE_2F, 4
 	warp_event  3, 15, CERULEAN_CAVE_2F, 5
-	warp_event  3, 11, CERULEAN_CAVE_1BF, 1
+	warp_event  3, 11, CERULEAN_CAVE_B1F, 1
 	warp_event 31, 25, ROUTE_4, 1
 
 	def_coord_events
