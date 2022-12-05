@@ -256,13 +256,6 @@ SpriteAnimOAMData:
 	dbsprite  1,  2,  0,  0, $01, 0 | X_FLIP | Y_FLIP
 	dbsprite  2,  2,  0,  0, $00, 0 | X_FLIP | Y_FLIP
 
-.Frameset_MagnetTrainGreen:
-	frame SPRITE_ANIM_OAMSET_MAGNET_TRAIN_GREEN_1,  8
-	frame SPRITE_ANIM_OAMSET_MAGNET_TRAIN_GREEN_2,  8
-	frame SPRITE_ANIM_OAMSET_MAGNET_TRAIN_GREEN_1,  8
-	frame SPRITE_ANIM_OAMSET_MAGNET_TRAIN_GREEN_2,  8, OAM_X_FLIP
-	oamrestart
-
 .OAMData_Unused43_4A:
 	db 9
 	dbsprite -2, -2,  4,  4, $00, 0
