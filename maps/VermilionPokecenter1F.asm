@@ -96,6 +96,11 @@ VermilionPokecenter1FFishingGuruText_FoughtSnorlax:
 	line "GO!!"
 	done
 
+PlayerReceivedSquirtleText:
+    text "<PLAYER> received"
+	line "SQUIRTLE!"
+	done
+
 VermilionPokecenter1FSailorText:
 	text "The FAST SHIP is a"
 	line "great place to"

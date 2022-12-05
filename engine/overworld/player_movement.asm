@@ -738,7 +738,7 @@ ENDM
     ld a, [wPlayerState]
 	cp PLAYER_NORMAL
 	ret nz
-	ldh a, [wJoypadDown]
+	ldh a, [hJoypadDown]
 	and B_BUTTON
 	cp B_BUTTON
 	ret

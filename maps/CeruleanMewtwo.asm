@@ -25,7 +25,7 @@ Mewtwo:
 	pause 15
 	closetext
 	setevent EVENT_FOUGHT_MEWTWO
-	loadvar VAR_BATTLETYPE,
+	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
 	loadwildmon MEWTWO, 90
 	startbattle
 	disappear CERULEANMEWTWO_MEWTWO
@@ -40,7 +40,7 @@ CeruleanMewtwo_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 4, 7, CERULEAN_CAVE_1BF, 1
+	warp_event 4, 7, CERULEAN_CAVE_B1F, 1
 	
 
 	def_coord_events

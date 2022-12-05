@@ -700,6 +700,7 @@ ENDM
 	map_attributes CeruleanCave1F, CERULEAN_CAVE_1F, $00, 0
 	map_attributes CeruleanCave2F, CERULEAN_CAVE_2F, $00, 0
 	map_attributes CeruleanCaveB1F, CERULEAN_CAVE_B1F, $00, 0
+	map_attributes CeruleanMewtwo, CERULEAN_MEWTWO, $00, 0
 	map_attributes ViridianForest, VIRIDIAN_FOREST, $00, 0
 	map_attributes ViridianGateSouth, VIRIDIAN_GATE_SOUTH, $00, 0
 	map_attributes ViridianGateNorth, VIRIDIAN_GATE_NORTH, $00, 0

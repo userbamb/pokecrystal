@@ -29,7 +29,7 @@ BadTrainerScript:
 	opentext
 	checkevent EVENT_GOT_CHARMANDER
 	iffalse .GiveCharmander
-	writetext BadBoyBasicText
+	writetext PorcodioText
 	waitbutton
 	closetext
 	end 
@@ -49,7 +49,7 @@ BadTrainerScript:
 	givepoke CHARMANDER, 5
 	special GiveCharmander
 	setevent EVENT_GOT_CHARMANDER
-	writetext BabBoyBasicText
+	writetext PorcodioText
 	waitbutton
 	closetext
 	end
@@ -85,9 +85,8 @@ PlayerReceivedCharmanderText:
 	line "CHARMANDER!"
 	done
 
-BabBoyBasicText:
-    text "I'm not weak!"
-	line "#MONS are."
+PorcodioText:
+    text "Go away."
 	done
 
 

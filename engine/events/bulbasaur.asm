@@ -74,14 +74,14 @@ GiveBulbasaur:
 	db LEECH_SEED
 	db SPORE
 	db TACKLE
-	db POISON_POWDER
+	db RAZOR_LEAF
 	db 0
 .Moveset1:
 ; This is the normal moveset of a level 15 Dratini
 	db LEECH_SEED
 	db SPORE
 	db TACKLE
-	db POISON_POWDER
+	db RAZOR_LEAF
 	db 0
 
 .GetNthPartyMon:
