@@ -7,6 +7,20 @@ SafariZoneNorth_MapScripts:
     def_scene_scripts
     
 	def_callbacks
+    callback MAPCALLBACK_OBJECTS, MewFirstSafariZoneCallback
+
+MewFirstSafariZoneCallback:
+    checkevent EVENT_SAFARI_ZONE_NORTH_MEW
+	iftrue .NoAppear
+	readvar VAR_WEEKDAY
+	ifequal SUNDAY, .Appear
+.NoAppear:
+	disappear SAFARIZONENORTH_MEW
+	endcallback
+
+.Appear:
+	appear SAFARIZONENORTH_MEW
+	endcallback
 
 MewFoundScript:
     showemote EMOTE_SHOCK, SAFARIZONENORTH_MEW, 15
