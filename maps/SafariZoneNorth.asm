@@ -10,7 +10,7 @@ SafariZoneNorth_MapScripts:
     callback MAPCALLBACK_OBJECTS, MewFirstSafariZoneCallback
 
 MewFirstSafariZoneCallback:
-    checkevent EVENT_SAFARI_ZONE_NORTH_MEW
+    checkevent EVENT_SAFARI_ZONE_MEW_SCARED
 	iftrue .NoAppear
 	readvar VAR_WEEKDAY
 	ifequal SUNDAY, .Appear
@@ -29,7 +29,7 @@ MewFoundScript:
 	playsound SFX_WARP_FROM
 	applymovement SAFARIZONENORTH_MEW, MewMovement
 	disappear SAFARIZONENORTH_MEW
-	setevent EVENT_SAFARI_ZONE_NORTH_MEW
+	setevent EVENT_SAFARI_ZONE_MEW_SCARED
 	special InitRoamMons
 	refreshscreen
 	reloadmappart
