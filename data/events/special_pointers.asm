@@ -55,8 +55,6 @@ SpecialsPointers::
 	add_special UnownPuzzle
 	add_special SlotMachine
 	add_special CardFlip
-	add_special GiveKabuto ;                   unused tryin to use
-	add_special GiveOmanyte ;                  unused tryin to use
 	add_special FadeOutPalettes
 	add_special BattleTowerFade
 	add_special FadeBlackQuickly
@@ -185,3 +183,5 @@ SpecialsPointers::
 	add_special GiveCharmander
 	add_special GiveSquirtle
 	add_special GiveBulbasaur
+	add_special GiveKabuto
+	add_special GiveOmanyte

@@ -1,4 +1,4 @@
-; move ids
+; move ids 
 ; indexes for:
 ; - Moves (see data/moves/moves.asm)
 ; - MoveNames (see data/moves/names.asm)

@@ -27,7 +27,7 @@ PewterLabNerdScript:
 	scall .CorrectPokemon
 	setevent EVENT_SHOWED_KABUTOPS
 	sjump .ShowedKabutops
-	writetext PewterLabNerdProud
+	writetext PewterLabFinalText
 	waitbutton
 	closetext
 	end
@@ -162,6 +162,11 @@ PlayerReceivedKabutoText:
 	line "KABUTO."
 	done
 
+PlayerReceivedOmanyteText:
+    text "<PLAYER> received"
+	line "OMANYTE."
+	done
+
 AskKabutoEvolution:
     text "PACH: Did KABUTO"
 	line "manage to evolve"
@@ -213,4 +218,4 @@ PewterLab_MapEvents:
 	
 	def_object_events
 	object_event  9,  5, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, PewterLabNerdScript, -1
-    object_event  7,  4, SPRITE_STARYU, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PewterStaryuScript, -1
+    object_event  7,  4, SPRITE_STARMIE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PewterStaryuScript, -1
