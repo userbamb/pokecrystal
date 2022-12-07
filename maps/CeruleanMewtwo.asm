@@ -40,7 +40,7 @@ CeruleanMewtwo_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 4, 7, CERULEAN_CAVE_B1F, 1
+	warp_event  5,  7, CERULEAN_CAVE_B1F, 1
 	
 
 	def_coord_events
@@ -48,4 +48,4 @@ CeruleanMewtwo_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  4,  4, SPRITE_LUGIA, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, Mewtwo, EVENT_CERULEANB1F_MEWTWO
+	object_event  4,  4, SPRITE_BULBASAUR, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, Mewtwo, EVENT_CERULEANB1F_MEWTWO

@@ -11,7 +11,7 @@ CeruleanCaveB1F_MapEvents:
 
 	def_warp_events
 	warp_event 35, 19, CERULEAN_MEWTWO, 1
-	warp_event  5,  9, CERULEAN_CAVE_1F, 1
+	warp_event  5,  9, CERULEAN_CAVE_1F, 7
 
 	def_coord_events
 

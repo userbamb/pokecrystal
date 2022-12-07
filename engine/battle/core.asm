@@ -6001,7 +6001,7 @@ LoadEnemyMon:
 ; In a wild battle, we pull from the item slots in BaseData
 
 ; Force Item1
-; Used for Ho-Oh, Lugia and Snorlax encounters
+; Used for Ho-Oh, Lugia, Snorlax and Mewtwo encounters
 	ld a, [wBattleType]
 	cp BATTLETYPE_FORCEITEM
 	ld a, [wBaseItem1]
