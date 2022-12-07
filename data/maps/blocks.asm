@@ -1075,3 +1075,6 @@ ViridianForest_Blocks:
 
 ViridianForestHouse_Blocks:
     INCBIN "maps/ViridianForestHouse.blk"
+
+PewterLab_Blocks:
+    INCBIN "maps/PewterLab.blk"

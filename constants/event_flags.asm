@@ -268,7 +268,9 @@
 	const EVENT_GOT_CHARMANDER
 	const EVENT_GOT_SQUIRTLE
 	const EVENT_GOT_BULBASAUR
-; Unused: next 339 events
+	const EVENT_GOT_KABUTO
+	const EVENT_GOT_OMANYTE
+; Unused: next 337 events
 
 	const_next 600
 ; Kurt Apricorn events
@@ -510,6 +512,7 @@
 	const EVENT_GOT_ODD_EGG
 	const_skip ; unused
 	const EVENT_GOT_GS_BALL_FROM_POKECOM_CENTER
+	const EVENT_SHOWED_KABUTOPS
 ; Unused: next 167 events
 
 	const_next 1000

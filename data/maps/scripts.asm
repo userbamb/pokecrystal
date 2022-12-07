@@ -494,4 +494,4 @@ INCLUDE "maps/ViridianForest.asm"
 INCLUDE "maps/ViridianGateSouth.asm"
 INCLUDE "maps/ViridianGateNorth.asm"
 INCLUDE "maps/ViridianForestHouse.asm"
-
+INCLUDE "maps/PewterLab.asm"
