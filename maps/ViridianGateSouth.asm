@@ -18,9 +18,9 @@ ViridianGateOfficerScript:
 
 ViridianGateOfficerText:
 	text "This forest is a"
-	line "calm spot for"
+	line "nice resting"
 
-	cont "trainers"
+	cont "place."
 	done
 
 
@@ -28,10 +28,11 @@ ViridianGateSouth_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  4,  0, VIRIDIAN_FOREST, 10
-	warp_event  5,  0, VIRIDIAN_FOREST, 11
-	warp_event  4,  7, ROUTE_2, 1
-	warp_event  5,  7, ROUTE_2, 1
+	warp_event  4,  7, ROUTE_2, 6
+	warp_event  5,  7, ROUTE_2, 6
+	warp_event  4,  0, VIRIDIAN_FOREST, 2
+	warp_event  5,  0, VIRIDIAN_FOREST, 3
+	
 
 	def_coord_events
 

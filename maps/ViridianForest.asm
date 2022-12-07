@@ -38,10 +38,10 @@ ViridianForestSignpostText:
 ViridianForest_MapEvents:
 	db 0, 0 ; filler
 
-	def_warp_events
+	def_warp_events 
 	warp_event  1,  5, VIRIDIAN_GATE_NORTH, 3
-	warp_event 17, 49, VIRIDIAN_GATE_SOUTH, 1
-	warp_event 16, 49, VIRIDIAN_GATE_SOUTH, 2
+	warp_event 17, 49, VIRIDIAN_GATE_SOUTH, 4
+	warp_event 16, 49, VIRIDIAN_GATE_SOUTH, 3
 	warp_event  3, 33, VIRIDIAN_FOREST_HOUSE, 1
 
 	def_coord_events

@@ -514,7 +514,7 @@ ENDM
 	endgroup
 
     newgroup VIRIDIANFOR                                          ;29
-	map_const VIRIDIAN_FOREST,                             28, 17 ;  1
+	map_const VIRIDIAN_FOREST,                             17, 28 ;  1
 	map_const VIRIDIAN_GATE_SOUTH,                          5,  4 ;  2
 	map_const VIRIDIAN_GATE_NORTH,                          5,  4 ;  3
 	map_const VIRIDIAN_FOREST_HOUSE,                        5,  4 ;  4
