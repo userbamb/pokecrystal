@@ -16,8 +16,10 @@ PewterLabNerdScript:
 	iftrue .JustGotKabuto
 	checkevent EVENT_GOT_KABUTO
 	iffalse .GiveKabuto
-	promptbutton
+	checkevent EVENT_SHOWED_KABUTOPS
+	iftrue .ShowedAllPewter
 	writetext AskKabutoEvolution
+	promptbutton
 	yesorno
 	iffalse .SaidNo
 	scall .ExcitedToSee
@@ -27,10 +29,6 @@ PewterLabNerdScript:
 	scall .CorrectPokemon
 	setevent EVENT_SHOWED_KABUTOPS
 	sjump .ShowedKabutops
-	writetext PewterLabFinalText
-	waitbutton
-	closetext
-	end
 
 .PewterLabBusy:
     writetext PewterLabBusyText
@@ -39,7 +37,7 @@ PewterLabNerdScript:
 	end
 
 .JustGotKabuto:
-	writetext JustGotKabutoText
+	writetext PewterLabFinalText
 	waitbutton
 	closetext
 	end
@@ -52,8 +50,7 @@ PewterLabNerdScript:
 
 .ExcitedToSee:
     writetext PewterNerdExcitedText
-	waitbutton
-	closetext
+	promptbutton
 	end
 
 .WrongPokemon:
@@ -64,6 +61,11 @@ PewterLabNerdScript:
 
 .CorrectPokemon:
     writetext PewterCorrectPokeText
+	promptbutton
+	end
+
+.ShowedAllPewter:
+    writetext PewterFinalFinalText
 	waitbutton
 	closetext
 	end
@@ -108,8 +110,8 @@ PewterLabNerdScript:
 	end
 
 PewterPartyFullText:
-    text "PACH: Your party"
-	line "is full!"
+    text "PACH: You don't"
+	line "want to train it?"
 	done
 
 PewterLabBusyText:
@@ -117,12 +119,6 @@ PewterLabBusyText:
 	line "doing here, kid?"
 	cont "Me and my STARYU"
 	cont "are working."
-	done
-
-JustGotKabutoText:
-    text "PACH: Was KABUTO"
-	line "able evolve with"
-	cont "with you?"
 	done
 
 PewterLabNerdGivesKabuto:
@@ -145,11 +141,11 @@ PewterLabNerdGivesKabuto:
 	para "We just discovered"
 	line "that fossils could"
 
-	para "be regenerated, but"
+	para "be regenerated but"
 	line "can they evolve?"
 
 	para "Could you find"
-	cont "this out for me?" 
+	line "this out for me?" 
 	done
 
 PewterLabFinalText:
@@ -179,7 +175,7 @@ PewterDontHaveText:
 
 PewterNerdExcitedText:
     text "PACH: Really?!"
-	line "You are THE BEST!"
+	line "You are the best!"
 	done
 
 PewterCorrectPokeText:
@@ -190,7 +186,15 @@ PewterCorrectPokeText:
 PewterLabNerdGivesOmanyte:
     text "PACH: You should"
 	line "train this little"
-	cont "one too."
+	cont "one too!"
+	done
+
+PewterFinalFinalText:
+    text "PACH: Me and my"
+	line "friend STARYU are"
+	para "working hard to"
+	line "open a new Lab in"
+	cont "the future." 
 	done
 
 PewterStaryuScript:
@@ -217,5 +221,5 @@ PewterLab_MapEvents:
 	def_bg_events
 	
 	def_object_events
-	object_event  9,  5, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, PewterLabNerdScript, -1
+	object_event  9,  5, SPRITE_SCIENTIST, SPRITEMOVEDATA_WANDER, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, PewterLabNerdScript, -1
     object_event  7,  4, SPRITE_STARMIE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PewterStaryuScript, -1

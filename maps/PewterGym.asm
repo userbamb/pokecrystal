@@ -107,7 +107,7 @@ BrockWinLossText:
 	para "You're stronger"
 	line "than I expected…"
 
-	para "Go ahead--take"
+	para "Go ahead and take"
 	line "this BADGE."
 	done
 
