@@ -353,3 +353,12 @@ INCBIN "data/tilesets/cerucave_metatiles.bin"
 
 TilesetCerucaveColl::
 INCLUDE "data/tilesets/cerucave_collision.asm"
+
+TilesetKantoModernGFX::
+INCBIN "gfx/tilesets/kanto_modern.2bpp.lz"
+
+TilesetKantoModernMeta::
+INCBIN "data/tilesets/kanto_modern_metatiles.bin"
+
+TilesetKantoModernColl::
+INCLUDE "data/tilesets/kanto_modern_collision.asm"

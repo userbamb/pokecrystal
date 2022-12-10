@@ -114,6 +114,9 @@ INCLUDE "gfx/tilesets/safari_palette_map.asm"
 TilesetCerucavePalMap:
 INCLUDE "gfx/tilesets/cerucave_palette_map.asm"
 
+TilesetKantoModernPalMap:
+INCLUDE "gfx/tilesets/kanto_modern_palette_map.asm"
+
 
 
 MapGroupPalettes: ; unreferenced

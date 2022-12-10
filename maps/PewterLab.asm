@@ -170,7 +170,7 @@ AskKabutoEvolution:
 	done
 
 PewterDontHaveText:
-    text "PACH: ??"
+    text "PACH: What?"
 	done
 
 PewterNerdExcitedText:
@@ -180,7 +180,7 @@ PewterNerdExcitedText:
 
 PewterCorrectPokeText:
     text "PACH: WOW! So"
-	line "that's KABUTOPS!"
+	line "that's KABUTOPS."
 	done
 
 PewterLabNerdGivesOmanyte:
@@ -193,8 +193,7 @@ PewterFinalFinalText:
     text "PACH: Me and my"
 	line "friend STARYU are"
 	para "working hard to"
-	line "open a new Lab in"
-	cont "the future." 
+	line "restore the LAB."
 	done
 
 PewterStaryuScript:

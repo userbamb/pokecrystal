@@ -52,4 +52,5 @@ Tilesets::
 	tileset TilesetAerodactylWordRoom
 	tileset TilesetSafari
 	tileset TilesetCerucave
+	tileset TilesetKantoModern 
 	assert_table_length NUM_TILESETS + 1
