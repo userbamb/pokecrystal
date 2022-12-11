@@ -53,7 +53,10 @@ CeladonDeptStore3FYoungsterText:
 
 	para "should use this TM"
 	line "on…"
-	done
+
+	para "Lucky for me,"
+	line "it's reusable!"
+ 	done
 
 CeladonDeptStore3FGameboyKid1Text:
 	text "Uh-oh! I traded my"
