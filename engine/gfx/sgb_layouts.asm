@@ -45,6 +45,7 @@ SGBLayoutJumptable:
 	dw .SGB_MagnetTrain
 	dw .SGB_PackPals
 	dw .SGB_TrainerCard
+	dw .SGB_TrainerCardKanto
 	dw .SGB_PokedexUnownMode
 	dw .SGB_BillsPC
 	dw .SGB_UnownPuzzle
