@@ -25,7 +25,7 @@ ItemDescriptions:
 	dw FireStoneDesc
 	dw ThunderStoneDesc
 	dw WaterStoneDesc
-	dw TeruSama2Desc
+	dw GogglesDesc
 	dw HPUpDesc
 	dw ProteinDesc
 	dw IronDesc
@@ -45,12 +45,12 @@ ItemDescriptions:
 	dw SuperRepelDesc
 	dw MaxRepelDesc
 	dw DireHitDesc
-	dw TeruSama3Desc
+	dw RubberBandDesc
 	dw FreshWaterDesc
 	dw SodaPopDesc
 	dw LemonadeDesc
 	dw XAttackDesc
-	dw TeruSama4Desc
+	dw CoolCharmDesc
 	dw XDefendDesc
 	dw XSpeedDesc
 	dw XSpecialDesc
@@ -90,7 +90,7 @@ ItemDescriptions:
 	dw BigMushroomDesc
 	dw SilverPowderDesc
 	dw BluApricornDesc
-	dw TeruSama6Desc
+	dw StrangeRootesc
 	dw AmuletCoinDesc
 	dw YlwApricornDesc
 	dw GrnApricornDesc
@@ -100,7 +100,7 @@ ItemDescriptions:
 	dw WhtApricornDesc
 	dw BlackbeltDesc
 	dw BlkApricornDesc
-	dw TeruSama7Desc
+	dw FidgetDesc
 	dw PnkApricornDesc
 	dw BlackGlassesDesc
 	dw SlowpokeTailDesc
@@ -354,8 +354,9 @@ WaterStoneDesc:
 	db   "Evolves certain"
 	next "kinds of #MON.@"
 
-TeruSama2Desc:
-	db   "?@"
+GogglesDesc:
+	db   "Prevents falling"
+	next "asleep (HOLD)@"
 
 HPUpDesc:
 	db   "Raises the HP of"
@@ -433,8 +434,9 @@ DireHitDesc:
 	db   "Ups critical hit"
 	next "ratio. (1 BTL)@"
 
-TeruSama3Desc:
-	db   "?@"
+RubberBandDesc:
+	db   "Prevents paraly-"
+	next "sys. (HOLD)@"
 
 FreshWaterDesc:
 	db   "Restores #MON"
@@ -452,8 +454,9 @@ XAttackDesc:
 	db   "Raises ATTACK."
 	next "(1 BTL)@"
 
-TeruSama4Desc:
-	db   "?@"
+CoolCharmDesc:
+	db   "Prevents burn."
+	next "(HOLD)@"
 
 XDefendDesc:
 	db   "Raises DEFENSE."
@@ -608,8 +611,9 @@ SilverPowderDesc:
 BluApricornDesc:
 	db   "A blue APRICORN.@"
 
-TeruSama6Desc:
-	db   "?@"
+StrangeRootDesc:
+	db   "Prevents poison-"
+	next "ing. (HOLD)@"
 
 AmuletCoinDesc:
 	db   "Doubles monetary"
@@ -644,8 +648,9 @@ BlkApricornDesc:
 	db   "A black APRICORN."
 	next "@"
 
-TeruSama7Desc:
-	db   "?@"
+FidgetDesc:
+	db   "Prevents confusion."
+    next "@"
 
 PnkApricornDesc:
 	db   "A pink APRICORN."
