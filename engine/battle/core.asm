@@ -6049,6 +6049,15 @@ LoadEnemyMon:
 	jr .UpdateDVs
 
 .GenerateDVs:
+;checkswarm
+	ld hl, wDailyFlags1
+	bit DAILYFLAGS1_SWARM_F, [hl]
+	jr z, .skipshine
+	
+	farcall GenerateSwarmShiny
+	jr .next
+
+.skipshine:
 ; Generate new random DVs
 	call BattleRandom
 	ld b, a
@@ -6062,6 +6071,7 @@ LoadEnemyMon:
 	ld [hli], a
 	ld [hl], c
 
+.next
 ; We've still got more to do if we're dealing with a wild monster
 	ld a, [wBattleMode]
 	dec a

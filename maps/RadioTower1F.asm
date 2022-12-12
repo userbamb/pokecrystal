@@ -5,11 +5,90 @@
 	const RADIOTOWER1F_ROCKET
 	const RADIOTOWER1F_LUCKYNUMBERMAN
 	const RADIOTOWER1F_CARD_WOMAN
+    const RADIOTOWER1F_SWARM_DUDE
 
 RadioTower1F_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+
+SwarmGrampsScript:
+	faceplayer
+	opentext
+	checkflag ENGINE_SWARM
+	iftrue .skiprandomswarm
+	random 3
+	ifequal 0, .mareep
+	ifequal 1, .yanma
+    ifequal 2, .remoraid
+
+.mareep
+	setflag ENGINE_SWARM
+	swarm ROUTE_43
+	writetext SwarmMareepText
+	waitbutton
+	closetext
+	end
+
+.yanma
+	setflag ENGINE_SWARM
+	swarm ROUTE_35
+	writetext SwarmYanmaText
+	waitbutton
+	closetext
+	end
+
+.remoraid
+	setflag ENGINE_SWARM
+	swarm ROUTE_32
+	writetext SwarmRemoraidText
+	waitbutton
+	closetext
+	end
+
+.skiprandomswarm
+	writetext SkipSwarmText
+	waitbutton
+	closetext
+	end
+
+SwarmMareepText:
+	text "Let me see…"
+	line "What did the news"
+	cont "say?"
+
+	para "Oh yes! There's a"
+	line "swarm of MAREEP"
+	cont "on ROUTE 43."
+	done
+	
+SwarmYanmaText:
+	text "Let me see…"
+	line "What did the news"
+	cont "say?"
+
+	para "Oh yes! There's a"
+	line "swarm of YANMA"
+	cont "on ROUTE 35."
+	done
+	
+SwarmRemoraidsText:
+	text "Let me see…"
+	line "What did the news"
+	cont "say?"
+
+	para "Oh yes! There's a"
+	line "swarm of REMORAID"
+	cont "on ROUTE 32."
+	done
+
+SkipSwarmText:
+	text "Often #MON"
+	line "of unusual colors"
+
+	para "are reported in"
+	line "swarms."
+	done
 
 RadioTower1FReceptionistScript:
 	faceplayer
@@ -484,6 +563,7 @@ RadioTower1F_MapEvents:
 	bg_event 13,  0, BGEVENT_READ, RadioTower1FLuckyChannelSign
 
 	def_object_events
+	object_event  2,  1, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, SwarmGrampsScript, -1
 	object_event  5,  6, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RadioTower1FReceptionistScript, -1
 	object_event 16,  4, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RadioTower1FLassScript, EVENT_GOLDENROD_CITY_CIVILIANS
 	object_event 15,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, RadioTower1FYoungsterScript, EVENT_GOLDENROD_CITY_CIVILIANS
