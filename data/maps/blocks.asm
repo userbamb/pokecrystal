@@ -332,7 +332,6 @@ VioletMart_Blocks:
 VermilionMart_Blocks:
 PewterMart_Blocks:
 FuchsiaMart_Blocks:
-LavenderMart_Blocks:
 ViridianMart_Blocks:
 SaffronMart_Blocks:
 CherrygroveMart_Blocks:
@@ -341,8 +340,8 @@ CherrygroveMart_Blocks:
 Route10North_Blocks:
 	INCBIN "maps/Route10North.blk"
 
-BetaLakeOfRage_Blocks: ; unreferenced
-	INCBIN "maps/unused/BetaLakeOfRage.blk"
+LavenderPokecenter1F_Blocks:
+    INCBIN "maps/Pokecenter1FBig.blk"
 
 OlivinePokecenter1F_Blocks:
 MahoganyPokecenter1F_Blocks:
@@ -358,7 +357,6 @@ GoldenrodPokecenter1F_Blocks:
 VermilionPokecenter1F_Blocks:
 PewterPokecenter1F_Blocks:
 FuchsiaPokecenter1F_Blocks:
-LavenderPokecenter1F_Blocks:
 SilverCavePokecenter1F_Blocks:
 CeladonPokecenter1F_Blocks:
 CianwoodPokecenter1F_Blocks:
@@ -1078,3 +1076,4 @@ ViridianForestHouse_Blocks:
 
 PewterLab_Blocks:
     INCBIN "maps/PewterLab.blk"
+
