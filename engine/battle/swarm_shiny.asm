@@ -5,11 +5,11 @@ GenerateSwarmShiny:
 	ld c, a
 	call GetWorldMapLocation
     cp LANDMARK_ROUTE_35
-    jz z, .yanma
+    jr z, .yanma
     cp LANDMARK_DARK_CAVE
 	jr z, .dunsparce
     cp LANDMARK_ROUTE_32
-	jr z, .qwilfish
+	jr z, .remoraid
     jr .skipshine
 
 .yanma
@@ -38,7 +38,7 @@ GenerateSwarmShiny:
 	call Random
 	cp 30 ; adjust to desired percentage
 	jr nc, .skipshine
-	ld b, ATKDEFDV_SHINYF
+	ld b, ATKDEFDV_SHINY
 	ld c, SPDSPCDV_SHINY
 	jr .UpdateDVs
 

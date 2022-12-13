@@ -72,7 +72,7 @@ SwarmYanmaText:
 	cont "on ROUTE 35."
 	done
 	
-SwarmRemoraidsText:
+SwarmRemoraidText:
 	text "Let me see…"
 	line "What did the news"
 	cont "say?"

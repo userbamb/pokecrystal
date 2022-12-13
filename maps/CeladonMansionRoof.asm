@@ -12,18 +12,18 @@ CeladonMansionRoof_MapScripts:
     callback MAPCALLBACK_OBJECTS, CeladonMansionZapdosCallback
     callback MAPCALLBACK_OBJECTS, CeladonMansionMoltresCallback
 
-CeladonMansionarticunoCallback:
+CeladonMansionArticunoCallback:
     checkevent EVENT_GOT_ARTICUNO
-	iftrue .Nospawn
+	iftrue .NoAppear1
 	readvar VAR_WEEKDAY
-	ifequal MONDAY, .Appear
-	sjump .NoAppear
+	ifequal MONDAY, .Appear1
+	sjump .NoAppear1
 
-.Appear:
+.Appear1:
 	appear CELADONMANSIONROOF_ARTICUNO
 	endcallback
 
-.NoAppear:
+.NoAppear1:
 	disappear CELADONMANSIONROOF_ARTICUNO
 	endcallback
 
@@ -48,16 +48,16 @@ ArticunoText:
 
 CeladonMansionZapdosCallback:
     checkevent EVENT_GOT_ZAPDOS
-	iftrue .Nospawn
+	iftrue .NoAppear2
 	readvar VAR_WEEKDAY
-	ifequal FRIDAY, .Appear
-	sjump .NoAppear
+	ifequal FRIDAY, .Appear2
+	sjump .NoAppear2
 
-.Appear:
+.Appear2:
 	appear CELADONMANSIONROOF_ZAPDOS
 	endcallback
 
-.NoAppear:
+.NoAppear2:
 	disappear CELADONMANSIONROOF_ZAPDOS
 	endcallback
 
@@ -82,16 +82,16 @@ ZapdosText:
 
 CeladonMansionMoltresCallback:
     checkevent EVENT_GOT_MOLTRES
-	iftrue .Nospawn
+	iftrue .NoAppear3
 	readvar VAR_WEEKDAY
-	ifequal SUNDAY, .Appear
-	sjump .NoAppear
+	ifequal SUNDAY, .Appear3
+	sjump .NoAppear3
 
-.Appear:
+.Appear3:
 	appear CELADONMANSIONROOF_MOLTRES
 	endcallback
 
-.NoAppear:
+.NoAppear3:
 	disappear CELADONMANSIONROOF_MOLTRES
 	endcallback
 
@@ -139,7 +139,7 @@ CeladonMansionRoof_MapEvents:
 	bg_event  6,  1, BGEVENT_LEFT, CeladonMansionRoofGraffiti
 
 	def_object_events
-	object_event 5, 10, SPRITE_ARTICUNO, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Articuno, 0
-    object_event 5, 10, SPRITE_ZAPDOS, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, Zapdos, 0
+	object_event 5, 10, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Articuno, 0
+    object_event 5, 10, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, Zapdos, 0
 	object_event 5, 10, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Moltres, 0
     
