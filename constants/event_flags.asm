@@ -1484,8 +1484,10 @@
 	const EVENT_FOUGHT_MEWTWO
 	const EVENT_CERULEANB1F_MEWTWO
 	const EVENT_VIRIDIAN_FOREST_REVIVE
-	
-; Unused: next 28 events
+	const EVENT_GOT_ARTICUNO
+	const EVENT_GOT_ZAPDOS
+	const EVENT_GOT_MOLTRES
+; Unused: next 25 events
 
 	const_next 2048
 DEF NUM_EVENTS EQU const_value ; 800
