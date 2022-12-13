@@ -1,6 +1,6 @@
 BikeShopPhoneCallerText:
 	text "Hi, <PLAY_G>!"
-	line "Our BICYCLE sales"
+	line "SKATEBOARD sales"
 
 	para "have gone through"
 	line "the roof!"
@@ -8,12 +8,12 @@ BikeShopPhoneCallerText:
 	para "We owe it all to"
 	line "your advertising"
 
-	para "by riding around"
-	line "on our BICYCLE."
+	para "by going around"
+	line "on our SKATEBOARD."
 
 	para "As our way of say-"
 	line "ing thanks, please"
 
-	para "keep that BICYCLE."
+	para "keep that one."
 	line "Thanks again!"
 	done

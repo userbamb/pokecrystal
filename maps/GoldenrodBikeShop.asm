@@ -49,12 +49,12 @@ GoldenrodBikeShopClerkIntroText:
 	text "…sigh… I moved"
 	line "here, but I can't"
 
-	para "sell my BICYCLES."
+	para "sell SKATEBOARDS."
 	line "Why is that?"
 
 	para "Could you ride a"
-	line "BICYCLE and adver-"
-	cont "tise for me?"
+	line "SKATEBOARD and"
+	cont "advertise for me?"
 	done
 
 GoldenrodBikeShopClerkAgreedText:
@@ -64,16 +64,16 @@ GoldenrodBikeShopClerkAgreedText:
 	line "and phone number,"
 
 	para "and I'll loan you"
-	line "a BICYCLE."
+	line "a SKATEBOARD."
 	done
 
 BorrowedABicycleText:
 	text "<PLAYER> borrowed a"
-	line "BICYCLE."
+	line "SKATEBOARD."
 	done
 
 GoldenrodBikeShopClerkFirstRateBikesText:
-	text "My BICYCLES are"
+	text "My SKATEBOARDS are"
 	line "first-rate! You"
 
 	para "can ride them"
@@ -90,7 +90,7 @@ GoldenrodBikeShopJustReleasedCompactBikeText:
 	text "Just released!"
 
 	para "First-rate compact"
-	line "BICYCLES!"
+	line "SKATEBOARDS!"
 	done
 
 GoldenrodBikeShopBicycleText:

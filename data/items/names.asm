@@ -6,7 +6,7 @@ ItemNames::
 	li "GREAT BALL"
 	li "# BALL"
 	li "TERU-SAMA"
-	li "BICYCLE"
+	li "SKATEBOARD"
 	li "MOON STONE"
 	li "ANTIDOTE"
 	li "BURN HEAL"

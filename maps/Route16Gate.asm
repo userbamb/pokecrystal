@@ -14,6 +14,7 @@ Route16GateOfficerScript:
 	jumptextfaceplayer Route16GateOfficerText
 
 Route16GateBicycleCheck:
+    showemote EMOTE_SHOCK, ROUTE17ROUTE18GATE_OFFICER, 5
 	checkitem BICYCLE
 	iffalse .NoBicycle
 	end
