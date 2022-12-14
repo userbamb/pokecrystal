@@ -8,16 +8,20 @@ CeladonMansionRoof_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
-	callback MAPCALLBACK_OBJECTS, CeladonMansionArticunoCallback
+	callback MAPCALLBACK_OBJECTS, CeladonArticunoCallback
 
-CeladonMansionArticunoCallback:
-	checkevent EVENT_FOUGHT_ARTICUNO
-	iftrue .NoAppear
-	appear CELADONMANSIONROOF_ARTICUNO 
+CeladonArticunoCallback:
+    
+	checktime MORN
+	iftrue .Appear
 	endcallback
 
 .NoAppear:
 	disappear CELADONMANSIONROOF_ARTICUNO
+	endcallback
+
+.Appear:
+	appear CELADONMANSIONROOF_ARTICUNO 
 	endcallback
 
 Articuno:
@@ -29,7 +33,7 @@ Articuno:
 	closetext
 	setevent EVENT_FOUGHT_ARTICUNO
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
-	loadwildmon ARTICUNO, 10
+	loadwildmon ARTICUNO, 3
 	startbattle
 	disappear CELADONMANSIONROOF_ARTICUNO
 	reloadmapafterbattle
@@ -64,5 +68,5 @@ CeladonMansionRoof_MapEvents:
 	bg_event  6,  1, BGEVENT_LEFT, CeladonMansionRoofGraffiti
 
 	def_object_events
-	object_event 4, 4, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Articuno, EVENT_CELADON_MANSION_ROOF_ARTICUNO
+	object_event 4, 4, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Articuno, EVENT_FOUGHT_ARTICUNO
   
