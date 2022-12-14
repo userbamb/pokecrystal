@@ -9,21 +9,14 @@ CeladonMansionRoof_MapScripts:
 
 	def_callbacks
 	callback MAPCALLBACK_OBJECTS, CeladonMansionArticunoCallback
-    callback MAPCALLBACK_OBJECTS, CeladonMansionZapdosCallback
-    callback MAPCALLBACK_OBJECTS, CeladonMansionMoltresCallback
 
 CeladonMansionArticunoCallback:
-    checkevent EVENT_GOT_ARTICUNO
-	iftrue .NoAppear1
-	readvar VAR_WEEKDAY
-	ifequal MONDAY, .Appear1
-	sjump .NoAppear1
-
-.Appear1:
-	appear CELADONMANSIONROOF_ARTICUNO
+	checkevent EVENT_FOUGHT_ARTICUNO
+	iftrue .NoAppear
+	appear CELADONMANSIONROOF_ARTICUNO 
 	endcallback
 
-.NoAppear1:
+.NoAppear:
 	disappear CELADONMANSIONROOF_ARTICUNO
 	endcallback
 
@@ -34,9 +27,9 @@ Articuno:
 	cry ARTICUNO
 	pause 15
 	closetext
-	setevent EVENT_GOT_ARTICUNO
+	setevent EVENT_FOUGHT_ARTICUNO
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
-	loadwildmon ARTICUNO, 60
+	loadwildmon ARTICUNO, 10
 	startbattle
 	disappear CELADONMANSIONROOF_ARTICUNO
 	reloadmapafterbattle
@@ -44,74 +37,6 @@ Articuno:
 
 ArticunoText:
 	text "Pyaaas!"
-	done
-
-CeladonMansionZapdosCallback:
-    checkevent EVENT_GOT_ZAPDOS
-	iftrue .NoAppear2
-	readvar VAR_WEEKDAY
-	ifequal FRIDAY, .Appear2
-	sjump .NoAppear2
-
-.Appear2:
-	appear CELADONMANSIONROOF_ZAPDOS
-	endcallback
-
-.NoAppear2:
-	disappear CELADONMANSIONROOF_ZAPDOS
-	endcallback
-
-Zapdos:
-	faceplayer
-	opentext
-	writetext ZapdosText
-	cry ZAPDOS
-	pause 15
-	closetext
-	setevent EVENT_GOT_ZAPDOS
-	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
-	loadwildmon ZAPDOS, 60
-	startbattle
-	disappear CELADONMANSIONROOF_ZAPDOS
-	reloadmapafterbattle
-	end
-
-ZapdosText:
-	text "Tyaaas!"
-	done
-
-CeladonMansionMoltresCallback:
-    checkevent EVENT_GOT_MOLTRES
-	iftrue .NoAppear3
-	readvar VAR_WEEKDAY
-	ifequal SUNDAY, .Appear3
-	sjump .NoAppear3
-
-.Appear3:
-	appear CELADONMANSIONROOF_MOLTRES
-	endcallback
-
-.NoAppear3:
-	disappear CELADONMANSIONROOF_MOLTRES
-	endcallback
-
-Moltres:
-	faceplayer
-	opentext
-	writetext MoltresText
-	cry MOLTRES
-	pause 15
-	closetext
-	setevent EVENT_GOT_MOLTRES
-	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
-	loadwildmon MOLTRES, 60
-	startbattle
-	disappear CELADONMANSIONROOF_MOLTRES
-	reloadmapafterbattle
-	end
-
-MoltresText:
-	text "Nyaaas!"
 	done
 
 CeladonMansionRoofGraffiti:
@@ -139,7 +64,5 @@ CeladonMansionRoof_MapEvents:
 	bg_event  6,  1, BGEVENT_LEFT, CeladonMansionRoofGraffiti
 
 	def_object_events
-	object_event 5, 10, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Articuno, 0
-    object_event 5, 10, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, Zapdos, 0
-	object_event 5, 10, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Moltres, 0
-    
+	object_event 4, 4, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Articuno, EVENT_CELADON_MANSION_ROOF_ARTICUNO
+  

@@ -33,7 +33,7 @@ Mewtwo:
 	end
 
 MewtwoText:
-	text "YOU SURE?!"
+	text "MEEEEWWW"
 	done
 
 CeruleanMewtwo_MapEvents:
