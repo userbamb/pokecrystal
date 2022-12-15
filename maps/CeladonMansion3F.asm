@@ -191,10 +191,10 @@ CeladonMansion3F_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  0,  0, CELADON_MANSION_ROOF, 1
+	warp_event  0,  0, CELADON_MANSION_ROOFL, 1
 	warp_event  1,  0, CELADON_MANSION_2F, 2
 	warp_event  6,  0, CELADON_MANSION_2F, 3
-	warp_event  7,  0, CELADON_MANSION_ROOF, 2
+	warp_event  7,  0, CELADON_MANSION_ROOFR, 1
 
 	def_coord_events
 

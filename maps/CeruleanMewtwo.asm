@@ -10,7 +10,7 @@ CeruleanMewtwo_MapScripts:
 CeruleanMewtwoCallback:
 	checkevent EVENT_FOUGHT_MEWTWO
 	iftrue .NoAppear
-	appear CERULEANMEWTWO_MEWTWO
+	appear CERULEANMEWTWO_MEWTWO 
 	endcallback
 
 .NoAppear:
@@ -33,7 +33,7 @@ Mewtwo:
 	end
 
 MewtwoText:
-	text "MEEEEWWW"
+	text "MEEEEWWW!"
 	done
 
 CeruleanMewtwo_MapEvents:

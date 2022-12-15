@@ -627,7 +627,8 @@ ENDM
 	map_attributes CeladonMansion1F, CELADON_MANSION_1F, $00, 0
 	map_attributes CeladonMansion2F, CELADON_MANSION_2F, $00, 0
 	map_attributes CeladonMansion3F, CELADON_MANSION_3F, $00, 0
-	map_attributes CeladonMansionRoof, CELADON_MANSION_ROOF, $01, 0
+	map_attributes CeladonMansionRoofR, CELADON_MANSION_ROOFR, $01, 0
+	map_attributes CeladonMansionRoofL, CELADON_MANSION_ROOFL, $01, 0
 	map_attributes CeladonMansionRoofHouse, CELADON_MANSION_ROOF_HOUSE, $00, 0
 	map_attributes CeladonPokecenter1F, CELADON_POKECENTER_1F, $00, 0
 	map_attributes CeladonPokecenter2FBeta, CELADON_POKECENTER_2F_BETA, $00, 0
