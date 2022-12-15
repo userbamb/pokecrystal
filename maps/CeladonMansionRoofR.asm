@@ -1,17 +1,14 @@
 	object_const_def
-	const CELADONMANSIONROOF_ARTICUNO
-	const CELADONMANSIONROOF_ZAPDOS
-	const CELADONMANSIONROOF_MOLTRES
 
-CeladonMansionRoof_MapScripts:
+CeladonMansionRoofR_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
 
-CeladonMansionRoofGraffiti:
-	jumptext CeladonMansionRoofGraffitiText
+CeladonMansionRoofRGraffiti:
+	jumptext CeladonMansionRoofRGraffitiText
 
-CeladonMansionRoofGraffitiText:
+CeladonMansionRoofRGraffitiText:
 	text "There's graffiti"
 	line "on the wall…"
 
@@ -19,7 +16,7 @@ CeladonMansionRoofGraffitiText:
 	line "moustache!"
 	done
 
-CeladonMansionRoof_MapEvents:
+CeladonMansionRoofR_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
@@ -30,6 +27,6 @@ CeladonMansionRoof_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  6,  1, BGEVENT_LEFT, CeladonMansionRoofGraffiti
+	bg_event  6,  1, BGEVENT_LEFT, CeladonMansionRoofRGraffiti
 
 	def_object_events

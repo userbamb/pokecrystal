@@ -422,7 +422,7 @@ TinTower1FSage4Text1:
 	line "TOWER!"
 	done
 
-1FSage5Text1:
+TinTower1FSage5Text1:
 	text "This will protect"
 	line "you. Take it."
 	done
