@@ -10,7 +10,26 @@ CeladonMansion1F_MapScripts:
 	def_callbacks
 
 CeladonMansionManager:
-	jumptextfaceplayer CeladonMansionManagerText
+    faceplayer
+	opentext
+    checkevent EVENT_GOT_ROOF_KEY
+	iftrue .givekey
+	writetext CeladonMansionManagerText
+	waitbutton
+	end
+.givekey:
+    checkevent EVENT_GOT_CHARMANDER
+	iffalse .gotkey
+	writetext CeladonMansionManagerCharText
+	promptbutton
+	verbosegiveitem ROOF_KEY
+	setevent EVENT_GOT_ROOF_KEY
+	waitbutton
+	end
+.gotkey
+    writetext CeladonMansionManagerText
+	waitbutton
+	end
 
 CeladonMansion1FMeowth:
 	opentext

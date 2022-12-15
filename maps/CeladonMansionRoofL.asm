@@ -3,7 +3,7 @@
 	const CELADONMANSIONROOF_ZAPDOS
 	const CELADONMANSIONROOF_MOLTRES
 
-CeladonMansionRoof_MapScripts:
+CeladonMansionRoofL_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
@@ -114,7 +114,7 @@ CeladonMansionRoofGraffitiText:
 	line "moustache!"
 	done
 
-CeladonMansionRoof_MapEvents:
+CeladonMansionRoofL_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events

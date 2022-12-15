@@ -8,6 +8,44 @@ CeladonMansion3F_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+    callback MAPCALLBACK_TILES, CeladonMansionRoofKeyCallback
+
+CeladonMansionRoofKeyCallback:
+	checkevent EVENT_USED_ROOF_KEY
+	iffalse .LockRoofDoor
+	endcallback
+
+.LockRoofDoor:
+	changeblock 0, 0, $3a ; locked door
+	endcallback
+
+RoofDoorScript::
+	opentext
+	checkevent EVENT_USED_ROOF_KEY
+	iftrue .Open
+	checkitem ROOF_KEY
+	iftrue .Unlock
+	writetext RoofDoorsLockedText
+	waitbutton
+	closetext
+	end
+
+.Unlock:
+	playsound SFX_TRANSACTION
+	writetext RoofKeyOpenedDoorText
+	waitbutton
+	closetext
+	changeblock 0, 0, $15 ; unlocked door
+	reloadmappart
+	closetext
+	setevent EVENT_USED_ROOF_KEY
+	end
+
+.Open:
+	writetext GoldenrodUndergroundTheDoorIsOpenText
+	waitbutton
+	closetext
+	end
 
 GameFreakGameDesignerScript:
 	faceplayer
@@ -194,7 +232,7 @@ CeladonMansion3F_MapEvents:
 	warp_event  0,  0, CELADON_MANSION_ROOFL, 1
 	warp_event  1,  0, CELADON_MANSION_2F, 2
 	warp_event  6,  0, CELADON_MANSION_2F, 3
-	warp_event  7,  0, CELADON_MANSION_ROOFR, 1
+	warp_event  7,  0, CELADON_MANSION_ROOFR, 2
 
 	def_coord_events
 

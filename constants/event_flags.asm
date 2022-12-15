@@ -273,6 +273,7 @@
 	const EVENT_FOUGHT_ARTICUNO
 	const EVENT_FOUGHT_ZAPDOS
 	const EVENT_FOUGHT_MOLTRES
+	const EVENT_USED_ROOF_KEY
 ; Unused: next 337 events
 
 	const_next 600
