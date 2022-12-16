@@ -3,6 +3,7 @@ _RoofKey:
 	ld a, [wMapGroup]
 	cp GROUP_CELADON_MANSION_3F
 	jr nz, .nope
+
 	ld a, [wMapNumber]
 	cp MAP_CELADON_MANSION_3F
 	jr nz, .nope
@@ -14,7 +15,7 @@ _RoofKey:
 	ld a, e
 	cp 4
 	jr nz, .nope
-; Let's use the Roof Key.
+; Let's use the Hub Key
 	ld hl, .RoofKeyScript
 	call QueueScript
 	ld a, TRUE
@@ -28,4 +29,4 @@ _RoofKey:
 
 .RoofKeyScript:
 	closetext
-	farsjump RoofKeySlotScript
+	farsjump RoofDoorScript

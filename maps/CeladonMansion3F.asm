@@ -142,6 +142,16 @@ GameFreakGameDesignerPauseForDiplomaText:
 	text "…"
 	done
 
+RoofDoorsLockedText:
+    text "This side of the"
+	line "roof is not acces-"
+	cont "sible."
+	done
+
+RoofKeyOpenedDoorText:
+    text "The door opened."
+	done
+
 GameFreakGameDesignerAfterDiplomaText:
 	text "The GRAPHIC ARTIST"
 	line "will print out a"
@@ -237,6 +247,7 @@ CeladonMansion3F_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event  0,  0, BGEVENT_READ, RoofDoorScript
 	bg_event  5,  8, BGEVENT_UP, CeladonMansion3FDevRoomSign
 	bg_event  4,  3, BGEVENT_UP, CeladonMansion3FDrawing
 	bg_event  1,  6, BGEVENT_UP, CeladonMansion3FGameProgram

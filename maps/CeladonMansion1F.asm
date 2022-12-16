@@ -12,25 +12,24 @@ CeladonMansion1F_MapScripts:
 CeladonMansionManager:
     faceplayer
 	opentext
-    checkevent EVENT_GOT_ROOF_KEY
-	iftrue .givekey
-	writetext CeladonMansionManagerText
-	waitbutton
+	checkevent EVENT_GOT_ROOF_KEY
+	iftrue .GotKeys
+	writetext CeladonMansionManagerHoText
+	promptbutton
+	checkevent EVENT_FOUGHT_HO_OH
+	iftrue .GiveKeys
+	closetext
 	end
-.givekey:
-    checkevent EVENT_GOT_CHARMANDER
-	iffalse .gotkey
+
+.GiveKeys:
 	writetext CeladonMansionManagerCharText
 	promptbutton
 	verbosegiveitem ROOF_KEY
 	setevent EVENT_GOT_ROOF_KEY
+.GotKeys:
+	writetext CeladonMansionManagerText
 	waitbutton
-	end
-.gotkey
-    writetext CeladonMansionManagerText
-	waitbutton
-	end
-
+    
 CeladonMansion1FMeowth:
 	opentext
 	writetext CeladonMansion1FMeowthText
@@ -61,12 +60,45 @@ CeladonMansionManagersSuiteSign:
 CeladonMansion1FBookshelf:
 	jumpstd PictureBookshelfScript
 
+CeladonMansionManagerCharText:
+    text "That is incredible…"
+	line "I knew that one day"
+
+	para "someone else would"
+	line "have seen "
+
+	para "HO-OH too…"
+	line "Take this, I think"
+    
+	para "you are strong"
+	line "enough to go on"
+	
+	text "the roof…"
+	line "But be careful!"
+	done
+
+CeladonMansionManagerHoText:
+    text "When I was"
+	line "younger…"
+
+	para "I once saw a"
+	line "#MON of rainbow"
+
+	para "colors flying"
+    line "above this town…"
+
+	para "A legend?…"
+	line "I know that what"
+
+	cont "I saw was real…"
+	done
+
 CeladonMansionManagerText:
 	text "My dear #MON"
 	line "keep me company,"
 
 	para "so I don't ever"
-	line "feel lonely."
+	line "feel lonely…"
 
 	para "MEOWTH even brings"
 	line "money home."

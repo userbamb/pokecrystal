@@ -34,30 +34,30 @@ CeladonMansionRoofHousePharmacistScript:
 	end
 
 CeladonMansionRoofHousePharmacistIntroText:
-	text "Let me recount a"
-	line "terrifying tale…"
+	text "Me and my GENGAR"
+	line "live here alone…"
 	done
 
 CeladonMansionRoofHousePharmacistNotNightText:
-	text "Then again, it's"
-	line "not as scary while"
+	text "Sometimes we get"
+	line "to take care of"
 
-	para "it's still light"
-	line "outside."
+	para "some injuried"
+	line "#MON outside…"
 
-	para "Come back after"
-	line "sunset, OK?"
+	para "They seem to"
+	line "trust just us…"
 	done
 
 CeladonMansionRoofHousePharmacistStoryText:
 	text "Once upon a time,"
 	line "there was a little"
 
-	para "boy who was given"
-	line "a new BICYCLE…"
+	para "boy who used to "
+	line "visit us… He"
 
-	para "He wanted to try"
-	line "it right away…"
+	para "wanted to become"
+	line "the CHAMPION…"
 
 	para "He was having so"
 	line "much fun that he"
@@ -65,26 +65,16 @@ CeladonMansionRoofHousePharmacistStoryText:
 	para "didn't notice the"
 	line "sun had set…"
 
-	para "While riding home"
+	para "He went outside"
 	line "in the pitch-black"
 
-	para "night, the bike"
-	line "suddenly slowed!"
+	para "night, and a"
+	line "#MON attacked him!"
 
-	para "The pedals became"
-	line "heavy!"
+	para "We were inside and"
+	line "only heard a loud"
 
-	para "When he stopped"
-	line "pedaling, the bike"
-
-	para "began slipping"
-	line "backwards!"
-
-	para "It was as if the"
-	line "bike were cursed"
-
-	para "and trying to drag"
-	line "him into oblivion!"
+	para "THUNDER!"
 
 	para "…"
 
@@ -92,12 +82,13 @@ CeladonMansionRoofHousePharmacistStoryText:
 
 	para "SHRIEEEEK!"
 
-	para "The boy had been"
-	line "riding uphill on"
-	cont "CYCLING ROAD!"
+	para "The boy never"
+	line "came back to visit"
+	cont "us…"
 
-	para "…"
-	line "Ba-dum ba-dum!"
+	para "Is he still alive?"
+	line "GENGAR misses him"
+    cont "sometimes…"
 
 	para "For listening so"
 	line "patiently, you may"
@@ -105,13 +96,13 @@ CeladonMansionRoofHousePharmacistStoryText:
 	done
 
 CeladonMansionRoofHousePharmacistCurseText:
-	text "TM03 is CURSE."
+    text "Me and my GENGAR"
+	line "live here alone…"
 
-	para "It's a terrifying"
-	line "move that slowly"
+	para "come visit us"
+	line "sometimes, if you"
 
-	para "whittles down the"
-	line "victim's HP."
+	cont "want!"
 	done
 
 CeladonMansionRoofHouse_MapEvents:

@@ -423,7 +423,6 @@ CeladonMansion2F_Blocks:
 CeladonMansion3F_Blocks:
 	INCBIN "maps/CeladonMansion3F.blk"
 
-CeladonMansionRoofR_Blocks:
 CeladonMansionRoofL_Blocks:
 	INCBIN "maps/CeladonMansionRoof.blk"
 

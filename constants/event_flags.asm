@@ -274,6 +274,7 @@
 	const EVENT_FOUGHT_ZAPDOS
 	const EVENT_FOUGHT_MOLTRES
 	const EVENT_USED_ROOF_KEY
+	const EVENT_GOT_ROOF_KEY
 ; Unused: next 337 events
 
 	const_next 600
