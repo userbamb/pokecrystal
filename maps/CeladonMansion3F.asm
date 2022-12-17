@@ -144,7 +144,7 @@ GameFreakGameDesignerPauseForDiplomaText:
 
 RoofDoorsLockedText:
     text "The roof is not"
-	cont "accessible."
+	line "accessible."
 	done
 
 RoofKeyOpenedDoorText:
