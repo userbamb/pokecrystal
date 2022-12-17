@@ -41,6 +41,7 @@ Oak:
 	writetext OakOpenMtSilverText
 	promptbutton
 	setevent EVENT_OPENED_MT_SILVER
+	setevent EVENT_OPENED_CERUCAVE
 	sjump .CheckPokedex
 
 .Complain:

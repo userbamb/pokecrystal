@@ -23,7 +23,7 @@ MewFirstSafariZoneCallback:
 	endcallback
 
 MewFoundScript:
-    showemote EMOTE_SHOCK, SAFARIZONENORTH_MEW, 15
+    showemote EMOTE_SHOCK, SAFARIZONENORTH_MEW, 10
 	cry MEW
 	waitsfx
 	playsound SFX_WARP_FROM

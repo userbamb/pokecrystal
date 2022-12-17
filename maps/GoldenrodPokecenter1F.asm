@@ -15,8 +15,8 @@ GoldenrodPokecenter1FNurseScript:
 	jumpstd PokecenterNurseScript
 
 GoldenrodPokecenter1F_GSBallSceneLeft:
-	readvar VAR_BADGES
-	ifequal NUM_BADGES, .gsball
+	checkevent EVENT_ENABLE_DIPLOMA_PRINTING
+	iftrue .gsball
 	end
 
 .gsball

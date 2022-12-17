@@ -143,9 +143,8 @@ GameFreakGameDesignerPauseForDiplomaText:
 	done
 
 RoofDoorsLockedText:
-    text "This side of the"
-	line "roof is not acces-"
-	cont "sible."
+    text "The roof is not"
+	cont "accessible."
 	done
 
 RoofKeyOpenedDoorText:
@@ -242,7 +241,6 @@ CeladonMansion3F_MapEvents:
 	warp_event  0,  0, CELADON_MANSION_ROOFL, 1
 	warp_event  1,  0, CELADON_MANSION_2F, 2
 	warp_event  6,  0, CELADON_MANSION_2F, 3
-	warp_event  7,  0, CELADON_MANSION_ROOFR, 2
 
 	def_coord_events
 

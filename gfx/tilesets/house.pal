@@ -10,8 +10,8 @@
 	RGB 07, 07, 07
 ; green
 	RGB 30, 28, 26
-	RGB 15, 20, 01
-	RGB 09, 13, 00
+	RGB 10, 21, 01
+	RGB 07, 14, 00
 	RGB 07, 07, 07
 ; water (blue)
 	RGB 30, 28, 26

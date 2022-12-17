@@ -3,11 +3,16 @@
 	const ROUTE4_LASS1
 	const ROUTE4_LASS2
 	const ROUTE4_POKE_BALL
+    const ROUTE4_SUPERNERD
 
 Route4_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+
+Route4SupernerdScript:
+    jumptextfaceplayer SuperNerd4ScriptText
+
 
 TrainerBirdKeeperHank:
 	trainer BIRD_KEEPER, HANK, EVENT_BEAT_BIRD_KEEPER_HANK, BirdKeeperHankSeenText, BirdKeeperHankBeatenText, 0, .Script
@@ -44,6 +49,9 @@ TrainerPicnickerSharon:
 
 MtMoonSquareSign:
 	jumptext MtMoonSquareSignText
+
+CeruleanCaveSign:
+    jumptext CeruleanCaveSignText
 
 Route4HPUp:
 	itemball HP_UP
@@ -118,6 +126,22 @@ MtMoonSquareSignText:
 	line "stairs."
 	done
 
+CeruleanCaveSignText:
+	text "CERULEAN CAVE"
+
+	para "Definition of"
+	line "vicious."
+	done
+
+SuperNerd4ScriptText:
+    text "I'm in charge of"
+	line "keeping this ent-"
+
+	para "rance off limits."
+	line "The CERULEAN CAVE"
+	cont "is dangerous…"
+	done
+
 Route4_MapEvents:
 	db 0, 0 ; filler
 
@@ -130,9 +154,12 @@ Route4_MapEvents:
 	def_bg_events
 	bg_event  3,  7, BGEVENT_READ, MtMoonSquareSign
 	bg_event 10,  3, BGEVENT_ITEM, Route4HiddenUltraBall
+	bg_event 39,  5, BGEVENT_READ, CeruleanCaveSign
 
 	def_object_events
 	object_event 17,  9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperHank, -1
 	object_event  9,  8, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerPicnickerHope, -1
 	object_event 21,  6, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerPicnickerSharon, -1
 	object_event 26,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route4HPUp, EVENT_ROUTE_4_HP_UP
+    object_event 38,  4, SPRITE_SLOWPOKE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, Route4SupernerdScript, EVENT_OPENED_CERUCAVE
+	

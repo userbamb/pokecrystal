@@ -184,10 +184,10 @@ DragonsDenB1FHiddenRevive:
 	hiddenitem REVIVE, EVENT_DRAGONS_DEN_B1F_HIDDEN_REVIVE
 
 DragonsDenB1FHiddenMaxPotion:
-	hiddenitem MAX_POTION, EVENT_DRAGONS_DEN_B1F_HIDDEN_MAX_POTION
+	hiddenitem LEFTOVERS, EVENT_DRAGONS_DEN_B1F_HIDDEN_MAX_POTION
 
 DragonsDenB1FHiddenMaxElixer:
-	hiddenitem MAX_ELIXER, EVENT_DRAGONS_DEN_B1F_HIDDEN_MAX_ELIXER
+	hiddenitem RUBBER_BAND, EVENT_DRAGONS_DEN_B1F_HIDDEN_MAX_ELIXER
 
 MovementDragonsDen_ClairWalksToYou:
 	slow_step RIGHT
@@ -417,7 +417,7 @@ DragonsDenB1F_MapEvents:
 	def_bg_events
 	bg_event 18, 24, BGEVENT_READ, DragonShrineSignpost
 	bg_event 33, 29, BGEVENT_ITEM, DragonsDenB1FHiddenRevive
-	bg_event 21, 17, BGEVENT_ITEM, DragonsDenB1FHiddenMaxPotion
+	bg_event  9, 21, BGEVENT_ITEM, DragonsDenB1FHiddenMaxPotion
 	bg_event 31, 15, BGEVENT_ITEM, DragonsDenB1FHiddenMaxElixer
 
 	def_object_events
