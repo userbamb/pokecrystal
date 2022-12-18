@@ -176,6 +176,8 @@ Route8_MapEvents:
 	def_warp_events
 	warp_event  4,  4, ROUTE_8_SAFFRON_GATE, 3
 	warp_event  4,  5, ROUTE_8_SAFFRON_GATE, 4
+	warp_event 35,  8, ROUTE_8_LAVENDER_GATE, 1
+	warp_event 35,  9, ROUTE_8_LAVENDER_GATE, 2
 
 	def_coord_events
 
