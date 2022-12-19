@@ -705,3 +705,5 @@ ENDM
 	map_attributes ViridianGateNorth, VIRIDIAN_GATE_NORTH, $00, 0
 	map_attributes ViridianForestHouse, VIRIDIAN_FOREST_HOUSE, $00, 0
 	map_attributes PewterLab, PEWTER_LAB, $00, 0
+	map_attributes Route8LavenderGate, ROUTE_8_LAVENDER_GATE, $00, 0
+	map_attributes Route12LavenderGate, ROUTE_12_LAVENDER_GATE, $00, 0

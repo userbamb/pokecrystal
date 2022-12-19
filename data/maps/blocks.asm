@@ -42,14 +42,10 @@ BetaSproutTower5_Blocks: ; unreferenced
 Route15_Blocks:
 	INCBIN "maps/Route15.blk"
 
-BetaSproutTower9_Blocks: ; unreferenced
-	INCBIN "maps/unused/BetaSproutTower9.blk"
 
 Route19_Blocks:
 	INCBIN "maps/Route19.blk"
 
-BetaBlackthornCity_Blocks: ; unreferenced
-	INCBIN "maps/unused/BetaBlackthornCity.blk"
 
 Route10South_Blocks:
 	INCBIN "maps/Route10South.blk"
@@ -93,9 +89,6 @@ Route25_Blocks:
 
 Route24_Blocks:
 	INCBIN "maps/Route24.blk"
-
-BetaVioletCity_Blocks: ; unreferenced
-	INCBIN "maps/unused/BetaVioletCity.blk"
 
 Route3_Blocks:
 	INCBIN "maps/Route3.blk"
@@ -216,6 +209,7 @@ Route40BattleTowerGate_Blocks:
 Route2Gate_Blocks:
 Route29Route46Gate_Blocks:
 Route5SaffronGate_Blocks:
+Route12LavenderGate_Blocks:
 	INCBIN "maps/NorthSouthGate.blk"
 
 BetaEcruteakCity_Blocks: ; unreferenced
@@ -282,6 +276,7 @@ Route16Gate_Blocks:
 Route7SaffronGate_Blocks:
 Route17Route18Gate_Blocks:
 Route31VioletGate_Blocks:
+Route8LavenderGate_Blocks:
 	INCBIN "maps/EastWestGate.blk"
 
 BetaAzaleaTown_Blocks: ; unreferenced
@@ -467,9 +462,6 @@ NationalParkBugContest_Blocks:
 Route5UndergroundPathEntrance_Blocks:
 Route6UndergroundPathEntrance_Blocks:
 	INCBIN "maps/UndergroundPathEntrance.blk"
-
-BetaCapsuleHouse_Blocks: ; unreferenced
-	INCBIN "maps/unused/BetaCapsuleHouse.blk"
 
 KurtsHouse_Blocks:
 	INCBIN "maps/KurtsHouse.blk"

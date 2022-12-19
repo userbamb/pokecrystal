@@ -110,10 +110,10 @@ LavenderTown_MapEvents:
 	warp_event 13, 13, LAVENDER_NAME_RATER, 1
 	warp_event 19, 11, SOUL_HOUSE, 1
 	warp_event 21,  5, LAV_RADIO_TOWER_1F, 1
-	warp_event  4,  8, ROUTE_8_LAVENDER_GATE, 1
-	warp_event  4,  9, ROUTE_8_LAVENDER_GATE, 1
+	warp_event  4,  8, ROUTE_8_LAVENDER_GATE, 3
+	warp_event  4,  9, ROUTE_8_LAVENDER_GATE, 4
 	warp_event 15, 17, ROUTE_12_LAVENDER_GATE, 1
-	warp_event 16, 17, ROUTE_12_LAVENDER_GATE, 1
+	warp_event 16, 17, ROUTE_12_LAVENDER_GATE, 2
 
 	def_coord_events
 

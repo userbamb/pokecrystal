@@ -112,13 +112,13 @@ MartGoldenrod2F2:
 
 MartGoldenrod3F:
 	db 7 ; # items
-	db X_SPEED
-	db X_SPECIAL
-	db X_DEFEND
-	db X_ATTACK
-	db DIRE_HIT
-	db GUARD_SPEC
-	db X_ACCURACY
+	db RUBBER_BAND
+	db STRANGE_ROOT
+	db COOL_CHARM
+	db FIDGET
+	db GOGGLES
+	db BERSERK_GENE
+	db PP_UP
 	db -1 ; end
 
 MartGoldenrod4F:

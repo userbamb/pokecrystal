@@ -356,10 +356,10 @@ ENDM
 	endgroup
 
 	newgroup LAVENDER                                             ; 17
-	map_const ROUTE_8,                                     20,  9 ;  1
-	map_const ROUTE_12,                                    10, 27 ;  2
-	map_const ROUTE_10_SOUTH,                              10,  9 ;  3
-	map_const LAVENDER_TOWN,                               10,  9 ;  4
+	map_const ROUTE_8,                                     21,  9 ;  1
+	map_const ROUTE_12,                                    10, 28 ;  2
+	map_const ROUTE_10_SOUTH,                              13,  9 ;  3
+	map_const LAVENDER_TOWN,                               13, 11 ;  4
 	map_const LAVENDER_POKECENTER_1F,                      10,  4 ;  5
 	map_const LAVENDER_POKECENTER_2F_BETA,                  8,  4 ;  6
 	map_const MR_FUJIS_HOUSE,                               5,  4 ;  7
@@ -369,6 +369,8 @@ ENDM
 	map_const LAV_RADIO_TOWER_1F,                          10,  4 ; 12
 	map_const ROUTE_8_SAFFRON_GATE,                         5,  4 ; 13
 	map_const ROUTE_12_SUPER_ROD_HOUSE,                     4,  4 ; 14
+	map_const ROUTE_8_LAVENDER_GATE,                        5,  4 ; 15
+	map_const ROUTE_12_LAVENDER_GATE,                       5,  4 ; 16
 	endgroup
 
 	newgroup SILVER                                               ; 19
