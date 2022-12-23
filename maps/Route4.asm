@@ -134,11 +134,8 @@ CeruleanCaveSignText:
 	done
 
 SuperNerd4ScriptText:
-    text "I'm in charge of"
-	line "keeping this ent-"
-
-	para "rance off limits."
-	line "The CERULEAN CAVE"
+    text "SLOWKING: The"
+	line "CERULEAN CAVE"
 	cont "is dangerous…"
 	done
 
