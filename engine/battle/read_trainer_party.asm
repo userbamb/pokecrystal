@@ -1,3 +1,9 @@
+GetNextTrainerDataByte:
+	ld a, [wTrainerGroupBank]
+	call GetFarByte
+	inc hl
+	ret
+
 ReadTrainerParty:
 	ld a, [wInBattleTowerBattle]
 	bit 0, a
@@ -33,6 +39,9 @@ ReadTrainerParty:
 	ld hl, TrainerGroups
 	add hl, bc
 	add hl, bc
+	add hl, bc
+	ld a, [hli]
+	ld [wTrainerGroupBank], a
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
@@ -43,18 +52,18 @@ ReadTrainerParty:
 	dec b
 	jr z, .got_trainer
 .loop
-	ld a, [hli]
+	call GetNextTrainerDataByte
 	cp -1
 	jr nz, .loop
 	jr .skip_trainer
 .got_trainer
 
 .skip_name
-	ld a, [hli]
+	call GetNextTrainerDataByte
 	cp "@"
 	jr nz, .skip_name
 
-	ld a, [hli]
+	call GetNextTrainerDataByte
 	ld [wOtherTrainerType], a
 	ld d, h
 	ld e, l
@@ -77,17 +86,46 @@ ReadTrainerPartyPieces:
 	ld h, d
 	ld l, e
 
+; Variable?
+	bit TRAINERTYPE_VARIABLE_F, a
+	jr z, .not_variable
+	; get badge count in c
+	push hl
+	ld hl, wBadges
+	ld b, 2
+	call CountSetBits
+	pop hl
+	; Skip that many $fe delimiters
+.outerloop
+	ld a, c
+	and a
+	jr z, .continue
+.innerloop
+	call GetNextTrainerDataByte
+	cp $fe
+	jr nz, .innerloop
+	dec c
+	jr .outerloop
+
+.continue
+	; Get trainer type of variable stage
+	call GetNextTrainerDataByte
+	ld [wOtherTrainerType], a
+	; fallthrough
+.not_variable
 .loop
 ; end?
-	ld a, [hli]
+	call GetNextTrainerDataByte
 	cp -1
+	ret z
+	cp $fe
 	ret z
 
 ; level
 	ld [wCurPartyLevel], a
 
 ; species
-	ld a, [hli]
+	call GetNextTrainerDataByte
 	ld [wCurPartySpecies], a
 
 ; add to party
@@ -112,20 +150,66 @@ ReadTrainerPartyPieces:
 	pop hl
 
 ; When reading DVs, treat PERFECT_DV as $ff
-	ld a, [hli]
+	call GetNextTrainerDataByte
 	cp PERFECT_DV
 	jr nz, .atk_def_dv_ok
 	ld a, $ff
 .atk_def_dv_ok
 	ld [de], a
 	inc de
-	ld a, [hli]
+	call GetNextTrainerDataByte
 	cp PERFECT_DV
 	jr nz, .spd_spc_dv_ok
 	ld a, $ff
 .spd_spc_dv_ok
 	ld [de], a
 .no_dvs
+
+; stat exp?
+	ld a, [wOtherTrainerType]
+	bit TRAINERTYPE_STAT_EXP_F, a
+	jr z, .no_stat_exp
+
+	push hl
+	ld a, [wOTPartyCount]
+	dec a
+	ld hl, wOTPartyMon1StatExp
+	call GetPartyLocation
+	ld d, h
+	ld e, l
+	pop hl
+
+	ld c, NUM_EXP_STATS
+.stat_exp_loop
+; When reading stat experience, treat PERFECT_STAT_EXP as $FFFF
+	call GetNextTrainerDataByte
+	dec hl
+	cp LOW(PERFECT_STAT_EXP)
+	jr nz, .not_perfect_stat_exp
+	inc hl
+	call GetNextTrainerDataByte
+	dec hl
+	cp HIGH(PERFECT_STAT_EXP)
+	dec hl
+	jr nz, .not_perfect_stat_exp
+	ld a, $ff
+rept 2
+	ld [de], a
+	inc de
+	inc hl
+endr
+	jr .continue_stat_exp
+
+.not_perfect_stat_exp
+rept 2
+	call GetNextTrainerDataByte
+	ld [de], a
+	inc de
+endr
+.continue_stat_exp
+	dec c
+	jr nz, .stat_exp_loop
+.no_stat_exp
 
 ; item?
 	ld a, [wOtherTrainerType]
@@ -141,7 +225,7 @@ ReadTrainerPartyPieces:
 	ld e, l
 	pop hl
 
-	ld a, [hli]
+	call GetNextTrainerDataByte
 	ld [de], a
 .no_item
 
@@ -161,7 +245,7 @@ ReadTrainerPartyPieces:
 
 	ld b, NUM_MOVES
 .copy_moves
-	ld a, [hli]
+	call GetNextTrainerDataByte
 	ld [de], a
 	inc de
 	dec b
@@ -208,10 +292,12 @@ ReadTrainerPartyPieces:
 
 	pop hl
 .no_moves
+ 
+    jp .loop
 
-; Custom DVs affect stats, so recalculate them after TryAddMonToParty
-	ld a, [wOtherTrainerType]
-	and TRAINERTYPE_DVS
+; Custom DVs or stat experience affect stats,
+; so recalculate them after TryAddMonToParty	ld a, [wOtherTrainerType]
+	and TRAINERTYPE_DVS | TRAINERTYPE_STAT_EXP
 	jr z, .no_stat_recalc
 
 	push hl
@@ -273,6 +359,8 @@ Battle_GetTrainerName::
 	ld a, [wInBattleTowerBattle]
 	bit 0, a
 	ld hl, wOTPlayerName
+	ld a, BANK(Battle_GetTrainerName)
+	ld [wTrainerGroupBank], a
 	jp nz, CopyTrainerName
 
 	ld a, [wOtherTrainerID]
@@ -305,6 +393,9 @@ GetTrainerName::
 	ld hl, TrainerGroups
 	add hl, bc
 	add hl, bc
+	add hl, bc
+	ld a, [hli]
+	ld [wTrainerGroupBank], a
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
@@ -315,7 +406,7 @@ GetTrainerName::
 	jr z, CopyTrainerName
 
 .skip
-	ld a, [hli]
+    call GetNextTrainerDataByte
 	cp $ff
 	jr nz, .skip
 	jr .loop
@@ -324,7 +415,8 @@ CopyTrainerName:
 	ld de, wStringBuffer1
 	push de
 	ld bc, NAME_LENGTH
-	call CopyBytes
+	ld a, [wTrainerGroupBank]
+	call FarCopyBytes
 	pop de
 	ret
 
@@ -336,4 +428,4 @@ IncompleteCopyNameFunction: ; unreferenced
 	pop de
 	ret
 
-INCLUDE "data/trainers/parties.asm"
+INCLUDE "data/trainers/party_pointers.asm"
