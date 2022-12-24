@@ -703,6 +703,4 @@ DEF KRIS EQU __trainer_class__
 	trainerclass MYSTICALMAN ; 43
 	const EUSINE
 
-    trainerclass MONICA ; 44
-	const MONICA
 DEF NUM_TRAINER_CLASSES EQU __trainer_class__ - 1
