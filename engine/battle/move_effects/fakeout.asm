@@ -1,4 +1,4 @@
-BattleCommand_fakeout: ; 37683
+BattleCommand_FakeOut: ; 37683
 	ld a, [hBattleTurn]
 	and a
 	jr z, .PlayerTurn

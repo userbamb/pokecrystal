@@ -5336,27 +5336,6 @@ BattleCommand_EndLoop:
 	ld [wBattleScriptBufferAddress], a
 	ret
 
-BattleCommand_FakeOut:
-	ld a, [wAttackMissed]
-	and a
-	ret nz
-
-	call CheckSubstituteOpp
-	jr nz, .fail
-
-	ld a, BATTLE_VARS_STATUS_OPP
-	call GetBattleVar
-	and 1 << FRZ | SLP_MASK
-	jr nz, .fail
-
-	call CheckOpponentWentFirst
-	jr z, FlinchTarget
-
-.fail
-	ld a, 1
-	ld [wAttackMissed], a
-	ret
-
 BattleCommand_FlinchTarget:
 	call CheckSubstituteOpp
 	ret nz
