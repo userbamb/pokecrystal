@@ -2077,3 +2077,21 @@ DefenseCurl:
 	statupmessage
 	statupfailtext
 	endmove
+
+FakeOut:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	fakeout
+	hittarget
+	failuretext
+	checkfaint
+	criticaltext
+	supereffectivetext
+	endmove

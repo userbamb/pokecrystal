@@ -389,6 +389,7 @@ AI_Smart_EffectHandlers:
 	dbw EFFECT_SOLARBEAM,        AI_Smart_Solarbeam
 	dbw EFFECT_THUNDER,          AI_Smart_Thunder
 	dbw EFFECT_FLY,              AI_Smart_Fly
+	dbw EFFECT_FAKE_OUT          AI_Smart_FakeOut
 	db -1 ; end
 
 AI_Smart_Sleep:
@@ -1172,6 +1173,24 @@ AI_Smart_Fly:
 	dec [hl]
 	dec [hl]
 	dec [hl]
+	ret
+
+AI_Smart_FakeOut:
+	ld a, [wEnemyTurnsTaken]
+	cp FAKE_OUT
+	jr nz, .dont
+	
+	call CheckIfTargetIsGhostType
+	jr z, .dont
+	
+	ld a, [hl]
+	sub 5
+	ld [hl], a
+	ret
+.dont
+	ld a, [hl]
+	add $20
+	ld [hl], a
 	ret
 
 AI_Smart_SuperFang:
@@ -3280,3 +3299,4 @@ AI_50_50:
 	call Random
 	cp 50 percent + 1
 	ret
+

@@ -265,4 +265,6 @@ Moves:
 	move ROCK_SMASH,   EFFECT_ATTACK_UP_HIT,      60, FIGHTING,      PHYSICAL,   100, 15,   0
 	move WHIRLPOOL,    EFFECT_TRAP_TARGET,        15, WATER,         PHYSICAL,    70, 15,   0
 	move BEAT_UP,      EFFECT_BEAT_UP,            10, DARK,          PHYSICAL,   100, 10,   0
+	move FAKE_OUT,     EFFECT_FAKE_OUT,  		  40, NORMAL,        PHYSICAL,   100, 10, 100
+
 	assert_table_length NUM_ATTACKS
