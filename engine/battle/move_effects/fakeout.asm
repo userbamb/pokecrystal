@@ -1,4 +1,4 @@
-BattleCommand_FakeOut: ; 37683
+BattleCommand_FakeOut: 
 	ld a, [hBattleTurn]
 	and a
 	jr z, .PlayerTurn
@@ -13,4 +13,9 @@ BattleCommand_FakeOut: ; 37683
 .cont
 	jp FlinchTarget
 .failed
-    jp FailMove
+   	ld a, 1
+	ld [wAttackMissed], a
+	call BattleCommand_MoveDelay
+	ld hl, ButItFailedText
+	call StdBattleTextbox
+	jp EndMoveEffect
