@@ -4599,12 +4599,12 @@ BattleAnim_BeatUp:
 
 BattleAnim_FakeOut:
 	anim_1gfx ANIM_GFX_OBJECTS
-	anim_obj ANIM_OBJ_99,   -15, 0,  5, 0, $a0
-	anim_obj ANIM_OBJ_99,   -15, 0,  5, 0, $20
+	anim_obj ANIM_OBJ_ENCORE_HAND,   -15, 0,  5, 0, $a0
+	anim_obj ANIM_OBJ_ENCORE_HAND,   -15, 0,  5, 0, $20
 	anim_wait 8
 	anim_sound 0, 1, SFX_DOUBLE_KICK
 	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $2
-	anim_obj ANIM_OBJ_9A,   -15, 0,  4, 0, $2c
+	anim_obj ANIM_OBJ_ENCORE_STAR,   -15, 0,  4, 0, $2c
 	anim_wait 32
 	anim_ret
 

@@ -11,13 +11,6 @@ BattleCommand_FakeOut: ; 37683
 	dec a
 	jr nz, .failed
 .cont
-	call CheckIfTargetIsGhostType
-	jr z, .failed
 	jp FlinchTarget
 .failed
-	ld a, 1
-	ld [wAttackMissed], a
-	call BattleCommand_movedelay
-	ld hl, ButItFailedText
-	call StdBattleTextBox
-	jp EndMoveEffect
+    jp FailMove
