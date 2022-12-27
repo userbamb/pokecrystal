@@ -28,7 +28,7 @@ Moves:
 	move GUILLOTINE,   EFFECT_OHKO,                0, NORMAL,        PHYSICAL,    30,  5,   0
 	move RAZOR_WIND,   EFFECT_CONFUSE_HIT,        80, FLYING,        SPECIAL,     75, 10,  35
 	move SWORDS_DANCE, EFFECT_ATTACK_UP_2,         0, NORMAL,        STATUS,     100, 30,   0
-	move CUT,          EFFECT_PRIORITY_HIT,       70, GRASS,         PHYSICAL,    95, 30,   0
+	move CUT,          EFFECT_PRIORITY_HIT,       70, FLYING,         PHYSICAL,    95, 30,   0
 	move GUST,         EFFECT_GUST,               70, FLYING,        SPECIAL,    100, 35,   0
 	move WING_ATTACK,  EFFECT_NORMAL_HIT,         60, FLYING,        PHYSICAL,   100, 35,   0
 	move WHIRLWIND,    EFFECT_FORCE_SWITCH,        0, NORMAL,        STATUS,     100, 20,   0
@@ -68,7 +68,7 @@ Moves:
 	move EMBER,        EFFECT_BURN_HIT,           35, FIRE,          SPECIAL,    100, 25, 100
 	move FLAMETHROWER, EFFECT_BURN_HIT,           95, FIRE,          SPECIAL,    100, 15,  10
 	move MIST,         EFFECT_MIST,                0, ICE,           STATUS,     100, 30,   0
-	move WATER_GUN,    EFFECT_PRIORITY_HIT,       60, WATER,         PHYSICAL,   100, 25,   0
+	move WATER_GUN,    EFFECT_PRIORITY_HIT,       70, WATER,         PHYSICAL,   100, 25,   0
 	move HYDRO_PUMP,   EFFECT_NORMAL_HIT,        120, WATER,         SPECIAL,     90, 15,   0
 	move SURF,         EFFECT_CONFUSE_HIT,        95, WATER,         SPECIAL,    100, 15,   0
 	move ICE_BEAM,     EFFECT_FREEZE_HIT,         95, ICE,           SPECIAL,    100, 10,  10
@@ -265,6 +265,5 @@ Moves:
 	move ROCK_SMASH,   EFFECT_ATTACK_UP_HIT,      60, FIGHTING,      PHYSICAL,   100, 15,   0
 	move WHIRLPOOL,    EFFECT_TRAP_TARGET,        15, WATER,         PHYSICAL,    70, 15,   0
 	move BEAT_UP,      EFFECT_BEAT_UP,            10, DARK,          PHYSICAL,   100, 10,   0
-	move FAKE_OUT,     EFFECT_FAKE_OUT,  		  40, NORMAL,        PHYSICAL,   100, 10, 100
-
+	move FAKE_OUT,     EFFECT_FAKE_OUT,  		  44, NORMAL,        PHYSICAL,   100, 10, 100
 	assert_table_length NUM_ATTACKS

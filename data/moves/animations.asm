@@ -4603,7 +4603,7 @@ BattleAnim_FakeOut:
 	anim_obj ANIM_OBJ_ENCORE_HAND,   -15, 0,  5, 0, $20
 	anim_wait 8
 	anim_sound 0, 1, SFX_DOUBLE_KICK
-	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $2
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $8, $2
 	anim_obj ANIM_OBJ_ENCORE_STAR,   -15, 0,  4, 0, $2c
 	anim_wait 32
 	anim_ret
