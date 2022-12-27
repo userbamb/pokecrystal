@@ -252,13 +252,13 @@ DEF NUM_DECODESCS EQU const_value
 ; swarm arguments
 ; StoreSwarmMapIndices arguments
 	const_def
-	const SWARM_DUNSPARCE ; 0
+	const SWARM_MAREEP ; 0
 	const SWARM_YANMA     ; 1
 
 ; ActivateFishingSwarm setval arguments
 	const_def
 	const FISHSWARM_NONE     ; 0
-	const FISHSWARM_QWILFISH ; 1
+	const FISHSWARM_CHINCHOU ; 1
 	const FISHSWARM_REMORAID ; 2
 
 ; SpecialGameboyCheck return values

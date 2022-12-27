@@ -93,8 +93,8 @@ GetFishGroupIndex:
 ; Return the index of fishgroup d in de.
 
 	ld a, d
-	cp FISHGROUP_QWILFISH
-	jr z, .qwilfish
+	cp FISHGROUP_CHINCHOU
+	jr z, .chinchou
 	cp FISHGROUP_REMORAID
 	jr z, .remoraid
 
@@ -104,11 +104,11 @@ GetFishGroupIndex:
 	ld d, 0
 	ret
 
-.qwilfish
+.chinchou
 	ld a, [wFishingSwarmFlag]
-	cp FISHSWARM_QWILFISH
+	cp FISHSWARM_CHINCHOU
 	jr nz, .done
-	ld d, FISHGROUP_QWILFISH_SWARM
+	ld d, FISHGROUP_CHINCHOU_SWARM
 	jr .done
 
 .remoraid

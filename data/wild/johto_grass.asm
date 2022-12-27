@@ -1187,7 +1187,7 @@ JohtoGrassWildMons:
 	db 4, GEODUDE
 	db 2, TEDDIURSA
 	db 4, ZUBAT
-	db 4, DUNSPARCE
+	db 4, TEDDIURSA
 	; day
 	db 3, GEODUDE
 	db 2, ZUBAT
@@ -1195,7 +1195,7 @@ JohtoGrassWildMons:
 	db 4, GEODUDE
 	db 2, ZUBAT
 	db 4, ZUBAT
-	db 4, DUNSPARCE
+	db 4, TEDDIURSA
 	; nite
 	db 3, GEODUDE
 	db 2, ZUBAT
@@ -1203,7 +1203,7 @@ JohtoGrassWildMons:
 	db 4, GEODUDE
 	db 2, ZUBAT
 	db 4, ZUBAT
-	db 4, DUNSPARCE
+	db 4, TEDDIURSA
 	end_grass_wildmons
 
 	def_grass_wildmons DARK_CAVE_BLACKTHORN_ENTRANCE

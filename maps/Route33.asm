@@ -20,7 +20,7 @@ TrainerHikerAnthony:
 	opentext
 	checkflag ENGINE_ANTHONY_READY_FOR_REMATCH
 	iftrue .Rematch
-	checkflag ENGINE_DUNSPARCE_SWARM
+	checkflag ENGINE_MAREEP_SWARM
 	iftrue .Swarm
 	checkcellnum PHONE_HIKER_ANTHONY
 	iftrue .NumberAccepted
@@ -163,7 +163,7 @@ HikerAnthony2AfterText:
 
 HikerAnthonyDunsparceText:
 	text "Hey, did you get a"
-	line "DUNSPARCE?"
+	line "MAREEP?"
 
 	para "I caught one too."
 
