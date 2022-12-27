@@ -776,7 +776,7 @@ LoadBluePage:
 	jr nz, .vertical_divider
 	hlcoord 11, 8
 	ld bc, 6
-	predef PrintTempMonStats
+	predef PrintTempMonStatsDVs
 	ret
 
 .PlaceOTInfo:

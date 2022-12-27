@@ -82,7 +82,7 @@ DrawHP:
 	pop de
 	ret
 
-PrintTempMonStats:
+PrintTempMonStatsDVs:
 ; Print wTempMon's stats at hl, with spacing bc.
 	push bc
 	push hl
@@ -91,22 +91,22 @@ PrintTempMonStats:
 	pop hl
 	pop bc
 	add hl, bc
-	ld bc, SCREEN_WIDTH - 8
+	ld bc, SCREEN_WIDTH - 5
 	add hl, bc
 	 ; Attack DVs and stat
 	ld de, wTempMonAttack + 1
 	ld a, [de]
 	push af
-    ld a, [wTempMonDVs]
+	ld a, [wTempMonDVs]
     and $f0
     swap a
 	ld [wTempMonAttack + 1], a
 	ld de, wTempMonAttack
-    lb bc, 2, 3
+	lb bc, 2, 3
 	call .PrintDVs
 	pop af
 	ld [wTempMonAttack + 1], a
-    lb bc, 2, 3
+	lb bc, 2, 3
 	ld de, wTempMonAttack
 	call .PrintStat
 	 ; Defense DVs and stat
@@ -154,7 +154,6 @@ PrintTempMonStats:
 	lb bc, 2, 3
 	ld de, wTempMonSpclDef
 	call .PrintStat
-
 	 ; Speed DVs and stat
 	ld de, wTempMonAttack + 1
 	ld a, [de]
@@ -171,17 +170,18 @@ PrintTempMonStats:
 	lb bc, 2, 3
 	ld de, wTempMonSpeed
 	jp PrintNum
-
 .PrintStat:
 	push hl
 	call PrintNum
 	pop hl
-	ld de, SCREEN_WIDTH - 8
+	ld de, SCREEN_WIDTH
+	add hl, de
+	ld de, SCREEN_WIDTH - 5
 	add hl, de
 	ret
 	
 .PrintDVs:
-    push hl
+	push hl
 	call PrintNum
 	pop hl
 	ld de, 5
@@ -189,11 +189,50 @@ PrintTempMonStats:
 	ret
 
 .StatNames:
-	db   "DV   ATK  "
-	next "DV   DEF  "
-	next "DV  SPCL.A"
-	next "DV  SPCL.D"
-	next "DV  SPEED"
+	db   "DV   ATK"
+	next "DV   DEF"
+	next "DV   SP.A"
+	next "DV   SP.D"
+	next "DV   SPE"
+	next "@"
+
+PrintTempMonStats:
+; Print wTempMon's stats at hl, with spacing bc.
+	push bc
+	push hl
+	ld de, .StatNames
+	call PlaceString
+	pop hl
+	pop bc
+	add hl, bc
+	ld bc, SCREEN_WIDTH
+	add hl, bc
+	ld de, wTempMonAttack
+	lb bc, 2, 3
+	call .PrintStat
+	ld de, wTempMonDefense
+	call .PrintStat
+	ld de, wTempMonSpclAtk
+	call .PrintStat
+	ld de, wTempMonSpclDef
+	call .PrintStat
+	ld de, wTempMonSpeed
+	jp PrintNum
+
+.PrintStat:
+	push hl
+	call PrintNum
+	pop hl
+	ld de, SCREEN_WIDTH * 2
+	add hl, de
+	ret
+
+.StatNames:
+	db   "ATTACK"
+	next "DEFENSE"
+	next "SPCL.ATK"
+	next "SPCL.DEF"
+	next "SPEED"
 	next "@"
 
 GetGender:
