@@ -10,8 +10,16 @@ GenerateSwarmShiny:
 	jr z, .mareep
     cp LANDMARK_ROUTE_32
 	jr z, .remoraid
+	cp LANDMARK_ROUTE_37
+	jr z, .vulpix
     jr .skipshine
 
+
+.vulpix
+   ld a, [wCurPartySpecies]
+   cp VULPIX
+   jr nz, .skipshine
+   jr .rollshiny
 .yanma
    ld a, [wCurPartySpecies]
    cp YANMA

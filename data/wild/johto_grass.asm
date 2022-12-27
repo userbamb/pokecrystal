@@ -1411,7 +1411,7 @@ JohtoGrassWildMons:
 	db 10, ABRA
 	db 12, JIGGLYPUFF
 	db 10, DITTO
-	db 12, YANMA
+	db 12, DITTO
 	; day
 	db 12, SNUBBULL
 	db 14, PIDGEY
@@ -1419,7 +1419,7 @@ JohtoGrassWildMons:
 	db 10, ABRA
 	db 12, JIGGLYPUFF
 	db 10, DITTO
-	db 12, YANMA
+	db 12, DITTO
 	; nite
 	db 12, DROWZEE
 	db 14, HOOTHOOT
@@ -1427,7 +1427,7 @@ JohtoGrassWildMons:
 	db 10, ABRA
 	db 12, JIGGLYPUFF
 	db 10, DITTO
-	db 12, YANMA
+	db 12, DITTO
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_36

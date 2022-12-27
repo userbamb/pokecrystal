@@ -17,10 +17,11 @@ SwarmGrampsScript:
 	opentext
 	checkflag ENGINE_SWARM
 	iftrue .skiprandomswarm
-	random 3
+	random 4
 	ifequal 0, .mareep
 	ifequal 1, .yanma
     ifequal 2, .remoraid
+	ifequal 3  .vulpix
 
 .mareep
 	setflag ENGINE_SWARM
@@ -42,6 +43,14 @@ SwarmGrampsScript:
 	setflag ENGINE_SWARM
 	swarm ROUTE_32
 	writetext SwarmRemoraidText
+	waitbutton
+	closetext
+	end
+
+.vulpix
+	setflag ENGINE_SWARM
+	swarm ROUTE_37
+	writetext SwarmVulpixText
 	waitbutton
 	closetext
 	end
@@ -80,6 +89,15 @@ SwarmRemoraidText:
 	para "Oh yes! There's a"
 	line "swarm of REMORAID"
 	cont "on ROUTE 32."
+	done
+
+SwarmVulpixText:
+	text "Let me see…"
+	line "What did the news say?"
+
+	para "Oh yes! There's a"
+	line "swarm of VULPIX"
+	cont "on ROUTE 37."
 	done
 
 SkipSwarmText:
