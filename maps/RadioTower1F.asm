@@ -21,7 +21,7 @@ SwarmGrampsScript:
 	ifequal 0, .mareep
 	ifequal 1, .yanma
     ifequal 2, .remoraid
-	ifequal 3  .vulpix
+	ifequal 3,  .vulpix
 
 .mareep
 	setflag ENGINE_SWARM
