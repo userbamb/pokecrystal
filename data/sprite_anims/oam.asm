@@ -72,8 +72,8 @@ SpriteAnimOAMData:
 	spriteanimoam $00, .OAMData_PartyMonWithMail2        ; SPRITE_ANIM_OAMSET_PARTY_MON_WITH_MAIL_2
 	spriteanimoam $00, .OAMData_PartyMonWithItem1        ; SPRITE_ANIM_OAMSET_PARTY_MON_WITH_ITEM_1
 	spriteanimoam $00, .OAMData_PartyMonWithItem2        ; SPRITE_ANIM_OAMSET_PARTY_MON_WITH_ITEM_2
-	spriteanimoam $00, .OAMData_MagnetTrainGreen           ; SPRITE_ANIM_OAMSET_MAGNET_TRAIN_GREEN_1
-	spriteanimoam $04, .OAMData_MagnetTrainGreen           ; SPRITE_ANIM_OAMSET_MAGNET_TRAIN_GREEN_2
+	spriteanimoam $00, .OAMData_MagnetTrainRed           ; SPRITE_ANIM_OAMSET_MAGNET_TRAIN_GREEN_1
+	spriteanimoam $04, .OAMData_MagnetTrainRed           ; SPRITE_ANIM_OAMSET_MAGNET_TRAIN_GREEN_2
 	spriteanimoam $00, .OAMData_Unused43_4A              ; SPRITE_ANIM_OAMSET_UNUSED_43
 	spriteanimoam $30, .OAMData_Unused43_4A              ; SPRITE_ANIM_OAMSET_UNUSED_44
 	spriteanimoam $03, .OAMData_Unused43_4A              ; SPRITE_ANIM_OAMSET_UNUSED_45
@@ -764,12 +764,12 @@ SpriteAnimOAMData:
 	dbsprite -1,  0,  0,  0, $02, PAL_OW_GREEN
 	dbsprite  0,  0,  0,  0, $03, PAL_OW_GREEN
 
-.OAMData_MagnetTrainGreen:
+.OAMData_MagnetTrainRed:
 	db 4
-	dbsprite -1, -1,  0,  0, $00, PAL_OW_GREEN | PRIORITY
-	dbsprite  0, -1,  0,  0, $01, PAL_OW_GREEN | PRIORITY
-	dbsprite -1,  0,  0,  0, $02, PAL_OW_GREEN | PRIORITY
-	dbsprite  0,  0,  0,  0, $03, PAL_OW_GREEN | PRIORITY
+	dbsprite -1, -1,  0,  0, $00, PAL_OW_RED | PRIORITY
+	dbsprite  0, -1,  0,  0, $01, PAL_OW_RED | PRIORITY
+	dbsprite -1,  0,  0,  0, $02, PAL_OW_RED | PRIORITY
+	dbsprite  0,  0,  0,  0, $03, PAL_OW_RED | PRIORITY
 
 .OAMData_MagnetTrainBlue:
 	db 4

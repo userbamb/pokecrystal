@@ -28,7 +28,7 @@ SpriteAnimFrameData:
 	dw .Frameset_TrademonBubble
 	dw .Frameset_EvolutionBallOfLight
 	dw .Frameset_RadioTuningKnob
-	dw .Frameset_MagnetTrainGreen
+	dw .Frameset_MagnetTrainRed
 	dw .Frameset_Unused1C
 	dw .Frameset_Leaf
 	dw .Frameset_CutTree
@@ -241,11 +241,11 @@ SpriteAnimFrameData:
 	oamframe SPRITE_ANIM_OAMSET_RADIO_TUNING_KNOB, 32
 	oamend
 
-.Frameset_MagnetTrainGreen:
-	oamframe SPRITE_ANIM_OAMSET_MAGNET_TRAIN_GREEN_1,  8
-	oamframe SPRITE_ANIM_OAMSET_MAGNET_TRAIN_GREEN_2,  8
-	oamframe SPRITE_ANIM_OAMSET_MAGNET_TRAIN_GREEN_1,  8
-	oamframe SPRITE_ANIM_OAMSET_MAGNET_TRAIN_GREEN_2,  8, OAM_X_FLIP
+.Frameset_MagnetTrainRed:
+	oamframe SPRITE_ANIM_OAMSET_MAGNET_TRAIN_RED_1,  8
+	oamframe SPRITE_ANIM_OAMSET_MAGNET_TRAIN_RED_2,  8
+	oamframe SPRITE_ANIM_OAMSET_MAGNET_TRAIN_RED_1,  8
+	oamframe SPRITE_ANIM_OAMSET_MAGNET_TRAIN_RED_2,  8, OAM_X_FLIP
 	oamrestart
 
 .Frameset_Unknown1: ; unreferenced
