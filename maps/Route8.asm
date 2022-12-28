@@ -182,7 +182,7 @@ Route8_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 11,  7, BGEVENT_READ, Route8UndergroundPathSign
+	bg_event 13,  5, BGEVENT_READ, Route8UndergroundPathSign
 	bg_event 10,  5, BGEVENT_READ, Route8LockedDoor
 
 	def_object_events

@@ -212,7 +212,7 @@ Route9_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 15,  7, BGEVENT_READ, Route9Sign
+	bg_event  7,  7, BGEVENT_READ, Route9Sign
 	bg_event 41, 15, BGEVENT_ITEM, Route9HiddenEther
 
 	def_object_events

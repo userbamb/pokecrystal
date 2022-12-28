@@ -149,7 +149,7 @@ Route4_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  3,  7, BGEVENT_READ, MtMoonSquareSign
+	bg_event  5,  7, BGEVENT_READ, MtMoonSquareSign
 	bg_event 10,  3, BGEVENT_ITEM, Route4HiddenUltraBall
 	bg_event 39,  5, BGEVENT_READ, CeruleanCaveSign
 
@@ -158,5 +158,5 @@ Route4_MapEvents:
 	object_event  9,  8, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerPicnickerHope, -1
 	object_event 21,  6, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerPicnickerSharon, -1
 	object_event 26,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route4HPUp, EVENT_ROUTE_4_HP_UP
-    object_event 38,  4, SPRITE_SLOWPOKE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, Route4SupernerdScript, EVENT_OPENED_CERUCAVE
+	object_event 38,  4, SPRITE_SLOWPOKE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, Route4SupernerdScript, EVENT_OPENED_CERUCAVE
 	

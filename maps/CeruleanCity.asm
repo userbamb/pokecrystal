@@ -288,8 +288,8 @@ CeruleanCity_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 23, 23, BGEVENT_READ, CeruleanCitySign
-	bg_event 27, 25, BGEVENT_READ, CeruleanGymSign
+	bg_event  7, 23, BGEVENT_READ, CeruleanCitySign
+	bg_event 23, 23, BGEVENT_READ, CeruleanGymSign
 	bg_event 11, 29, BGEVENT_READ, CeruleanBikeShopSign
 	bg_event 25, 17, BGEVENT_READ, CeruleanPoliceSign
 	bg_event 23,  7, BGEVENT_READ, CeruleanCapeSign
@@ -305,4 +305,4 @@ CeruleanCity_MapEvents:
 	object_event 21, 24, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeruleanCityCooltrainerFScript, -1
 	object_event 30, 26, SPRITE_FISHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeruleanCityFisherScript, -1
 	object_event  6, 12, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeruleanCityYoungsterScript, -1
-    object_event -2, 14, SPRITE_SLOWPOKE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, Route4SupernerdScript, EVENT_OPENED_CERUCAVE
+	object_event -2, 14, SPRITE_SLOWPOKE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, Route4SupernerdScript, EVENT_OPENED_CERUCAVE

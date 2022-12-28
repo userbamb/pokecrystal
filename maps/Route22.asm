@@ -22,6 +22,6 @@ Route22_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 15,  7, BGEVENT_READ, VictoryRoadEntranceSign
+	bg_event 13,  7, BGEVENT_READ, VictoryRoadEntranceSign
 
 	def_object_events

@@ -199,7 +199,7 @@ Route13_MapEvents:
 	def_bg_events
 	bg_event 29, 13, BGEVENT_READ, Route13TrainerTips
 	bg_event 41, 11, BGEVENT_READ, Route13Sign
-	bg_event 17, 13, BGEVENT_READ, Route13DirectionsSign
+	bg_event  9, 13, BGEVENT_READ, Route13DirectionsSign
 	bg_event 30, 13, BGEVENT_ITEM, Route13HiddenCalcium
 
 	def_object_events
