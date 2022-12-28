@@ -14,14 +14,14 @@ FishGroups:
 	fishgroup 50 percent + 1, .Lake_Old,             .Lake_Good,             .Lake_Super
 	fishgroup 50 percent + 1, .Pond_Old,             .Pond_Good,             .Pond_Super
 	fishgroup 50 percent + 1, .Dratini_Old,          .Dratini_Good,          .Dratini_Super
-	fishgroup 50 percent + 1, .Chinchou_Swarm_Old,   .CHINCHOU_Swarm_Good,   .CHINCHOU_Swarm_Super
+	fishgroup 50 percent + 1, .Chinchou_Swarm_Old,   .Chinchou_Swarm_Good,   .Chinchou_Swarm_Super
 	fishgroup 50 percent + 1, .Remoraid_Swarm_Old,   .Remoraid_Swarm_Good,   .Remoraid_Swarm_Super
 	fishgroup 50 percent + 1, .Gyarados_Old,         .Gyarados_Good,         .Gyarados_Super
 	fishgroup 50 percent + 1, .Dratini_2_Old,        .Dratini_2_Good,        .Dratini_2_Super
 	fishgroup 50 percent + 1, .WhirlIslands_Old,     .WhirlIslands_Good,     .WhirlIslands_Super
-	fishgroup 50 percent + 1, .Chinchou_Old,         .CHINCHOU_Good,         .CHINCHOU_Super
+	fishgroup 50 percent + 1, .Chinchou_Old,         .Chinchou_Good,         .Chinchou_Super
 	fishgroup 50 percent + 1, .Remoraid_Old,         .Remoraid_Good,         .Remoraid_Super
-	fishgroup 50 percent + 1, .Chinchou_NoSwarm_Old, .CHINCHOU_NoSwarm_Good, .CHINCHOU_NoSwarm_Super
+	fishgroup 50 percent + 1, .Chinchou_NoSwarm_Old, .Chinchou_NoSwarm_Good, .Chinchou_NoSwarm_Super
 	assert_table_length NUM_FISHGROUPS
 
 .Shore_Old:
