@@ -771,14 +771,14 @@ Route34_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 12,  6, BGEVENT_READ, Route34Sign
+	bg_event 12,  7, BGEVENT_READ, Route34Sign
 	bg_event 13, 33, BGEVENT_READ, Route34TrainerTips
 	bg_event 10, 13, BGEVENT_READ, DayCareSign
 	bg_event  8, 32, BGEVENT_ITEM, Route34HiddenRareCandy
 	bg_event 17, 19, BGEVENT_ITEM, Route34HiddenSuperPotion
 
 	def_object_events
-	object_event 13,  7, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TrainerCamperTodd1, -1
+	object_event 13,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TrainerCamperTodd1, -1
 	object_event 15, 32, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerYoungsterSamuel, -1
 	object_event 11, 20, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerYoungsterIan, -1
 	object_event 10, 26, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerPicnickerGina1, -1
