@@ -65,16 +65,16 @@ CeladonMansionManagerCharText:
 	line "I knew that one day"
 
 	para "someone else would"
-	line "have seen "
+	line "have seen HO-OH"
 
-	para "HO-OH too…"
-	line "Take this, I think"
+	cont "too…"
+	para "Take this, I think"
     
-	para "you are strong"
-	line "enough to go on"
+	line "you are strong"
+	para "enough to go on"
 	
-	text "the roof…"
-	line "But be careful!"
+	line "the roof…"
+	cont "But be careful!"
 	done
 
 CeladonMansionManagerHoText:
