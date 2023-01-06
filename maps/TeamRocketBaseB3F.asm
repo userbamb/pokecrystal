@@ -427,7 +427,7 @@ ExecutiveM4AfterText:
 	done
 
 RocketBaseMurkrowText:
-	text "MURKROW: The"
+	text "HOOTHOOT: The"
 	line "password is…"
 
 	para "HAIL GIOVANNI."
