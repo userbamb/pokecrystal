@@ -623,13 +623,6 @@ DunsparceEggMoves:
 	db OUTRAGE
 	db -1 ; end
 
-GligarEggMoves:
-	db METAL_CLAW
-	db WING_ATTACK
-	db RAZOR_WIND
-	db COUNTER
-	db -1 ; end
-
 SnubbullEggMoves:
 	db METRONOME
 	db FAINT_ATTACK
@@ -642,10 +635,10 @@ SnubbullEggMoves:
 	db -1 ; end
 
 QwilfishEggMoves:
-	db FLAIL
-	db HAZE
-	db BUBBLEBEAM
-	db SUPERSONIC
+    db METAL_CLAW
+	db WING_ATTACK
+	db RAZOR_WIND
+	db COUNTER
 	db -1 ; end
 
 ShuckleEggMoves:

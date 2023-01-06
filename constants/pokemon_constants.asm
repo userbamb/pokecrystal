@@ -230,7 +230,7 @@ DEF JOHTO_POKEMON EQU const_value
 	const STEELIX    ; d0
 	const SNUBBULL   ; d1
 	const GRANBULL   ; d2
-	const QWILFISH   ; d3
+	const QWILFISH   ; d3 GLIGAR
 	const SCIZOR     ; d4
 	const SHUCKLE    ; d5
 	const HERACROSS  ; d6

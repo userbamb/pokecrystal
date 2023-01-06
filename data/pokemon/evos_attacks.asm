@@ -2843,17 +2843,16 @@ GranbullEvosAttacks:
 	db 51, TAKE_DOWN
 	db 0 ; no more level-up moves
 
-QwilfishEvosAttacks:
+QwilfishEvosAttacks: ;GLIGAR
 	db 0 ; no more evolutions
-	db 1, SPIKES
-	db 1, TACKLE
 	db 1, POISON_STING
-	db 10, HARDEN
-	db 10, MINIMIZE
-	db 19, WATER_GUN
-	db 28, PIN_MISSILE
-	db 37, TAKE_DOWN
-	db 46, HYDRO_PUMP
+	db 6, SAND_ATTACK
+	db 13, HARDEN
+	db 20, QUICK_ATTACK
+	db 28, FAINT_ATTACK
+	db 36, SLASH
+	db 44, SCREECH
+	db 52, GUILLOTINE
 	db 0 ; no more level-up moves
 
 ScizorEvosAttacks:

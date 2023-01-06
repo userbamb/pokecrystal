@@ -1,10 +1,10 @@
-	db "BALLOON@" ; species name
-	dw 108, 90 ; height, weight
+	db "FLYSCORPIO@" ; species name
+	dw 307, 1430 ; height, weight
 
-	db   "When faced with a"
-	next "larger opponent,"
-	next "it swallows as"
-
-	page "much water as it"
-	next "can to match the"
-	next "opponent's size.@"
+	db   "It builds its nest"
+	next "on a steep cliff."
+	next "When it is done"
+	
+	page "gliding, it hops"
+	next "along the ground"
+	next "back to its nest.@"

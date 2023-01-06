@@ -1631,7 +1631,7 @@ JohtoGrassWildMons:
 	; morn
 	db 23, GEODUDE
 	db 23, GRAVELER
-	db 24, GLIGAR
+	db 24, QWILFISH ;GLIGAR
 	db 25, DONPHAN
 	db 20, PHANPY
 	db 27, SKARMORY
@@ -1639,7 +1639,7 @@ JohtoGrassWildMons:
 	; day
 	db 23, GEODUDE
 	db 23, GRAVELER
-	db 24, GLIGAR
+	db 24, QWILFISH
 	db 25, DONPHAN
 	db 30, DONPHAN
 	db 27, SKARMORY
@@ -1647,7 +1647,7 @@ JohtoGrassWildMons:
 	; nite
 	db 23, GEODUDE
 	db 23, GRAVELER
-	db 24, GLIGAR
+	db 24, QWILFISH
 	db 25, GRAVELER
 	db 27, GRAVELER
 	db 27, GRAVELER

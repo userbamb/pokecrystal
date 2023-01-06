@@ -210,7 +210,7 @@ PokemonNames::
 	db "STEELIX@@@"
 	db "SNUBBULL@@"
 	db "GRANBULL@@"
-	db "QWILFISH@@"  ;gelania
+	db "GLIGAR@@@@"  ;QWILFISH
 	db "SCIZOR@@@@"
 	db "SHUCKLE@@@" ;EXEGGUTORAKOL
 	db "HERACROSS@"
