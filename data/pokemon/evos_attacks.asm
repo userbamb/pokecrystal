@@ -1546,6 +1546,7 @@ ChanseyEvosAttacks:
 	db 0 ; no more level-up moves
 
 TangelaEvosAttacks:
+    db EVOLVE_HAPPINESS, TR_NITE, MISDREAVUS
 	db 0 ; no more evolutions
 	db 1, CONSTRICT
 	db 4, SLEEP_POWDER
@@ -2700,14 +2701,18 @@ SlowkingEvosAttacks:
 
 MisdreavusEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, GROWL
-	db 1, PSYWAVE
-	db 6, SPITE
-	db 12, CONFUSE_RAY
-	db 19, MEAN_LOOK
-	db 27, PSYBEAM
-	db 36, PAIN_SPLIT
-	db 46, PERISH_SONG
+	db 1, ABSORB
+	db 1, CONSTRICT
+	db 4, STUN_SPORE
+	db 7, SPORE
+	db 10, MEGA_DRAIN
+	db 13, BIND
+	db 19, VINE_WHIP
+	db 25, POISONPOWDER
+	db 31, SWORDS_DANCE
+	db 34, SLEEP_POWDER
+	db 40, ANCIENTPOWER
+	db 50, LEECH_SEED
 	db 0 ; no more level-up moves
 
 UnownEvosAttacks:

@@ -600,20 +600,6 @@ WooperEggMoves:
 	db SAFEGUARD
 	db -1 ; end
 
-MurkrowEggMoves:
-	db WHIRLWIND
-	db DRILL_PECK
-	db QUICK_ATTACK
-	db MIRROR_MOVE
-	db WING_ATTACK
-	db SKY_ATTACK
-	db -1 ; end
-
-MisdreavusEggMoves:
-	db SCREECH
-	db DESTINY_BOND
-	db -1 ; end
-
 GirafarigEggMoves:
 	db TAKE_DOWN
 	db AMNESIA

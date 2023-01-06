@@ -1,10 +1,10 @@
-	db "SCREECH@" ; species name
-	dw 204, 20 ; height, weight
+	db "MISCHIEF@" ; species name
+	dw 504, 1220 ; height, weight
 
-	db   "It loves to watch"
-	next "people it's scar-"
-	next "ed. It frightens"
+	db   "Its self styled"
+	next "vines are a great"
+	next "source of pride."
 
-	page "them by screaming"
-	next "loudly or appear-"
-	next "ing suddenly.@"
+	page "It will even style"
+	next "TANGTRIP & TANGELA"
+	next "vines for them.@"

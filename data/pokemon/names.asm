@@ -199,7 +199,7 @@ PokemonNames::
 	db "UMBREON@@@"
 	db "LEAFEON@@@" ;MURKROW
 	db "SLOWKING@@"
-	db "MISDREAVUS"  ;gorochu
+	db "GELANIA@@@"  ;MISDREAVUS
 	db "UNOWN@@@@@" 
 	db "WOBBUFFET@"  ;GIRAFARIG EVO
 	db "GIRAFARIG@"

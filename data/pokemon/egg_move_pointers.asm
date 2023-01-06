@@ -199,7 +199,7 @@ EggMovePointers::
 	dw NoEggMoves
 	dw NoEggMoves ;LEAFEON
 	dw NoEggMoves
-	dw MisdreavusEggMoves
+	dw TangelaEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw GirafarigEggMoves
