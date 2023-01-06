@@ -211,8 +211,8 @@ PokemonCries::
 	mon_cry CRY_GIRAFARIG,    65,  512 ; GIRAFARIG
 	mon_cry CRY_SLOWKING,    128,  256 ; PINECO
 	mon_cry CRY_SLOWKING,      0,  384 ; FORRETRESS
-	mon_cry CRY_DUNSPARCE,   452,  256 ; DUNSPARCE
-	mon_cry CRY_GLIGAR,     -258,  256 ; GLIGAR
+	mon_cry CRY_PICHU,       $f60,  $200 ; DUNSPARCE KOTORA
+	mon_cry CRY_RAIKOU,      $db3,  $168 ; GLIGAR    RAITORA
 	mon_cry CRY_TYPHLOSION,  239,  247 ; STEELIX
 	mon_cry CRY_DUNSPARCE,   274,  232 ; SNUBBULL
 	mon_cry CRY_DUNSPARCE,     0,  384 ; GRANBULL

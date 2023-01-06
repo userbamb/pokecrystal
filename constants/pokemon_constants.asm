@@ -225,8 +225,8 @@ DEF JOHTO_POKEMON EQU const_value
 	const GIRAFARIG  ; cb
 	const PINECO     ; cc
 	const FORRETRESS ; cd
-	const DUNSPARCE  ; ce
-	const GLIGAR     ; cf
+	const DUNSPARCE  ; ce KOTORA
+	const GLIGAR     ; cf RAITORA
 	const STEELIX    ; d0
 	const SNUBBULL   ; d1
 	const GRANBULL   ; d2

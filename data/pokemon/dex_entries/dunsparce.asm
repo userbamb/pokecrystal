@@ -1,10 +1,10 @@
-	db "LAND SNAKE@" ; species name
-	dw 411, 310 ; height, weight
+    db "ROTUND@" ; species name
+	dw 203, 470 ; height, weight
 
-	db   "It hides deep"
-	next "inside caves where"
-	next "no light ever"
+	db   "When charged up"
+	next "its fur crackles"
+	next "like lightning."
 
-	page "reaches it and"
-	next "remains virtually"
-	next "motionless there.@"
+	page "If its tail is"
+	next "standing on end,"
+	next "it's about to zap.@"

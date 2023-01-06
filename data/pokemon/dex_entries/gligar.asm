@@ -1,10 +1,10 @@
-	db "FLYSCORPIO@" ; species name
-	dw 307, 1430 ; height, weight
+	db "PROWLER@" ; species name
+	dw 501, 1520 ; height, weight
 
-	db   "It builds its nest"
-	next "on a steep cliff."
-	next "When it is done"
+	db   "Its golden color"
+	next "and splendidly"
+	next "rotund shape made"
 
-	page "gliding, it hops"
-	next "along the ground"
-	next "back to its nest.@"
+	page "it a symbol of"
+	next "royal superiority"
+	next "in ancient JOHTO.@"

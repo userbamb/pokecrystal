@@ -206,7 +206,7 @@ EggMovePointers::
 	dw PinecoEggMoves
 	dw NoEggMoves
 	dw DunsparceEggMoves
-	dw GligarEggMoves
+	dw DunsparceEggMoves ;RAITORA
 	dw NoEggMoves
 	dw SnubbullEggMoves
 	dw NoEggMoves

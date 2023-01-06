@@ -205,8 +205,8 @@ PokemonNames::
 	db "GIRAFARIG@"
 	db "PINECO@@@@"
 	db "FORRETRESS"
-	db "DUNSPARCE@" ;gligar gliscor
-	db "GLIGAR@@@@"
+	db "KOTORA@@@@" ;KOTORA RAITORA
+	db "RAITORA@@@"
 	db "STEELIX@@@"
 	db "SNUBBULL@@"
 	db "GRANBULL@@"

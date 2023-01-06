@@ -2771,26 +2771,36 @@ ForretressEvosAttacks:
 	db 0 ; no more level-up moves
 
 DunsparceEvosAttacks:
+	db EVOLVE_HAPPINESS, TR_MORNDAY, GLIGAR
 	db 0 ; no more evolutions
-	db 1, RAGE
-	db 5, DEFENSE_CURL
-	db 13, GLARE
-	db 18, SPITE
-	db 26, PURSUIT
-	db 30, SCREECH
-	db 38, TAKE_DOWN
+	db 1, TACKLE
+	db 1, TAIL_WHIP
+	db 6, THUNDERSHOCK
+	db 10, BITE
+	db 15, THUNDER_WAVE
+	db 19, SCARY_FACE
+	db 24, SPARK
+	db 28, TAKE_DOWN
+	db 33, AGILITY
+	db 37, CRUNCH
+	db 42, THUNDERBOLT
 	db 0 ; no more level-up moves
 
 GligarEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, POISON_STING
-	db 6, SAND_ATTACK
-	db 13, HARDEN
-	db 20, QUICK_ATTACK
-	db 28, FAINT_ATTACK
-	db 36, SLASH
-	db 44, SCREECH
-	db 52, GUILLOTINE
+	db 1, TACKLE
+	db 1, TAIL_WHIP
+	db 6, THUNDERSHOCK
+	db 10, BITE
+	db 15, THUNDER_WAVE
+	db 19, SCARY_FACE
+	db 24, SPARK
+	db 28, TAKE_DOWN
+	db 35, AGILITY
+	db 42, CRUNCH
+	db 49, THUNDERBOLT
+	db 56, THUNDER
+	db 60, EXTREMESPEED
 	db 0 ; no more level-up moves
 
 SteelixEvosAttacks:

@@ -619,8 +619,8 @@ DunsparceEggMoves:
 	db BIDE
 	db ANCIENTPOWER
 	db ROCK_SLIDE
-	db BITE
-	db RAGE
+	db EXTREMESPEED
+	db OUTRAGE
 	db -1 ; end
 
 GligarEggMoves:
