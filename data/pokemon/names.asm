@@ -197,7 +197,7 @@ PokemonNames::
 	db "QUAGSIRE@@" 
 	db "ESPEON@@@@"
 	db "UMBREON@@@"
-	db "LEAFEON@@@" MURKROW
+	db "LEAFEON@@@" ;MURKROW
 	db "SLOWKING@@"
 	db "MISDREAVUS"  ;gorochu
 	db "UNOWN@@@@@" 
