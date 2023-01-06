@@ -1795,6 +1795,7 @@ EeveeEvosAttacks:
 	db EVOLVE_ITEM, THUNDERSTONE, JOLTEON
 	db EVOLVE_ITEM, WATER_STONE, VAPOREON
 	db EVOLVE_ITEM, FIRE_STONE, FLAREON
+	db EVOLVE_ITEM, LEAF_STONE, MURKROW   ;LEAFEON
 	db EVOLVE_HAPPINESS, TR_MORNDAY, ESPEON
 	db EVOLVE_HAPPINESS, TR_NITE, UMBREON
 	db 0 ; no more evolutions
@@ -2670,14 +2671,20 @@ UmbreonEvosAttacks:
 
 MurkrowEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, PECK
-	db 11, PURSUIT
-	db 16, HAZE
-	db 26, NIGHT_SHADE
-	db 31, FAINT_ATTACK
-	db 41, MEAN_LOOK
+	db 1, TACKLE
+	db 1, TAIL_WHIP
+	db 8, SAND_ATTACK
+	db 16, RAZOR_LEAF
+	db 23, QUICK_ATTACK
+	db 25, SYNTHESIS
+	db 30, LEECH_SEED
+	db 36, MEGA_DRAIN
+	db 42, SPORE
+	db 45, SOLARBEAM
+	db 47, AGILITY
+	db 52, MEAN_LOOK
 	db 0 ; no more level-up moves
-
+	
 SlowkingEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, CURSE

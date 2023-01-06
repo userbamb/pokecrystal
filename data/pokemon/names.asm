@@ -194,10 +194,10 @@ PokemonNames::
 	db "SUNFLORA@@"  ;RAITORA KOTORA
 	db "YANMA@@@@@"
 	db "WOOPER@@@@" ;quagsire
-	db "QUAGSIRE@@" ;leafeon
+	db "QUAGSIRE@@" 
 	db "ESPEON@@@@"
 	db "UMBREON@@@"
-	db "MURKROW@@@"
+	db "LEAFEON@@@" MURKROW
 	db "SLOWKING@@"
 	db "MISDREAVUS"  ;gorochu
 	db "UNOWN@@@@@" 
