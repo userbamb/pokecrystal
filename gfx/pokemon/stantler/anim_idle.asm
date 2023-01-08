@@ -3,3 +3,4 @@
 	frame 3, 07
 	dorepeat 1
 	endanim
+	
