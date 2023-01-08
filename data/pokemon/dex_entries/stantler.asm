@@ -1,10 +1,11 @@
-	db "BIG HORN@" ; species name
-	dw 407, 1570 ; height, weight
+	db "SPOTBILL@" ; species name
+	dw 401, 710 ; height, weight
 
-	db   "The round balls"
-	next "found on the"
-	next "fallen antlers can"
+	db   "Very territorial."
+	next "Will defend its"
+	next "hatchlings if it"
 
-	page "be ground into a"
-	next "powder that aids"
-	next "in sleeping.@"
+	page "has a slight sense"
+	next "of danger from its"
+	next "surroundings.@"
+	

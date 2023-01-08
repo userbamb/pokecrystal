@@ -399,11 +399,11 @@ BugCatcherArnieBeatenText:
 	done
 
 BugCatcherArnieAfterBattleText:
-	text "My VENONAT won me"
-	line "the Bug-Catching"
+	text "I want to catch"
+	line "the mascotte of"
 
-	para "Contest at the"
-	line "NATIONAL PARK."
+	para "the NATIONAL PARK."
+	line "It's difficult!"
 	done
 
 BugCatcherArnieYanmaText:

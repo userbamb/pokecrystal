@@ -234,17 +234,17 @@ DEF JOHTO_POKEMON EQU const_value
 	const SCIZOR     ; d4
 	const SHUCKLE    ; d5
 	const HERACROSS  ; d6
-	const SNEASEL    ; d7
+	const SNEASEL    ; d7 PANGSHI
 	const TEDDIURSA  ; d8
 	const URSARING   ; d9
 	const SLUGMA     ; da
 	const MAGCARGO   ; db
 	const SWINUB     ; dc
 	const PILOSWINE  ; dd
-	const CORSOLA    ; de
-	const REMORAID   ; df
-	const OCTILLERY  ; e0
-	const DELIBIRD   ; e1
+	const CORSOLA    ; de WOLFAN
+	const REMORAID   ; df WOLFMAN
+	const OCTILLERY  ; e0 REMORAID
+	const DELIBIRD   ; e1 OCTILLERY
 	const MANTINE    ; e2
 	const SKARMORY   ; e3
 	const HOUNDOUR   ; e4
@@ -253,7 +253,7 @@ DEF JOHTO_POKEMON EQU const_value
 	const PHANPY     ; e7
 	const DONPHAN    ; e8
 	const PORYGON2   ; e9
-	const STANTLER   ; ea
+	const STANTLER   ; ea MADAME
 	const SMEARGLE   ; eb
 	const TYROGUE    ; ec
 	const HITMONTOP  ; ed

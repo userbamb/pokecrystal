@@ -15,12 +15,12 @@ FishGroups:
 	fishgroup 50 percent + 1, .Pond_Old,             .Pond_Good,             .Pond_Super
 	fishgroup 50 percent + 1, .Dratini_Old,          .Dratini_Good,          .Dratini_Super
 	fishgroup 50 percent + 1, .Chinchou_Swarm_Old,   .Chinchou_Swarm_Good,   .Chinchou_Swarm_Super
-	fishgroup 50 percent + 1, .Remoraid_Swarm_Old,   .Remoraid_Swarm_Good,   .Remoraid_Swarm_Super
+	fishgroup 50 percent + 1, .OCTILLERY_Swarm_Old,   .OCTILLERY_Swarm_Good,   .OCTILLERY_Swarm_Super
 	fishgroup 50 percent + 1, .Gyarados_Old,         .Gyarados_Good,         .Gyarados_Super
 	fishgroup 50 percent + 1, .Dratini_2_Old,        .Dratini_2_Good,        .Dratini_2_Super
 	fishgroup 50 percent + 1, .WhirlIslands_Old,     .WhirlIslands_Good,     .WhirlIslands_Super
 	fishgroup 50 percent + 1, .Chinchou_Old,         .Chinchou_Good,         .Chinchou_Super
-	fishgroup 50 percent + 1, .Remoraid_Old,         .Remoraid_Good,         .Remoraid_Super
+	fishgroup 50 percent + 1, .OCTILLERY_Old,         .OCTILLERY_Good,         .OCTILLERY_Super
 	fishgroup 50 percent + 1, .Chinchou_NoSwarm_Old, .Chinchou_NoSwarm_Good, .Chinchou_NoSwarm_Super
 	assert_table_length NUM_FISHGROUPS
 
@@ -114,20 +114,20 @@ FishGroups:
 	db  90 percent + 1, CHINCHOU,   40
 	db 100 percent,     CHINCHOU,   40
 
-.Remoraid_Swarm_Old:
+.OCTILLERY_Swarm_Old:
 	db  70 percent + 1, MAGIKARP,   10
 	db  85 percent + 1, MAGIKARP,   10
-	db 100 percent,     REMORAID,   10
-.Remoraid_Swarm_Good:
+	db 100 percent,     OCTILLERY,   10
+.OCTILLERY_Swarm_Good:
 	db  35 percent,     MAGIKARP,   20
-	db  70 percent,     REMORAID,   20
-	db  90 percent + 1, REMORAID,   20
+	db  70 percent,     OCTILLERY,   20
+	db  90 percent + 1, OCTILLERY,   20
 	db 100 percent,     time_group 12
-.Remoraid_Swarm_Super:
-	db  40 percent,     REMORAID,   40
+.OCTILLERY_Swarm_Super:
+	db  40 percent,     OCTILLERY,   40
 	db  70 percent,     time_group 13
-	db  90 percent + 1, REMORAID,   40
-	db 100 percent,     REMORAID,   40
+	db  90 percent + 1, OCTILLERY,   40
+	db 100 percent,     OCTILLERY,   40
 
 .Gyarados_Old:
 	db  70 percent + 1, MAGIKARP,   10
@@ -192,20 +192,20 @@ FishGroups:
 	db  90 percent + 1, MAGIKARP,   40
 	db 100 percent,     CHINCHOU,   40
 
-.Remoraid_Old:
+.OCTILLERY_Old:
 	db  70 percent + 1, MAGIKARP,   10
 	db  85 percent + 1, MAGIKARP,   10
 	db 100 percent,     POLIWAG,    10
-.Remoraid_Good:
+.OCTILLERY_Good:
 	db  35 percent,     MAGIKARP,   20
 	db  70 percent,     POLIWAG,    20
 	db  90 percent + 1, POLIWAG,    20
 	db 100 percent,     time_group 6
-.Remoraid_Super:
+.OCTILLERY_Super:
 	db  40 percent,     POLIWAG,    40
 	db  70 percent,     time_group 7
 	db  90 percent + 1, MAGIKARP,   40
-	db 100 percent,     REMORAID,   40
+	db 100 percent,     OCTILLERY,   40
 
 TimeFishGroups:
 	;  day              nite
@@ -221,8 +221,8 @@ TimeFishGroups:
 	db DRATINI,    40,  DRATINI,    40 ; 9
 	db CHINCHOU,   20,  CHINCHOU,   20 ; 10
 	db CHINCHOU,   40,  CHINCHOU,   40 ; 11
-	db REMORAID,   20,  REMORAID,   20 ; 12
-	db REMORAID,   40,  REMORAID,   40 ; 13
+	db OCTILLERY,   20,  OCTILLERY,   20 ; 12
+	db OCTILLERY,   40,  OCTILLERY,   40 ; 13
 	db GYARADOS,   20,  GYARADOS,   20 ; 14
 	db GYARADOS,   40,  GYARADOS,   40 ; 15
 	db DRATINI,    10,  DRATINI,    10 ; 16

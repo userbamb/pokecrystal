@@ -60,7 +60,7 @@ MoveNames::
 	li "ICE BEAM"
 	li "BLIZZARD"
 	li "PSYBEAM"
-	li "BUBBLEBEAM"
+	li "BUBBLE BOMB"
 	li "AURORA BEAM"
 	li "HYPER BEAM"
 	li "PECK"

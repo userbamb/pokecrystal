@@ -508,7 +508,7 @@ PsybeamDescription:
 
 BubblebeamDescription:
 	db   "An attack that may"
-	next "lower SPEED.@"
+	next "burn the foe.@"
 
 AuroraBeamDescription:
 	db   "An attack that may"

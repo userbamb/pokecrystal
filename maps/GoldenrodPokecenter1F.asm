@@ -15,7 +15,7 @@ GoldenrodPokecenter1FNurseScript:
 	jumpstd PokecenterNurseScript
 
 GoldenrodPokecenter1F_GSBallSceneLeft:
-	checkevent EVENT_ENABLE_DIPLOMA_PRINTING
+	checkevent EVENT_HEALED_MOOMOO
 	iftrue .gsball
 	end
 

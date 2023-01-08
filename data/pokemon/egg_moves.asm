@@ -364,7 +364,7 @@ KangaskhanEggMoves:
 
 HorseaEggMoves:
 	db FLAIL
-	db AURORA_BEAM
+	db BUBBLEBEAM
 	db OCTAZOOKA
 	db DISABLE
 	db SPLASH
@@ -398,7 +398,7 @@ PinsirEggMoves:
 	db -1 ; end
 
 LaprasEggMoves:
-	db AURORA_BEAM
+	db BUBBLEBEAM
 	db FORESIGHT
 	db -1 ; end
 
@@ -463,7 +463,7 @@ TotodileEggMoves:
 	db THRASH
 	db HYDRO_PUMP
 	db ANCIENTPOWER
-	db RAZOR_WIND
+	db BUBBLEBEAM
 	db ROCK_SLIDE
 	db -1 ; end
 
@@ -681,34 +681,22 @@ SwinubEggMoves:
 	db -1 ; end
 
 CorsolaEggMoves:
-	db ROCK_SLIDE
-	db SAFEGUARD
-	db SCREECH
+	db COUNTER
+	db DYNAMICPUNCH
 	db MIST
-	db AMNESIA
+	db OUTRAGE
+	db PURSUIT
+	db SCREECH
 	db -1 ; end
 
-RemoraidEggMoves:
+OctilleryEggMoves:
 	db AURORA_BEAM
 	db OCTAZOOKA
-	db SUPERSONIC
-	db HAZE
-	db SCREECH
-	db -1 ; end
-
-DelibirdEggMoves:
-	db AURORA_BEAM
-	db QUICK_ATTACK
-	db FUTURE_SIGHT
-	db SPLASH
-	db RAPID_SPIN
-	db -1 ; end
-
-MantineEggMoves:
 	db TWISTER
 	db HYDRO_PUMP
+	db SUPERSONIC
 	db HAZE
-	db SLAM
+	db FLAMETHROWER
 	db -1 ; end
 
 SkarmoryEggMoves:

@@ -1,10 +1,10 @@
-	db "JET@" ; species name
-	dw 211, 630 ; height, weight
+	db "JET@" ; species name REMORAID
+	dw 200, 260 ; height, weight
 
-	db   "Its instinct is to"
-	next "bury itself in"
-	next "holes. It often"
+	db   "To escape from an"
+	next "attacker, it may"
+	next "shoot water out of"
 
-	page "steals the nesting"
-	next "holes of others to"
-	next "sleep in them.@"
+	page "its mouth, then"
+	next "use that force to"
+	next "swim backward.@"

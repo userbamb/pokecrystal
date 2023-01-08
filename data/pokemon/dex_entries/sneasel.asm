@@ -1,10 +1,10 @@
-	db "SHARP CLAW@" ; species name
-	dw 211, 620 ; height, weight
+	db "TALISMAN@" ; species name
+	dw 211, 240 ; height, weight
 
-	db   "This cunning"
-	next "#MON hides"
-	next "under the cover"
+	db   "Beware when this"
+	next "#MON leaps,"
+	next "as it is able to"
 
-	page "of darkness,"
-	next "waiting to attack"
-	next "its prey.@"
+	page "envelop and steal"
+	next "the soul of its"
+	next "target.@"

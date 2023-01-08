@@ -17,11 +17,13 @@ SwarmGrampsScript:
 	opentext
 	checkflag ENGINE_SWARM
 	iftrue .skiprandomswarm
-	random 4
+	random 5
 	ifequal 0, .mareep
 	ifequal 1, .yanma
     ifequal 2, .remoraid
 	ifequal 3, .vulpix
+	ifequal 4, .kotora
+
 
 .mareep
 	setflag ENGINE_SWARM
@@ -55,11 +57,29 @@ SwarmGrampsScript:
 	closetext
 	end
 
+.kotora
+	setflag ENGINE_SWARM
+	swarm NATIONAL_PARK
+	writetext SwarmKotoraText
+	waitbutton
+	closetext
+	end
+
 .skiprandomswarm
 	writetext SkipSwarmText
 	waitbutton
 	closetext
 	end
+
+SwarmKotoraText:
+    text "Let me see…"
+	line "What did the news"
+	cont "say?"
+
+	para "Oh yes! There's a"
+	line "swarm of KOTORA"
+	cont "on NATIONAL PARK."
+	done
 
 SwarmMareepText:
 	text "Let me see…"

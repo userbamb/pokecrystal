@@ -214,17 +214,17 @@ PokemonNames::
 	db "SCIZOR@@@@"
 	db "SHUCKLE@@@" ;EXEGGUTORAKOL
 	db "HERACROSS@"
-	db "SNEASEL@@@" 
+	db "PANGSHI@@@"  SNEASEL 
 	db "TEDDIURSA@"
 	db "URSARING@@"
 	db "SLUGMA@@@@" 
 	db "MAGCARGO@@" 
 	db "SWINUB@@@@"
 	db "PILOSWINE@"
-	db "CORSOLA@@@" ;mamoswine
-	db "REMORAID@@"
-	db "OCTILLERY@"
-	db "DELIBIRD@@"  
+	db "WOLFAN@@@@" ;WOLF CORSOLA
+	db "WARWOLF@@@" ;WOLF REMORAID
+	db "REMORAID@@" ; REMORAID OCTILLERY
+	db "OCTILLERY@"  ; OCTILLERY REMORAID
 	db "MANTINE@@@"
 	db "SKARMORY@@"
 	db "HOUNDOUR@@"
@@ -233,7 +233,7 @@ PokemonNames::
 	db "PHANPY@@@@"
 	db "DONPHAN@@@"
 	db "PORYGON2@@"
-	db "STANTLER@@" ;sir
+	db "MADAME@@@@" ;STANTLER
 	db "SMEARGLE@@"
 	db "TYROGUE@@@"
 	db "HITMONTOP@"

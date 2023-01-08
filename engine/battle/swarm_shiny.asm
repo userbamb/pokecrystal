@@ -12,9 +12,15 @@ GenerateSwarmShiny:
 	jr z, .remoraid
 	cp LANDMARK_ROUTE_37
 	jr z, .vulpix
+	cp LANDMARK_NATIONAL_PARK
+	jr z, .kotora
     jr .skipshine
 
-
+.kotora
+   ld a, [wCurPartySpecies]
+   cp DUNSPARCE
+   jr nz, .skipshine
+   jr .rollshiny
 .vulpix
    ld a, [wCurPartySpecies]
    cp VULPIX
@@ -32,7 +38,7 @@ GenerateSwarmShiny:
    jr .rollshiny
 .remoraid
     ld a, [wCurPartySpecies]
-    cp REMORAID
+    cp OCTILLERY
     jr nz, .skipshine
     ;fallthrough
 .rollshiny

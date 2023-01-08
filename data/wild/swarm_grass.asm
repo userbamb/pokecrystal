@@ -8,7 +8,7 @@ SwarmGrassWildMons:
 	; morn
 	db 3, GIRAFARIG
 	db 3, MAREEP
-	db 2, SENTRET
+	db 2, DUNSPARCE
 	db 2, GIRAFARIG
 	db 2, MAREEP
 	db 4, MAREEP
@@ -16,7 +16,7 @@ SwarmGrassWildMons:
 	; day
 	db 3, GIRAFARIG
 	db 3, MAREEP
-	db 2, SENTRET
+	db 2, DUNSPARCE
 	db 2, GIRAFARIG
 	db 2, MAREEP
 	db 4, MAREEP
@@ -24,7 +24,7 @@ SwarmGrassWildMons:
 	; nite
 	db 3, GIRAFARIG
 	db 3, MAREEP
-	db 2, SENTRET
+	db 2, DUNSPARCE
 	db 2, GIRAFARIG
 	db 2, MAREEP
 	db 4, MAREEP
@@ -85,5 +85,33 @@ SwarmGrassWildMons:
 	db 15, NOCTOWL
 	db 15, VULPIX
 	db 15, ARIADOS
+
+	map_id NATIONAL_PARK
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 12, NIDORAN_M
+	db 12, NIDORAN_F
+	db 14, LEDYBA
+	db 13, DUNSPARCE
+	db 10, DUNSPARCE
+	db 10, SENTRET
+	db 10, SENTRET
+	; day
+	db 12, NIDORAN_F
+	db 12, NIDORAN_M
+	db 14, SUNKERN
+	db 13, DUNSPARCE
+	db 10, DUNSPARCE
+	db 10, WEEDLE
+	db 10, SENTRET
+	; nite
+	db 12, DUNSPARCE
+	db 13, HOOTHOOT
+	db 14, SPINARAK
+	db 15, DUNSPARCE
+	db 10, VENONAT
+	db 12, VENONAT
+	db 12, VENONAT
+
 
 	db -1 ; end

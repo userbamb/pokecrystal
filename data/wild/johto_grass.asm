@@ -346,8 +346,8 @@ JohtoGrassWildMons:
 	db 14, LEDYBA
 	db 13, PIDGEY
 	db 10, CATERPIE
-	db 10, WEEDLE
-	db 10, WEEDLE
+	db 10, SENTRET
+	db 10, SENTRET
 	; day
 	db 12, NIDORAN_F
 	db 12, NIDORAN_M
@@ -355,7 +355,7 @@ JohtoGrassWildMons:
 	db 13, PIDGEY
 	db 10, CATERPIE
 	db 10, WEEDLE
-	db 10, WEEDLE
+	db 10, SENTRET
 	; nite
 	db 12, PSYDUCK
 	db 13, HOOTHOOT
@@ -721,10 +721,10 @@ JohtoGrassWildMons:
 	db 22, GOLBAT
 	db 22, GOLBAT
 	; nite
-	db 21, DELIBIRD
+	db 21, JYNX
 	db 22, ZUBAT
 	db 22, GOLBAT
-	db 23, DELIBIRD
+	db 23, JYNX
 	db 24, GOLBAT
 	db 22, GOLBAT
 	db 22, GOLBAT
@@ -749,13 +749,13 @@ JohtoGrassWildMons:
 	db 23, GOLBAT
 	db 22, JYNX
 	; nite
-	db 22, DELIBIRD
+	db 22, JYNX
 	db 23, ZUBAT
 	db 23, GOLBAT
-	db 24, DELIBIRD
+	db 24, JYNX
 	db 25, GOLBAT
 	db 23, GOLBAT
-	db 22, SNEASEL
+	db 10, SMOOCHUM
 	end_grass_wildmons
 
 	def_grass_wildmons ICE_PATH_B2F_MAHOGANY_SIDE
@@ -777,13 +777,13 @@ JohtoGrassWildMons:
 	db 22, JYNX
 	db 24, JYNX
 	; nite
-	db 23, DELIBIRD
+	db 23, JYNX
 	db 24, ZUBAT
 	db 24, GOLBAT
-	db 25, DELIBIRD
+	db 25, JYNX
 	db 26, GOLBAT
-	db 22, SNEASEL
-	db 24, SNEASEL
+	db 22, CORSOLA
+	db 24, JYNX
 	end_grass_wildmons
 
 	def_grass_wildmons ICE_PATH_B2F_BLACKTHORN_SIDE
@@ -805,13 +805,13 @@ JohtoGrassWildMons:
 	db 22, JYNX
 	db 24, JYNX
 	; nite
-	db 23, DELIBIRD
+	db 23, JYNX
 	db 24, ZUBAT
 	db 24, GOLBAT
-	db 25, DELIBIRD
+	db 25, GOLBAT
 	db 26, GOLBAT
-	db 22, SNEASEL
-	db 24, SNEASEL
+	db 22, CORSOLA
+	db 10, CORSOLA
 	end_grass_wildmons
 
 	def_grass_wildmons ICE_PATH_B3F
@@ -833,13 +833,13 @@ JohtoGrassWildMons:
 	db 24, JYNX
 	db 26, JYNX
 	; nite
-	db 24, DELIBIRD
+	db 24, CORSOLA
 	db 25, ZUBAT
 	db 25, GOLBAT
-	db 26, DELIBIRD
-	db 22, SNEASEL
-	db 24, SNEASEL
-	db 26, SNEASEL
+	db 26, CORSOLA
+	db 22, CORSOLA
+	db 24, JYNX
+	db 26, JYNX
 	end_grass_wildmons
 
 	def_grass_wildmons WHIRL_ISLAND_NW
@@ -1238,17 +1238,17 @@ JohtoGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 2, PIDGEY
-	db 2, SENTRET
+	db 2, PIDGEY
 	db 3, PIDGEY
-	db 3, SENTRET
+	db 3, RATTATA
 	db 2, RATTATA
 	db 3, HOPPIP
 	db 3, HOPPIP
 	; day
 	db 2, PIDGEY
-	db 2, SENTRET
+	db 2, RATTATA
 	db 3, PIDGEY
-	db 3, SENTRET
+	db 3, PIDGEY
 	db 2, RATTATA
 	db 3, HOPPIP
 	db 3, HOPPIP
@@ -1478,9 +1478,9 @@ JohtoGrassWildMons:
 	db 15, PIDGEY
 	; nite
 	db 13, SPINARAK
-	db 14, STANTLER
+	db 14, NOCTOWL
 	db 15, HOOTHOOT
-	db 16, STANTLER
+	db 16, SNEASEL
 	db 15, NOCTOWL
 	db 15, ARIADOS
 	db 15, ARIADOS
@@ -1573,21 +1573,21 @@ JohtoGrassWildMons:
 	def_grass_wildmons ROUTE_43
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 15, SENTRET
+	db 15, PIDGEY
 	db 16, PIDGEOTTO
 	db 16, FARFETCH_D
-	db 15, FURRET
+	db 15, FARFETCH_D
 	db 17, RATICATE
-	db 17, FURRET
-	db 17, FURRET
+	db 17, RATICATE
+	db 17, DUNSPARCE
 	; day
-	db 15, SENTRET
+	db 15, PIDGEY
 	db 16, PIDGEOTTO
 	db 16, FARFETCH_D
-	db 15, FURRET
+	db 15, FARFETCH_D
 	db 17, RATICATE
-	db 17, FURRET
-	db 17, FURRET
+	db 17, RATICATE
+	db 17, MAREEP
 	; nite
 	db 15, VENONAT
 	db 16, NOCTOWL
