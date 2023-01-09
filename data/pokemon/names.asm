@@ -214,7 +214,7 @@ PokemonNames::
 	db "SCIZOR@@@@"
 	db "SHUCKLE@@@" ;EXEGGUTORAKOL
 	db "HERACROSS@"
-	db "PANGSHI@@@"  SNEASEL 
+	db "PANGSHI@@@"  ;SNEASEL 
 	db "TEDDIURSA@"
 	db "URSARING@@"
 	db "SLUGMA@@@@" 

@@ -134,6 +134,31 @@ BattleTowerMons:
 	bigdw 28 ; SDef
 	db "GARU-RA@@@@"
 
+    db CORSOLA
+	db SCOPE_LENS
+	db ICY_WIND, RETURN, ROCK_SMASH, ICE_PUNCH
+	dw 0 ; OT ID
+	dt 1000 ; Exp
+	; Stat exp
+	bigdw 40000
+	bigdw 30000
+	bigdw 33300
+	bigdw 30000
+	bigdw 30000
+	dn 15, 14, 15, 13 ; DVs
+	db 15, 10, 20, 5 ; PP
+	db 250 ; Happiness
+	db 0, 0, 0 ; Pokerus, Caught data
+	db 10 ; Level
+	db 0, 0 ; Status
+	bigdw 38 ; HP
+	bigdw 38 ; Max HP
+	bigdw 23 ; Atk
+	bigdw 29 ; Def
+	bigdw 19 ; Spd
+	bigdw 24 ; SAtk
+	bigdw 28 ; SDef
+	db "SANI-GO@@@@"
 
 	db MILTANK
 	db GOLD_BERRY
@@ -212,6 +237,32 @@ BattleTowerMons:
 	bigdw 28 ; SAtk
 	bigdw 30 ; SDef
 	db "RAPURASU@@@"
+
+	db SNEASEL
+	db GOLD_BERRY
+	db EXTREMESPEED, FAINT_ATTACK, EMBER, RECOVER
+	dw 0 ; OT ID
+	dt 1000 ; Exp
+	; Stat exp
+	bigdw 30000
+	bigdw 35000
+	bigdw 30000
+	bigdw 30000
+	bigdw 30000
+	dn 15, 11, 11, 15 ; DVs
+	db 20, 20, 15, 5 ; PP
+	db 100 ; Happiness
+	db 0, 0, 0 ; Pokerus, Caught data
+	db 10 ; Level
+	db 0, 0 ; Status
+	bigdw 38 ; HP
+	bigdw 38 ; Max HP
+	bigdw 31 ; Atk
+	bigdw 22 ; Def
+	bigdw 34 ; Spd
+	bigdw 19 ; SAtk
+	bigdw 27 ; SDef
+	db "NIyu-RA@@@@"
 
 	db PORYGON2
 	db BRIGHTPOWDER
@@ -5205,6 +5256,32 @@ BattleTowerMons:
 	bigdw 263 ; SAtk
 	bigdw 263 ; SDef
 	db "MUUMA@@@@@@"
+
+    db SNEASEL
+	db GOLD_BERRY
+	db EXTREMESPEED, FAINT_ATTACK, EMBER, RECOVER
+    dw 0 ; OT ID
+	dt 1000000 ; Exp
+	; Stat exp
+	bigdw 50000
+	bigdw 50000
+	bigdw 48000
+	bigdw 45000
+	bigdw 50000
+	dn 15, 13, 14, 15 ; DVs
+	db 20, 5, 15, 20 ; PP
+	db 100 ; Happiness
+	db 0, 0, 0 ; Pokerus, Caught data
+	db 100 ; Level
+	db 0, 0 ; Status
+	bigdw 301 ; HP
+	bigdw 301 ; Max HP
+	bigdw 280 ; Atk
+	bigdw 195 ; Def
+	bigdw 316 ; Spd
+	bigdw 160 ; SAtk
+	bigdw 240 ; SDef
+	db "NIyu-RA@@@@"
 
 	db SCIZOR
 	db QUICK_CLAW
