@@ -6,7 +6,7 @@
 	db GRASS, ROCK ; type
 	db 30 ; catch rate
 	db 211 ; base exp
-	db LONG_VINE, LONG_VINE ; items
+	db STRANGE_ROOT, MIRACLEBERRY ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
 	db 20 ; step cycles to hatch

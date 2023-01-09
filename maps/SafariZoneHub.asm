@@ -45,7 +45,6 @@ SafariZoneHub_MapEvents:
 
     def_bg_events
 	bg_event 14, 22, BGEVENT_READ, SafariZoneHubAreaSign
-	bg_event 18, 20, BGEVENT_READ, SafariZoneHubRestHouseSign
 	
     def_object_events
 	object_event 14, 10, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SafariZoneHubNugget, EVENT_SAFARI_ZONE_HUB_NUGGET

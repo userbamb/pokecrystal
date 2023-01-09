@@ -26,7 +26,7 @@ Mewtwo:
 	closetext
 	setevent EVENT_FOUGHT_MEWTWO
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
-	loadwildmon MURKROW, 10
+	loadwildmon OCTILLERY, 10
 	startbattle
 	disappear CERULEANMEWTWO_MEWTWO
 	reloadmapafterbattle

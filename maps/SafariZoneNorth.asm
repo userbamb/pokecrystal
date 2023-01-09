@@ -112,7 +112,6 @@ SafariZoneNorth_MapEvents:
 	def_bg_events
 	bg_event 13, 23, BGEVENT_ITEM, SafariZoneNorthHiddenLuckyPunch
 	bg_event 9, 27, BGEVENT_READ, SafariZoneNorthAreaSign
-	bg_event 26, 4, BGEVENT_READ, SafariZoneNorthRestHouseSign
 	bg_event 24, 20, BGEVENT_READ, SafariZoneNorthTrainerTips1Sign
 	bg_event 13, 29, BGEVENT_READ, SafariZoneNorthTrainerTips2Sign
 	

@@ -847,25 +847,25 @@ KantoGrassWildMons:
 	; morn
 	db 31, TANGELA
 	db 42, PONYTA
-	db 42, ARBOK
-	db 44, RAPIDASH
+	db 42, NIDORINA
+	db 44, NIDORINO
 	db 41, DODUO
 	db 43, DODRIO
 	db 43, DODRIO
 	; day
 	db 41, TANGELA
 	db 42, PONYTA
-	db 42, ARBOK
-	db 44, RAPIDASH
+	db 42, NIDORINO
+	db 44, KANGASKHAN
 	db 41, DODUO
 	db 43, DODRIO
-	db 43, DODRIO
+	db 10, CHIKORITA
 	; nite
 	db 41, TANGELA
 	db 42, POLIWHIRL
 	db 42, GOLBAT
 	db 44, POLIWHIRL
-	db 40, GOLBAT
+	db 40, KANGASKHAN
 	db 44, GOLBAT
 	db 44, GOLBAT
 	end_grass_wildmons
@@ -876,15 +876,15 @@ KantoGrassWildMons:
 	db 41, TANGELA
 	db 42, PONYTA
 	db 42, ARBOK
-	db 44, RAPIDASH
+	db 44, SCYTHER
 	db 41, DODUO
-	db 43, DODRIO
+	db 43, CHANSEY
 	db 43, DODRIO
 	; day
 	db 41, TANGELA
-	db 42, PONYTA
+	db 10, CYNDAQUIL
 	db 42, ARBOK
-	db 44, RAPIDASH
+	db 44, SCYTHER
 	db 41, DODUO
 	db 43, DODRIO
 	db 43, DODRIO
@@ -893,7 +893,7 @@ KantoGrassWildMons:
 	db 42, POLIWHIRL
 	db 42, GOLBAT
 	db 44, POLIWHIRL
-	db 40, GOLBAT
+	db 40, PINSIR
 	db 44, GOLBAT
 	db 44, GOLBAT
 	end_grass_wildmons
@@ -903,27 +903,111 @@ KantoGrassWildMons:
 	; morn
 	db 41, TANGELA
 	db 42, PONYTA
-	db 42, ARBOK
+	db 42, KANGASKHAN
 	db 44, RAPIDASH
 	db 41, DODUO
 	db 43, DODRIO
 	db 43, DODRIO
 	; day
-	db 41, TANGELA
+	db 10, TOTODILE
 	db 42, PONYTA
-	db 42, ARBOK
+	db 42, KANGASKHAN
 	db 44, RAPIDASH
 	db 41, DODUO
 	db 43, DODRIO
 	db 43, DODRIO
 	; nite
-	db 41, TANGELA
+	db 10, TOTODILE
 	db 42, POLIWHIRL
 	db 42, GOLBAT
 	db 44, POLIWHIRL
 	db 40, GOLBAT
 	db 44, GOLBAT
+	db 44, UMBREON
+	end_grass_wildmons
+
+		def_grass_wildmons CERULEAN_CAVE_1F
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 41, TANGELA
+	db 42, KINGLER
+	db 42, ARBOK
 	db 44, GOLBAT
+	db 41, GOLBAT
+	db 43, GRAVELER
+	db 43, CHANSEY
+	; day
+	db 41, TANGELA
+	db 42, KINGLER
+	db 42, ARBOK
+	db 44, GOLBAT
+	db 41, GOLBAT
+	db 43, GRAVELER
+	db 43, MISDREAVUS
+	; nite
+	db 41, TANGELA
+	db 42, KINGLER
+	db 42, ARBOK
+	db 44, GOLBAT
+	db 41, GOLBAT
+	db 43, GRAVELER
+	db 43, CROBAT
+	end_grass_wildmons
+
+    def_grass_wildmons CERULEAN_CAVE_2F
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 41, TANGELA
+	db 42, PARASECT
+	db 42, PARAS
+	db 44, GOLBAT
+	db 41, GOLBAT
+	db 43, GRAVELER
+	db 43, CHANSEY
+	; day
+	db 41, TANGELA
+	db 42, PARASECT
+	db 42, PARAS
+	db 44, GOLBAT
+	db 41, GOLBAT
+	db 43, GRAVELER
+	db 43, MISDREAVUS
+	; nite
+	db 41, TANGELA
+	db 42, PARASECT
+	db 42, PARAS
+	db 44, GOLBAT
+	db 41, GOLBAT
+	db 43, MISDREAVUS
+	db 43, CHANSEY
+	end_grass_wildmons
+
+    def_grass_wildmons CERULEAN_CAVE_B1F
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 41, TANGELA
+	db 42, PARASECT
+	db 42, KINGLER
+	db 44, GOLBAT
+	db 41, GOLBAT
+	db 43, POLIWHIRL
+	db 43, SLOWBRO
+	; day
+	db 41, MISDREAVUS
+	db 42, PARASECT
+	db 42, KINGLER
+	db 44, GOLBAT
+	db 41, GOLBAT
+	db 43, POLIWHIRL
+	db 43, SLOWKING
+	; nite
+	db 41, TANGELA
+	db 42, PARASECT
+	db 42, KINGLER
+	db 44, GOLBAT
+	db 41, GOLBAT
+	db 43, POLIWHIRL
+	db 43, POLITOED
 	end_grass_wildmons
 	
 	db -1 ; end

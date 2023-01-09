@@ -56,7 +56,6 @@ SafariZoneEast_MapEvents:
 
     def_bg_events
 	bg_event 4, 22, BGEVENT_READ, SafariZoneEastAreaSign
-	bg_event 26, 10, BGEVENT_READ, SafariZoneEastRestHouseSign
 	bg_event 6, 4, BGEVENT_READ, SafariZoneEastTrainerTipsSign
 	
     def_object_events
