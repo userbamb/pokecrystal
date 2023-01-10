@@ -114,14 +114,33 @@ MonicaScript:
 	end
 
 .Monday:
-	writetext MonicaMondayText
+    checkevent EVENT_BEAT_BEAUTY_MONICA
+	iftrue .done
+	writetext MonicaFightMondayText ;CHIEDE SE VUOI SFIDA
+	yesorno
+	iffalse .no
+	closetext
+	winlosstext MonicaWinLossText, 0
+	loadtrainer BEAUTY, MONICA
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_BEAUTY_MONICA
+
+.no:
+    writetext MonicaNoFightMondayText
 	waitbutton
+	closetext
+	end
+    
 .done:
+    writetext MonicaMondayText
+	waitbutton
 	closetext
 	end
 
 .NotMonday:
 	writetext MonicaNotMondayText
+	clearevent EVENT_BEAT_BEAUTY_MONICA
 	waitbutton
 	closetext
 	end
@@ -159,6 +178,12 @@ Route40_StepUp4Movement: ; unreferenced
 	step UP
 	step UP
 	step_end
+
+MonicaWinLossText:
+    text "You're on the"
+	line "right track,"
+	cont "<PLAYER>!"
+	done
 
 SwimmermSimonSeenText:
 	text "You have to warm"
@@ -309,6 +334,22 @@ MonicaGaveGiftText:
 	para "You should equip a"
 	line "bird #MON with"
 	cont "that item."
+	done
+
+MonicaNoFightMondayText:
+    text "MONICA: Right,"
+	line "I understand…"
+    done
+
+MonicaFightMondayText:
+    text "MONICA: Since we"
+	line "are here…"
+
+	para "Do you want to"
+	line "challenge me?"
+
+	para "I could show you"
+	line "some tricks!"
 	done
 
 MonicaMondayText:
