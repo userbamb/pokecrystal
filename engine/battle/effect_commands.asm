@@ -2540,7 +2540,7 @@ DittoMetalPowder:
 	ld a, [wTempEnemyMonSpecies]
 
 .got_species
-	cp DITTO
+	cp METTO
 	ret nz
 
 	push bc
@@ -2550,22 +2550,25 @@ DittoMetalPowder:
 	pop bc
 	ret nz
 
-; BUG: Metal Powder can increase damage taken with boosted (Special) Defense (see docs/bugs_and_glitches.md)
-	ld a, c
-	srl a
-	add c
-	ld c, a
+	ld h, b
+	ld l, c
+	srl b
+	rr c
+	add hl, bc
+	ld b, h
+	ld c, l
+
+	ld a, HIGH(MAX_STAT_VALUE)
+	cp b
+	jr c, .cap
+	ret nz
+	ld a, LOW(MAX_STAT_VALUE)
+	cp c
 	ret nc
 
-	srl b
-	ld a, b
-	and a
-	jr nz, .done
-	inc b
-.done
-	scf
-	rr c
-	ret
+.cap
+	ld bc, MAX_STAT_VALUE
+ 	ret
 
 BattleCommand_DamageStats:
 	ldh a, [hBattleTurn]
@@ -2647,11 +2650,14 @@ PlayerAttackDamage:
 	call ThickClubBoost
 
 .done
+    push hl
+	call DittoMetalPowder
+	pop hl
+
 	call TruncateHL_BC
 
 	ld a, [wBattleMonLevel]
 	ld e, a
-	call DittoMetalPowder
 
 	ld a, 1
 	and a
@@ -2840,11 +2846,21 @@ SpeciesItemBoost:
 	ret nz
 
 ; Double the stat
-; BUG: Thick Club and Light Ball can make (Special) Attack wrap around above 1024 (see docs/bugs_and_glitches.md)
 	sla l
 	rl h
-	ret
 
+	ld a, HIGH(MAX_STAT_VALUE)
+	cp h
+	jr c, .cap
+	ret nz
+	ld a, LOW(MAX_STAT_VALUE)
+	cp l
+	ret nc
+
+.cap
+	ld hl, MAX_STAT_VALUE
+ 	ret
+	
 EnemyAttackDamage:
 	call ResetDamage
 
@@ -2914,11 +2930,14 @@ EnemyAttackDamage:
 	call ThickClubBoost
 
 .done
+    push hl
+	call DittoMetalPowder
+	pop hl
+
 	call TruncateHL_BC
 
 	ld a, [wEnemyMonLevel]
 	ld e, a
-	call DittoMetalPowder
 
 	ld a, 1
 	and a
