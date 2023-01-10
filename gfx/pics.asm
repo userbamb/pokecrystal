@@ -782,6 +782,8 @@ RemoraidFrontpic:    INCBIN "gfx/pokemon/remoraid/front.animated.2bpp.lz"
 PoliwagFrontpic:     INCBIN "gfx/pokemon/poliwag/front.animated.2bpp.lz"
 TogepiBackpic:       INCBIN "gfx/pokemon/togepi/back.2bpp.lz"
 CrobatBackpic:       INCBIN "gfx/pokemon/crobat/back.2bpp.lz"
+MettoFrontpic:       INCBIN "gfx/pokemon/metto/front.animated.2bpp.lz"
+MettoBackpic:        INCBIN "gfx/pokemon/metto/back.2bpp.lz"
 
 SECTION "Pics 22", ROMX
 

@@ -1707,7 +1707,7 @@ JohtoGrassWildMons:
 	db 44, POLIWHIRL
 	db 40, GOLBAT
 	db 44, GOLBAT
-	db 44, GOLBAT
+	db 44, METTO
 	end_grass_wildmons
 
 	db -1 ; end

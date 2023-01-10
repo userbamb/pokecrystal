@@ -32,12 +32,10 @@ AlphabeticalPokedexOrder:
 	db CLEFAIRY
 	db CLEFFA
 	db CLOYSTER
-	db CORSOLA
 	db CROBAT
 	db CROCONAW
 	db CUBONE
 	db CYNDAQUIL
-	db DELIBIRD
 	db DEWGONG
 	db DIGLETT
 	db DITTO
@@ -49,7 +47,6 @@ AlphabeticalPokedexOrder:
 	db DRATINI
 	db DROWZEE
 	db DUGTRIO
-	db DUNSPARCE
 	db EEVEE
 	db EKANS
 	db ELECTABUZZ
@@ -67,10 +64,11 @@ AlphabeticalPokedexOrder:
 	db FORRETRESS
 	db FURRET
 	db GASTLY
+	db MISDREAVUS ;GELANIA
 	db GENGAR
 	db GEODUDE
 	db GIRAFARIG
-	db GLIGAR
+    db QWILFISH ;GLIGAR
 	db GLOOM
 	db GOLBAT
 	db GOLDEEN
@@ -107,10 +105,12 @@ AlphabeticalPokedexOrder:
 	db KINGDRA
 	db KINGLER
 	db KOFFING
+	db DUNSPARCE ;KOTORA
 	db KRABBY
 	db LANTURN
 	db LAPRAS
 	db LARVITAR
+	db MURKROW ; LEAFEON
 	db LEDIAN
 	db LEDYBA
 	db LICKITUNG
@@ -118,6 +118,7 @@ AlphabeticalPokedexOrder:
 	db MACHAMP
 	db MACHOKE
 	db MACHOP
+	db STANTLER ;MADAME
 	db MAGBY
 	db MAGCARGO
 	db MAGIKARP
@@ -132,14 +133,13 @@ AlphabeticalPokedexOrder:
 	db MEGANIUM
 	db MEOWTH
 	db METAPOD
+	db METTO
 	db MEW
 	db MEWTWO
 	db MILTANK
-	db MISDREAVUS
 	db MOLTRES
 	db MR__MIME
 	db MUK
-	db MURKROW
 	db NATU
 	db NIDOKING
 	db NIDOQUEEN
@@ -149,11 +149,12 @@ AlphabeticalPokedexOrder:
 	db NIDORINO
 	db NINETALES
 	db NOCTOWL
-	db OCTILLERY
+	db DELIBIRD ; octillery
 	db ODDISH
 	db OMANYTE
 	db OMASTAR
 	db ONIX
+	db SNEASEL ;PANGSHI
 	db PARAS
 	db PARASECT
 	db PERSIAN
@@ -178,13 +179,13 @@ AlphabeticalPokedexOrder:
 	db PUPITAR
 	db QUAGSIRE
 	db QUILAVA
-	db QWILFISH
 	db RAICHU
 	db RAIKOU
+	db GLIGAR ;RAITORA
 	db RAPIDASH
 	db RATICATE
 	db RATTATA
-	db REMORAID
+	db OCTILLERY ;remoraid
 	db RHYDON
 	db RHYHORN
 	db SANDSHREW
@@ -205,13 +206,11 @@ AlphabeticalPokedexOrder:
 	db SLUGMA
 	db SMEARGLE
 	db SMOOCHUM
-	db SNEASEL
 	db SNORLAX
 	db SNUBBULL
 	db SPEAROW
 	db SPINARAK
 	db SQUIRTLE
-	db STANTLER
 	db STARMIE
 	db STARYU
 	db STEELIX
@@ -243,11 +242,13 @@ AlphabeticalPokedexOrder:
 	db VOLTORB
 	db VULPIX
 	db WARTORTLE
+	db REMORAID ;warwolf
 	db WEEDLE
 	db WEEPINBELL
 	db WEEZING
 	db WIGGLYTUFF
 	db WOBBUFFET
+	db CORSOLA ;WOLFAN
 	db WOOPER
 	db XATU
 	db YANMA

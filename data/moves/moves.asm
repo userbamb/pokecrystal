@@ -144,7 +144,7 @@ Moves:
 	move CLAMP,        EFFECT_TRAP_TARGET,        35, WATER,         PHYSICAL,    75, 10,   0
 	move SWIFT,        EFFECT_ALWAYS_HIT,         60, NORMAL,        SPECIAL,    100, 20,   0
 	move SKULL_BASH,   EFFECT_FLINCH_HIT,         90, ROCK,          PHYSICAL,   100, 15,   0
-	move SPIKE_CANNON, EFFECT_MULTI_HIT,          20, STEEL,         PHYSICAL,   100, 15,   0
+	move SPIKE_CANNON, EFFECT_MULTI_HIT,          30, STEEL,         PHYSICAL,   100, 15,   0
 	move CONSTRICT,    EFFECT_SPEED_DOWN_HIT,     10, NORMAL,        PHYSICAL,   100, 35,  10
 	move AMNESIA,      EFFECT_SP_DEF_UP_2,         0, PSYCHIC_TYPE,  STATUS,     100, 20,   0
 	move KINESIS,      EFFECT_ACCURACY_DOWN,       0, PSYCHIC_TYPE,  STATUS,      80, 15,   0

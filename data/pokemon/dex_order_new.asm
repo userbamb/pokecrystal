@@ -54,6 +54,7 @@ NewPokedexOrder:
 	db EKANS
 	db ARBOK
 	db DUNSPARCE
+	db GLIGAR
 	db MAREEP
 	db FLAAFFY
 	db AMPHAROS
@@ -94,6 +95,7 @@ NewPokedexOrder:
 	db KADABRA
 	db ALAKAZAM
 	db DITTO
+	db METTO
 	db PINECO
 	db FORRETRESS
 	db NIDORAN_F
@@ -130,7 +132,6 @@ NewPokedexOrder:
 	db NINETALES
 	db GROWLITHE
 	db ARCANINE
-	db STANTLER
 	db MARILL
 	db AZUMARILL
 	db DIGLETT
@@ -160,6 +161,7 @@ NewPokedexOrder:
 	db MR__MIME
 	db SMEARGLE
 	db FARFETCH_D
+	db STANTLER
 	db NATU
 	db XATU
 	db QWILFISH
@@ -175,30 +177,31 @@ NewPokedexOrder:
 	db CORSOLA
 	db REMORAID
 	db OCTILLERY
+	db DELIBIRD
+	db MANTINE
 	db CHINCHOU
 	db LANTURN
 	db SEEL
 	db DEWGONG
 	db LICKITUNG
 	db TANGELA
+	db MISDREAVUS
 	db EEVEE
 	db VAPOREON
 	db JOLTEON
 	db FLAREON
 	db ESPEON
 	db UMBREON
+	db MURKROW
 	db HORSEA
 	db SEADRA
 	db KINGDRA
-	db GLIGAR
-	db DELIBIRD
 	db SWINUB
 	db PILOSWINE
 	db TEDDIURSA
 	db URSARING
 	db PHANPY
 	db DONPHAN
-	db MANTINE
 	db SKARMORY
 	db DODUO
 	db DODRIO
@@ -209,13 +212,11 @@ NewPokedexOrder:
 	db KANGASKHAN
 	db RHYHORN
 	db RHYDON
-	db MURKROW
 	db HOUNDOUR
 	db HOUNDOOM
 	db SLUGMA
 	db MAGCARGO
 	db SNEASEL
-	db MISDREAVUS
 	db PORYGON
 	db PORYGON2
 	db CHANSEY

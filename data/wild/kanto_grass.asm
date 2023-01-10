@@ -978,7 +978,7 @@ KantoGrassWildMons:
 	db 42, PARAS
 	db 44, GOLBAT
 	db 41, GOLBAT
-	db 43, MISDREAVUS
+	db 43, METTO
 	db 43, CHANSEY
 	end_grass_wildmons
 

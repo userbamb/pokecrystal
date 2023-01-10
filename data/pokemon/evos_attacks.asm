@@ -1785,6 +1785,7 @@ LaprasEvosAttacks:
 	db 0 ; no more level-up moves
 
 DittoEvosAttacks:
+    db EVOLVE_TRADE, METAL_POWDER, METTO
 	db 0 ; no more evolutions
 	db 1, TRANSFORM
 	db 0 ; no more level-up moves
@@ -3401,3 +3402,11 @@ CelebiEvosAttacks:
 	db 40, BATON_PASS
 	db 50, PERISH_SONG
 	db 0 ; no more level-up moves
+
+MettoEvosAttacks:
+	db 0 ; no more evolutions
+	db 1, TRANSFORM
+	db 40, SPIKES
+	db 50, SPIKE_CANNON
+	db 0 ; no more level-up moves
+	
