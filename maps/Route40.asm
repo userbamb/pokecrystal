@@ -125,6 +125,7 @@ MonicaScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_BEAUTY_MONICA
+	closetext
 
 .no:
     writetext MonicaNoFightMondayText

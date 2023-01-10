@@ -243,7 +243,7 @@ DEF KRIS EQU __trainer_class__
 	trainerclass BEAUTY ; 1d
 	const VICTORIA
 	const SAMANTHA
-	const JULIE ; unused
+	const MONICA ; TRY MONIFA OF MONDAY
 	const JACLYN ; unused
 	const BRENDA ; unused
 	const CASSIE
