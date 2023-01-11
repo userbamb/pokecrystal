@@ -23,6 +23,7 @@ Route40MonicaCallback:
 	readvar VAR_WEEKDAY
 	ifequal MONDAY, .MonicaAppears
 	disappear ROUTE40_MONICA
+	clearevent EVENT_BEAT_BEAUTY_MONICA
 	endcallback
 
 .MonicaAppears:
@@ -125,8 +126,7 @@ MonicaScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_BEAUTY_MONICA
-	closetext
-
+	end
 .no:
     writetext MonicaNoFightMondayText
 	waitbutton
@@ -141,7 +141,6 @@ MonicaScript:
 
 .NotMonday:
 	writetext MonicaNotMondayText
-	clearevent EVENT_BEAT_BEAUTY_MONICA
 	waitbutton
 	closetext
 	end

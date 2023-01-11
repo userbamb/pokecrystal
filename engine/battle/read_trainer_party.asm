@@ -201,6 +201,7 @@ endr
 	jr .continue_stat_exp
 
 .not_perfect_stat_exp
+
 rept 2
 	call GetNextTrainerDataByte
 	ld [de], a
