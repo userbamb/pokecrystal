@@ -190,7 +190,7 @@ TuscanyScript:
 
 TuscanyTuesdayScript:
 	checkevent EVENT_BEAT_COOLTRAINERF_TUSCANY
-	iftrue .done
+	iftrue TuscanyDoneScript
 	writetext TuscanyFightTuesdayText ;CHIEDE SE VUOI SFIDA
 	yesorno
 	iffalse .no
