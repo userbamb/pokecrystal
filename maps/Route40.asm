@@ -128,13 +128,13 @@ MonicaScript:
 	setevent EVENT_BEAT_BEAUTY_MONICA
 	end
 .no:
-    writetext MonicaNoFightMondayText
+    writetext MonicaNoFightMondayText ;next time
 	waitbutton
 	closetext
 	end
     
 .done:
-    writetext MonicaMondayText
+    writetext MonicaMondayText ;PARLA DEI FRATELLI
 	waitbutton
 	closetext
 	end
@@ -178,12 +178,6 @@ Route40_StepUp4Movement: ; unreferenced
 	step UP
 	step UP
 	step_end
-
-MonicaWinLossText:
-    text "You're on the"
-	line "right track,"
-	cont "<PLAYER>!"
-	done
 
 SwimmermSimonSeenText:
 	text "You have to warm"
@@ -337,19 +331,29 @@ MonicaGaveGiftText:
 	done
 
 MonicaNoFightMondayText:
-    text "MONICA: Right,"
-	line "I understand…"
+    text "MONICA: Maybe"
+	line "next time!"
     done
 
+MonicaWinLossText:
+    text "You're on the"
+	line "right track,"
+	cont "<PLAYER>!"
+	done
+
 MonicaFightMondayText:
-    text "MONICA: Since we"
-	line "are here…"
+    text "MONICA: Me and"
+	line "my siblings train"
+
+	para "very hard: if you"
+	line "want a challenge,"
+
+	para "challenge us! I"
+	line "can be your opp-"
+	cont "onent today.
 
 	para "Do you want to"
-	line "challenge me?"
-
-	para "I could show you"
-	line "some tricks!"
+	line "battle?"
 	done
 
 MonicaMondayText:

@@ -28,6 +28,7 @@ Route29TuscanyCallback:
 
 .TuscanyDisappears:
 	disappear ROUTE29_TUSCANY
+	clearevent EVENT_BEAT_COOLTRAINERF_TUSCANY
 	endcallback
 
 .DoesTuscanyAppear:
@@ -188,9 +189,27 @@ TuscanyScript:
 	end
 
 TuscanyTuesdayScript:
-	writetext TuscanyTuesdayText
+	checkevent EVENT_BEAT_COOLTRAINERF_TUSCANY
+	iftrue .done
+	writetext TuscanyFightTuesdayText ;CHIEDE SE VUOI SFIDA
+	yesorno
+	iffalse .no
+	closetext
+	winlosstext TuscanyWinLossText, 0
+	loadtrainer COOLTRAINERF, TUESDAY
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_COOLTRAINERF_TUSCANY
+	end
+.no:
+    writetext TuscanyNoFightMondayText ;next time
 	waitbutton
+	closetext
+	end
+
 TuscanyDoneScript:
+    writetext TuscanyTuesdayText
+	waitbutton
 	closetext
 	end
 
@@ -366,6 +385,32 @@ TuscanyGivesGiftText:
 
 	para "accept this gift,"
 	line "a PINK BOW."
+	done
+
+TuscanyFightTuesdayText:
+    text "TUSCANY: Me and"
+	line "my siblings train"
+
+	para "very hard: if you"
+	line "want a challenge,"
+
+	para "challenge us! I"
+	line "can be your opp-"
+	cont "onent today.
+
+	para "Do you want to"
+	line "battle?"
+	done
+
+MonicaNoFightMondayText:
+    text "TUSCANY: Maybe"
+	line "next time!"
+    done
+
+MonicaWinLossText:
+    text "You're on the"
+	line "right track,"
+	cont "<PLAYER>!"
 	done
 
 TuscanyGaveGiftText:

@@ -74,7 +74,7 @@ Moves:
 	move ICE_BEAM,     EFFECT_FREEZE_HIT,         95, ICE,           SPECIAL,    100, 10,  10
 	move BLIZZARD,     EFFECT_FREEZE_HIT,        120, ICE,           SPECIAL,     90,  5,  10
 	move PSYBEAM,      EFFECT_CONFUSE_HIT,        65, PSYCHIC_TYPE,  SPECIAL,    100, 20,  10
-	move BUBBLEBEAM,   EFFECT_BURN_HIT,           65, WATER,         SPECIAL,    100, 20,  50
+	move BUBBLEBEAM,   EFFECT_SPEED_DOWN_HIT,     65, WATER,         SPECIAL,    100, 20, 100
 	move AURORA_BEAM,  EFFECT_ATTACK_DOWN_HIT,    65, ICE,           SPECIAL,    100, 20,  10
 	move HYPER_BEAM,   EFFECT_HYPER_BEAM,        150, NORMAL,        SPECIAL,     90,  5,   0
 	move PECK,         EFFECT_NORMAL_HIT,         35, FLYING,        PHYSICAL,   100, 35,   0
@@ -203,7 +203,7 @@ Moves:
 	move BELLY_DRUM,   EFFECT_BELLY_DRUM,          0, NORMAL,        STATUS,     100, 10,   0
 	move SLUDGE_BOMB,  EFFECT_POISON_HIT,         90, POISON,        PHYSICAL,   100, 10,  30
 	move MUD_SLAP,     EFFECT_SPEED_DOWN_HIT,     65, GROUND,        PHYSICAL,   100, 10, 100
-	move OCTAZOOKA,    EFFECT_ATTACK_UP_HIT,      65, WATER,         PHYSICAL,    95, 10,  50
+	move OCTAZOOKA,    EFFECT_BURN_HIT,           85, WATER,         SPECIAL,    95, 10,  70
 	move SPIKES,       EFFECT_SPIKES,              0, GROUND,        STATUS,     100, 20,   0
 	move ZAP_CANNON,   EFFECT_PARALYZE_HIT,      100, ELECTRIC,      SPECIAL,     50,  5, 100
 	move FORESIGHT,    EFFECT_FORESIGHT,           0, NORMAL,        STATUS,     100, 40,   0

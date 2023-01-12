@@ -611,7 +611,7 @@ GirafarigEggMoves:
 PinecoEggMoves:
 	db REFLECT
 	db PIN_MISSILE
-	db FLAIL
+	db FLAME_WHEEL
 	db SWIFT
 	db -1 ; end
 
@@ -642,7 +642,7 @@ QwilfishEggMoves:
 	db -1 ; end
 
 ShuckleEggMoves:
-	db SWEET_SCENT
+	db FLAME_WHEEL
 	db -1 ; end
 
 HeracrossEggMoves:
