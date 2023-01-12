@@ -239,7 +239,6 @@ DEF KRIS EQU __trainer_class__
 	const REENA2
 	const REENA3
 	const CARA
-	const TUSCANY
 
 	trainerclass BEAUTY ; 1d
 	const VICTORIA
@@ -325,6 +324,7 @@ DEF KRIS EQU __trainer_class__
 	const COLETTE
 	const HILLARY
 	const SHIRLEY
+	const TUSCANY
 
 	trainerclass SABRINA ; 23
 	const SABRINA1

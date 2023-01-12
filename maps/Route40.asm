@@ -350,7 +350,7 @@ MonicaFightMondayText:
 
 	para "challenge us! I"
 	line "can be your opp-"
-	cont "onent today.
+	cont "onent today."
 
 	para "Do you want to"
 	line "battle?"

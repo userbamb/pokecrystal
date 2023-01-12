@@ -196,7 +196,7 @@ TuscanyTuesdayScript:
 	iffalse .no
 	closetext
 	winlosstext TuscanyWinLossText, 0
-	loadtrainer COOLTRAINERF, TUESDAY
+	loadtrainer TEACHER, TUSCANY
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_COOLTRAINERF_TUSCANY
@@ -396,7 +396,7 @@ TuscanyFightTuesdayText:
 
 	para "challenge us! I"
 	line "can be your opp-"
-	cont "onent today.
+	cont "onent today."
 
 	para "Do you want to"
 	line "battle?"
