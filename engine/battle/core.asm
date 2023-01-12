@@ -5980,8 +5980,7 @@ LoadEnemyMon:
 	jp .Happiness
 
 .InitDVs:
-
-	ld a, [wBattleMode]
+    ld a, [wBattleMode]
 	dec a
 	jr z, .WildDVs
 

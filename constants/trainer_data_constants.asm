@@ -57,5 +57,5 @@ TRAINERTYPE_DVS        EQU 1 << TRAINERTYPE_DVS_F
 TRAINERTYPE_STAT_EXP   EQU 1 << TRAINERTYPE_STAT_EXP_F
 TRAINERTYPE_VARIABLE   EQU 1 << TRAINERTYPE_VARIABLE_F
 
-PERFECT_DV EQU $11 ; treated as $FF in enemy party data
+PERFECT_DV EQU $13 ; treated as $FF in enemy party data
 PERFECT_STAT_EXP EQU $1337 ; treated as $FFFF in enemy party data
