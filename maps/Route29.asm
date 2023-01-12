@@ -202,7 +202,7 @@ TuscanyTuesdayScript:
 	setevent EVENT_BEAT_COOLTRAINERF_TUSCANY
 	end
 .no:
-    writetext TuscanyNoFightMondayText ;next time
+    writetext TuscanyNoFightTuesdayText ;next time
 	waitbutton
 	closetext
 	end
@@ -402,12 +402,12 @@ TuscanyFightTuesdayText:
 	line "battle?"
 	done
 
-MonicaNoFightMondayText:
+TuscanyNoFightTuesdayText:
     text "TUSCANY: Maybe"
 	line "next time!"
     done
 
-MonicaWinLossText:
+TuscanyWinLossText:
     text "You're on the"
 	line "right track,"
 	cont "<PLAYER>!"
