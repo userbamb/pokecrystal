@@ -1,10 +1,10 @@
-	db "SEED@" ; species name
-	dw 100, 40 ; height, weight
+	db "LOUDCAT@" ; species name
+	dw 109, 220 ; height, weight
 
-	db   "It is very weak."
-	next "Its only means of"
-	next "defense is to"
+	db   "This noisy #MON"
+	next "rings its bell"
+	next "for food, pets,"
 
-	page "shake its leaves"
-	next "desperately at its"
-	next "attacker.@"
+	page "and most of all"
+	next "the attention of"
+	next "its trainer.@"

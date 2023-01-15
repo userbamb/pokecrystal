@@ -2058,7 +2058,7 @@ DefenseCurl:
 	checkobedience
 	usedmovetext
 	doturn
-	defenseup
+	defenseup2
 	curl
 	lowersub
 	statupanim

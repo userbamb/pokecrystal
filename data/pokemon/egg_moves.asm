@@ -507,7 +507,7 @@ ChinchouEggMoves:
 PichuEggMoves:
 	db REVERSAL
 	db BIDE
-	db PRESENT
+	db SUPER_FANG
 	db ENCORE
 	db DOUBLESLAP
 	db -1 ; end
@@ -603,7 +603,7 @@ WooperEggMoves:
 GirafarigEggMoves:
 	db TAKE_DOWN
 	db AMNESIA
-	db FORESIGHT
+	db SUPER_FANG
 	db FUTURE_SIGHT
 	db BEAT_UP
 	db -1 ; end

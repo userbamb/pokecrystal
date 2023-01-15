@@ -15,6 +15,7 @@ AlphabeticalPokedexOrder:
 	db BAYLEEF
 	db BEEDRILL
 	db BELLOSSOM
+	db SUNFLORA ;bellrun
 	db BELLSPROUT
 	db BLASTOISE
 	db BLISSEY
@@ -188,6 +189,7 @@ AlphabeticalPokedexOrder:
 	db OCTILLERY ;remoraid
 	db RHYDON
 	db RHYHORN
+	db SUNKERN ;rinrin 
 	db SANDSHREW
 	db SANDSLASH
 	db SCIZOR
@@ -216,8 +218,6 @@ AlphabeticalPokedexOrder:
 	db STEELIX
 	db SUDOWOODO
 	db SUICUNE
-	db SUNFLORA
-	db SUNKERN
 	db SWINUB
 	db TANGELA
 	db TAUROS

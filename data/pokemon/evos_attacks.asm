@@ -400,8 +400,8 @@ NidoranFEvosAttacks:
 	db 8, SCRATCH
 	db 12, DOUBLE_KICK
 	db 17, POISON_STING
-	db 23, TAIL_WHIP
-	db 30, BITE
+	db 23, MOONLIGHT
+	db 30, CRUNCH
 	db 38, FURY_SWIPES
 	db 0 ; no more level-up moves
 
@@ -413,8 +413,8 @@ NidorinaEvosAttacks:
 	db 8, SCRATCH
 	db 12, DOUBLE_KICK
 	db 19, POISON_STING
-	db 27, TAIL_WHIP
-	db 36, BITE
+	db 27, MOONLIGHT
+	db 36, CRUNCH
 	db 46, FURY_SWIPES
 	db 0 ; no more level-up moves
 
@@ -424,7 +424,7 @@ NidoqueenEvosAttacks:
 	db 1, SCRATCH
 	db 1, DOUBLE_KICK
 	db 1, TAIL_WHIP
-	db 23, BODY_SLAM
+	db 43, SLUDGE_BOMB
 	db 0 ; no more level-up moves
 
 NidoranMEvosAttacks:
@@ -435,7 +435,7 @@ NidoranMEvosAttacks:
 	db 8, HORN_ATTACK
 	db 12, DOUBLE_KICK
 	db 17, POISON_STING
-	db 23, FOCUS_ENERGY
+	db 23, MORNING_SUN
 	db 30, FURY_ATTACK
 	db 38, HORN_DRILL
 	db 0 ; no more level-up moves
@@ -448,8 +448,8 @@ NidorinoEvosAttacks:
 	db 8, HORN_ATTACK
 	db 12, DOUBLE_KICK
 	db 19, POISON_STING
-	db 27, FOCUS_ENERGY
-	db 36, FURY_ATTACK
+	db 27, MORNING_SUN
+	db 36, MEGAHORN
 	db 46, HORN_DRILL
 	db 0 ; no more level-up moves
 
@@ -459,7 +459,7 @@ NidokingEvosAttacks:
 	db 1, HORN_ATTACK
 	db 1, DOUBLE_KICK
 	db 1, POISON_STING
-	db 23, THRASH
+	db 43, SLUDGE_BOMB
 	db 0 ; no more level-up moves
 
 ClefairyEvosAttacks:
@@ -1351,8 +1351,8 @@ VoltorbEvosAttacks:
 	db 1, TACKLE
 	db 9, SCREECH
 	db 17, SONICBOOM
-	db 23, SELFDESTRUCT
-	db 29, ROLLOUT
+	db 23, AGILITY
+	db 29, BATON_PASS
 	db 33, LIGHT_SCREEN
 	db 37, SWIFT
 	db 39, EXPLOSION
@@ -1367,8 +1367,8 @@ ElectrodeEvosAttacks:
 	db 1, SELFDESTRUCT
 	db 9, SCREECH
 	db 17, SONICBOOM
-	db 23, SELFDESTRUCT
-	db 29, ROLLOUT
+	db 23, AGILITY
+	db 29, BATON_PASS
 	db 34, LIGHT_SCREEN
 	db 40, SWIFT
 	db 44, EXPLOSION
@@ -1509,7 +1509,7 @@ RhyhornEvosAttacks:
 	db 1, TAIL_WHIP
 	db 13, STOMP
 	db 19, FURY_ATTACK
-	db 31, SCARY_FACE
+	db 31, ROCK_THROW
 	db 37, HORN_DRILL
 	db 49, TAKE_DOWN
 	db 55, EARTHQUAKE
@@ -1523,7 +1523,7 @@ RhydonEvosAttacks:
 	db 1, FURY_ATTACK
 	db 13, STOMP
 	db 19, FURY_ATTACK
-	db 31, SCARY_FACE
+	db 31, ROCK_THROW
 	db 37, HORN_DRILL
 	db 54, TAKE_DOWN
 	db 65, EARTHQUAKE
@@ -1557,7 +1557,6 @@ TangelaEvosAttacks:
 	db 31, MEGA_DRAIN
 	db 34, STUN_SPORE
 	db 40, SLAM
-	db 46, GROWTH
 	db 0 ; no more level-up moves
 
 KangaskhanEvosAttacks:
@@ -2185,7 +2184,7 @@ FeraligatrEvosAttacks:
 	db 21, BITE
 	db 28, SCARY_FACE
 	db 38, SLASH
-	db 47, SCREECH
+	db 47, CRUNCH
 	db 58, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
@@ -2475,7 +2474,7 @@ BellossomEvosAttacks:
 	db 0 ; no more level-up moves
 
 MarillEvosAttacks:
-	db EVOLVE_LEVEL, 28, AZUMARILL
+	db EVOLVE_HAPPINESS, TR_ANYTIME, AZUMARILL
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 3, DEFENSE_CURL
@@ -2586,25 +2585,34 @@ AipomEvosAttacks:
 	db 0 ; no more level-up moves
 
 SunkernEvosAttacks:
-	db EVOLVE_ITEM, SUN_STONE, SUNFLORA
+	db EVOLVE_HAPPINESS, TR_ANYTIME, SUNFLORA
 	db 0 ; no more evolutions
-	db 1, ABSORB
-	db 4, GROWTH
-	db 10, MEGA_DRAIN
-	db 19, SUNNY_DAY
-	db 31, SYNTHESIS
-	db 46, GIGA_DRAIN
+	db 1, SCRATCH
+	db 1, GROWL
+	db 6, PURSUIT
+	db 10, DISABLE
+	db 20, BATON_PASS
+	db 24, FAINT_ATTACK
+	db 29, FURY_SWIPES
+	db 34, HEAL_BELL
+	db 38, CONFUSE_RAY
+	db 43, CRUNCH
+	db 48, GROWTH
 	db 0 ; no more level-up moves
 
 SunfloraEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, ABSORB
-	db 1, POUND
-	db 4, GROWTH
-	db 10, RAZOR_LEAF
-	db 19, SUNNY_DAY
-	db 31, PETAL_DANCE
-	db 46, SOLARBEAM
+	db 1, SCRATCH
+	db 1, GROWL
+	db 6, PURSUIT
+	db 10, DISABLE
+	db 20, BATON_PASS
+	db 24, FAINT_ATTACK
+	db 30, FURY_SWIPES
+	db 35, HEAL_BELL
+	db 41, CONFUSE_RAY
+	db 47, CRUNCH
+	db 52, GROWTH
 	db 0 ; no more level-up moves
 
 YanmaEvosAttacks:
@@ -2714,8 +2722,9 @@ MisdreavusEvosAttacks:
 	db 25, SYNTHESIS
 	db 31, SWORDS_DANCE
 	db 34, SLEEP_POWDER
-	db 40, ROCK_SLIDE
+	db 40, ROCK_THROW
 	db 50, LEECH_SEED
+	db 50, ROCK_SLIDE
 	db 0 ; no more level-up moves
 
 UnownEvosAttacks:
@@ -2938,10 +2947,10 @@ UrsaringEvosAttacks:
 	db 8, LICK
 	db 15, FURY_SWIPES
 	db 22, FAINT_ATTACK
-	db 29, REST
+	db 31, RECOVER
 	db 39, SLASH
 	db 49, FAKE_OUT
-	db 59, THRASH
+	db 59, BODY_SLAM
 	db 0 ; no more level-up moves
 
 SlugmaEvosAttacks:

@@ -1,10 +1,10 @@
-	db "SUN@" ; species name
-	dw 207, 190 ; height, weight
+	db "LOUDCAT@" ; species name
+	dw 207, 410 ; height, weight
 
-	db   "As the hot season"
-	next "approaches, the"
-	next "petals on this"
+	db   "Each clan has its"
+	next "own distinctive"
+	next "pitch to their"
 
-	page "#MON's face"
-	next "become more vivid"
-	next "and lively.@"
+	page "bell chime. They"
+	next "communicate using"
+	next "chime sequences.@"
