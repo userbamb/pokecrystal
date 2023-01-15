@@ -714,7 +714,7 @@ KantoGrassWildMons:
 	db 14, BUTTERFREE
 	; day
 	db 8, CATERPIE
-	db 12, SUNKERN
+	db 12, CATERPIE
 	db 10, CATERPIE
 	db 12, ABRA
 	db 10, BELLSPROUT

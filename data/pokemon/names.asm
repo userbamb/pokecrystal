@@ -190,8 +190,8 @@ PokemonNames::
 	db "SKIPLOOM@@"
 	db "JUMPLUFF@@"
 	db "AIPOM@@@@@"
-	db "SUNKERN@@@"  ;sunflora qua
-	db "SUNFLORA@@"  ;RAITORA KOTORA
+	db "RINRIN@@@@"  ;RINRIN
+	db "BELLRUN@@@"  ;BELLRUN
 	db "YANMA@@@@@"
 	db "WOOPER@@@@" ;quagsire
 	db "QUAGSIRE@@" 

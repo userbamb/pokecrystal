@@ -351,7 +351,7 @@ JohtoGrassWildMons:
 	; day
 	db 12, NIDORAN_F
 	db 12, NIDORAN_M
-	db 14, SUNKERN
+	db 14, PSYDUCK
 	db 13, PIDGEY
 	db 10, CATERPIE
 	db 10, WEEDLE
@@ -386,9 +386,9 @@ JohtoGrassWildMons:
 	db 22, SMEARGLE
 	; nite
 	db 20, NATU
-	db 22, NATU
-	db 18, NATU
-	db 24, NATU
+	db 22, SUNKERN
+	db 18, SUNKERN
+	db 24, SUNKERN
 	db 22, WOOPER
 	db 22, QUAGSIRE
 	db 22, QUAGSIRE

@@ -99,7 +99,7 @@ SwarmGrassWildMons:
 	; day
 	db 12, NIDORAN_F
 	db 12, NIDORAN_M
-	db 14, SUNKERN
+	db 14, SENTRET
 	db 13, DUNSPARCE
 	db 10, DUNSPARCE
 	db 10, WEEDLE
@@ -109,8 +109,8 @@ SwarmGrassWildMons:
 	db 13, HOOTHOOT
 	db 14, SPINARAK
 	db 15, DUNSPARCE
-	db 10, VENONAT
-	db 12, VENONAT
+	db 10, SUNKERN
+	db 12, SUNKERN
 	db 12, VENONAT
 
 
