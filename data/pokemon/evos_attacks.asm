@@ -2142,18 +2142,19 @@ TyphlosionEvosAttacks:
 	db 31, FLAME_WHEEL
 	db 45, SWIFT
 	db 60, FLAMETHROWER
+	db 64, SACRED_FIRE
 	db 0 ; no more level-up moves
 
 TotodileEvosAttacks:
 	db EVOLVE_LEVEL, 18, CROCONAW
 	db 0 ; no more evolutions
-	db 1, METAL_CLAW
-	db 1, COMET_PUNCH ;test
-	db 7, FAKE_OUT
+	db 1, SCRATCH
+	db 1, LEER ;test
 	db 13, WATER_GUN
 	db 20, BITE
 	db 27, SCARY_FACE
 	db 35, SLASH
+	db 38, SUPER_FANG
 	db 43, SCREECH
 	db 52, HYDRO_PUMP
 	db 0 ; no more level-up moves
