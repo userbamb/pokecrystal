@@ -131,13 +131,13 @@ TrainerClassAttributes:
 ; Youngster
 	db NO_ITEM, NO_ITEM ; items
 	db 4 ; base reward
-	dw AI_BASIC | AI_STATUS
+	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_SOMETIMES
 
 ; Schoolboy
 	db NO_ITEM, NO_ITEM ; items
 	db 8 ; base reward
-	dw AI_BASIC | AI_SETUP | AI_TYPES | AI_OPPORTUNIST | AI_CAUTIOUS | AI_STATUS
+	dw AI_BASIC | AI_SETUP | AI_TYPES | AI_OPPORTUNIST | AI_CAUTIOUS | AI_STATUS | AI_SMART | AI_AGGRESSIVE 
 	dw CONTEXT_USE | SWITCH_OFTEN
 
 ; Bird Keeper
@@ -149,7 +149,7 @@ TrainerClassAttributes:
 ; Lass
 	db NO_ITEM, NO_ITEM ; items
 	db 6 ; base reward
-	dw AI_BASIC | AI_CAUTIOUS | AI_STATUS
+	dw  AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_OFTEN
 
 ; Janine

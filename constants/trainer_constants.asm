@@ -125,6 +125,7 @@ DEF KRIS EQU __trainer_class__
 	const JASON
 	const JOEY4
 	const JOEY5
+	const SUNNY
 
 	trainerclass SCHOOLBOY ; 17
 	const JACK1
@@ -151,6 +152,8 @@ DEF KRIS EQU __trainer_class__
 	const ALAN5
 	const CHAD4
 	const CHAD5
+	const ARTHUR
+	const SANTOS
 
 	trainerclass BIRD_KEEPER ; 18
 	const ROD
@@ -191,6 +194,7 @@ DEF KRIS EQU __trainer_class__
 	const DANA3
 	const DANA4
 	const DANA5
+	const FRIEDA 
 
 	trainerclass JANINE ; 1a
 	const JANINE1
@@ -555,6 +559,7 @@ DEF KRIS EQU __trainer_class__
 	const GILBERT
 	const JARED
 	const RODNEY
+	const WESLEY
 
 	trainerclass PICNICKER ; 35
 	const LIZ1

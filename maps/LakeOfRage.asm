@@ -35,6 +35,7 @@ LakeOfRageWesleyCallback:
 	readvar VAR_WEEKDAY
 	ifequal WEDNESDAY, .WesleyAppears
 	disappear LAKEOFRAGE_WESLEY
+	clearevent EVENT_BEAT_PSYCHIC_WESLEY
 	endcallback
 
 .WesleyAppears:
@@ -211,9 +212,27 @@ WesleyScript:
 	end
 
 WesleyWednesdayScript:
+	checkevent EVENT_BEAT_PSYCHIC_WESLEY
+	iftrue WesleyDoneScript
+	writetext WesleyFightText ;CHIEDE SE VUOI SFIDA
+	yesorno
+	iffalse .no
+	closetext
+	winlosstext WesleyWinLossText, 0
+	loadtrainer PSYCHIC_T, WESLEY
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_PSYCHIC_WESLEY
+	end
+.no:
+    writetext WesleyNoFightText ;next time
+	waitbutton
+	closetext
+	end
+
+WesleyDoneScript:
 	writetext WesleyWednesdayText
 	waitbutton
-WesleyDoneScript:
 	closetext
 	end
 
@@ -455,6 +474,30 @@ WesleyGivesGiftText:
 	text "Pleased to meet"
 	line "you. Please take a"
 	cont "souvenir."
+	done
+
+WesleyFightText:
+    text "WESLEY: Me and"
+	line "my siblings train"
+
+	para "very hard: if you"
+	line "want a challenge,"
+
+	para "challenge us! I"
+	line "can be your opp-"
+	cont "onent today."
+
+	para "Do you want to"
+	line "battle?"
+	done
+
+WesleyNoFightText:
+    text "WESLEY: Maybe"
+	line "next time!"
+    done
+
+WesleyWinLossText:
+    text "Go! <PLAYER>, go!"
 	done
 
 WesleyGaveGiftText:

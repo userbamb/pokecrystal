@@ -134,9 +134,11 @@ CeruleanCaveSignText:
 	done
 
 SuperNerd4ScriptText:
-    text "SLOWKING: The"
-	line "CERULEAN CAVE"
-	cont "is dangerous…"
+    text "This SLOWKING"
+	line "seems to be sta-"
+	
+	para "ding here for a"
+	line "reason…"
 	done
 
 Route4_MapEvents:

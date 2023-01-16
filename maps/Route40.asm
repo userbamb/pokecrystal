@@ -336,9 +336,7 @@ MonicaNoFightMondayText:
     done
 
 MonicaWinLossText:
-    text "You're on the"
-	line "right track,"
-	cont "<PLAYER>!"
+    text "Flyin' high!"
 	done
 
 MonicaFightMondayText:

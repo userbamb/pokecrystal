@@ -17,6 +17,7 @@ Route37SunnyCallback:
 	readvar VAR_WEEKDAY
 	ifequal SUNDAY, .SunnyAppears
 	disappear ROUTE37_SUNNY
+	clearevent EVENT_BEAT_YOUNGSTER_SUNNY
 	endcallback
 
 .SunnyAppears:
@@ -87,11 +88,30 @@ SunnyScript:
 	end
 
 SunnySundayScript:
-	writetext SunnySundayText
+	checkevent EVENT_BEAT_YOUNGSTER_SUNNY
+	iftrue SunnyDoneScript
+	writetext SunnyFightText ;CHIEDE SE VUOI SFIDA
+	yesorno
+	iffalse .no
+	closetext
+	winlosstext SunnyWinLossText, 0
+	loadtrainer YOUNGSTER, SUNNY
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_YOUNGSTER_SUNNY
+	end
+.no:
+    writetext SunnyNoFightText ;next time
 	waitbutton
-SunnyDoneScript:
 	closetext
 	end
+
+SunnyDoneScript:
+	writetext SunnySundayText
+	waitbutton
+	closetext
+	end
+
 
 SunnyNotSundayScript:
 	writetext SunnyNotSundayText
@@ -212,6 +232,30 @@ SunnyGaveGiftText:
 	para "My sis MONICA said"
 	line "it powers up"
 	cont "electric moves!"
+	done
+
+SunnyFightText:
+    text "SUNNY: Me and"
+	line "my siblings train"
+
+	para "very hard: if you"
+	line "want a challenge,"
+
+	para "challenge us! I"
+	line "can be your opp-"
+	cont "onent today."
+
+	para "Do you want to"
+	line "battle?"
+	done
+
+SunnyNoFightText:
+    text "SUNNY: Maybe"
+	line "next time!"
+    done
+
+SunnyWinLossText:
+    text "You are strong!"
 	done
 
 SunnySundayText:

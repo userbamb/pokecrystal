@@ -27,6 +27,7 @@ Route36ArthurCallback:
 	readvar VAR_WEEKDAY
 	ifequal THURSDAY, .ArthurAppears
 	disappear ROUTE36_ARTHUR
+	clearevent EVENT_BEAT_SCHOOLBOY_ARTHUR
 	endcallback
 
 .ArthurAppears:
@@ -337,9 +338,27 @@ ArthurScript:
 	end
 
 .AlreadyGotStone:
+	checkevent EVENT_BEAT_SCHOOLBOY_ARTHUR
+	iftrue .BagFull
+	writetext ArthurFightText ;CHIEDE SE VUOI SFIDA
+	yesorno
+	iffalse .no
+	closetext
+	winlosstext ArthurWinLossText, 0
+	loadtrainer SCHOOLBOY, ARTHUR
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_SCHOOLBOY_ARTHUR
+	end
+.no:
+    writetext ArthurNoFightText ;next time
+	waitbutton
+	closetext
+	end
+
+.BagFull:
 	writetext ArthurThursdayText
 	waitbutton
-.BagFull:
 	closetext
 	end
 
@@ -609,6 +628,30 @@ ArthurThursdayText:
 
 	para "the second son out"
 	line "of seven children."
+	done
+
+ArthurFightText:
+    text "ARTHUR: Me and"
+	line "my siblings train"
+
+	para "very hard: if you"
+	line "want a challenge,"
+
+	para "challenge us! I"
+	line "can be your opp-"
+	cont "onent today."
+
+	para "Do you want to"
+	line "battle?"
+	done
+
+ArthurNoFightText:
+    text "ARTHUR: Maybe"
+	line "next time!"
+    done
+
+ArthurWinLossText:
+    text "Rock hard!"
 	done
 
 ArthurNotThursdayText:

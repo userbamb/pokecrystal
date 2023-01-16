@@ -36,6 +36,7 @@ Route32FriedaCallback:
 	readvar VAR_WEEKDAY
 	ifequal FRIDAY, .FriedaAppears
 	disappear ROUTE32_FRIEDA
+	clearevent EVENT_BEAT_LASS_FRIEDA
 	endcallback
 
 .FriedaAppears:
@@ -471,9 +472,26 @@ FriedaScript:
 	end
 
 .Friday:
+	checkevent EVENT_BEAT_LASS_FRIEDA
+	iftrue .Done
+	writetext FriedaFightText ;CHIEDE SE VUOI SFIDA
+	yesorno
+	iffalse .no
+	closetext
+	winlosstext FriedaWinLossText, 0
+	loadtrainer LASS, FRIEDA
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_LASS_FRIEDA
+	end
+.no:
+    writetext FriedaNoFightText ;next time
+	waitbutton
+	closetext
+	end
+.Done:
 	writetext FriedaFridayText
 	waitbutton
-.Done:
 	closetext
 	end
 
@@ -866,6 +884,30 @@ MeetFriedaText:
 FriedaGivesGiftText:
 	text "Here's a POISON"
 	line "BARB for you!"
+	done
+
+FriedaFightText:
+    text "FRIEDA: Me and"
+	line "my siblings train"
+
+	para "very hard: if you"
+	line "want a challenge,"
+
+	para "challenge us! I"
+	line "can be your opp-"
+	cont "onent today."
+
+	para "Do you want to"
+	line "battle?"
+	done
+
+FriedaNoFightText:
+    text "FRIEDA: Maybe"
+	line "next time!"
+    done
+
+FriedaWinLossText:
+    text "Keep it up!"
 	done
 
 FriedaGaveGiftText:

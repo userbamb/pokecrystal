@@ -148,7 +148,7 @@ RoofDoorsLockedText:
 	done
 
 RoofKeyOpenedDoorText:
-    text "The door opened."
+    text "The door opened!"
 	done
 
 GameFreakGameDesignerAfterDiplomaText:

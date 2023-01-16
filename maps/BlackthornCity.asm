@@ -24,6 +24,7 @@ BlackthornCitySantosCallback:
 	readvar VAR_WEEKDAY
 	ifequal SATURDAY, .SantosAppears
 	disappear BLACKTHORNCITY_SANTOS
+	clearevent EVENT_BEAT_SCHOOLBOY_SANTOS
 	endcallback
 
 .SantosAppears:
@@ -109,9 +110,26 @@ SantosScript:
 	end
 
 .Saturday:
+	checkevent EVENT_BEAT_SCHOOLBOY_SANTOS
+	iftrue .Done
+	writetext SantosFightText ;CHIEDE SE VUOI SFIDA
+	yesorno
+	iffalse .no
+	closetext
+	winlosstext SantosWinLossText, 0
+	loadtrainer SCHOOLBOY, SANTOS
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_SCHOOLBOY_SANTOS
+	end
+.no:
+    writetext SantosNoFightText ;next time
+	waitbutton
+	closetext
+	end
+.Done:
 	writetext SantosSaturdayText
 	waitbutton
-.Done:
 	closetext
 	end
 
@@ -247,6 +265,30 @@ SantosGaveGiftText:
 
 	para "It will frighten"
 	line "you…"
+	done
+
+SantosFightText:
+    text "SANTOS: Me and"
+	line "my siblings train"
+
+	para "very hard: if you"
+	line "want a challenge,"
+
+	para "challenge us… I"
+	line "can be your opp-"
+	cont "onent today…"
+
+	para "Do you want to"
+	line "battle?…"
+	done
+
+SantosNoFightText:
+    text "SANTOS: Maybe"
+	line "next time…"
+    done
+
+SantosWinLossText:
+    text "…Nice moves…"
 	done
 
 SantosSaturdayText:

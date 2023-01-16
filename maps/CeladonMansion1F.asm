@@ -67,14 +67,16 @@ CeladonMansionManagerCharText:
 	para "someone else would"
 	line "have seen HO-OH"
 
-	cont "too…"
-	para "Take this, I think"
-    
-	line "you are strong"
-	para "enough to go on"
-	
-	line "the roof…"
-	cont "But be careful!"
+	para "Take this, you can"
+    line "go on the roof…"
+
+	para "But be careful!"
+	line "Dangerous #MON"
+
+	cont "sometimes appear…"
+
+	para "That's why I "
+	line "locked it!"
 	done
 
 CeladonMansionManagerHoText:
