@@ -28,7 +28,7 @@ Route29TuscanyCallback:
 
 .TuscanyDisappears:
 	disappear ROUTE29_TUSCANY
-	clearevent EVENT_BEAT_COOLTRAINERF_TUSCANY
+	clearevent EVENT_BEAT_TEACHER_TUSCANY
 	endcallback
 
 .DoesTuscanyAppear:
@@ -189,7 +189,7 @@ TuscanyScript:
 	end
 
 TuscanyTuesdayScript:
-	checkevent EVENT_BEAT_COOLTRAINERF_TUSCANY
+	checkevent EVENT_BEAT_TEACHER_TUSCANY
 	iftrue TuscanyDoneScript
 	writetext TuscanyFightTuesdayText ;CHIEDE SE VUOI SFIDA
 	yesorno
@@ -199,7 +199,7 @@ TuscanyTuesdayScript:
 	loadtrainer TEACHER, TUSCANY
 	startbattle
 	reloadmapafterbattle
-	setevent EVENT_BEAT_COOLTRAINERF_TUSCANY
+	setevent EVENT_BEAT_TEACHER_TUSCANY
 	end
 .no:
     writetext TuscanyNoFightTuesdayText ;next time
