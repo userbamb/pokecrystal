@@ -2062,11 +2062,11 @@ ChikoritaEvosAttacks:
 	db 1, GROWL
 	db 8, RAZOR_LEAF
 	db 12, REFLECT
-	db 15, POISONPOWDER
+	db 15, SLEEP_POWDER
 	db 22, SYNTHESIS
 	db 29, BODY_SLAM
 	db 36, LIGHT_SCREEN
-	db 43, SAFEGUARD
+	db 43, LEECH_SEED
 	db 50, SOLARBEAM
 	db 0 ; no more level-up moves
 
@@ -2079,11 +2079,11 @@ BayleefEvosAttacks:
 	db 1, REFLECT
 	db 8, RAZOR_LEAF
 	db 12, REFLECT
-	db 15, POISONPOWDER
+	db 15, SLEEP_POWDER
 	db 23, SYNTHESIS
 	db 31, BODY_SLAM
 	db 39, LIGHT_SCREEN
-	db 47, SAFEGUARD
+	db 47, LEECH_SEED
 	db 55, SOLARBEAM
 	db 0 ; no more level-up moves
 
@@ -2095,11 +2095,11 @@ MeganiumEvosAttacks:
 	db 1, REFLECT
 	db 8, RAZOR_LEAF
 	db 12, REFLECT
-	db 15, POISONPOWDER
+	db 15, SLEEP_POWDER
 	db 23, SYNTHESIS
 	db 31, BODY_SLAM
 	db 41, LIGHT_SCREEN
-	db 51, SAFEGUARD
+	db 51, LEECH_SEED
 	db 61, SOLARBEAM
 	db 0 ; no more level-up moves
 
@@ -2147,7 +2147,7 @@ TyphlosionEvosAttacks:
 TotodileEvosAttacks:
 	db EVOLVE_LEVEL, 18, CROCONAW
 	db 0 ; no more evolutions
-	db 1, SCRATCH
+	db 1, METAL_CLAW
 	db 1, COMET_PUNCH ;test
 	db 7, FAKE_OUT
 	db 13, WATER_GUN
@@ -2890,7 +2890,7 @@ ShuckleEvosAttacks:
 	db 14, ENCORE
 	db 23, SAFEGUARD
 	db 28, BIDE
-	db 37, REST
+	db 37, LEECH_LIFE
 	db 0 ; no more level-up moves
 
 HeracrossEvosAttacks:

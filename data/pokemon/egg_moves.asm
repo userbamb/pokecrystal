@@ -442,7 +442,6 @@ DratiniEggMoves:
 
 ChikoritaEggMoves:
 	db VINE_WHIP
-	db LEECH_SEED
 	db COUNTER
 	db ANCIENTPOWER
 	db FLAIL
@@ -463,7 +462,7 @@ TotodileEggMoves:
 	db THRASH
 	db HYDRO_PUMP
 	db ANCIENTPOWER
-	db BUBBLEBEAM
+	db OCTAZOOKA
 	db ROCK_SLIDE
 	db -1 ; end
 
@@ -648,7 +647,7 @@ ShuckleEggMoves:
 HeracrossEggMoves:
 	db HARDEN
 	db BIDE
-	db FLAIL
+	db COMET_PUNCH
 	db -1 ; end
 
 SneaselEggMoves:

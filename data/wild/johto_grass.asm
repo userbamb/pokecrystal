@@ -346,7 +346,7 @@ JohtoGrassWildMons:
 	db 14, LEDYBA
 	db 13, PIDGEY
 	db 10, CATERPIE
-	db 10, SENTRET
+	db 10, CATERPIE
 	db 10, SENTRET
 	; day
 	db 12, NIDORAN_F
@@ -1466,8 +1466,8 @@ JohtoGrassWildMons:
 	db 15, PIDGEY
 	db 16, GROWLITHE
 	db 15, PIDGEOTTO
-	db 15, LEDIAN
-	db 15, LEDIAN
+	db 15, LEDYBA
+	db 15, LEDYBA
 	; day
 	db 13, PIDGEY
 	db 14, GROWLITHE
@@ -1509,8 +1509,8 @@ JohtoGrassWildMons:
 	db 16, RATICATE
 	db 16, MAGNEMITE
 	db 16, NOCTOWL
-	db 16, MEOWTH
-	db 16, MEOWTH
+	db 16, SUNKERN
+	db 16, SUNKERN
 	db 16, MEOWTH
 	end_grass_wildmons
 

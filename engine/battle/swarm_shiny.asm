@@ -14,8 +14,36 @@ GenerateSwarmShiny:
 	jr z, .vulpix
 	cp LANDMARK_NATIONAL_PARK
 	jr z, .kotora
+	cp LANDMARK_ROUTE_34
+    jr z, .ditto
+	cp LANDMARK_ROUTE_44
+    jr z, .nidorino
+	cp LANDMARK_ROUTE_38
+    jr z, .miltank
+	cp LANDMARK_CHERRYGROVE_CITY
+    jr z, .horsea
     jr .skipshine
 
+.horsea
+   ld a, [wCurPartySpecies]
+   cp HORSEA
+   jr nz, .skipshine
+   jr .rollshiny
+.miltank
+   ld a, [wCurPartySpecies]
+   cp MILTANK
+   jr nz, .skipshine
+   jr .rollshiny
+.nidorino
+   ld a, [wCurPartySpecies]
+   cp NIDORINO
+   jr nz, .skipshine
+   jr .rollshiny
+.ditto
+   ld a, [wCurPartySpecies]
+   cp DITTO
+   jr nz, .skipshine
+   jr .rollshiny
 .kotora
    ld a, [wCurPartySpecies]
    cp DUNSPARCE
@@ -43,14 +71,14 @@ GenerateSwarmShiny:
     ;fallthrough
 .rollshiny
     call Random
-	cp 30 ; adjust to desired percentage
+	cp 7 ; adjust to desired percentage
 	jr nc, .trynext
 	ld b, ATKDEFDV_SHINY
 	ld c, SPDSPCDV_SHINY
 	jr .UpdateDVs
 .trynext:
 	call Random
-	cp 30 ; adjust to desired percentage
+	cp 7 ; adjust to desired percentage
 	jr nc, .skipshine
 	ld b, ATKDEFDV_SHINY
 	ld c, SPDSPCDV_SHINY

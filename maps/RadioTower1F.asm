@@ -17,13 +17,48 @@ SwarmGrampsScript:
 	opentext
 	checkflag ENGINE_SWARM
 	iftrue .skiprandomswarm
-	random 5
+	random 9
 	ifequal 0, .mareep
 	ifequal 1, .yanma
     ifequal 2, .remoraid
 	ifequal 3, .vulpix
 	ifequal 4, .kotora
+	ifequal 5, .ditto
+	ifequal 6, .nidorino
+	ifequal 7, .miltank
+	ifequal 8, .horsea
 
+.horsea
+	setflag ENGINE_SWARM
+	swarm CHERRYGROVE_CITY
+	writetext SwarmHorseaText
+	waitbutton
+	closetext
+	end
+
+.miltank
+	setflag ENGINE_SWARM
+	swarm ROUTE_38
+	writetext SwarmMiltankText
+	waitbutton
+	closetext
+	end
+
+.nidorino
+	setflag ENGINE_SWARM
+	swarm ROUTE_44
+	writetext SwarmNidorinoText
+	waitbutton
+	closetext
+	end
+
+.ditto
+	setflag ENGINE_SWARM
+	swarm ROUTE_34
+	writetext SwarmDittoText
+	waitbutton
+	closetext
+	end
 
 .mareep
 	setflag ENGINE_SWARM
@@ -81,6 +116,46 @@ SwarmKotoraText:
 	cont "on NATIONAL PARK."
 	done
 
+SwarmMiltankText:
+	text "Let me see…"
+	line "What did the news"
+	cont "say?"
+
+	para "Oh yes! There's a"
+	line "swarm of MILTANK"
+	cont "on ROUTE 38."
+	done
+
+SwarmHorseaText:
+	text "Let me see…"
+	line "What did the news"
+	cont "say?"
+
+	para "Oh yes! HORSEA"
+	line "is swarming in"
+	cont "CHERRYGROVE CITY."
+	done
+
+SwarmNidorinoText:
+	text "Let me see…"
+	line "What did the news"
+	cont "say?"
+
+	para "Oh yes! There's a"
+	line "swarm of NIDORINO"
+	cont "on ROUTE 44."
+	done
+
+SwarmDittoText:
+	text "Let me see…"
+	line "What did the news"
+	cont "say?"
+
+	para "Oh yes! There's a"
+	line "swarm of DITTO"
+	cont "on ROUTE 34."
+	done
+
 SwarmMareepText:
 	text "Let me see…"
 	line "What did the news"
@@ -113,7 +188,8 @@ SwarmRemoraidText:
 
 SwarmVulpixText:
 	text "Let me see…"
-	line "What did the news say?"
+	line "What did the news 
+	cont "say?"
 
 	para "Oh yes! There's a"
 	line "swarm of VULPIX"
