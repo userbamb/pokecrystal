@@ -16,3 +16,4 @@ SwarmWaterWildMons:
 	db 20, HORSEA
 	db 24, STARYU
 	db -1 ; end
+	
