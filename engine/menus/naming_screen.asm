@@ -210,6 +210,15 @@ NamingScreen:
 	pop de
 	ld b, SPRITE_ANIM_INDEX_RED_WALK
 	ld a, d
+	cp HIGH(ChrisSpriteGFX)
+	jr nz, .not_chris
+	ld a, e
+	cp LOW(ChrisSpriteGFX)
+	jr nz, .not_chris
+	ld b, SPRITE_ANIM_INDEX_BLUE_WALK
+	jr .not_kris
+.not_chris
+	ld a, d
 	cp HIGH(KrisSpriteGFX)
 	jr nz, .not_kris
 	ld a, e
