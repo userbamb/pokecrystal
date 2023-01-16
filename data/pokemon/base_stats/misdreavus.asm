@@ -1,6 +1,6 @@
 	db MISDREAVUS ; 200 GELANIA
 
-	db 100, 70, 125,  50,  80,  80
+	db 100, 70, 125,  50,  50,  70
 	;   hp  atk  def  spd  sat  sdf
 
 	db GRASS, ROCK ; type

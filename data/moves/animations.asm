@@ -699,16 +699,19 @@ BattleAnim_Doubleslap:
 	anim_ret
 
 BattleAnim_CometPunch:
+	anim_1gfx ANIM_GFX_REFLECT
+	anim_obp0 $0
+	anim_sound 0, 0, SFX_RAGE
+	anim_call BattleAnim_TargetObj_1Row
+	anim_call BattleAnimSub_Metallic
+	anim_call BattleAnim_ShowMon_0
 	anim_1gfx ANIM_GFX_HIT
-	anim_if_param_equal $1, .alternate
+	anim_resetobp0
 	anim_sound 0, 1, SFX_COMET_PUNCH
 	anim_obj ANIM_OBJ_PUNCH, 144, 48, $0
 	anim_wait 6
 	anim_obj ANIM_OBJ_HIT_YFIX, 144, 48, $0
-	anim_wait 8
-	anim_ret
-
-.alternate:
+	anim_wait 6
 	anim_sound 0, 1, SFX_COMET_PUNCH
 	anim_obj ANIM_OBJ_PUNCH, 120, 64, $0
 	anim_wait 6

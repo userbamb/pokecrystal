@@ -958,7 +958,7 @@ TentacoolEvosAttacks:
 	db 19, ACID
 	db 30, WRAP
 	db 36, BARRIER
-	db 43, SCREECH
+	db 43, OCTAZOOKA
 	db 49, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
@@ -972,7 +972,7 @@ TentacruelEvosAttacks:
 	db 19, ACID
 	db 30, WRAP
 	db 38, BARRIER
-	db 47, SCREECH
+	db 47, OCTAZOOKA
 	db 55, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
@@ -1457,7 +1457,7 @@ HitmonchanEvosAttacks:
 	db 26, FIRE_PUNCH
 	db 32, MACH_PUNCH
 	db 38, MEGA_PUNCH
-	db 44, DETECT
+	db 44, COMET_PUNCH
 	db 50, COUNTER
 	db 0 ; no more level-up moves
 
@@ -1525,7 +1525,7 @@ RhydonEvosAttacks:
 	db 19, FURY_ATTACK
 	db 31, ROCK_THROW
 	db 37, HORN_DRILL
-	db 54, TAKE_DOWN
+	db 54, COMET_PUNCH
 	db 65, EARTHQUAKE
 	db 0 ; no more level-up moves
 
@@ -1676,7 +1676,7 @@ ScytherEvosAttacks:
 	db 30, WING_ATTACK
 	db 36, SLASH
 	db 42, SWORDS_DANCE
-	db 48, DOUBLE_TEAM
+	db 48, LEECH_LIFE
 	db 0 ; no more level-up moves
 
 JynxEvosAttacks:
@@ -1897,26 +1897,26 @@ KabutoEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, HARDEN
-	db 10, ABSORB
+	db 10, LEECH_LIFE
 	db 19, LEER
 	db 28, SAND_ATTACK
 	db 37, ENDURE
 	db 46, MEGA_DRAIN
-	db 55, ANCIENTPOWER
+	db 55, ROCK_THROW
 	db 0 ; no more level-up moves
 
 KabutopsEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, HARDEN
-	db 1, ABSORB
-	db 10, ABSORB
+	db 1, LEECH_LIFE
+	db 10, LEECH_LIFE
 	db 19, LEER
 	db 28, SAND_ATTACK
 	db 37, ENDURE
 	db 40, SLASH
 	db 51, MEGA_DRAIN
-	db 65, ANCIENTPOWER
+	db 65, ROCK_THROW
 	db 0 ; no more level-up moves
 
 AerodactylEvosAttacks:
@@ -2148,7 +2148,7 @@ TotodileEvosAttacks:
 	db EVOLVE_LEVEL, 18, CROCONAW
 	db 0 ; no more evolutions
 	db 1, SCRATCH
-	db 1, LEER
+	db 1, COMET_PUNCH ;test
 	db 7, FAKE_OUT
 	db 13, WATER_GUN
 	db 20, BITE
@@ -2211,7 +2211,7 @@ FurretEvosAttacks:
 	db 28, LEECH_SEED
 	db 38, ENCORE
 	db 48, EXTREMESPEED
-	db 50, MOONLIGHT
+	db 50, SYNTHESIS
 	db 53, TRANSFORM
 	db 0 ; no more level-up moves
 
@@ -2245,33 +2245,33 @@ NoctowlEvosAttacks:
 	db 0 ; no more level-up moves
 
 LedybaEvosAttacks:
-	db EVOLVE_LEVEL, 18, LEDIAN
+	db EVOLVE_LEVEL, 38, LEDIAN
 	db 0 ; no more evolutions
 	db 1, TACKLE
-	db 8, SUPERSONIC
+	db 1, SUPERSONIC
+	db 8, EMBER
 	db 15, COMET_PUNCH
 	db 22, LIGHT_SCREEN
 	db 22, REFLECT
-	db 22, SAFEGUARD
+	db 22, FLAME_WHEEL
 	db 29, BATON_PASS
 	db 36, FAKE_OUT
 	db 43, AGILITY
-	db 50, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 LedianEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, SUPERSONIC
-	db 8, SUPERSONIC
+	db 8, EMBER
 	db 15, COMET_PUNCH
 	db 24, LIGHT_SCREEN
 	db 24, REFLECT
-	db 24, SAFEGUARD
+	db 24, FLAME_WHEEL
 	db 33, BATON_PASS
 	db 42, FAKE_OUT
 	db 51, AGILITY
-	db 60, DOUBLE_EDGE
+	db 58, LEECH_LIFE
 	db 0 ; no more level-up moves
 
 SpinarakEvosAttacks:
@@ -2396,7 +2396,7 @@ TogeticEvosAttacks:
 	db 18, SWEET_KISS
 	db 25, ENCORE
 	db 31, SAFEGUARD
-	db 38, DOUBLE_EDGE
+	db 38, GUST
 	db 48, TRI_ATTACK
     db 50, SOFTBOILED
 	db 0 ; no more level-up moves
@@ -2404,7 +2404,7 @@ TogeticEvosAttacks:
 NatuEvosAttacks:
 	db EVOLVE_LEVEL, 25, XATU
 	db 0 ; no more evolutions
-	db 1, PECK
+	db 1, GUST
 	db 1, LEER
 	db 10, NIGHT_SHADE
 	db 20, TELEPORT
@@ -2415,7 +2415,7 @@ NatuEvosAttacks:
 
 XatuEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, PECK
+	db 1, GUST
 	db 1, LEER
 	db 1, NIGHT_SHADE
 	db 10, NIGHT_SHADE
@@ -2876,7 +2876,8 @@ ScizorEvosAttacks:
 	db 18, FALSE_SWIPE
 	db 24, AGILITY
 	db 30, METAL_CLAW
-	db 36, SLASH
+	db 36, LEECH_LIFE
+	db 38, COMET_PUNCH
 	db 42, SWORDS_DANCE
 	db 48, BATON_PASS
 	db 0 ; no more level-up moves
@@ -3213,7 +3214,7 @@ HitmontopEvosAttacks:
 	db 25, RAPID_SPIN
 	db 31, COUNTER
 	db 37, AGILITY
-	db 43, DETECT
+	db 43, COMET_PUNCH
 	db 49, TRIPLE_KICK
 	db 0 ; no more level-up moves
 

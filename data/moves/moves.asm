@@ -17,7 +17,7 @@ Moves:
 	move POUND,        EFFECT_NORMAL_HIT,         40, NORMAL,        PHYSICAL,   100, 35,   0
 	move KARATE_CHOP,  EFFECT_NORMAL_HIT,         75, FIGHTING,      PHYSICAL,   100, 25,   0
 	move DOUBLESLAP,   EFFECT_MULTI_HIT,          15, NORMAL,        PHYSICAL,    85, 10,   0
-	move COMET_PUNCH,  EFFECT_MULTI_HIT,          18, FIRE,          PHYSICAL,    85, 15,   0
+	move COMET_PUNCH,  EFFECT_PRIORITY_HIT,       75, STEEL,          PHYSICAL,    85, 15,   0
 	move MEGA_PUNCH,   EFFECT_NORMAL_HIT,         80, NORMAL,        PHYSICAL,    85, 20,   0
 	move PAY_DAY,      EFFECT_PAY_DAY,            40, NORMAL,        PHYSICAL,   100, 20,   0
 	move FIRE_PUNCH,   EFFECT_BURN_HIT,           75, FIRE,          PHYSICAL,   100, 15,  10
@@ -154,7 +154,7 @@ Moves:
 	move DREAM_EATER,  EFFECT_DREAM_EATER,       100, PSYCHIC_TYPE,  SPECIAL,    100, 15,   0
 	move POISON_GAS,   EFFECT_POISON,              0, POISON,        PHYSICAL,    55, 40,   0
 	move BARRAGE,      EFFECT_MULTI_HIT,          15, NORMAL,        PHYSICAL,    85, 20,   0
-	move LEECH_LIFE,   EFFECT_LEECH_HIT,          20, BUG,           PHYSICAL,   100, 15,   0
+	move LEECH_LIFE,   EFFECT_LEECH_HIT,          90, BUG,           PHYSICAL,   100, 15,   0
 	move LOVELY_KISS,  EFFECT_SLEEP,               0, NORMAL,        STATUS,      85, 10,   0
 	move SKY_ATTACK,   EFFECT_SKY_ATTACK,        140, FLYING,        PHYSICAL,    90,  5,   0
 	move TRANSFORM,    EFFECT_TRANSFORM,           0, NORMAL,        STATUS,     100, 10,   0
@@ -245,7 +245,7 @@ Moves:
 	move RAPID_SPIN,   EFFECT_RAPID_SPIN,         20, NORMAL,        PHYSICAL,   100, 40,   0
 	move SWEET_SCENT,  EFFECT_EVASION_DOWN,        0, NORMAL,        STATUS,     100, 20,   0
 	move IRON_TAIL,    EFFECT_DEFENSE_DOWN_HIT,  100, STEEL,         PHYSICAL,    75, 15,  30
-	move METAL_CLAW,   EFFECT_PRIORITY_HIT,       70, STEEL,         PHYSICAL,   100, 35,   0
+	move METAL_CLAW,   EFFECT_ATTACK_UP_HIT,      70, STEEL,         PHYSICAL,   100, 35, 100
 	move VITAL_THROW,  EFFECT_ALWAYS_HIT,         70, FIGHTING,      PHYSICAL,   100, 10,   0
 	move MORNING_SUN,  EFFECT_HEAL,                0, NORMAL,        STATUS,     100,  5,   0
 	move SYNTHESIS,    EFFECT_HEAL,                0, GRASS,         STATUS,     100,  5,   0

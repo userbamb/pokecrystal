@@ -179,7 +179,7 @@ GrowlitheEggMoves:
 
 PoliwagEggMoves:
 	db MIST
-	db SPLASH
+	db OCTAZOOKA
 	db BUBBLEBEAM
 	db HAZE
 	db MIND_READER
@@ -582,7 +582,7 @@ AipomEggMoves:
 	db SCREECH
 	db PURSUIT
 	db AGILITY
-	db SPITE
+	db COMET_PUNCH
 	db SLAM
 	db DOUBLESLAP
 	db BEAT_UP
@@ -728,7 +728,7 @@ StantlerEggMoves:
 	db SPITE
 	db DISABLE
 	db LIGHT_SCREEN
-	db BITE
+	db VINE_WHIP
 	db -1 ; end
 
 TyrogueEggMoves:
