@@ -188,7 +188,7 @@ SwarmRemoraidText:
 
 SwarmVulpixText:
 	text "Let me see…"
-	line "What did the news 
+	line "What did the news" 
 	cont "say?"
 
 	para "Oh yes! There's a"
