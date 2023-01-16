@@ -2170,6 +2170,7 @@ CroconawEvosAttacks:
 	db 21, BITE
 	db 28, SCARY_FACE
 	db 37, SLASH
+	db 40, SUPER_FANG
 	db 45, SCREECH
 	db 55, HYDRO_PUMP
 	db 0 ; no more level-up moves
@@ -2185,6 +2186,7 @@ FeraligatrEvosAttacks:
 	db 21, BITE
 	db 28, SCARY_FACE
 	db 38, SLASH
+	db 44, SUPER_FANG
 	db 47, CRUNCH
 	db 58, HYDRO_PUMP
 	db 0 ; no more level-up moves
