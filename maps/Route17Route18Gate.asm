@@ -14,7 +14,6 @@ Route17Route18GateOfficerScript:
 	jumptextfaceplayer Route17Route18GateOfficerText
 
 Route17Route18GateBicycleCheck:
-    showemote EMOTE_SHOCK, ROUTE17ROUTE18GATE_OFFICER, 5
 	checkitem BICYCLE
 	iffalse .NoBicycle
 	end
@@ -47,7 +46,9 @@ Route17Route18GateCannotPassText:
 	line "is beyond here."
 
 	para "You have to have a"
-	line "BICYCLE to go on."
+	line "BICYCLE to go on…"
+	para "Or a SKATEBOARD"
+	line "I guess…"
 	done
 
 Route17Route18Gate_MapEvents:

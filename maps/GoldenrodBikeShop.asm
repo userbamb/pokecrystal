@@ -95,7 +95,7 @@ GoldenrodBikeShopJustReleasedCompactBikeText:
 
 GoldenrodBikeShopBicycleText:
 	text "It's a shiny new"
-	line "BICYCLE!"
+	line "SKATEBOARD!"
 	done
 
 GoldenrodBikeShop_MapEvents:

@@ -291,10 +291,10 @@ GoldenrodCityPokefanMText:
 
 GoldenrodCityYoungster1Text:
 	text "I know there's a"
-	line "new BIKE SHOP, but"
+	line "new SKATE SHOP,"
 
-	para "I can't find it"
-	line "anywhere."
+	para "but I can't find"
+	line "it anywhere."
 	done
 
 GoldenrodCityCooltrainerF1Text:
@@ -449,7 +449,7 @@ GoldenrodCitySignText:
 GoldenrodCityBikeShopSignText:
 	text "The World is a"
 	line "Cycle Path!"
-	cont "BIKE SHOP"
+	cont "SKATE SHOP" 
 	done
 
 GoldenrodCityGameCornerSignText:

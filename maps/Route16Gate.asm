@@ -14,7 +14,6 @@ Route16GateOfficerScript:
 	jumptextfaceplayer Route16GateOfficerText
 
 Route16GateBicycleCheck:
-    showemote EMOTE_SHOCK, ROUTE17ROUTE18GATE_OFFICER, 5
 	checkitem BICYCLE
 	iffalse .NoBicycle
 	end
@@ -56,7 +55,10 @@ Route16GateCannotPassText:
 	line "on the CYCLING"
 
 	para "ROAD without a"
-	line "BICYCLE."
+	line "BICYCLE…"
+	para "The SKATEBOARD"
+	line "would do…"
+	cont "I think…"
 	done
 
 Route16Gate_MapEvents:

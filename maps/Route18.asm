@@ -65,7 +65,8 @@ BirdKeeperBobAfterBattleText:
 	line "a BICYCLE, you're"
 
 	para "not allowed to use"
-	line "the shortcut."
+	line "the shortcut…"
+	cont "Right?…"
 	done
 
 Route18SignText:
