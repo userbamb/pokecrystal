@@ -156,7 +156,7 @@ Moves:
 	move BARRAGE,      EFFECT_MULTI_HIT,          15, NORMAL,        PHYSICAL,    85, 20,   0
 	move LEECH_LIFE,   EFFECT_LEECH_HIT,          90, BUG,           PHYSICAL,   100, 15,   0
 	move LOVELY_KISS,  EFFECT_SLEEP,               0, NORMAL,        STATUS,      85, 10,   0
-	move SKY_ATTACK,   EFFECT_SKY_ATTACK,        140, FLYING,        PHYSICAL,    90,  5,   0
+	move SKY_ATTACK,   EFFECT_RECOIL_HIT,        140, FLYING,        PHYSICAL,    90, 10,   0
 	move TRANSFORM,    EFFECT_TRANSFORM,           0, NORMAL,        STATUS,     100, 10,   0
 	move BUBBLE,       EFFECT_SPEED_DOWN_HIT,     20, WATER,         SPECIAL,    100, 30,  10
 	move DIZZY_PUNCH,  EFFECT_CONFUSE_HIT,        70, NORMAL,        PHYSICAL,   100, 10,  20
@@ -222,7 +222,7 @@ Moves:
 	move FALSE_SWIPE,  EFFECT_FALSE_SWIPE,        40, NORMAL,        PHYSICAL,   100, 40,   0
 	move SWAGGER,      EFFECT_SWAGGER,             0, NORMAL,        STATUS,      90, 15, 100
 	move MILK_DRINK,   EFFECT_HEAL,                0, NORMAL,        STATUS,     100, 10,   0
-	move SPARK,        EFFECT_ATTACK_UP_HIT,      65, ELECTRIC,      PHYSICAL,   100, 20, 100
+	move SPARK,        EFFECT_DEFENSE_UP_HIT,     85, ELECTRIC,      PHYSICAL,   100, 20, 100
 	move FURY_CUTTER,  EFFECT_FURY_CUTTER,        10, BUG,           PHYSICAL,    95, 20,   0
 	move STEEL_WING,   EFFECT_DEFENSE_UP_HIT,     70, STEEL,         PHYSICAL,    90, 25,  50
 	move MEAN_LOOK,    EFFECT_MEAN_LOOK,           0, NORMAL,        STATUS,     100,  5,   0

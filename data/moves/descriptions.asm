@@ -1259,8 +1259,8 @@ FutureSightDescription:
 	next "hits on 3rd turn.@"
 
 RockSmashDescription:
-	db   "An attack that may"
-	next "lower DEFENSE.@"
+	db   "An attack that "
+	next "raises ATTACK.@"
 
 WhirlpoolDescription:
 	db   "Traps the foe for"
