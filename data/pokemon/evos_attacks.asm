@@ -111,7 +111,7 @@ CharizardEvosAttacks:
 	db 36, WING_ATTACK
 	db 44, SLASH
 	db 54, DRAGON_RAGE
-	db 64, FIRE_SPIN
+	db 64, SKY_ATTACK
 	db 0 ; no more level-up moves
 
 SquirtleEvosAttacks:
@@ -2070,7 +2070,7 @@ ChikoritaEvosAttacks:
 	db 1, SKY_ATTACK
 	db 1, RAZOR_WIND
 	db 1, SPARK
-	db 1, SMOKESCREEN
+	db 8, WATERFALL
 	db 15, SLEEP_POWDER
 	db 22, SYNTHESIS
 	db 29, BODY_SLAM

@@ -1317,7 +1317,7 @@ BattleAnim_RazorWind:
 	anim_obj ANIM_OBJ_GROWTH, 48, 108, $28
 	anim_obj ANIM_OBJ_GROWTH, 48, 108, $30
 	anim_obj ANIM_OBJ_GROWTH, 48, 108, $38
-	anim_wait 12
+	anim_wait 40
 	anim_call BattleAnimSub_Glimmer2
 	anim_ret
 
@@ -2605,37 +2605,29 @@ BattleAnim_Minimize:
 	anim_ret
 
 BattleAnim_SkyAttack:
-	anim_2gfx ANIM_GFX_SPEED, ANIM_GFX_HIT
+	anim_1gfx ANIM_GFX_HIT
 	anim_call BattleAnim_TargetObj_1Row
-	anim_bgeffect ANIM_BG_FADE_MON_TO_LIGHT, $0, BG_EFFECT_USER, $40
-	anim_bgeffect ANIM_BG_CYCLE_OBPALS_GRAY_AND_YELLOW, $0, $2, $0
-.loop
-	anim_sound 0, 0, SFX_SWORDS_DANCE
-	anim_obj ANIM_OBJ_FOCUS, 44, 108, $6
-	anim_wait 2
-	anim_obj ANIM_OBJ_FOCUS, 36, 108, $6
-	anim_wait 2
-	anim_obj ANIM_OBJ_FOCUS, 52, 108, $8
-	anim_wait 2
-	anim_obj ANIM_OBJ_FOCUS, 28, 108, $8
-	anim_wait 2
-	anim_obj ANIM_OBJ_FOCUS, 60, 108, $6
-	anim_wait 2
-	anim_obj ANIM_OBJ_FOCUS, 20, 108, $8
-	anim_wait 2
-	anim_obj ANIM_OBJ_FOCUS, 68, 108, $8
-	anim_wait 2
-	anim_loop 3, .loop
-	anim_wait 8
-	anim_incbgeffect ANIM_BG_FADE_MON_TO_LIGHT
+	anim_bgeffect ANIM_BG_CYCLE_MON_LIGHT_DARK_REPEATING, $0, BG_EFFECT_USER, $20
+	anim_sound 0, 0, SFX_RAGE
+	anim_wait 72
+	anim_incbgeffect ANIM_BG_CYCLE_MON_LIGHT_DARK_REPEATING
 	anim_call BattleAnim_ShowMon_0
-	anim_wait 32
-	anim_bgp $1b
-	anim_bgeffect ANIM_BG_SHAKE_SCREEN_X, $50, $4, $10
-	anim_bgeffect ANIM_BG_CYCLE_OBPALS_GRAY_AND_YELLOW, $0, $2, $0
-	anim_sound 0, 1, SFX_HYPER_BEAM
-	anim_obj ANIM_OBJ_HIT_YFIX, 136, 56, $0
-	anim_wait 64
+	anim_wait 48
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $3
+	anim_sound 0, 1, SFX_WING_ATTACK
+	anim_obj ANIM_OBJ_HIT_BIG_YFIX, 148, 56, $0
+	anim_obj ANIM_OBJ_HIT_BIG_YFIX, 116, 56, $0
+	anim_wait 6
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $3
+	anim_sound 0, 1, SFX_WING_ATTACK
+	anim_obj ANIM_OBJ_HIT_BIG_YFIX, 144, 56, $0
+	anim_obj ANIM_OBJ_HIT_BIG_YFIX, 120, 56, $0
+	anim_wait 6
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $3
+	anim_sound 0, 1, SFX_WING_ATTACK
+	anim_obj ANIM_OBJ_HIT_BIG_YFIX, 140, 56, $0
+	anim_obj ANIM_OBJ_HIT_BIG_YFIX, 124, 56, $0
+	anim_wait 24
 	anim_ret
 
 
@@ -2989,6 +2981,7 @@ BattleAnim_Waterfall:
 	anim_obj ANIM_OBJ_HIT_YFIX, 136, 24, $0
 	anim_wait 8
 	anim_ret
+
 
 BattleAnim_PsychicM:
 	anim_1gfx ANIM_GFX_PSYCHIC
