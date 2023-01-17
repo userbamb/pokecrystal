@@ -26,7 +26,7 @@ Moves:
 	move SCRATCH,      EFFECT_NORMAL_HIT,         40, NORMAL,        PHYSICAL,   100, 35,   0
 	move VICEGRIP,     EFFECT_NORMAL_HIT,         55, NORMAL,        PHYSICAL,   100, 30,   0
 	move GUILLOTINE,   EFFECT_OHKO,                0, NORMAL,        PHYSICAL,    30,  5,   0
-	move RAZOR_WIND,   EFFECT_CONFUSE_HIT,        80, FLYING,        SPECIAL,     75, 10,  35
+	move RAZOR_WIND,   EFFECT_HEAL,                0, FLYING,        STATUS,     100, 20,   0
 	move SWORDS_DANCE, EFFECT_ATTACK_UP_2,         0, NORMAL,        STATUS,     100, 30,   0
 	move CUT,          EFFECT_PRIORITY_HIT,       70, FLYING,         PHYSICAL,    95, 30,   0
 	move GUST,         EFFECT_GUST,               70, FLYING,        SPECIAL,    100, 35,   0
@@ -65,7 +65,7 @@ Moves:
 	move SONICBOOM,    EFFECT_STATIC_DAMAGE,      40, NORMAL,        PHYSICAL,    90, 20,   0
 	move DISABLE,      EFFECT_DISABLE,             0, NORMAL,        STATUS,      55, 20,   0
 	move ACID,         EFFECT_DEFENSE_DOWN_HIT,   40, POISON,        SPECIAL,    100, 30,  10
-	move EMBER,        EFFECT_BURN_HIT,           35, FIRE,          SPECIAL,    100, 25, 100
+	move EMBER,        EFFECT_BURN_HIT,           35, FIRE,          SPECIAL,    100, 25,  10
 	move FLAMETHROWER, EFFECT_BURN_HIT,           95, FIRE,          SPECIAL,    100, 15,  10
 	move MIST,         EFFECT_MIST,                0, ICE,           STATUS,     100, 30,   0
 	move WATER_GUN,    EFFECT_PRIORITY_HIT,       70, WATER,         PHYSICAL,   100, 25,   0
@@ -121,7 +121,7 @@ Moves:
 	move RECOVER,      EFFECT_HEAL,                0, NORMAL,        STATUS,     100, 20,   0
 	move HARDEN,       EFFECT_DEFENSE_UP,          0, NORMAL,        STATUS,     100, 30,   0
 	move MINIMIZE,     EFFECT_EVASION_UP,          0, NORMAL,        STATUS,     100, 20,   0
-	move SMOKESCREEN,  EFFECT_ACCURACY_DOWN,       0, NORMAL,        STATUS,     100, 20,   0
+	move SMOKESCREEN,  EFFECT_BURN_HIT,           10, FIRE,         SPECIAL,     100, 20, 100
 	move CONFUSE_RAY,  EFFECT_CONFUSE,             0, GHOST,         STATUS,     100, 10,   0
 	move WITHDRAW,     EFFECT_DEFENSE_UP,          0, WATER,         STATUS,     100, 40,   0
 	move DEFENSE_CURL, EFFECT_DEFENSE_CURL,        0, NORMAL,        STATUS,     100, 40,   0
@@ -165,7 +165,7 @@ Moves:
 	move PSYWAVE,      EFFECT_PSYWAVE,             1, PSYCHIC_TYPE,  SPECIAL,     80, 15,   0
 	move SPLASH,       EFFECT_SPLASH,              0, NORMAL,        STATUS,     100, 40,   0
 	move ACID_ARMOR,   EFFECT_DEFENSE_UP_2,        0, POISON,        STATUS,     100, 40,   0
-	move CRABHAMMER,   EFFECT_NORMAL_HIT,         90, WATER,         PHYSICAL,   100, 10,   0
+	move CRABHAMMER,   EFFECT_FLINCH_HIT,         90, WATER,         PHYSICAL,   100, 10,  30
 	move EXPLOSION,    EFFECT_SELFDESTRUCT,      250, NORMAL,        PHYSICAL,   100,  5,   0
 	move FURY_SWIPES,  EFFECT_MULTI_HIT,          18, NORMAL,        PHYSICAL,    80, 15,   0
 	move BONEMERANG,   EFFECT_DOUBLE_HIT,         50, GROUND,        PHYSICAL,    90, 10,   0

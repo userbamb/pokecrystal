@@ -14,7 +14,7 @@ BulbasaurEggMoves:
 	db LIGHT_SCREEN
 	db SKULL_BASH
 	db SAFEGUARD
-	db RAZOR_WIND
+	db SPORE
 	db PETAL_DANCE
 	db -1 ; end
 

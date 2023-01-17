@@ -147,6 +147,9 @@ SpriteAnimOAMData:
 	spriteanimoam $08, .OAMData_GameFreakLogo4_11        ; SPRITE_ANIM_OAMSET_GAMEFREAK_LOGO_9
 	spriteanimoam $04, .OAMData_GameFreakLogo4_11        ; SPRITE_ANIM_OAMSET_GAMEFREAK_LOGO_10
 	spriteanimoam $00, .OAMData_GameFreakLogo4_11        ; SPRITE_ANIM_OAMSET_GAMEFREAK_LOGO_11
+	spriteanimoam $00, .OAMData_TreeWalk                  ; SPRITE_ANIM_OAMSET_RED_WALK_1
+	spriteanimoam $04, .OAMData_TreeWalk                  ; SPRITE_ANIM_OAMSET_RED_WALK_2
+	
 	assert_table_length NUM_SPRITE_ANIM_OAMSETS
 
 .OAMData_1x1_Palette0:
@@ -1134,3 +1137,9 @@ SpriteAnimOAMData:
 	dbsprite  0,  0,  4,  0, $52, 1
 	dbsprite  1,  0,  4,  0, $53, 1
 	
+	.OAMData_RedWalk:
+	db 4
+	dbsprite -1, -1,  0,  0, $00, PAL_OW_TREE
+	dbsprite  0, -1,  0,  0, $01, PAL_OW_TREE
+	dbsprite -1,  0,  0,  0, $02, PAL_OW_TREE
+	dbsprite  0,  0,  0,  0, $03, PAL_OW_TREE

@@ -67,6 +67,7 @@ SpriteAnimFrameData:
 	dw .Frameset_IntroUnownF
 	dw .Frameset_CelebiLeft
 	dw .Frameset_CelebiRight
+	dw .Frameset_TreeWalk
 	assert_table_length NUM_SPRITE_ANIM_FRAMESETS
 
 .Frameset_00:
@@ -498,3 +499,9 @@ SpriteAnimFrameData:
 	oamframe SPRITE_ANIM_OAMSET_CELEBI_2,  8, OAM_X_FLIP
 	oamend
 	
+	.Frameset_TreeWalk:
+	oamframe SPRITE_ANIM_OAMSET_TREE_WALK_1,  8
+	oamframe SPRITE_ANIM_OAMSET_TREE_WALK_2,  8
+	oamframe SPRITE_ANIM_OAMSET_TREE_WALK_1,  8
+	oamframe SPRITE_ANIM_OAMSET_TREE_WALK_2,  8, OAM_X_FLIP
+	oamrestart

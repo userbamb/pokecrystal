@@ -280,7 +280,7 @@ DoubleslapDescription:
 
 CometPunchDescription:
 	db   "Repeatedly punches"
-	next "2-5 times.@"
+	next "hitting first.@"
 
 MegaPunchDescription:
 	db   "A powerful punch"
@@ -315,15 +315,15 @@ GuillotineDescription:
 	next "pincer attack.@"
 
 RazorWindDescription:
-	db   "1st turn: Prepare"
-	next "2nd turn: Attack@"
+	db   "Restores HP by 1/2"
+	next "the max HP.@"
 
 SwordsDanceDescription:
 	db   "A dance that in-"
 	next "creases ATTACK.@"
 
 CutDescription:
-	db   "Cuts using claws,"
+	db   "Hits fast with"
 	next "scythes, etc.@"
 
 GustDescription:
@@ -352,7 +352,7 @@ SlamDescription:
 
 VineWhipDescription:
 	db   "Whips the foe with"
-	next "slender vines.@"
+	next "vines. Hits first.@"
 
 StompDescription:
 	db   "An attack that may"
@@ -471,8 +471,8 @@ AcidDescription:
 	next "lower DEFENSE.@"
 
 EmberDescription:
-	db   "An attack that may"
-	next "inflict a burn.@"
+	db   "An attack that"
+	next "inflicts a burn.@"
 
 FlamethrowerDescription:
 	db   "An attack that may"
@@ -484,7 +484,7 @@ MistDescription:
 
 WaterGunDescription:
 	db   "Squirts water to"
-	next "attack.@"
+	next "attack first.@"
 
 HydroPumpDescription:
 	db   "A powerful water-"
@@ -543,8 +543,8 @@ SeismicTossDescription:
 	next "equals damage HP.@"
 
 StrengthDescription:
-	db   "A powerful physi-"
-	next "cal attack.@"
+	db   "A powerful move."
+	next "Raises attack.@"
 
 AbsorbDescription:
 	db   "Steals 1/2 of the"
@@ -615,8 +615,8 @@ ThunderDescription:
 	next "cause paralysis.@"
 
 RockThrowDescription:
-	db   "Drops rocks on the"
-	next "enemy.@"
+	db   "Drops rocks to lo-"
+	next "wer enemy SPEED.@"
 
 EarthquakeDescription:
 	db   "Tough but useless"
@@ -695,8 +695,8 @@ MinimizeDescription:
 	next "ness.@"
 
 SmokescreenDescription:
-	db   "Lowers the foe's"
-	next "accuracy.@"
+	db   "Burns the foe doi-"
+	next "ng little damage.@"
 
 ConfuseRayDescription:
 	db   "A move that causes"
@@ -835,8 +835,8 @@ LovelyKissDescription:
 	next "to fall asleep.@"
 
 SkyAttackDescription:
-	db   "1st turn: Prepare"
-	next "2nd turn: Attack@"
+	db   "High damage move"
+	next "with recoil.@"
 
 TransformDescription:
 	db   "The user assumes"
@@ -864,7 +864,7 @@ PsywaveDescription:
 
 SplashDescription:
 	db   "Has no effect"
-	next "whatsoever.@"
+	next "whatsoever. No?@"
 
 AcidArmorDescription:
 	db   "Sharply raises the"
@@ -1024,7 +1024,7 @@ MudSlapDescription:
 
 OctazookaDescription:
 	db   "An attack that may"
-	next "reduce accuracy.@"
+	next "burn the enemy.@"
 
 SpikesDescription:
 	db   "Hurts foes when"
@@ -1099,8 +1099,8 @@ MilkDrinkDescription:
 	next "the max HP.@"
 
 SparkDescription:
-	db   "An attack that may"
-	next "cause paralysis.@"
+	db   "An attack that ra-"
+	next "ises attack.@"
 
 FuryCutterDescription:
 	db   "Successive hits"
