@@ -226,6 +226,34 @@ KantoGrassWildMons:
 	db 4, NOCTOWL
 	end_grass_wildmons
 
+	def_grass_wildmons VIRIDIAN_FOREST
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 3, CATERPIE
+	db 3, LEDYBA
+	db 5, PIDGEY
+	db 7, BUTTERFREE
+	db 7, AIPOM
+	db 4, PIKACHU
+	db 4, PIKACHU
+	; day
+	db 3, CATERPIE
+	db 3, PIDGEY
+	db 5, AIPOM
+	db 7, BUTTERFREE
+	db 7, PIDGEOTTO
+	db 4, PIKACHU
+	db 4, PIKACHU
+	; nite
+	db 3, HOOTHOOT
+	db 3, SPINARAK
+	db 5, HOOTHOOT
+	db 7, HOOTHOOT
+	db 7, SPINARAK
+	db 4, NOCTOWL
+	db 4, NOCTOWL
+	end_grass_wildmons
+
 	def_grass_wildmons ROUTE_3
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
@@ -859,9 +887,9 @@ KantoGrassWildMons:
 	db 44, KANGASKHAN
 	db 41, DODUO
 	db 43, DODRIO
-	db 10, CHIKORITA
+	db 10, CUBONE
 	; nite
-	db 41, TANGELA
+	db 10, CUBONE
 	db 42, POLIWHIRL
 	db 42, GOLBAT
 	db 44, POLIWHIRL
@@ -882,7 +910,7 @@ KantoGrassWildMons:
 	db 43, DODRIO
 	; day
 	db 41, TANGELA
-	db 10, CYNDAQUIL
+	db 43, SCYTHER
 	db 42, ARBOK
 	db 44, SCYTHER
 	db 41, DODUO
@@ -909,7 +937,7 @@ KantoGrassWildMons:
 	db 43, DODRIO
 	db 43, DODRIO
 	; day
-	db 10, TOTODILE
+	db 10, GROWLITHE
 	db 42, PONYTA
 	db 42, KANGASKHAN
 	db 44, RAPIDASH
@@ -917,13 +945,13 @@ KantoGrassWildMons:
 	db 43, DODRIO
 	db 43, DODRIO
 	; nite
-	db 10, TOTODILE
+	db 10, POLIWAG
 	db 42, POLIWHIRL
 	db 42, GOLBAT
 	db 44, POLIWHIRL
 	db 40, GOLBAT
 	db 44, GOLBAT
-	db 44, UMBREON
+	db 44, SUNFLORA
 	end_grass_wildmons
 
 		def_grass_wildmons CERULEAN_CAVE_1F
