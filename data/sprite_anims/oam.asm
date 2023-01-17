@@ -1137,7 +1137,7 @@ SpriteAnimOAMData:
 	dbsprite  0,  0,  4,  0, $52, 1
 	dbsprite  1,  0,  4,  0, $53, 1
 	
-	.OAMData_RedWalk:
+	.OAMData_TreeWalk:
 	db 4
 	dbsprite -1, -1,  0,  0, $00, PAL_OW_TREE
 	dbsprite  0, -1,  0,  0, $01, PAL_OW_TREE

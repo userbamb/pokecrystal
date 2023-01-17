@@ -1306,20 +1306,18 @@ BattleAnim_Thunder:
 	anim_ret
 
 BattleAnim_RazorWind:
-	BattleAnim_FocusEnergy
-	anim_1gfx ANIM_GFX_SHINE
-	anim_call BattleAnim_TargetObj_1Row
-	anim_bgeffect ANIM_BG_FADE_MON_TO_LIGHT_REPEATING, $0, BG_EFFECT_USER, $40
-	anim_bgeffect ANIM_BG_CYCLE_MID_OBPALS_GRAY_AND_YELLOW, $0, $0, $0
-	anim_sound 0, 0, SFX_OUTRAGE
-	anim_wait 72
-	anim_incbgeffect ANIM_BG_FADE_MON_TO_LIGHT_REPEATING
-	anim_call BattleAnim_ShowMon_0
-	anim_if_param_equal $1, .one
-	anim_call BattleAnimSub_Glimmer
-	anim_ret
-
-.one
+	anim_bgeffect ANIM_BG_WHITE_HUES, $0, $8, $0
+	anim_2gfx ANIM_GFX_CHARGE, ANIM_GFX_SHINE
+	anim_sound 0, 0, SFX_SWORDS_DANCE
+	anim_obj ANIM_OBJ_GROWTH, 48, 108, $0
+	anim_obj ANIM_OBJ_GROWTH, 48, 108, $8
+	anim_obj ANIM_OBJ_GROWTH, 48, 108, $10
+	anim_obj ANIM_OBJ_GROWTH, 48, 108, $18
+	anim_obj ANIM_OBJ_GROWTH, 48, 108, $20
+	anim_obj ANIM_OBJ_GROWTH, 48, 108, $28
+	anim_obj ANIM_OBJ_GROWTH, 48, 108, $30
+	anim_obj ANIM_OBJ_GROWTH, 48, 108, $38
+	anim_wait 12
 	anim_call BattleAnimSub_Glimmer2
 	anim_ret
 
@@ -2607,23 +2605,39 @@ BattleAnim_Minimize:
 	anim_ret
 
 BattleAnim_SkyAttack:
-	BattleAnim_FocusEnergy
-	anim_1gfx ANIM_GFX_SKY_ATTACK
-	anim_bgeffect ANIM_BG_REMOVE_MON, $0, BG_EFFECT_USER, $0
+	anim_2gfx ANIM_GFX_SPEED, ANIM_GFX_HIT
+	anim_call BattleAnim_TargetObj_1Row
+	anim_bgeffect ANIM_BG_FADE_MON_TO_LIGHT, $0, BG_EFFECT_USER, $40
+	anim_bgeffect ANIM_BG_CYCLE_OBPALS_GRAY_AND_YELLOW, $0, $2, $0
+.loop
+	anim_sound 0, 0, SFX_SWORDS_DANCE
+	anim_obj ANIM_OBJ_FOCUS, 44, 108, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_FOCUS, 36, 108, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_FOCUS, 52, 108, $8
+	anim_wait 2
+	anim_obj ANIM_OBJ_FOCUS, 28, 108, $8
+	anim_wait 2
+	anim_obj ANIM_OBJ_FOCUS, 60, 108, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_FOCUS, 20, 108, $8
+	anim_wait 2
+	anim_obj ANIM_OBJ_FOCUS, 68, 108, $8
+	anim_wait 2
+	anim_loop 3, .loop
+	anim_wait 8
+	anim_incbgeffect ANIM_BG_FADE_MON_TO_LIGHT
+	anim_call BattleAnim_ShowMon_0
 	anim_wait 32
-	anim_sound 0, 0, SFX_HYPER_BEAM
-	anim_obj ANIM_OBJ_SKY_ATTACK, 48, 88, $40
-	anim_wait 64
-	anim_incobj 1
-	anim_wait 21
+	anim_bgp $1b
+	anim_bgeffect ANIM_BG_SHAKE_SCREEN_X, $50, $4, $10
+	anim_bgeffect ANIM_BG_CYCLE_OBPALS_GRAY_AND_YELLOW, $0, $2, $0
 	anim_sound 0, 1, SFX_HYPER_BEAM
-	anim_bgeffect ANIM_BG_ALTERNATE_HUES, $0, $2, $0
+	anim_obj ANIM_OBJ_HIT_YFIX, 136, 56, $0
 	anim_wait 64
-	anim_incobj 1
-	anim_wait 32
-	anim_bgeffect ANIM_BG_SHOW_MON, $0, BG_EFFECT_USER, $0
-	anim_wait 16
 	anim_ret
+
 
 BattleAnim_NightShade:
 	anim_1gfx ANIM_GFX_HIT
@@ -3839,10 +3853,12 @@ BattleAnim_Spark:
 	anim_wait 4
 	anim_incobj 2
 	anim_wait 1
-	anim_sound 0, 1, SFX_THUNDERSHOCK
-	anim_obj ANIM_OBJ_THUNDERBOLT_BALL, 136, 56, $2
-	anim_obj ANIM_OBJ_SPARKS_CIRCLE, 136, 56, $0
-	anim_wait 32
+	anim_sound 0, 1, SFX_ZAP_CANNON
+	anim_obj ANIM_OBJ_EXPLOSION2, 136, 56, $2
+	anim_wait 24
+	anim_sound 0, 1, SFX_ZAP_CANNON
+	anim_obj ANIM_OBJ_EXPLOSION2, 136, 56, $2
+	anim_wait 48
 	anim_ret
 
 BattleAnim_FuryCutter:
