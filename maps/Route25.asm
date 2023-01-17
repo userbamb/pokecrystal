@@ -62,9 +62,8 @@ BadTrainerScript:
 
 GiveCharmanderBad1Text:
     text "(What are you"
-	line "doing, you are"
-
-	para "useless to me…)"
+	line "doing, you use-"
+    cont  "less #MON…)"
     done
 
 GiveCharmanderBad2Text:

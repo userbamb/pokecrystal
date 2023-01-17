@@ -78,17 +78,18 @@ GiveSquirtleText:
 	cont "that SNORLAX?!"
 
 	para "It's fantastic,"
-	line "you are such a pro"
+	line "I wanna give you"
 
-	para "trainer, you can"
-	line "rise this SQUIRTLE"
+	cont "this SQUIRTLE!"
+	para "I know you can"
 
-	para "well for sure,"
-	line "Take it!"
+	line "train it well."
+	cont "Take it!"
 	done
 
 SquirtlePartyFullText:
-    text "You don't want it?"
+    text "You don't want"
+	line "it?"
 	done
     
 VermilionPokecenter1FFishingGuruText_FoughtSnorlax:

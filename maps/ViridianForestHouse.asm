@@ -77,14 +77,6 @@ LadyTakeBulbasaurText:
 	para "Would you help me"
 	line "me with this one?"
 
-	para "Destiny brought"
-	line "you here, and I"
-
-	para "don't have much"
-	line "resources left."
-
-	para "Please take it"
-	line "with you!"
 	done
 
 PlayerReceivedBulbasaurText:
