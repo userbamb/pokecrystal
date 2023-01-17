@@ -173,15 +173,6 @@ INCBIN "gfx/tilesets/dark_cave.2bpp.lz"
 
 SECTION "Tileset Data 5", ROMX
 
-TilesetPokeComCenterGFX::
-INCBIN "gfx/tilesets/pokecom_center.2bpp.lz"
-
-TilesetPokeComCenterMeta::
-INCBIN "data/tilesets/pokecom_center_metatiles.bin"
-
-TilesetPokeComCenterColl::
-INCLUDE "data/tilesets/pokecom_center_collision.asm"
-
 TilesetBattleTowerInsideGFX::
 INCBIN "gfx/tilesets/battle_tower_inside.2bpp.lz"
 
@@ -357,3 +348,14 @@ INCBIN "data/tilesets/players_room_metatiles.bin"
 
 TilesetPlayersRoomColl::
 INCLUDE "data/tilesets/players_room_collision.asm"
+
+SECTION "Tileset Data 9", ROMX
+
+TilesetPokeComCenterGFX::
+INCBIN "gfx/tilesets/pokecom_center.2bpp.lz"
+
+TilesetPokeComCenterMeta::
+INCBIN "data/tilesets/pokecom_center_metatiles.bin"
+
+TilesetPokeComCenterColl::
+INCLUDE "data/tilesets/pokecom_center_collision.asm"
