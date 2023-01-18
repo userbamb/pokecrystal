@@ -2892,7 +2892,6 @@ ScizorEvosAttacks:
 	db 38, COMET_PUNCH
 	db 42, SWORDS_DANCE
 	db 48, BATON_PASS
-	db 50, TWINEEDLE
 	db 0 ; no more level-up moves
 
 ShuckleEvosAttacks:
