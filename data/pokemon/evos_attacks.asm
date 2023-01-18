@@ -571,7 +571,7 @@ OddishEvosAttacks:
 	db 18, SLEEP_POWDER
 	db 23, ACID
 	db 32, MOONLIGHT
-	db 39, PETAL_DANCE
+	db 39, LEECH_SEED
 	db 0 ; no more level-up moves
 
 GloomEvosAttacks:
@@ -584,17 +584,17 @@ GloomEvosAttacks:
 	db 7, SWEET_SCENT
 	db 14, POISONPOWDER
 	db 16, STUN_SPORE
-	db 18, SLEEP_POWDER
-	db 24, ACID
+	db 18, SPORE
+	db 24, SLUDGE
 	db 35, MOONLIGHT
-	db 44, PETAL_DANCE
+	db 44, LEECH_SEED
 	db 0 ; no more level-up moves
 
 VileplumeEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, ABSORB
-	db 1, SWEET_SCENT
-	db 1, STUN_SPORE
+	db 1, LEECH_SEED
+	db 1, SPORE
 	db 1, PETAL_DANCE
 	db 0 ; no more level-up moves
 
@@ -1931,12 +1931,12 @@ AerodactylEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, WING_ATTACK
 	db 8, AGILITY
-	db 15, BITE
+	db 15, CRUNCH
 	db 22, SUPERSONIC
 	db 29, ANCIENTPOWER
 	db 36, ROCK_THROW
 	db 38, ROCK_SLIDE
-	db 43, TAKE_DOWN
+	db 43, SKY_ATTACK
 	db 50, RAZOR_WIND
 	db 0 ; no more level-up moves
 
@@ -3093,13 +3093,14 @@ MantineEvosAttacks:
 
 SkarmoryEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, LEER
+	db 1, RAZOR_WIND
 	db 1, PECK
 	db 13, SAND_ATTACK
-	db 19, SWIFT
+	db 19, SPIKES
 	db 25, AGILITY
 	db 37, FURY_ATTACK
 	db 49, STEEL_WING
+	db 52, SKY_ATTACK
 	db 0 ; no more level-up moves
 
 HoundourEvosAttacks:
