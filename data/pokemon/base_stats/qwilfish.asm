@@ -1,7 +1,7 @@
 	db QWILFISH ; 211 GLIGAR
 
-	db  65,  75, 105,  85,  35,  65
-;   hp  atk  def  spd  sat  sdf
+	db  85,  75, 105,  85,  35,  75
+    ;   hp  atk  def  spd  sat  sdf
 
 	db GROUND, FLYING ; type
 	db 60 ; catch rate
@@ -11,7 +11,7 @@
 	db 100 ; unknown 1
 	db 20 ; step cycles to hatch
 	db 5 ; unknown 2
-	INCBIN "gfx/pokemon/gligar/front.dimensions"
+	INCBIN "gfx/pokemon/qwilfish/front.dimensions"
 	dw NULL, NULL ; unused (beta front/back pics)
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_BUG, EGG_BUG ; egg groups
