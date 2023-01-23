@@ -133,7 +133,7 @@ ItemEffects:
 	dw NoEffect            ; MIRACLE_SEED
 	dw NoEffect            ; THICK_CLUB
 	dw NoEffect            ; FOCUS_BAND
-	dw NoEffect            ; ITEM_78
+	dw DvupoEffect            ; ITEM_78   MY ITEM 
 	dw EnergypowderEffect  ; ENERGYPOWDER
 	dw EnergyRootEffect    ; ENERGY_ROOT
 	dw HealPowderEffect    ; HEAL_POWDER
@@ -1186,6 +1186,28 @@ VitaminEffect:
 	farcall ChangeHappiness
 
 	jp UseDisposableItem
+
+DvupoEffect:
+    ld b, PARTYMENUACTION_HEALING_ITEM
+    call UseItem_SelectMon
+
+    jp c, RareCandy_StatBooster_ExitMenu
+
+    call RareCandy_StatBooster_GetParameters
+
+    ld a, MON_DVS
+    call GetPartyParamLocation
+    ld a, $FF ; maximum
+    ld [hli], a
+    ld [hl], a
+    call UpdateStatsAfterItem
+
+    call Play_SFX_FULL_HEAL
+
+    ld c, HAPPINESS_USEDITEM
+    farcall ChangeHappiness
+
+    jp UseDisposableItem
 
 NoEffectMessage:
 	ld hl, ItemWontHaveEffectText

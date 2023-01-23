@@ -729,7 +729,7 @@ FocusBandDesc:
 	next "ing. (HOLD)@"
 
 TeruSama8Desc:
-	db   "?@"
+	db   "Teru Sama's grace.@"
 
 EnergyPowderDesc:
 	db   "Restores #MON"
