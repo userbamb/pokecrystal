@@ -41,3 +41,5 @@
 	tilecoll FLOOR, FLOOR, WARP_CARPET_DOWN, WARP_CARPET_DOWN ; 28
 	tilecoll WALL, WALL, WALL, DOOR ; 29
 	tilecoll WALL, WALL, WALL, WALL ; 2a
+	tilecoll WALL, WALL, CUT_TREE, WALL ; 2b
+	tilecoll WALL, WALL, DOOR, DOOR ; 2c
