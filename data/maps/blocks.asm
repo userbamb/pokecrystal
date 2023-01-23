@@ -1069,3 +1069,6 @@ ViridianForestHouse_Blocks:
 PewterLab_Blocks:
     INCBIN "maps/PewterLab.blk"
 
+LuckySpot_Blocks:
+    INCBIN "maps/LuckySpot.blk"
+	

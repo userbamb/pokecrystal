@@ -152,6 +152,7 @@ ENDM
 	map_const ROCK_TUNNEL_1F,                              15, 18 ; 87
 	map_const ROCK_TUNNEL_B1F,                             15, 18 ; 88
 	map_const VICTORY_ROAD,                                10, 36 ; 91
+	map_const LUCKY_SPOT,                                  10, 10 ; 91
 	endgroup
 
 	newgroup ECRUTEAK                                             ;  4
