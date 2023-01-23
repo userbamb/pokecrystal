@@ -26,7 +26,7 @@ CutTreeBlockPointers:
 ; facing block, replacement block, animation
 	db $0b, $0a, 1 ; grass
 	db $32, $6d, 0 ; tree
-	db $33, $6c, 0 ; tree
+	db $33, $61, 0 ; tree
 	db $34, $6f, 0 ; tree
 	db $35, $4c, 0 ; tree
 	db $60, $6e, 0 ; tree
