@@ -1,5 +1,4 @@
     object_const_def
-	const LUCKYSPOT_LADY
     const LUCKYSPOT_MON1
     const LUCKYSPOT_MON2
     const LUCKYSPOT_MON3
@@ -9,10 +8,11 @@ LuckySpot_MapScripts:
 
 	def_callbacks
 
-LuckySpotLadyScript:
-	faceplayer
+
+LuckySpotMon1Script:
 	opentext
-	writetext TerusamaText
+	writetext LuckySpotMon1Text
+	cry POLIWAG
 	waitbutton
 	verbosegiveitem ITEM_78
 	iffalse .BagFull
@@ -23,29 +23,36 @@ LuckySpotLadyScript:
 .BagFull:
 	closetext
 	end
-
-
-LuckySpotMon1Script:
-	opentext
-	writetext LuckySpotMon1Text
-	cry POLIWAG
-	waitbutton
-	closetext
-	end
+	
 
 LuckySpotMon2Script:
 	opentext
 	writetext LuckySpotMon2Text
 	cry POLIWAG
 	waitbutton
+	verbosegiveitem ITEM_78
+	iffalse .BagFull
+	waitbutton
 	closetext
 	end
+
+.BagFull:
+	closetext
+	end
+	
 
 LuckySpotMon3Script:
     opentext
 	writetext LuckySpotMon3Text
 	cry POLIWAG
 	waitbutton
+	verbosegiveitem ITEM_88
+	iffalse .BagFull
+	waitbutton
+	closetext
+	end
+
+.BagFull:
 	closetext
 	end
 	
@@ -65,7 +72,7 @@ LuckySpotMon2Text:
 	done 
 	
 LuckySpotMon3Text:
-    text "POLIWAG: Glgl!"
+    text "POLIWAG: Glgl.."
 	done
 
 LuckySpot_MapEvents:
@@ -80,7 +87,6 @@ LuckySpot_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event 15, 11, SPRITE_BLUE, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_SCRIPT, 0, LuckySpotLadyScript, -1
 	object_event 18, 11, SPRITE_POLIWAG, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_SCRIPT, 0, LuckySpotMon1Script, -1
 	object_event  7,  4, SPRITE_POLIWAG, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LuckySpotMon2Script, -1
 	object_event  3, 15, SPRITE_POLIWAG, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LuckySpotMon3Script, -1

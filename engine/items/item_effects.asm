@@ -149,7 +149,7 @@ ItemEffects:
 	dw BasementKeyEffect   ; BASEMENT_KEY
 	dw NoEffect            ; PASS
 	dw RoofKeyEffect       ; ROOF_KEY
-	dw NoEffect            ; ITEM_88
+	dw SciainiEffect           ; ITEM_88 TRY SHINY
 	dw NoEffect            ; ITEM_89
 	dw NoEffect            ; CHARCOAL
 	dw RestoreHPEffect     ; BERRY_JUICE
@@ -1208,6 +1208,29 @@ DvupoEffect:
     farcall ChangeHappiness
 
     jp UseDisposableItem
+
+SciainiEffect:
+    ld b, PARTYMENUACTION_HEALING_ITEM
+    call UseItem_SelectMon
+
+    jp c, RareCandy_StatBooster_ExitMenu
+
+    call RareCandy_StatBooster_GetParameters
+
+    ld a, MON_DVS
+    call GetPartyParamLocation
+    ld [hl], $FA
+    inc hl
+    ld [hl], $AA
+    call UpdateStatsAfterItem
+
+    call Play_SFX_FULL_HEAL
+
+    ld c, HAPPINESS_USEDITEM
+    farcall ChangeHappiness
+
+    jp UseDisposableItem
+
 
 NoEffectMessage:
 	ld hl, ItemWontHaveEffectText

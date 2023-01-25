@@ -135,7 +135,7 @@ ItemNames::
 	li "BASEMENT KEY"
 	li "PASS"
 	li "ROOF KEYS"
-	li "TERU-SAMA"
+	li "TERU-KUN"
 	li "TERU-SAMA"
 	li "CHARCOAL"
 	li "BERRY JUICE"
