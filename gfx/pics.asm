@@ -59,7 +59,6 @@ SteelixFrontpic:     INCBIN "gfx/pokemon/steelix/front.animated.2bpp.lz"
 AlakazamFrontpic:    INCBIN "gfx/pokemon/alakazam/front.animated.2bpp.lz"
 GyaradosFrontpic:    INCBIN "gfx/pokemon/gyarados/front.animated.2bpp.lz"
 KangaskhanFrontpic:  INCBIN "gfx/pokemon/kangaskhan/front.animated.2bpp.lz"
-RhydonFrontpic:      INCBIN "gfx/pokemon/rhydon/front.animated.2bpp.lz"
 GolduckFrontpic:     INCBIN "gfx/pokemon/golduck/front.animated.2bpp.lz"
 RhyhornFrontpic:     INCBIN "gfx/pokemon/rhyhorn/front.animated.2bpp.lz"
 PidgeotFrontpic:     INCBIN "gfx/pokemon/pidgeot/front.animated.2bpp.lz"
@@ -786,6 +785,8 @@ CrobatBackpic:       INCBIN "gfx/pokemon/crobat/back.2bpp.lz"
 SECTION "Pics 22", ROMX
 MettoFrontpic:       INCBIN "gfx/pokemon/metto/front.animated.2bpp.lz"
 MettoBackpic:        INCBIN "gfx/pokemon/metto/back.2bpp.lz"
+RhydonFrontpic:      INCBIN "gfx/pokemon/rhydon/front.animated.2bpp.lz"
+
 
 SECTION "Pics 23", ROMX
 
