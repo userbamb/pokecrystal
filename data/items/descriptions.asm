@@ -649,8 +649,8 @@ BlkApricornDesc:
 	next "@"
 
 FidgetDesc:
-	db   "Prevents confusion."
-    next "@"
+	db   "Prevents confu-"
+    next "sion. (HOLD)@"
 
 PnkApricornDesc:
 	db   "A pink APRICORN."

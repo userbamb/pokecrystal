@@ -2581,7 +2581,7 @@ JumpluffEvosAttacks:
 	db 17, SLEEP_POWDER
 	db 22, LEECH_SEED
 	db 33, COTTON_SPORE
-	db 44, MEGA_DRAIN
+	db 44, SPORE
 	db 0 ; no more level-up moves
 
 AipomEvosAttacks:
