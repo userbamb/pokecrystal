@@ -356,7 +356,7 @@ WaterStoneDesc:
 
 GogglesDesc:
 	db   "Prevents falling"
-	next "asleep (HOLD)@"
+	next "asleep. (HOLD)@"
 
 HPUpDesc:
 	db   "Raises the HP of"

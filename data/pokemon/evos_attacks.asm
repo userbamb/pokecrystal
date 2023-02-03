@@ -2037,6 +2037,7 @@ DragoniteEvosAttacks:
 	db 55, WING_ATTACK
 	db 61, OUTRAGE
 	db 62, RAZOR_WIND
+	db 70, SKY_ATTACK
 	db 0 ; no more level-up moves
 
 MewtwoEvosAttacks:
@@ -3071,9 +3072,9 @@ DelibirdEvosAttacks:
 	db 25, OCTAZOOKA
 	db 30, DYNAMICPUNCH
 	db 38, LOCK_ON
+	db 40, LEECH_LIFE
 	db 45, HYDRO_PUMP
 	db 53, FIRE_BLAST
-	db 60, HYPER_BEAM
 	db 0 ; no more level-up moves
 
 MantineEvosAttacks:
