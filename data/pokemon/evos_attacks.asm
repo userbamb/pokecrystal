@@ -1121,7 +1121,7 @@ MagnetonEvosAttacks:
 	db 0 ; no more level-up moves
 
 FarfetchDEvosAttacks:
-    db EVOLVE_HAPPINESS, TR_NITE, STANTLER
+    db EVOLVE_LEVEL, 37, STANTLER
 	db 0 ; no more evolutions
 	db 1, PECK
 	db 7, SAND_ATTACK
@@ -1554,7 +1554,7 @@ ChanseyEvosAttacks:
 	db 0 ; no more level-up moves
 
 TangelaEvosAttacks:
-    db EVOLVE_HAPPINESS, TR_NITE, MISDREAVUS
+    db EVOLVE_ITEM, SUN_STONE, MISDREAVUS
 	db 0 ; no more evolutions
 	db 1, CONSTRICT
 	db 4, SLEEP_POWDER
@@ -2258,7 +2258,7 @@ NoctowlEvosAttacks:
 	db 0 ; no more level-up moves
 
 LedybaEvosAttacks:
-	db EVOLVE_LEVEL, 38, LEDIAN
+	db EVOLVE_LEVEL, 28, LEDIAN
 	db 0 ; no more evolutions
 	db 1, SMOKESCREEN
 	db 1, SUPERSONIC
@@ -3046,8 +3046,9 @@ RemoraidEvosAttacks: ;WARWOLF
 	db 0 ; no more level-up moves
 
 OctilleryEvosAttacks: ;REMORAID
-    db EVOLVE_HAPPINESS, TR_MORNDAY, DELIBIRD
-	db EVOLVE_HAPPINESS, TR_NITE, MANTINE
+    db EVOLVE_STAT, 24, ATK_LT_DEF, MANTINE
+	db EVOLVE_STAT, 24, ATK_GT_DEF, DELIBIRD
+	db EVOLVE_STAT, 24, ATK_EQ_DEF, MANTINE
 	db 0 ; no more evolutions
 	db 1, WATER_GUN
 	db 7, PSYBEAM
