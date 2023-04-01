@@ -2328,7 +2328,8 @@ CrobatEvosAttacks:
 	db 19, CONFUSE_RAY
 	db 30, HAZE
 	db 42, MEAN_LOOK
-	db 55, SUPER_FANG
+	db 43, SKY_ATTACK
+	db 50, RAZOR_WIND
 	db 0 ; no more level-up moves
 
 ChinchouEvosAttacks:
@@ -2796,7 +2797,7 @@ ForretressEvosAttacks:
 	db 0 ; no more level-up moves
 
 DunsparceEvosAttacks:
-	db EVOLVE_HAPPINESS, TR_MORNDAY, GLIGAR
+	db EVOLVE_HAPPINESS, TR_ANYTIME, GLIGAR
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, TAIL_WHIP
