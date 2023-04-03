@@ -391,7 +391,7 @@ SandslashEvosAttacks:
 	db 11, SAND_ATTACK
 	db 17, POISON_STING
 	db 24, SLASH
-	db 33, SWIFT
+	db 33, EARTHQUAKE
 	db 42, FURY_SWIPES
 	db 52, SANDSTORM
 	db 0 ; no more level-up moves
@@ -511,6 +511,7 @@ NinetalesEvosAttacks:
 	db 43, FIRE_SPIN
 	db 45, SACRED_FIRE
 	db 50, RECOVER
+	db 55, TRANSFORM
 	db 0 ; no more level-up moves
 
 JigglypuffEvosAttacks:
@@ -593,9 +594,9 @@ GloomEvosAttacks:
 VileplumeEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, ABSORB
-	db 1, LEECH_SEED
-	db 1, SPORE
-	db 1, PETAL_DANCE
+	db 37, LEECH_SEED
+	db 50, SPORE
+	db 58, PETAL_DANCE
 	db 0 ; no more level-up moves
 
 ParasEvosAttacks:
@@ -821,6 +822,7 @@ PoliwhirlEvosAttacks:
 	db 27, RAIN_DANCE
 	db 35, BODY_SLAM
 	db 43, BELLY_DRUM
+	db 50, CROSS_CHOP
 	db 51, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
@@ -830,7 +832,7 @@ PoliwrathEvosAttacks:
 	db 1, HYPNOSIS
 	db 1, DOUBLESLAP
 	db 1, SUBMISSION
-	db 35, SUBMISSION
+	db 45, CROSS_CHOP
 	db 51, MIND_READER
 	db 0 ; no more level-up moves
 
@@ -961,8 +963,9 @@ TentacoolEvosAttacks:
 	db 1, POISON_STING
 	db 6, SUPERSONIC
 	db 12, CONSTRICT
-	db 19, ACID
+	db 19, SLUDGE
 	db 30, WRAP
+	db 32, RECOVER
 	db 36, BARRIER
 	db 43, OCTAZOOKA
 	db 49, HYDRO_PUMP
@@ -975,8 +978,9 @@ TentacruelEvosAttacks:
 	db 1, CONSTRICT
 	db 6, SUPERSONIC
 	db 12, CONSTRICT
-	db 19, ACID
+	db 19, SLUDGE
 	db 30, WRAP
+	db 32, RECOVER
 	db 38, BARRIER
 	db 47, OCTAZOOKA
 	db 55, HYDRO_PUMP
@@ -1698,7 +1702,7 @@ JynxEvosAttacks:
 	db 21, DOUBLESLAP
 	db 25, ICE_PUNCH
 	db 35, MEAN_LOOK
-	db 41, BODY_SLAM
+	db 41, PSYCHIC_M
 	db 51, PERISH_SONG
 	db 57, BLIZZARD
 	db 0 ; no more level-up moves
@@ -2356,7 +2360,7 @@ LanturnEvosAttacks:
 	db 17, WATER_GUN
 	db 25, SPARK
 	db 33, CONFUSE_RAY
-	db 45, TAKE_DOWN
+	db 45, DISABLE
 	db 53, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
@@ -2413,6 +2417,7 @@ TogeticEvosAttacks:
 	db 38, GUST
 	db 48, TRI_ATTACK
     db 50, SOFTBOILED
+	db 60, AEROBLAST
 	db 0 ; no more level-up moves
 
 NatuEvosAttacks:
@@ -2523,7 +2528,7 @@ SudowoodoEvosAttacks:
 	db 19, LOW_KICK
 	db 28, ROCK_SLIDE
 	db 37, FAINT_ATTACK
-	db 46, SLAM
+	db 46, MACH_PUNCH
 	db 0 ; no more level-up moves
 
 PolitoedEvosAttacks:
@@ -2533,7 +2538,8 @@ PolitoedEvosAttacks:
 	db 1, DOUBLESLAP
 	db 1, PERISH_SONG
 	db 35, FAKE_OUT
-	db 51, SWAGGER
+	db 45, ENCORE
+	db 51, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 HoppipEvosAttacks:
@@ -2583,6 +2589,7 @@ JumpluffEvosAttacks:
 	db 17, SLEEP_POWDER
 	db 22, LEECH_SEED
 	db 33, COTTON_SPORE
+	db 40, MEGA_DRAIN
 	db 44, SPORE
 	db 0 ; no more level-up moves
 
@@ -2889,11 +2896,11 @@ ScizorEvosAttacks:
 	db 12, PURSUIT
 	db 18, FALSE_SWIPE
 	db 24, AGILITY
-	db 30, METAL_CLAW
-	db 36, RAZOR_WIND
-	db 38, COMET_PUNCH
-	db 42, SWORDS_DANCE
-	db 48, BATON_PASS
+	db 40, METAL_CLAW
+	db 45, RAZOR_WIND
+	db 47, COMET_PUNCH
+	db 48, SWORDS_DANCE
+	db 50, BATON_PASS
 	db 0 ; no more level-up moves
 
 ShuckleEvosAttacks:
