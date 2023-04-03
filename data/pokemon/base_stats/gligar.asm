@@ -1,6 +1,6 @@
 	db GLIGAR ; 207 RAITORA
 
-	db 115,  95,  99,  70, 95,  80
+	db 115,  95,  99,  70, 95,  76
 	;   hp  atk  def  spd  sat  sdf
 
 	db ELECTRIC, ELECTRIC ; type

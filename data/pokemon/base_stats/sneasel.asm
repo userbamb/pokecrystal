@@ -1,6 +1,6 @@
 	db SNEASEL ; 215
 
-	db  125, 67,  80,  48,  77,  95
+	db  105, 67,  80,  48,  77,  95
 	;   hp  atk  def  spd  sat  sdf
 
 	db GHOST, DARK ; type

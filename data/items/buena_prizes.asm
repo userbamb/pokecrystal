@@ -1,9 +1,9 @@
 BuenaPrizeItems:
 	table_width 2, BuenaPrizeItems
-	db ULTRA_BALL,   2
-	db FULL_RESTORE, 2
-	db NUGGET,       3
-	db RARE_CANDY,   3
+	db LEAF_STONE,   3
+	db WATER_STONE,  3
+	db FIRE_STONE,   3
+	db THUNDERSTONE, 3
 	db PROTEIN,      5
 	db IRON,         5
 	db CARBOS,       5
