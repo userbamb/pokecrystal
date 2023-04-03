@@ -30,7 +30,6 @@ MewFoundScript:
 	applymovement SAFARIZONENORTH_MEW, MewMovement
 	disappear SAFARIZONENORTH_MEW
 	setevent EVENT_SAFARI_ZONE_MEW_SCARED
-	special InitRoamMons
 	refreshscreen
 	reloadmappart
     end
