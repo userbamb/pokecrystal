@@ -20,6 +20,8 @@ GenerateSwarmShiny:
     jr z, .nidorino
 	cp LANDMARK_ROUTE_38
     jr z, .miltank
+    cp LANDMARK_RUINS_OF_ALPH_OUTSIDE
+    jr z, .clefairy
 	cp LANDMARK_CHERRYGROVE_CITY
     jr z, .horsea
     jr .skipshine
@@ -27,6 +29,11 @@ GenerateSwarmShiny:
 .horsea
    ld a, [wCurPartySpecies]
    cp HORSEA
+   jr nz, .skipshine
+   jr .rollshiny
+.clefairy
+   ld a, [wCurPartySpecies]
+   cp CLEFAIRY
    jr nz, .skipshine
    jr .rollshiny
 .miltank

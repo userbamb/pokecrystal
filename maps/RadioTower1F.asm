@@ -17,7 +17,7 @@ SwarmGrampsScript:
 	opentext
 	checkflag ENGINE_SWARM
 	iftrue .skiprandomswarm
-	random 9
+	random 10
 	ifequal 0, .mareep
 	ifequal 1, .yanma
     ifequal 2, .remoraid
@@ -27,6 +27,15 @@ SwarmGrampsScript:
 	ifequal 6, .nidorino
 	ifequal 7, .miltank
 	ifequal 8, .horsea
+	ifequal 9, .clefairy
+
+.clefairy
+	setflag ENGINE_SWARM
+	swarm RUINS_OF_ALPH_OUTSIDE
+	writetext SwarmClefairyText
+	waitbutton
+	closetext
+	end
 
 .horsea
 	setflag ENGINE_SWARM
@@ -174,6 +183,17 @@ SwarmYanmaText:
 	para "Oh yes! There's a"
 	line "swarm of YANMA"
 	cont "on ROUTE 35."
+	done
+
+SwarmClefairyText:
+	text "Let me see…"
+	line "What did the news"
+	cont "say?"
+
+	para "Oh yes! There's a"
+	line "swarm of CLEFAIRY"
+	para "…At the RUINS OF"
+	line "ALPH?!"
 	done
 	
 SwarmRemoraidText:

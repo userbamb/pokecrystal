@@ -932,6 +932,8 @@ BattleAnim_DragonRage:
 
 BattleAnim_Flamethrower:
 	anim_1gfx ANIM_GFX_FIRE
+	anim_bgeffect ANIM_BG_CYCLE_OBPALS_GRAY_AND_YELLOW, $0, $2, $0
+	anim_bgeffect ANIM_BG_ALTERNATE_HUES, $0, $2, $0
 	anim_sound 6, 2, SFX_EMBER
 	anim_obj ANIM_OBJ_FLAMETHROWER, 64, 92, $3
 	anim_wait 2
@@ -999,6 +1001,7 @@ BattleAnim_IcePunch:
 
 BattleAnim_IceBeam:
 	anim_1gfx ANIM_GFX_ICE
+	anim_bgeffect ANIM_BG_WHITE_HUES, $0, $8, $0
 .loop
 	anim_sound 6, 2, SFX_SHINE
 	anim_obj ANIM_OBJ_ICE_BEAM, 64, 92, $4
@@ -1840,7 +1843,8 @@ BattleAnim_Constrict:
 	anim_ret
 
 BattleAnim_Earthquake:
-	anim_bgeffect ANIM_BG_SHAKE_SCREEN_X, $60, $4, $10
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $8, $40
+	anim_bgeffect ANIM_BG_SHAKE_SCREEN_X, $60, $4, $0
 .loop
 	anim_sound 0, 1, SFX_EMBER
 	anim_wait 24
@@ -1849,7 +1853,7 @@ BattleAnim_Earthquake:
 
 BattleAnim_Fissure:
 	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $8, $40
-	anim_bgeffect ANIM_BG_SHAKE_SCREEN_X, $60, $4, $0
+	anim_bgeffect ANIM_BG_SHAKE_SCREEN_Y, $60, $4, $0
 .loop
 	anim_sound 0, 1, SFX_EMBER
 	anim_wait 24
@@ -2826,21 +2830,23 @@ BattleAnim_Smokescreen:
 	anim_ret
 
 BattleAnim_Strength:
-	anim_1gfx ANIM_GFX_SPEED
-	anim_call BattleAnim_TargetObj_1Row
-	anim_bgeffect ANIM_BG_FADE_MON_TO_BLACK_REPEATING, $0, BG_EFFECT_USER, $40
-	anim_sound 0, 0, SFX_SHARPEN
+	anim_3gfx ANIM_GFX_OBJECTS, ANIM_GFX_HIT, ANIM_GFX_WIND
+	anim_sound 0, 1, SFX_MILK_DRINK
+	anim_obj ANIM_OBJ_SWAGGER, 72, 88, $44
+	anim_bgeffect ANIM_BG_FADE_MON_TO_LIGHT_REPEATING, $0, BG_EFFECT_USER, $40
+	anim_wait 80
+	anim_bgeffect ANIM_BG_SHAKE_SCREEN_Y, $58, $2, $0
+	anim_sound 0, 1, SFX_STRENGTH
+	anim_obj ANIM_OBJ_HIT_BIG_YFIX, 136, 30, $0
+	anim_obj ANIM_OBJ_HIT_SMALL_YFIX, 136, 72, $0
+	anim_obj ANIM_OBJ_ENCORE_STAR, 124, 40, $2c
+	anim_obj ANIM_OBJ_ENCORE_STAR, 148, 40, $3c 
 	anim_wait 64
-	anim_incbgeffect ANIM_BG_FADE_MON_TO_BLACK_REPEATING
-	anim_wait 1
-	anim_bgeffect ANIM_BG_FADE_MON_TO_LIGHT, $0, BG_EFFECT_USER, $40
-	anim_sound 0, 1, SFX_MEGA_PUNCH
-	anim_obj ANIM_OBJ_HIT_BIG_YFIX, 132, 40, $0
-	anim_wait 26
 	anim_ret
 
 BattleAnim_SwordsDance:
 	anim_1gfx ANIM_GFX_WHIP
+	anim_bgeffect ANIM_BG_WHITE_HUES, $0, $8, $0
 	anim_sound 0, 0, SFX_SWORDS_DANCE
 	anim_obj ANIM_OBJ_SWORDS_DANCE, 48, 108, $0
 	anim_obj ANIM_OBJ_SWORDS_DANCE, 48, 108, $d
@@ -3252,16 +3258,17 @@ BattleAnim_Nightmare:
 
 BattleAnim_FlameWheel:
 	anim_1gfx ANIM_GFX_FIRE
+	anim_bgeffect ANIM_BG_CYCLE_OBPALS_GRAY_AND_YELLOW, $0, $2, $0
+	anim_bgeffect ANIM_BG_ALTERNATE_HUES, $0, $2, $0
 .loop
 	anim_sound 0, 0, SFX_EMBER
 	anim_obj ANIM_OBJ_FLAME_WHEEL, 48, 96, $0
-	anim_wait 6
+	anim_wait 4
 	anim_loop 8, .loop
 	anim_wait 96
 	anim_call BattleAnim_TargetObj_1Row
 	anim_bgeffect ANIM_BG_TACKLE, $0, BG_EFFECT_USER, $0
 	anim_wait 4
-	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $3
 	anim_sound 0, 1, SFX_EMBER
 	anim_obj ANIM_OBJ_FIRE_BLAST, 136, 48, $1
 	anim_obj ANIM_OBJ_FIRE_BLAST, 136, 48, $4
@@ -3272,6 +3279,7 @@ BattleAnim_FlameWheel:
 	anim_incobj 9
 	anim_wait 8
 	anim_ret
+
 
 BattleAnim_Snore:
 	anim_2gfx ANIM_GFX_STATUS, ANIM_GFX_NOISE
@@ -4104,23 +4112,28 @@ BattleAnim_PainSplit:
 	anim_ret
 
 BattleAnim_SacredFire:
-	anim_1gfx ANIM_GFX_FIRE
-	anim_bgeffect ANIM_BG_CYCLE_OBPALS_GRAY_AND_YELLOW, $0, $2, $0
-	anim_bgeffect ANIM_BG_ALTERNATE_HUES, $0, $2, $0
+	anim_2gfx ANIM_GFX_FIRE, ANIM_GFX_PSYCHIC
+    anim_bgeffect ANIM_BG_CYCLE_OBPALS_GRAY_AND_YELLOW, $0, $2, $0
+	anim_bgeffect ANIM_BG_CYCLE_BGPALS_INVERTED, $0, $4, $0
+	anim_sound 6, 6, SFX_PROTECT
 .loop
-	anim_sound 0, 0, SFX_EMBER
 	anim_obj ANIM_OBJ_SACRED_FIRE, 48, 104, $0
 	anim_wait 8
 	anim_loop 8, .loop
 	anim_wait 96
-	anim_call BattleAnim_TargetObj_1Row
-	anim_bgeffect ANIM_BG_TACKLE, $0, BG_EFFECT_USER, $0
-	anim_wait 4
-	anim_sound 0, 1, SFX_EMBER
-	anim_obj ANIM_OBJ_FIRE_BLAST, 136, 48, $1
-	anim_obj ANIM_OBJ_FIRE_BLAST, 136, 48, $4
-	anim_obj ANIM_OBJ_FIRE_BLAST, 136, 48, $5
+	anim_obj ANIM_OBJ_MEAN_LOOK, 48, 56, $0
+	anim_wait 32
+	anim_sound 0, 1, SFX_SHINE
 	anim_wait 8
+	anim_sound 0, 1, SFX_SHINE
+	anim_wait 16
+.loop3
+	anim_sound 0, 1, SFX_EMBER
+    anim_obj ANIM_OBJ_BURNED, 136, 56, $10
+	anim_obj ANIM_OBJ_BURNED, 136, 56, $90
+	anim_obj ANIM_OBJ_FIRE_BLAST, 136, 56, $6
+	anim_wait 8
+	anim_loop 4, .loop3
 	anim_bgeffect ANIM_BG_SHOW_MON, $0, BG_EFFECT_TARGET, $0
 	anim_wait 4
 	anim_incobj 9

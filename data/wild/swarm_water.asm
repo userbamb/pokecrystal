@@ -9,7 +9,7 @@ SwarmWaterWildMons:
 	db 20, TENTACRUEL
 	db -1 ; end
 
-  ; REMORAID SWARM
+  ; HORSEA SWARM
     map_id CHERRYGROVE_CITY
     db 6 percent ; encounter rate
 	db 15, HORSEA

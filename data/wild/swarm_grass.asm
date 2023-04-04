@@ -2,6 +2,34 @@
 
 SwarmGrassWildMons:
 
+; CLEFAIRY swarm
+	map_id RUINS_OF_ALPH_OUTSIDE
+    db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 20, CHANSEY
+	db 22, CLEFAIRY
+	db 18, CLEFAIRY
+	db 24, CLEFAIRY
+	db 20, ELEKID
+	db 22, ELEKID
+	db 22, SMEARGLE
+	; day
+	db 20, NATU
+	db 22, CLEFAIRY
+	db 18, CLEFAIRY
+	db 24, CLEFAIRY
+	db 20, ELEKID
+	db 22, ELEKID
+	db 22, SMEARGLE
+	; nite
+	db 20, NATU
+	db 22, CLEFAIRY
+	db 18, CLEFAIRY
+	db 24, CLEFAIRY
+	db 22, CLEFAIRY
+	db 22, CLEFAIRY
+	db 22, QUAGSIRE
+
 ; MILTANK swarm
 	map_id ROUTE_38
     db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite

@@ -781,7 +781,7 @@ GrowlitheEvosAttacks:
 	db 9, EMBER
 	db 18, SMOKESCREEN
 	db 26, TAKE_DOWN
-	db 34, FLAME_WHEEL
+	db 45, FLAME_WHEEL
 	db 42, AGILITY
 	db 50, FLAMETHROWER
 	db 0 ; no more level-up moves
@@ -1856,10 +1856,10 @@ FlareonEvosAttacks:
 	db 16, EMBER
 	db 23, QUICK_ATTACK
 	db 30, BITE
-	db 36, FLAME_WHEEL
+	db 36, FLAMETHROWER
 	db 42, SMOG
 	db 47, SMOKESCREEN
-	db 52, FLAMETHROWER
+	db 52, FLAME_WHEEL
 	db 0 ; no more level-up moves
 
 PorygonEvosAttacks:
@@ -2156,7 +2156,7 @@ TyphlosionEvosAttacks:
 	db 31, FLAME_WHEEL
 	db 45, SWIFT
 	db 60, FLAMETHROWER
-	db 64, SACRED_FIRE
+    db 65, FIRE_BLAST
 	db 0 ; no more level-up moves
 
 TotodileEvosAttacks:
@@ -2164,6 +2164,7 @@ TotodileEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, LEER ;test
+	db 7, RAGE
 	db 13, WATER_GUN
 	db 20, BITE
 	db 27, SCARY_FACE
@@ -2270,8 +2271,8 @@ LedybaEvosAttacks:
 	db 15, COMET_PUNCH
 	db 22, LIGHT_SCREEN
 	db 22, REFLECT
-	db 22, FLAME_WHEEL
-	db 29, BATON_PASS
+	db 22, AGILITY
+	db 28, BATON_PASS
 	db 36, FAKE_OUT
 	db 43, AGILITY
 	db 0 ; no more level-up moves
@@ -2284,10 +2285,10 @@ LedianEvosAttacks:
 	db 15, COMET_PUNCH
 	db 24, LIGHT_SCREEN
 	db 24, REFLECT
-	db 24, FLAME_WHEEL
+	db 24, AGILITY
 	db 33, BATON_PASS
 	db 42, FAKE_OUT
-	db 51, AGILITY
+	db 51, FLAME_WHEEL
 	db 58, LEECH_LIFE
 	db 0 ; no more level-up moves
 
