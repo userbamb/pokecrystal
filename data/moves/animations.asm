@@ -4121,7 +4121,7 @@ BattleAnim_SacredFire:
 	anim_wait 8
 	anim_loop 8, .loop
 	anim_wait 96
-	anim_obj ANIM_OBJ_MEAN_LOOK, 48, 56, $0
+	anim_obj ANIM_OBJ_MEAN_LOOK, 48, 48, $0
 	anim_wait 32
 	anim_sound 0, 1, SFX_SHINE
 	anim_wait 8
