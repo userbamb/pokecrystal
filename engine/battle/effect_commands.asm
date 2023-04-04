@@ -20,11 +20,7 @@ DoEnemyTurn:
 	cp BATTLEACTION_SWITCH1
 	ret nc
 
-	; fallthrough
-
 DoTurn:
-; Read in and execute the user's move effects for this turn.
-
 	xor a
 	ld [wTurnEnded], a
 
@@ -38,7 +34,6 @@ DoTurn:
 	call UpdateMoveData
 
 DoMove:
-; Get the user's move effect.
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
 	ld c, a
@@ -60,7 +55,6 @@ DoMove:
 	cp endmove_command
 	jr nz, .GetMoveEffect
 
-; Start at the first command.
 	ld hl, wBattleScriptBuffer
 	ld a, l
 	ld [wBattleScriptBufferAddress], a
@@ -83,11 +77,9 @@ DoMove:
 	ld [wBattleScriptBufferAddress + 1], a
 	pop af
 
-; endturn_command (-2) is used to terminate branches without ending the read cycle.
 	cp endturn_command
 	ret nc
 
-; The rest of the commands (01-af) are read from BattleCommandPointers.
 	push bc
 	dec a
 	ld c, a
@@ -132,7 +124,6 @@ BattleCommand_CheckTurn:
 	and a
 	jp nz, CheckEnemyTurn
 
-; check player turn
 	ld hl, wPlayerSubStatus4
 	bit SUBSTATUS_RECHARGE, [hl]
 	jr z, .no_recharge
@@ -192,13 +183,6 @@ BattleCommand_CheckTurn:
 
 	ld hl, wBattleMonStatus
 	bit FRZ, [hl]
-	jr z, .not_frozen
-
-	; Flame Wheel and Sacred Fire thaw the user.
-	ld a, [wCurPlayerMove]
-	cp FLAME_WHEEL
-	jr z, .not_frozen
-	cp SACRED_FIRE
 	jr z, .not_frozen
 
 	ld hl, FrozenSolidText
@@ -265,7 +249,6 @@ BattleCommand_CheckTurn:
 	cp 50 percent + 1
 	jr nc, .not_confused
 
-	; clear confusion-dependent substatus
 	ld hl, wPlayerSubStatus3
 	ld a, [hl]
 	and 1 << SUBSTATUS_CONFUSED
@@ -288,7 +271,6 @@ BattleCommand_CheckTurn:
 	ld de, ANIM_IN_LOVE
 	call FarPlayBattleAnimation
 
-	; 50% chance of infatuation
 	call BattleRandom
 	cp 50 percent + 1
 	jr c, .not_infatuated
@@ -300,12 +282,10 @@ BattleCommand_CheckTurn:
 
 .not_infatuated
 
-	; We can't disable a move that doesn't exist.
 	ld a, [wDisabledMove]
 	and a
 	jr z, .no_disabled_move
 
-	; Are we using the disabled move?
 	ld hl, wCurPlayerMove
 	cp [hl]
 	jr nz, .no_disabled_move
@@ -320,7 +300,6 @@ BattleCommand_CheckTurn:
 	bit PAR, [hl]
 	ret z
 
-	; 25% chance to be fully paralyzed
 	call BattleRandom
 	cp 25 percent
 	ret nc
@@ -406,7 +385,6 @@ CheckEnemyTurn:
 	jr .not_asleep
 
 .fast_asleep
-	; Snore and Sleep Talk bypass sleep.
 	ld a, [wCurEnemyMove]
 	cp SNORE
 	jr z, .not_asleep
@@ -419,13 +397,6 @@ CheckEnemyTurn:
 
 	ld hl, wEnemyMonStatus
 	bit FRZ, [hl]
-	jr z, .not_frozen
-
-	; Flame Wheel and Sacred Fire thaw the user.
-	ld a, [wCurEnemyMove]
-	cp FLAME_WHEEL
-	jr z, .not_frozen
-	cp SACRED_FIRE
 	jr z, .not_frozen
 
 	ld hl, FrozenSolidText
@@ -1077,8 +1048,6 @@ BattleCommand_DoTurn:
 	ret
 
 .continuousmoves
-	db EFFECT_RAZOR_WIND
-	db EFFECT_SKY_ATTACK
 	db EFFECT_SKULL_BASH
 	db EFFECT_SOLARBEAM
 	db EFFECT_FLY
@@ -1889,10 +1858,6 @@ BattleCommand_LowerSub:
 
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
-	cp EFFECT_RAZOR_WIND
-	jr z, .charge_turn
-	cp EFFECT_SKY_ATTACK
-	jr z, .charge_turn
 	cp EFFECT_SKULL_BASH
 	jr z, .charge_turn
 	cp EFFECT_SOLARBEAM
@@ -5625,9 +5590,6 @@ BattleCommand_Charge:
 	text_asm
 	ld a, BATTLE_VARS_MOVE_ANIM
 	call GetBattleVar
-	cp RAZOR_WIND
-	ld hl, .BattleMadeWhirlwindText
-	jr z, .done
 
 	cp SOLARBEAM
 	ld hl, .BattleTookSunlightText
@@ -5635,10 +5597,6 @@ BattleCommand_Charge:
 
 	cp SKULL_BASH
 	ld hl, .BattleLoweredHeadText
-	jr z, .done
-
-	cp SKY_ATTACK
-	ld hl, .BattleGlowingText
 	jr z, .done
 
 	cp FLY

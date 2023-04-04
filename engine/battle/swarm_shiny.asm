@@ -20,7 +20,7 @@ GenerateSwarmShiny:
     jr z, .nidorino
 	cp LANDMARK_ROUTE_38
     jr z, .miltank
-    cp LANDMARK_RUINS_OF_ALPH_OUTSIDE
+    cp LANDMARK_RUINS_OF_ALPH
     jr z, .clefairy
 	cp LANDMARK_CHERRYGROVE_CITY
     jr z, .horsea
