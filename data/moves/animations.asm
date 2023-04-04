@@ -3883,7 +3883,7 @@ BattleAnim_MilkDrink:
 	anim_ret
 
 BattleAnim_Spark:
-	anim_3gfx ANIM_GFX_LIGHTNING, ANIM_GFX_EXPLOSION, ANIM_GFX_STATUS
+	anim_2gfx ANIM_GFX_LIGHTNING, ANIM_GFX_EXPLOSION
 	anim_sound 0, 0, SFX_ZAP_CANNON
 	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $3
 	anim_obj ANIM_OBJ_THUNDER_WAVE, 48, 92, $0
@@ -3899,8 +3899,6 @@ BattleAnim_Spark:
 	anim_incobj 2
 	anim_wait 1
 	anim_sound 0, 1, SFX_ZAP_CANNON
-	anim_obj ANIM_OBJ_PARALYZED, 104, 56, $42
-	anim_obj ANIM_OBJ_PARALYZED, 160, 56, $c2
 	anim_obj ANIM_OBJ_EXPLOSION2, 136, 56, $2
 	anim_wait 24
 	anim_sound 0, 1, SFX_ZAP_CANNON
@@ -4121,7 +4119,7 @@ BattleAnim_SacredFire:
 	anim_wait 8
 	anim_loop 8, .loop
 	anim_wait 96
-	anim_obj ANIM_OBJ_MEAN_LOOK, 48, 48, $0
+	anim_obj ANIM_OBJ_MEAN_LOOK, 48, 56, $0
 	anim_wait 32
 	anim_sound 0, 1, SFX_SHINE
 	anim_wait 8
