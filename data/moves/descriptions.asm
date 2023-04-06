@@ -1148,7 +1148,7 @@ PainSplitDescription:
 
 SacredFireDescription:
 	db   "An attack that may"
-	next "reduce accuracy.@
+	next "reduce accuracy.@"
 
 MagnitudeDescription:
 	db   "A ground attack"

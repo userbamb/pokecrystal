@@ -680,8 +680,8 @@ SpiteEffectText:
 	prompt
 
 BellChimedText:
-	text "A bell chimed!"
-	line ""
+	text "All STATUS are"
+	line "healed!"
 	prompt
 
 FellAsleepText:
