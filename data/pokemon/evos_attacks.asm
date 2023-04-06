@@ -1700,7 +1700,7 @@ JynxEvosAttacks:
 	db 9, LOVELY_KISS
 	db 13, POWDER_SNOW
 	db 21, DOUBLESLAP
-	db 25, ICE_PUNCH
+	db 33, METRONOME
 	db 35, MEAN_LOOK
 	db 41, PSYCHIC_M
 	db 51, PERISH_SONG
@@ -2417,7 +2417,6 @@ TogeticEvosAttacks:
 	db 31, SAFEGUARD
 	db 38, GUST
 	db 48, TRI_ATTACK
-    db 50, SOFTBOILED
 	db 60, AEROBLAST
 	db 0 ; no more level-up moves
 
@@ -3030,7 +3029,7 @@ PiloswineEvosAttacks:
 	db 0 ; no more level-up moves
 
 CorsolaEvosAttacks: ;WOLFAN
-    db EVOLVE_LEVEL, 52, REMORAID
+    db EVOLVE_LEVEL, 40, REMORAID
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, LEER
@@ -3048,8 +3047,8 @@ RemoraidEvosAttacks: ;WARWOLF
 	db 12, FURY_SWIPES
 	db 18, LOW_KICK
 	db 23, MOONLIGHT
-	db 29, SUPER_FANG
-	db 52, CROSS_CHOP
+	db 40, BITE
+	db 45, CROSS_CHOP
 	db 56, CRUNCH
 	db 58, BLIZZARD
 	db 0 ; no more level-up moves
