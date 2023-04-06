@@ -216,7 +216,7 @@ MoveNames::
 	li "SLEEP TALK"
 	li "HEAL BELL"
 	li "RETURN"
-	li "PRESENT"
+	li "AROMATHERAPY"
 	li "FRUSTRATION"
 	li "SAFEGUARD"
 	li "PAIN SPLIT"

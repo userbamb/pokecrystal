@@ -352,7 +352,7 @@ SlamDescription:
 
 VineWhipDescription:
 	db   "Whips the foe with"
-	next "vines. Hits first.@"
+	next "vines.@"
 
 StompDescription:
 	db   "An attack that may"
@@ -484,7 +484,7 @@ MistDescription:
 
 WaterGunDescription:
 	db   "Squirts water to"
-	next "attack first.@"
+	next "attack.@"
 
 HydroPumpDescription:
 	db   "A powerful water-"
@@ -951,8 +951,8 @@ NightmareDescription:
 	next "1/4 HP every turn.@"
 
 FlameWheelDescription:
-	db   "An attack that may"
-	next "cause a burn.@"
+	db   "High damage move"
+	next "with recoil.@"
 
 SnoreDescription:
 	db   "An attack useable"
@@ -1131,8 +1131,8 @@ ReturnDescription:
 	next "based on loyalty.@"
 
 PresentDescription:
-	db   "A bomb that may"
-	next "restore HP.@"
+	db   "Eliminates all"
+	next "status problems.@"
 
 FrustrationDescription:
 	db   "An attack based on"
@@ -1148,7 +1148,7 @@ PainSplitDescription:
 
 SacredFireDescription:
 	db   "An attack that may"
-	next "inflict a burn.@"
+	next "reduce accuracy.@
 
 MagnitudeDescription:
 	db   "A ground attack"
@@ -1232,7 +1232,7 @@ SunnyDayDescription:
 
 CrunchDescription:
 	db   "An attack that may"
-	next "lower SPCL.DEF.@"
+	next "lower DEFENSE.@"
 
 MirrorCoatDescription:
 	db   "Counters a SPCL."
@@ -1259,8 +1259,8 @@ FutureSightDescription:
 	next "hits on 3rd turn.@"
 
 RockSmashDescription:
-	db   "An attack that "
-	next "raises ATTACK.@"
+	db   "An attack that may"
+	next "cause flinching.@"
 
 WhirlpoolDescription:
 	db   "Traps the foe for"

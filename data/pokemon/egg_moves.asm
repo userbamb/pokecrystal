@@ -144,7 +144,7 @@ DiglettEggMoves:
 
 MeowthEggMoves:
 	db SPITE
-	db CHARM
+	db PRESENT
 	db HYPNOSIS
 	db AMNESIA
 	db -1 ; end
@@ -153,7 +153,7 @@ PsyduckEggMoves:
 	db ICE_BEAM
 	db HYPNOSIS
 	db PSYBEAM
-	db FORESIGHT
+	db PRESENT
 	db LIGHT_SCREEN
 	db FUTURE_SIGHT
 	db PSYCHIC_M
@@ -444,7 +444,7 @@ ChikoritaEggMoves:
 	db VINE_WHIP
 	db COUNTER
 	db ANCIENTPOWER
-	db FLAIL
+	db PRESENT
 	db SWORDS_DANCE
 	db -1 ; end
 
@@ -460,7 +460,7 @@ CyndaquilEggMoves:
 TotodileEggMoves:
 	db CRUNCH
 	db THRASH
-	db HYDRO_PUMP
+	db PRESENT
 	db ANCIENTPOWER
 	db OCTAZOOKA
 	db ROCK_SLIDE
@@ -470,7 +470,7 @@ SentretEggMoves:
 	db DOUBLE_EDGE
 	db PURSUIT
 	db SLASH
-	db FOCUS_ENERGY
+	db PRESENT
 	db REVERSAL
 	db -1 ; end
 

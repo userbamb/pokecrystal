@@ -24,7 +24,7 @@ BulbasaurEvosAttacks:
 	db 15, POISONPOWDER
 	db 15, SLEEP_POWDER
 	db 20, RAZOR_LEAF
-	db 25, SWEET_SCENT
+	db 25, PRESENT
 	db 32, GROWTH
 	db 39, SYNTHESIS
 	db 46, SOLARBEAM
@@ -42,7 +42,7 @@ IvysaurEvosAttacks:
 	db 15, POISONPOWDER
 	db 15, SLEEP_POWDER
 	db 22, RAZOR_LEAF
-	db 29, SWEET_SCENT
+	db 29, PRESENT
 	db 38, GROWTH
 	db 47, SYNTHESIS
 	db 56, SOLARBEAM
@@ -60,7 +60,7 @@ VenusaurEvosAttacks:
 	db 15, POISONPOWDER
 	db 15, SLEEP_POWDER
 	db 22, RAZOR_LEAF
-	db 29, SWEET_SCENT
+	db 29, PRESENT
 	db 41, GROWTH
 	db 53, SYNTHESIS
 	db 65, SOLARBEAM
@@ -595,7 +595,7 @@ VileplumeEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, ABSORB
 	db 37, LEECH_SEED
-	db 50, SPORE
+	db 50, PRESENT
 	db 58, PETAL_DANCE
 	db 0 ; no more level-up moves
 
@@ -1914,7 +1914,7 @@ KabutoEvosAttacks:
 	db 28, SAND_ATTACK
 	db 37, ENDURE
 	db 46, MEGA_DRAIN
-	db 55, ROCK_THROW
+	db 55, ROCK_SLIDE
 	db 0 ; no more level-up moves
 
 KabutopsEvosAttacks:
@@ -1928,7 +1928,7 @@ KabutopsEvosAttacks:
 	db 37, ENDURE
 	db 40, SLASH
 	db 51, MEGA_DRAIN
-	db 65, ROCK_THROW
+	db 65, ROCK_SLIDE
 	db 0 ; no more level-up moves
 
 AerodactylEvosAttacks:
@@ -2115,6 +2115,7 @@ MeganiumEvosAttacks:
 	db 41, LIGHT_SCREEN
 	db 51, LEECH_SEED
 	db 61, SOLARBEAM
+	db 67, PRESENT
 	db 0 ; no more level-up moves
 
 CyndaquilEvosAttacks:
@@ -2229,7 +2230,7 @@ FurretEvosAttacks:
 	db 28, LEECH_SEED
 	db 38, ENCORE
 	db 48, EXTREMESPEED
-	db 50, SYNTHESIS
+	db 50, PRESENT
 	db 53, TRANSFORM
 	db 0 ; no more level-up moves
 

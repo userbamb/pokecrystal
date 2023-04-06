@@ -229,12 +229,12 @@ Moves:
 	move ATTRACT,      EFFECT_ATTRACT,             0, NORMAL,        STATUS,     100, 15,   0
 	move SLEEP_TALK,   EFFECT_SLEEP_TALK,          0, NORMAL,        STATUS,     100, 10,   0
 	move HEAL_BELL,    EFFECT_HEAL_BELL,           0, NORMAL,        STATUS,     100,  5,   0
-	move RETURN,       EFFECT_RETURN,              1, NORMAL,        SPECIAL,    100, 20,   0
-	move PRESENT,      EFFECT_PRESENT,             1, NORMAL,        PHYSICAL,    90, 15,   0
+	move RETURN,       EFFECT_RETURN,              1, NORMAL,        PHYSICAL,    100, 20,   0
+	move PRESENT,      EFFECT_HEAL_BELL,           0, NORMAL,      STATUS,       100, 15,   0
 	move FRUSTRATION,  EFFECT_FRUSTRATION,         1, NORMAL,        PHYSICAL,   100, 20,   0
 	move SAFEGUARD,    EFFECT_SAFEGUARD,           0, NORMAL,        STATUS,     100, 25,   0
 	move PAIN_SPLIT,   EFFECT_PAIN_SPLIT,          0, NORMAL,        STATUS,     100, 20,   0
-	move SACRED_FIRE,  EFFECT_SP_DEF_DOWN_HIT,       100, FIRE,          SPECIAL,    95, 15,  80
+	move SACRED_FIRE,  EFFECT_ACCURACY_DOWN_HIT,  100, FIRE,      SPECIAL,    95, 15,  80
 	move MAGNITUDE,    EFFECT_MAGNITUDE,           1, GROUND,        PHYSICAL,   100, 30,   0
 	move DYNAMICPUNCH, EFFECT_CONFUSE_HIT,       100, FIGHTING,      PHYSICAL,    60,  5, 100
 	move MEGAHORN,     EFFECT_NORMAL_HIT,        120, BUG,           PHYSICAL,    95, 10,   0
