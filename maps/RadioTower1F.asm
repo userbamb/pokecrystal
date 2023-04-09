@@ -17,7 +17,7 @@ SwarmGrampsScript:
 	opentext
 	checkflag ENGINE_SWARM
 	iftrue .skiprandomswarm
-	random 10
+	random 18
 	ifequal 0, .mareep
 	ifequal 1, .yanma
     ifequal 2, .remoraid
@@ -28,6 +28,82 @@ SwarmGrampsScript:
 	ifequal 7, .miltank
 	ifequal 8, .horsea
 	ifequal 9, .clefairy
+	ifequal 10, .teddiursa
+	ifequal 11, .chinchouz
+	ifequal 12, .ponyta
+	ifequal 13, .sentret
+	ifequal 14, .houndour
+	ifequal 15, .pichu
+	ifequal 16, .chansey
+	ifequal 17, .psyduck
+
+
+
+
+
+.psyduck
+	setflag ENGINE_SWARM
+	swarm ROUTE_33
+	writetext SwarmNidorinoText
+	waitbutton
+	closetext
+	end
+
+.chansey
+	setflag ENGINE_SWARM
+	swarm ROUTE_44
+	writetext SwarmNidorinoText
+	waitbutton
+	closetext
+	end
+
+.pichu
+	setflag ENGINE_SWARM
+	swarm ROUTE_39
+	writetext SwarmNidorinoText
+	waitbutton
+	closetext
+	end
+
+.houndour
+	setflag ENGINE_SWARM
+	swarm ROUTE_32
+	writetext SwarmNidorinoText
+	waitbutton
+	closetext
+	end
+
+.sentret
+	setflag ENGINE_SWARM
+	swarm ROUTE_29
+	writetext SwarmNidorinoText
+	waitbutton
+	closetext
+	end
+
+.ponyta
+	setflag ENGINE_SWARM
+	swarm ROUTE_26
+	writetext SwarmNidorinoText
+	waitbutton
+	closetext
+	end
+
+.chinchouz
+	setflag ENGINE_SWARM
+	swarm OLIVINE_CITY
+	writetext SwarmNidorinoText
+	waitbutton
+	closetext
+	end
+
+.teddiursa
+	setflag ENGINE_SWARM
+	swarm ROUTE_45
+	writetext SwarmTeddiursaText
+	waitbutton
+	closetext
+	end
 
 .clefairy
 	setflag ENGINE_SWARM
@@ -55,7 +131,7 @@ SwarmGrampsScript:
 
 .nidorino
 	setflag ENGINE_SWARM
-	swarm ROUTE_44
+	swarm ROUTE_42
 	writetext SwarmNidorinoText
 	waitbutton
 	closetext
@@ -152,7 +228,7 @@ SwarmNidorinoText:
 
 	para "Oh yes! There's a"
 	line "swarm of NIDORINO"
-	cont "on ROUTE 44."
+	cont "on ROUTE 42."
 	done
 
 SwarmDittoText:
@@ -183,6 +259,86 @@ SwarmYanmaText:
 	para "Oh yes! There's a"
 	line "swarm of YANMA"
 	cont "on ROUTE 35."
+	done
+
+SwarmPichuText:
+	text "Let me see…"
+	line "What did the news"
+	cont "say?"
+
+	para "Oh yes! PICHU"
+	line "is swarming on"
+	cont "ROUTE 39."
+	done
+
+SwarmPsyduckText:
+	text "Let me see…"
+	line "What did the news"
+	cont "say?"
+
+	para "Oh yes! PSYDUCK"
+	line "is swarming on"
+	cont "ROUTE 33."
+	done
+
+SwarmChanseyText:
+	text "Let me see…"
+	line "What did the news"
+	cont "say?"
+
+	para "Oh yes! CHANSEY"
+	line "is swarming on"
+	cont "ROUTE 44."
+	done
+
+SwarmHoundourText:
+	text "Let me see…"
+	line "What did the news"
+	cont "say?"
+
+	para "Oh yes! HOUNDOUR"
+	line "is swarming on"
+	cont "ROUTE 32."
+	done
+
+SwarmSentretText:
+	text "Let me see…"
+	line "What did the news"
+	cont "say?"
+
+	para "Oh yes! SENTRET"
+	line "is swarming on"
+	cont "ROUTE 29."
+	done
+
+SwarmPonytaText:
+	text "Let me see…"
+	line "What did the news"
+	cont "say?"
+
+	para "Oh yes! PONYTA"
+	line "is swarming on"
+	cont "ROUTE 26."
+	done
+
+SwarmChinchouzText:
+	text "Let me see…"
+	line "What did the news"
+	cont "say?"
+
+	para "Oh yes! CHINCHOU"
+	line "is swarming in"
+	cont "OLIVINE CITY."
+	done
+
+SwarmTeddiursaText:
+	text "Let me see…"
+	line "What did the news"
+	cont "say?"
+
+	para "Oh yes! TEDDIURSA"
+	line "is swarming on"
+	cont "ROUTE 45."
 	done
 
 SwarmClefairyText:

@@ -35,10 +35,10 @@ Moves:
 	move FLY,          EFFECT_FLY,                90, FLYING,        PHYSICAL,    95, 15,   0
 	move BIND,         EFFECT_TRAP_TARGET,        35, NORMAL,        PHYSICAL,    100, 20,   0
 	move SLAM,         EFFECT_NORMAL_HIT,         80, NORMAL,        PHYSICAL,    75, 20,   0
-	move VINE_WHIP,    EFFECT_FLINCH_HIT,       70, GRASS,         PHYSICAL,   100, 10,   35
+	move VINE_WHIP,    EFFECT_NORMAL_HIT,         70, GRASS,         PHYSICAL,   100, 10,   35
 	move STOMP,        EFFECT_STOMP,              65, NORMAL,        PHYSICAL,   100, 20,  30
 	move DOUBLE_KICK,  EFFECT_DOUBLE_HIT,         40, FIGHTING,      PHYSICAL,   100, 30,   0
-	move MEGA_KICK,    EFFECT_NORMAL_HIT,        120, NORMAL,        PHYSICAL,    75,  5,   0
+	move MEGA_KICK,    EFFECT_NORMAL_HIT,         120, NORMAL,        PHYSICAL,    75,  5,   0
 	move JUMP_KICK,    EFFECT_JUMP_KICK,          70, FIGHTING,      PHYSICAL,    95, 25,   0
 	move ROLLING_KICK, EFFECT_FLINCH_HIT,         70, FIGHTING,      PHYSICAL,    95, 15,  40
 	move SAND_ATTACK,  EFFECT_ACCURACY_DOWN,       0, GROUND,        STATUS,     100, 15,   0
@@ -88,7 +88,7 @@ Moves:
 	move MEGA_DRAIN,   EFFECT_LEECH_HIT,          70, GRASS,         SPECIAL,    100, 10,   0
 	move LEECH_SEED,   EFFECT_LEECH_SEED,          0, GRASS,         STATUS,      90, 10,   0
 	move GROWTH,       EFFECT_SP_ATK_UP_2,         0, GRASS,         STATUS,     100, 40,   0
-	move RAZOR_LEAF,   EFFECT_FLINCH_HIT,         65, GRASS,         PHYSICAL,     95, 25,  20
+	move RAZOR_LEAF,   EFFECT_FLINCH_HIT,         65, GRASS,         PHYSICAL,     95, 25,  33
 	move SOLARBEAM,    EFFECT_SOLARBEAM,         120, GRASS,         SPECIAL,    100, 10,   0
 	move POISONPOWDER, EFFECT_POISON,              0, POISON,        STATUS,      85, 35,   0
 	move STUN_SPORE,   EFFECT_PARALYZE,            0, GRASS,         STATUS,      85, 30,   0
@@ -203,9 +203,9 @@ Moves:
 	move BELLY_DRUM,   EFFECT_BELLY_DRUM,          0, NORMAL,        STATUS,     100, 10,   0
 	move SLUDGE_BOMB,  EFFECT_POISON_HIT,         90, POISON,        PHYSICAL,   100, 10,  30
 	move MUD_SLAP,     EFFECT_SPEED_DOWN_HIT,     65, GROUND,        PHYSICAL,   100, 10, 100
-	move OCTAZOOKA,    EFFECT_BURN_HIT,           85, WATER,         PHYSICAL,    95, 10,   80
+	move OCTAZOOKA,    EFFECT_BURN_HIT,           85, WATER,         PHYSICAL,    95, 10,  80
 	move SPIKES,       EFFECT_SPIKES,              0, GROUND,        STATUS,     100, 20,   0
-	move ZAP_CANNON,   EFFECT_PARALYZE_HIT,      100, ELECTRIC,      SPECIAL,     50,  5, 100
+	move ZAP_CANNON,   EFFECT_PARALYZE_HIT,       95, ELECTRIC,      PHYSICAL,    90,  5,  50
 	move FORESIGHT,    EFFECT_FORESIGHT,           0, NORMAL,        STATUS,     100, 40,   0
 	move DESTINY_BOND, EFFECT_DESTINY_BOND,        0, GHOST,         STATUS,     100,  5,   0
 	move PERISH_SONG,  EFFECT_PERISH_SONG,         0, NORMAL,        STATUS,     100,  5,   0
@@ -255,14 +255,14 @@ Moves:
 	move TWISTER,      EFFECT_TWISTER,            60, DRAGON,        SPECIAL,    100, 20,  20
 	move RAIN_DANCE,   EFFECT_RAIN_DANCE,          0, WATER,         STATUS,     100,  5,   0
 	move SUNNY_DAY,    EFFECT_SUNNY_DAY,           0, FIRE,          STATUS,     100,  5,   0
-	move CRUNCH,       EFFECT_DEFENSE_DOWN_HIT,       80, DARK,          PHYSICAL,    100, 15, 30
+	move CRUNCH,       EFFECT_DEFENSE_DOWN_HIT,   80, DARK,          PHYSICAL,    100, 15, 30
 	move MIRROR_COAT,  EFFECT_MIRROR_COAT,         1, PSYCHIC_TYPE,  SPECIAL,    100, 20,   0
 	move PSYCH_UP,     EFFECT_PSYCH_UP,            0, NORMAL,        STATUS,     100, 10,   0
 	move EXTREMESPEED, EFFECT_PRIORITY_HIT,       85, NORMAL,        PHYSICAL,   100,  8,   0
 	move ANCIENTPOWER, EFFECT_ALL_UP_HIT,         60, ROCK,          SPECIAL,    100, 15,  20
 	move SHADOW_BALL,  EFFECT_SP_DEF_DOWN_HIT,    80, GHOST,         SPECIAL,    100, 15,  20
 	move FUTURE_SIGHT, EFFECT_FUTURE_SIGHT,       80, PSYCHIC_TYPE,  SPECIAL,     90, 15,   0
-	move ROCK_SMASH,   EFFECT_FLINCH_HIT,       65, FIGHTING,      PHYSICAL,   100, 15,    30
+	move ROCK_SMASH,   EFFECT_FLINCH_HIT,         65, FIGHTING,      PHYSICAL,   100, 15,    30
 	move WHIRLPOOL,    EFFECT_TRAP_TARGET,        15, WATER,         PHYSICAL,    70, 15,   0
 	move BEAT_UP,      EFFECT_BEAT_UP,            10, DARK,          PHYSICAL,   100, 10,   0
 	move FAKE_OUT,     EFFECT_FAKE_OUT,  		  44, NORMAL,        PHYSICAL,   100, 10, 100

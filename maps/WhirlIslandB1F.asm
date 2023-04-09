@@ -36,7 +36,7 @@ WhirlIslandB1FHiddenUltraBall:
 	hiddenitem ULTRA_BALL, EVENT_WHIRL_ISLAND_B1F_HIDDEN_ULTRA_BALL
 
 WhirlIslandB1FHiddenFullRestore:
-	hiddenitem FULL_RESTORE, EVENT_WHIRL_ISLAND_B1F_HIDDEN_FULL_RESTORE
+	hiddenitem METAL_COAT, EVENT_WHIRL_ISLAND_B1F_HIDDEN_FULL_RESTORE
 
 WhirlIslandB1F_MapEvents:
 	db 0, 0 ; filler
