@@ -88,7 +88,7 @@ Moves:
 	move MEGA_DRAIN,   EFFECT_LEECH_HIT,          70, GRASS,         SPECIAL,    100, 10,   0
 	move LEECH_SEED,   EFFECT_LEECH_SEED,          0, GRASS,         STATUS,      90, 10,   0
 	move GROWTH,       EFFECT_SP_ATK_UP_2,         0, GRASS,         STATUS,     100, 40,   0
-	move RAZOR_LEAF,   EFFECT_FLINCH_HIT,         65, GRASS,         PHYSICAL,     95, 25,  33
+	move RAZOR_LEAF,   EFFECT_FLINCH_HIT,         65, GRASS,         SPECIAL,     95, 25,  33
 	move SOLARBEAM,    EFFECT_SOLARBEAM,         120, GRASS,         SPECIAL,    100, 10,   0
 	move POISONPOWDER, EFFECT_POISON,              0, POISON,        STATUS,      85, 35,   0
 	move STUN_SPORE,   EFFECT_PARALYZE,            0, GRASS,         STATUS,      85, 30,   0
@@ -230,11 +230,11 @@ Moves:
 	move SLEEP_TALK,   EFFECT_SLEEP_TALK,          0, NORMAL,        STATUS,     100, 10,   0
 	move HEAL_BELL,    EFFECT_HEAL_BELL,           0, NORMAL,        STATUS,     100,  5,   0
 	move RETURN,       EFFECT_RETURN,              1, NORMAL,        PHYSICAL,    100, 20,   0
-	move PRESENT,      EFFECT_HEAL_BELL,           0, NORMAL,      STATUS,       100, 15,   0
+	move PRESENT,      EFFECT_HEAL_BELL,           0, NORMAL,       STATUS,       100, 15,   0
 	move FRUSTRATION,  EFFECT_FRUSTRATION,         1, NORMAL,        PHYSICAL,   100, 20,   0
 	move SAFEGUARD,    EFFECT_SAFEGUARD,           0, NORMAL,        STATUS,     100, 25,   0
 	move PAIN_SPLIT,   EFFECT_PAIN_SPLIT,          0, NORMAL,        STATUS,     100, 20,   0
-	move SACRED_FIRE,  EFFECT_ACCURACY_DOWN_HIT,  100, FIRE,      SPECIAL,    95, 15,  80
+	move SACRED_FIRE,  EFFECT_ACCURACY_DOWN_HIT,  100, FIRE,         SPECIAL,    95, 15,  80
 	move MAGNITUDE,    EFFECT_MAGNITUDE,           1, GROUND,        PHYSICAL,   100, 30,   0
 	move DYNAMICPUNCH, EFFECT_CONFUSE_HIT,       100, FIGHTING,      PHYSICAL,    60,  5, 100
 	move MEGAHORN,     EFFECT_NORMAL_HIT,        120, BUG,           PHYSICAL,    95, 10,   0

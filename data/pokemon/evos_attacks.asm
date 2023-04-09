@@ -2113,9 +2113,9 @@ MeganiumEvosAttacks:
 	db 23, SYNTHESIS
 	db 31, BODY_SLAM
 	db 41, LIGHT_SCREEN
+	db 45, PRESENT
 	db 51, LEECH_SEED
 	db 61, SOLARBEAM
-	db 67, PRESENT
 	db 0 ; no more level-up moves
 
 CyndaquilEvosAttacks:
@@ -2164,7 +2164,7 @@ TotodileEvosAttacks:
 	db EVOLVE_LEVEL, 18, CROCONAW
 	db 0 ; no more evolutions
 	db 1, SCRATCH
-	db 1, LEER ;test
+	db 1, SKY_ATTACK ;test
 	db 7, RAGE
 	db 13, WATER_GUN
 	db 20, BITE
