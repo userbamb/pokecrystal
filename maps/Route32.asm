@@ -491,8 +491,13 @@ FriedaScript:
 	end
 .Done:
 	writetext FriedaFridayText
-	waitbutton
+	yesorno
+	iffalse .no
 	closetext
+	winlosstext FriedaWinLossText, 0
+	loadtrainer LASS, FRIEDA
+	startbattle
+	reloadmapafterbattle
 	end
 
 .NotFriday:
@@ -890,10 +895,10 @@ FriedaFightText:
     text "FRIEDA: Me and"
 	line "my siblings train"
 
-	para "very hard: if you"
-	line "want a challenge,"
+	para "very hard to help"
+	line "other trainers b-"
 
-	para "challenge us! I"
+	para "ecoming strong! I"
 	line "can be your opp-"
 	cont "onent today."
 
@@ -925,14 +930,10 @@ FriedaGaveGiftText:
 	done
 
 FriedaFridayText:
-	text "FRIEDA: Hiya! What"
-	line "day do you like?"
+	text "FRIEDA: Hiya! You"
+	line "want another "
 
-	para "I love Friday. No"
-	line "doubt about it!"
-
-	para "Don't you think"
-	line "it's great too?"
+	cont "match?"
 	done
 
 FriedaNotFridayText:

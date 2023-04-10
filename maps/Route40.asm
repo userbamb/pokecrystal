@@ -135,8 +135,13 @@ MonicaScript:
     
 .done:
     writetext MonicaMondayText ;PARLA DEI FRATELLI
-	waitbutton
+	yesorno
+	iffalse .no
 	closetext
+	winlosstext MonicaWinLossText, 0
+	loadtrainer BEAUTY, MONICA
+	startbattle
+	reloadmapafterbattle
 	end
 
 .NotMonday:
@@ -340,13 +345,16 @@ MonicaWinLossText:
 	done
 
 MonicaFightMondayText:
-    text "MONICA: Me and"
-	line "my siblings train"
+ 	text "MONICA: My broth-"
+	line "ers and sisters"
 
-	para "very hard: if you"
-	line "want a challenge,"
+	para "are all over the"
+	line "place. We train"
 
-	para "challenge us! I"
+	para "very hard to help"
+	line "other trainers b-"
+
+	para "ecoming strong! I"
 	line "can be your opp-"
 	cont "onent today."
 
@@ -355,14 +363,11 @@ MonicaFightMondayText:
 	done
 
 MonicaMondayText:
-	text "MONICA: My broth-"
-	line "ers and sisters"
+	text "MONICA: Do you"
+	line "need to fight"
 
-	para "are all over the"
-	line "place."
-
-	para "See if you could"
-	line "find them all!"
+	cont "with me again?"
+	
 	done
 
 MonicaNotMondayText:

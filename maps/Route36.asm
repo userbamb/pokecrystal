@@ -343,8 +343,13 @@ ArthurScript:
 
 .BagFull:
 	writetext ArthurThursdayText
-	waitbutton
+	yesorno
+	iffalse .no
 	closetext
+	winlosstext ArthurWinLossText, 0
+	loadtrainer SCHOOLBOY, ARTHUR
+	startbattle
+	reloadmapafterbattle
 	end
 
 ArthurNotThursdayScript:
@@ -609,20 +614,21 @@ ArthurGaveGiftText:
 
 ArthurThursdayText:
 	text "ARTHUR: I'm ARTHUR"
-	line "of Thursday. I'm"
+	line "of Thursday. I"
 
-	para "the second son out"
-	line "of seven children."
+	para "am very resilient!"
+	line "Want to fight with"
+	cont  "me again?"
 	done
 
 ArthurFightText:
     text "ARTHUR: Me and"
 	line "my siblings train"
 
-	para "very hard: if you"
-	line "want a challenge,"
+	para "very hard to help"
+	line "other trainers b-"
 
-	para "challenge us! I"
+	para "ecoming strong! I"
 	line "can be your opp-"
 	cont "onent today."
 

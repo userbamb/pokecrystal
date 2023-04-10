@@ -209,8 +209,13 @@ TuscanyTuesdayScript:
 
 TuscanyDoneScript:
     writetext TuscanyTuesdayText
-	waitbutton
+	yesorno
+	iffalse .no
 	closetext
+	winlosstext TuscanyWinLossText, 0
+	loadtrainer TEACHER, TUSCANY
+	startbattle
+	reloadmapafterbattle
 	end
 
 TuscanyNotTuesdayScript:
@@ -391,10 +396,10 @@ TuscanyFightTuesdayText:
     text "TUSCANY: Me and"
 	line "my siblings train"
 
-	para "very hard: if you"
-	line "want a challenge,"
+	para "very hard to help"
+	line "other trainers b-"
 
-	para "challenge us! I"
+	para "ecoming strong! I"
 	line "can be your opp-"
 	cont "onent today."
 
@@ -427,14 +432,11 @@ TuscanyGaveGiftText:
 
 TuscanyTuesdayText:
 	text "TUSCANY: Have you"
-	line "met MONICA, my"
-	cont "older sister?"
+	line "learnt something?"
+	para "Do you want to"
 
-	para "Or my younger"
-	line "brother, WESLEY?"
-
-	para "I am the second of"
-	line "seven children."
+	line "battle with me"
+	cont "again?"
 	done
 
 TuscanyNotTuesdayText:

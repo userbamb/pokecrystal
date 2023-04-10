@@ -129,8 +129,13 @@ SantosScript:
 	end
 .Done:
 	writetext SantosSaturdayText
-	waitbutton
+	yesorno
+	iffalse .no
 	closetext
+	winlosstext SantosWinLossText, 0
+	loadtrainer SCHOOLBOY, SANTOS
+	startbattle
+	reloadmapafterbattle
 	end
 
 .NotSaturday:
@@ -271,10 +276,10 @@ SantosFightText:
     text "SANTOS: Me and"
 	line "my siblings train"
 
-	para "very hard: if you"
-	line "want a challenge,"
+	para "very hard to help"
+	line "other trainers b-"
 
-	para "challenge us… I"
+	para "ecoming strong… I"
 	line "can be your opp-"
 	cont "onent today…"
 
@@ -294,11 +299,7 @@ SantosWinLossText:
 SantosSaturdayText:
 	text "SANTOS: …"
 
-	para "See you again on"
-	line "another Saturday…"
-
-	para "I won't have any"
-	line "more gifts…"
+	para "…Rematch?……"
 	done
 
 SantosNotSaturdayText:

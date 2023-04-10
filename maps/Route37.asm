@@ -108,8 +108,13 @@ SunnySundayScript:
 
 SunnyDoneScript:
 	writetext SunnySundayText
-	waitbutton
+	yesorno
+	iffalse .no
 	closetext
+	winlosstext SunnyWinLossText, 0
+	loadtrainer YOUNGSTER, SUNNY
+	startbattle
+	reloadmapafterbattle
 	end
 
 
@@ -238,10 +243,10 @@ SunnyFightText:
     text "SUNNY: Me and"
 	line "my siblings train"
 
-	para "very hard: if you"
-	line "want a challenge,"
+	para "very hard to help"
+	line "other trainers b-"
 
-	para "challenge us! I"
+	para "ecoming strong! I"
 	line "can be your opp-"
 	cont "onent today."
 
@@ -259,14 +264,8 @@ SunnyWinLossText:
 	done
 
 SunnySundayText:
-	text "SUNNY: My sisters"
-	line "and brothers are"
-	cont "MONICA, TUSCANY,"
-	cont "WESLEY, ARTHUR,"
-	cont "FRIEDA and SANTOS."
-
-	para "They're all older"
-	line "than me!"
+	text "SUNNY: Fight,"
+	line "fight, fight!"
 	done
 
 SunnyNotSundayText:

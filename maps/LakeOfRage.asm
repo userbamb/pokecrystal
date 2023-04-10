@@ -232,8 +232,13 @@ WesleyWednesdayScript:
 
 WesleyDoneScript:
 	writetext WesleyWednesdayText
-	waitbutton
+	yesorno
+	iffalse .no
 	closetext
+	winlosstext WesleyWinLossText, 0
+	loadtrainer PSYCHIC_T, WESLEY
+	startbattle
+	reloadmapafterbattle
 	end
 
 WesleyNotWednesdayScript:
@@ -480,10 +485,10 @@ WesleyFightText:
     text "WESLEY: Me and"
 	line "my siblings train"
 
-	para "very hard: if you"
-	line "want a challenge,"
+	para "very hard to help"
+	line "other trainers b-"
 
-	para "challenge us! I"
+	para "ecoming strong! I"
 	line "can be your opp-"
 	cont "onent today."
 
@@ -508,13 +513,10 @@ WesleyGaveGiftText:
 
 WesleyWednesdayText:
 	text "WESLEY: Since you"
-	line "found me, you must"
+	line "are so training,"
 
-	para "have met my broth-"
-	line "ers and sisters."
-
-	para "Or did you just"
-	line "get lucky?"
+	para "do you want to"
+	line "battle again?"
 	done
 
 WesleyNotWednesdayText:
