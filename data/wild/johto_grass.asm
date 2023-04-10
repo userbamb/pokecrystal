@@ -362,8 +362,8 @@ JohtoGrassWildMons:
 	db 14, SPINARAK
 	db 15, HOOTHOOT
 	db 10, VENONAT
-	db 12, VENONAT
-	db 12, VENONAT
+	db 12, SENTRET
+	db 12, SENTRET 
 	end_grass_wildmons
 
 	def_grass_wildmons RUINS_OF_ALPH_OUTSIDE

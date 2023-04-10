@@ -17,25 +17,22 @@ SwarmGrampsScript:
 	opentext
 	checkflag ENGINE_SWARM
 	iftrue .skiprandomswarm
-	random 18
+	random 15
 	ifequal 0, .mareep
 	ifequal 1, .yanma
     ifequal 2, .remoraid
 	ifequal 3, .vulpix
 	ifequal 4, .kotora
 	ifequal 5, .ditto
-	ifequal 6, .nidorino
-	ifequal 7, .miltank
-	ifequal 8, .horsea
-	ifequal 9, .clefairy
-	ifequal 10, .teddiursa
-	ifequal 11, .chinchouz
-	ifequal 12, .ponyta
-	ifequal 13, .sentret
-	ifequal 14, .houndour
-	ifequal 15, .pichu
-	ifequal 16, .chansey
-	ifequal 17, .psyduck
+	ifequal 6, .miltank
+	ifequal 7, .horsea
+	ifequal 8, .clefairy
+	ifequal 9, .teddiursa
+	ifequal 10, .chinchouz
+	ifequal 11, .ponyta
+	ifequal 12, .houndour
+	ifequal 13, .pichu
+	ifequal 14, .psyduck
 
 
 
@@ -44,15 +41,7 @@ SwarmGrampsScript:
 .psyduck
 	setflag ENGINE_SWARM
 	swarm ROUTE_33
-	writetext SwarmNidorinoText
-	waitbutton
-	closetext
-	end
-
-.chansey
-	setflag ENGINE_SWARM
-	swarm ROUTE_44
-	writetext SwarmNidorinoText
+	writetext SwarmPsyduckText
 	waitbutton
 	closetext
 	end
@@ -60,7 +49,7 @@ SwarmGrampsScript:
 .pichu
 	setflag ENGINE_SWARM
 	swarm ROUTE_39
-	writetext SwarmNidorinoText
+	writetext SwarmPichuText
 	waitbutton
 	closetext
 	end
@@ -68,15 +57,7 @@ SwarmGrampsScript:
 .houndour
 	setflag ENGINE_SWARM
 	swarm ROUTE_32
-	writetext SwarmNidorinoText
-	waitbutton
-	closetext
-	end
-
-.sentret
-	setflag ENGINE_SWARM
-	swarm ROUTE_29
-	writetext SwarmNidorinoText
+	writetext SwarmHoundourText
 	waitbutton
 	closetext
 	end
@@ -84,7 +65,7 @@ SwarmGrampsScript:
 .ponyta
 	setflag ENGINE_SWARM
 	swarm ROUTE_26
-	writetext SwarmNidorinoText
+	writetext SwarmPonytaText
 	waitbutton
 	closetext
 	end
@@ -92,7 +73,7 @@ SwarmGrampsScript:
 .chinchouz
 	setflag ENGINE_SWARM
 	swarm OLIVINE_CITY
-	writetext SwarmNidorinoText
+	writetext SwarmChinchouzText
 	waitbutton
 	closetext
 	end
@@ -125,14 +106,6 @@ SwarmGrampsScript:
 	setflag ENGINE_SWARM
 	swarm ROUTE_38
 	writetext SwarmMiltankText
-	waitbutton
-	closetext
-	end
-
-.nidorino
-	setflag ENGINE_SWARM
-	swarm ROUTE_42
-	writetext SwarmNidorinoText
 	waitbutton
 	closetext
 	end
@@ -221,16 +194,6 @@ SwarmHorseaText:
 	cont "CHERRYGROVE CITY."
 	done
 
-SwarmNidorinoText:
-	text "Let me see…"
-	line "What did the news"
-	cont "say?"
-
-	para "Oh yes! There's a"
-	line "swarm of NIDORINO"
-	cont "on ROUTE 42."
-	done
-
 SwarmDittoText:
 	text "Let me see…"
 	line "What did the news"
@@ -281,16 +244,6 @@ SwarmPsyduckText:
 	cont "ROUTE 33."
 	done
 
-SwarmChanseyText:
-	text "Let me see…"
-	line "What did the news"
-	cont "say?"
-
-	para "Oh yes! CHANSEY"
-	line "is swarming on"
-	cont "ROUTE 44."
-	done
-
 SwarmHoundourText:
 	text "Let me see…"
 	line "What did the news"
@@ -299,16 +252,6 @@ SwarmHoundourText:
 	para "Oh yes! HOUNDOUR"
 	line "is swarming on"
 	cont "ROUTE 32."
-	done
-
-SwarmSentretText:
-	text "Let me see…"
-	line "What did the news"
-	cont "say?"
-
-	para "Oh yes! SENTRET"
-	line "is swarming on"
-	cont "ROUTE 29."
 	done
 
 SwarmPonytaText:

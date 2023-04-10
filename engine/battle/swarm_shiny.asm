@@ -16,8 +16,6 @@ GenerateSwarmShiny:
 	jr z, .kotora
 	cp LANDMARK_ROUTE_34
    jr z, .ditto
-	cp LANDMARK_ROUTE_42
-   jr z, .nidorino
 	cp LANDMARK_ROUTE_38
    jr z, .miltank
    cp LANDMARK_CHERRYGROVE_CITY
@@ -30,14 +28,10 @@ GenerateSwarmShiny:
    jr z, .chinchouz
    cp LANDMARK_ROUTE_26
    jr z, .ponyta
-   cp LANDMARK_ROUTE_29
-   jr z, .sentret
    cp LANDMARK_ROUTE_32
    jr z, .houndour
    cp LANDMARK_ROUTE_39
    jr z, .pichu
-   cp LANDMARK_ROUTE_44
-   jr z, .chansey
    cp LANDMARK_ROUTE_33
    jr z, .psyduck
    jr .skipshine
@@ -49,11 +43,6 @@ GenerateSwarmShiny:
    cp PSYDUCK
    jr nz, .skipshine
    jr .rollshiny
-.chansey
-   ld a, [wCurPartySpecies]
-   cp CHANSEY
-   jr nz, .skipshine
-   jr .rollshiny
 .pichu
    ld a, [wCurPartySpecies]
    cp PICHU
@@ -62,11 +51,6 @@ GenerateSwarmShiny:
 .houndour
    ld a, [wCurPartySpecies]
    cp HOUNDOUR
-   jr nz, .skipshine
-   jr .rollshiny
-.sentret
-   ld a, [wCurPartySpecies]
-   cp SENTRET
    jr nz, .skipshine
    jr .rollshiny
 .ponyta
@@ -97,11 +81,6 @@ GenerateSwarmShiny:
 .miltank
    ld a, [wCurPartySpecies]
    cp MILTANK
-   jr nz, .skipshine
-   jr .rollshiny
-.nidorino
-   ld a, [wCurPartySpecies]
-   cp NIDORINO
    jr nz, .skipshine
    jr .rollshiny
 .ditto
