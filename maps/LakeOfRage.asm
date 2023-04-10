@@ -213,7 +213,7 @@ WesleyScript:
 
 WesleyWednesdayScript:
 	checkevent EVENT_BEAT_PSYCHIC_WESLEY
-	iftrue WesleyDoneScript
+	iftrue .WesleyDoneScript
 	writetext WesleyFightText ;CHIEDE SE VUOI SFIDA
 	yesorno
 	iffalse .no
@@ -230,7 +230,7 @@ WesleyWednesdayScript:
 	closetext
 	end
 
-WesleyDoneScript:
+.WesleyDoneScript:
 	writetext WesleyWednesdayText
 	yesorno
 	iffalse .no

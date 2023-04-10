@@ -190,7 +190,7 @@ TuscanyScript:
 
 TuscanyTuesdayScript:
 	checkevent EVENT_BEAT_TEACHER_TUSCANY
-	iftrue TuscanyDoneScript
+	iftrue .TuscanyDoneScript
 	writetext TuscanyFightTuesdayText ;CHIEDE SE VUOI SFIDA
 	yesorno
 	iffalse .no
@@ -207,7 +207,7 @@ TuscanyTuesdayScript:
 	closetext
 	end
 
-TuscanyDoneScript:
+.TuscanyDoneScript:
     writetext TuscanyTuesdayText
 	yesorno
 	iffalse .no

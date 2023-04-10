@@ -89,7 +89,7 @@ SunnyScript:
 
 SunnySundayScript:
 	checkevent EVENT_BEAT_YOUNGSTER_SUNNY
-	iftrue SunnyDoneScript
+	iftrue .SunnyDoneScript
 	writetext SunnyFightText ;CHIEDE SE VUOI SFIDA
 	yesorno
 	iffalse .no
@@ -106,7 +106,7 @@ SunnySundayScript:
 	closetext
 	end
 
-SunnyDoneScript:
+.SunnyDoneScript:
 	writetext SunnySundayText
 	yesorno
 	iffalse .no
