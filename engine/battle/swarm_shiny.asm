@@ -4,12 +4,10 @@ GenerateSwarmShiny:
 	ld a, [wMapNumber]
 	ld c, a
 	call GetWorldMapLocation
-   cp LANDMARK_ROUTE_43
-	jr z, .mareep
    cp LANDMARK_ROUTE_35
    jr z, .yanma
-   cp LANDMARK_ROUTE_32
-	jr z, .remoraid
+   cp LANDMARK_ROUTE_43
+	jr z, .mareep
 	cp LANDMARK_ROUTE_37
 	jr z, .vulpix
 	cp LANDMARK_NATIONAL_PARK
@@ -28,31 +26,8 @@ GenerateSwarmShiny:
    jr z, .chinchouz
    cp LANDMARK_ROUTE_26
    jr z, .ponyta
-   cp LANDMARK_ROUTE_32
-   jr z, .houndour
-   cp LANDMARK_ROUTE_39
-   jr z, .pichu
-   cp LANDMARK_ROUTE_33
-   jr z, .psyduck
    jr .skipshine
 
-
-
-.psyduck
-   ld a, [wCurPartySpecies]
-   cp PSYDUCK
-   jr nz, .skipshine
-   jr .rollshiny
-.pichu
-   ld a, [wCurPartySpecies]
-   cp PICHU
-   jr nz, .skipshine
-   jr .rollshiny
-.houndour
-   ld a, [wCurPartySpecies]
-   cp HOUNDOUR
-   jr nz, .skipshine
-   jr .rollshiny
 .ponyta
    ld a, [wCurPartySpecies]
    cp PONYTA
@@ -83,6 +58,11 @@ GenerateSwarmShiny:
    cp MILTANK
    jr nz, .skipshine
    jr .rollshiny
+.yanma
+   ld a, [wCurPartySpecies]
+   cp YANMA
+   jr nz, .skipshine
+   jr .rollshiny
 .ditto
    ld a, [wCurPartySpecies]
    cp DITTO
@@ -93,26 +73,17 @@ GenerateSwarmShiny:
    cp DUNSPARCE
    jr nz, .skipshine
    jr .rollshiny
-.vulpix
-   ld a, [wCurPartySpecies]
-   cp VULPIX
-   jr nz, .skipshine
-   jr .rollshiny
-.yanma
-   ld a, [wCurPartySpecies]
-   cp YANMA
-   jr nz, .skipshine
-   jr .rollshiny
 .mareep
    ld a, [wCurPartySpecies]
    cp MAREEP
    jr nz, .skipshine
    jr .rollshiny
-.remoraid
-    ld a, [wCurPartySpecies]
-    cp OCTILLERY
-    jr nz, .skipshine
-    ;fallthrough
+.vulpix
+   ld a, [wCurPartySpecies]
+   cp VULPIX
+   jr nz, .skipshine
+   jr .rollshiny
+
 .rollshiny
     call Random
 	cp 12 ; adjust to desired percentage

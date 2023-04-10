@@ -17,50 +17,18 @@ SwarmGrampsScript:
 	opentext
 	checkflag ENGINE_SWARM
 	iftrue .skiprandomswarm
-	random 15
+	random 11
 	ifequal 0, .mareep
 	ifequal 1, .yanma
-    ifequal 2, .remoraid
-	ifequal 3, .vulpix
-	ifequal 4, .kotora
-	ifequal 5, .ditto
-	ifequal 6, .miltank
-	ifequal 7, .horsea
-	ifequal 8, .clefairy
-	ifequal 9, .teddiursa
-	ifequal 10, .chinchouz
-	ifequal 11, .ponyta
-	ifequal 12, .houndour
-	ifequal 13, .pichu
-	ifequal 14, .psyduck
-
-
-
-
-
-.psyduck
-	setflag ENGINE_SWARM
-	swarm ROUTE_33
-	writetext SwarmPsyduckText
-	waitbutton
-	closetext
-	end
-
-.pichu
-	setflag ENGINE_SWARM
-	swarm ROUTE_39
-	writetext SwarmPichuText
-	waitbutton
-	closetext
-	end
-
-.houndour
-	setflag ENGINE_SWARM
-	swarm ROUTE_32
-	writetext SwarmHoundourText
-	waitbutton
-	closetext
-	end
+	ifequal 2, .vulpix
+	ifequal 3, .kotora
+	ifequal 4, .ditto
+	ifequal 5, .miltank
+	ifequal 6, .horsea
+	ifequal 7, .clefairy
+	ifequal 8, .teddiursa
+	ifequal 9, .chinchouz
+	ifequal 10, .ponyta
 
 .ponyta
 	setflag ENGINE_SWARM
@@ -134,14 +102,6 @@ SwarmGrampsScript:
 	closetext
 	end
 
-.remoraid
-	setflag ENGINE_SWARM
-	swarm ROUTE_32
-	writetext SwarmRemoraidText
-	waitbutton
-	closetext
-	end
-
 .vulpix
 	setflag ENGINE_SWARM
 	swarm ROUTE_37
@@ -152,7 +112,7 @@ SwarmGrampsScript:
 
 .kotora
 	setflag ENGINE_SWARM
-	swarm NATIONAL_PARK
+	swarm ROUTE_42
 	writetext SwarmKotoraText
 	waitbutton
 	closetext
@@ -171,7 +131,7 @@ SwarmKotoraText:
 
 	para "Oh yes! There's a"
 	line "swarm of KOTORA"
-	cont "on NATIONAL PARK."
+	cont "on ROUTE 42."
 	done
 
 SwarmMiltankText:
@@ -224,36 +184,6 @@ SwarmYanmaText:
 	cont "on ROUTE 35."
 	done
 
-SwarmPichuText:
-	text "Let me see…"
-	line "What did the news"
-	cont "say?"
-
-	para "Oh yes! PICHU"
-	line "is swarming on"
-	cont "ROUTE 39."
-	done
-
-SwarmPsyduckText:
-	text "Let me see…"
-	line "What did the news"
-	cont "say?"
-
-	para "Oh yes! PSYDUCK"
-	line "is swarming on"
-	cont "ROUTE 33."
-	done
-
-SwarmHoundourText:
-	text "Let me see…"
-	line "What did the news"
-	cont "say?"
-
-	para "Oh yes! HOUNDOUR"
-	line "is swarming on"
-	cont "ROUTE 32."
-	done
-
 SwarmPonytaText:
 	text "Let me see…"
 	line "What did the news"
@@ -295,16 +225,6 @@ SwarmClefairyText:
 	line "ALPH?!"
 	done
 	
-SwarmRemoraidText:
-	text "Let me see…"
-	line "What did the news"
-	cont "say?"
-
-	para "Oh yes! There's a"
-	line "swarm of REMORAID"
-	cont "on ROUTE 32."
-	done
-
 SwarmVulpixText:
 	text "Let me see…"
 	line "What did the news" 
