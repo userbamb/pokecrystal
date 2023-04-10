@@ -204,12 +204,18 @@ WesleyScript:
 	writetext WesleyGivesGiftText
 	promptbutton
 	verbosegiveitem BLACKBELT_I
-	iffalse .no
+	iffalse .bagon
 	setevent EVENT_GOT_BLACKBELT_FROM_WESLEY
 	writetext WesleyGaveGiftText
 	waitbutton
 	closetext
 	end
+.bagon:
+    writetext WesleyNoFightText ;next time
+	waitbutton
+	closetext
+	end
+
 
 WesleyWednesdayScript:
 	checkevent EVENT_BEAT_PSYCHIC_WESLEY

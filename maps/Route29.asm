@@ -181,9 +181,14 @@ TuscanyScript:
 	writetext TuscanyGivesGiftText
 	promptbutton
 	verbosegiveitem PINK_BOW
-	iffalse .no
+	iffalse .bagon
 	setevent EVENT_GOT_PINK_BOW_FROM_TUSCANY
 	writetext TuscanyGaveGiftText
+	waitbutton
+	closetext
+	end
+.bagon:
+    writetext TuscanyNoFightTuesdayText ;next time
 	waitbutton
 	closetext
 	end
