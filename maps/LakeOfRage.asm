@@ -204,7 +204,7 @@ WesleyScript:
 	writetext WesleyGivesGiftText
 	promptbutton
 	verbosegiveitem BLACKBELT_I
-	iffalse WesleyDoneScript
+	iffalse .no
 	setevent EVENT_GOT_BLACKBELT_FROM_WESLEY
 	writetext WesleyGaveGiftText
 	waitbutton

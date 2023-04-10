@@ -315,7 +315,7 @@ ArthurScript:
 	writetext ArthurGivesGiftText
 	promptbutton
 	verbosegiveitem HARD_STONE
-	iffalse .BagFull
+	iffalse .no
 	setevent EVENT_GOT_HARD_STONE_FROM_ARTHUR
 	writetext ArthurGaveGiftText
 	waitbutton

@@ -107,7 +107,7 @@ MonicaScript:
 	writetext MonicaGivesGiftText
 	promptbutton
 	verbosegiveitem SHARP_BEAK
-	iffalse .done
+	iffalse .no
 	setevent EVENT_GOT_SHARP_BEAK_FROM_MONICA
 	writetext MonicaGaveGiftText
 	waitbutton

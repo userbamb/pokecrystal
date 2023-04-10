@@ -80,7 +80,7 @@ SunnyScript:
 	promptbutton
 .next
 	verbosegiveitem MAGNET
-	iffalse SunnyDoneScript
+	iffalse .no
 	setevent EVENT_GOT_MAGNET_FROM_SUNNY
 	writetext SunnyGaveGiftText
 	waitbutton

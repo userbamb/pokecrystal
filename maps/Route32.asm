@@ -464,7 +464,7 @@ FriedaScript:
 	writetext FriedaGivesGiftText
 	promptbutton
 	verbosegiveitem POISON_BARB
-	iffalse .Done
+	iffalse .no
 	setevent EVENT_GOT_POISON_BARB_FROM_FRIEDA
 	writetext FriedaGaveGiftText
 	waitbutton

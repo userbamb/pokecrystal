@@ -102,7 +102,7 @@ SantosScript:
 	writetext SantosGivesGiftText
 	promptbutton
 	verbosegiveitem SPELL_TAG
-	iffalse .Done
+	iffalse .no
 	setevent EVENT_GOT_SPELL_TAG_FROM_SANTOS
 	writetext SantosGaveGiftText
 	waitbutton

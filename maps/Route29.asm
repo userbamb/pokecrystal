@@ -181,7 +181,7 @@ TuscanyScript:
 	writetext TuscanyGivesGiftText
 	promptbutton
 	verbosegiveitem PINK_BOW
-	iffalse TuscanyDoneScript
+	iffalse .no
 	setevent EVENT_GOT_PINK_BOW_FROM_TUSCANY
 	writetext TuscanyGaveGiftText
 	waitbutton
