@@ -2163,7 +2163,7 @@ TotodileEvosAttacks:
 	db EVOLVE_LEVEL, 18, CROCONAW
 	db 0 ; no more evolutions
 	db 1, SCRATCH
-	db 1, SKY_ATTACK ;test
+	db 1, LEER ;test
 	db 7, RAGE
 	db 13, WATER_GUN
 	db 20, BITE
