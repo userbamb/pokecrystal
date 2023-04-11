@@ -1,6 +1,6 @@
-	db MURKROW ; 198 LEAFEON
+	db MURKROW ; 198 LEAFEON 
 
-	db  85,  75, 130,  95, 110,  80
+	db  95,  60, 130,  65, 110,  75
 	;   hp  atk  def  spd  sat  sdf
 
 	db GRASS, GRASS ; type

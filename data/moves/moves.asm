@@ -74,8 +74,8 @@ Moves:
 	move ICE_BEAM,     EFFECT_FREEZE_HIT,         95, ICE,           SPECIAL,    100, 10,  10
 	move BLIZZARD,     EFFECT_FREEZE_HIT,        120, ICE,           SPECIAL,     85,  5,  10
 	move PSYBEAM,      EFFECT_CONFUSE_HIT,        65, PSYCHIC_TYPE,  SPECIAL,    100, 20,  10
-	move BUBBLEBEAM,   EFFECT_SPEED_DOWN_HIT,     65, WATER,         SPECIAL,    100, 20, 100
-	move AURORA_BEAM,  EFFECT_ATTACK_DOWN_HIT,    65, ICE,           SPECIAL,    100, 20, 100
+	move BUBBLEBEAM,   EFFECT_SPEED_DOWN_HIT,     75, WATER,         SPECIAL,    100, 20, 100
+	move AURORA_BEAM,  EFFECT_ATTACK_DOWN_HIT,    75, ICE,           SPECIAL,    100, 20, 100
 	move HYPER_BEAM,   EFFECT_HYPER_BEAM,        150, NORMAL,        SPECIAL,     90,  5,   0
 	move PECK,         EFFECT_NORMAL_HIT,         55, FLYING,        PHYSICAL,   100, 35,   0
 	move DRILL_PECK,   EFFECT_NORMAL_HIT,         80, FLYING,        PHYSICAL,   100, 20,   0
@@ -180,8 +180,8 @@ Moves:
 	move SUBSTITUTE,   EFFECT_SUBSTITUTE,          0, NORMAL,        STATUS,     100, 10,   0
 	move STRUGGLE,     EFFECT_RECOIL_HIT,         50, NORMAL,        PHYSICAL,   100,  1,   0
 	move SKETCH,       EFFECT_SKETCH,              0, NORMAL,        STATUS,     100,  1,   0
-	move TRIPLE_KICK,  EFFECT_TRIPLE_KICK,        30, FIGHTING,      PHYSICAL,    90, 10,   0
-	move THIEF,        EFFECT_THIEF,              70, DARK,          SPECIAL,    100, 10, 100
+	move TRIPLE_KICK,  EFFECT_TRIPLE_KICK,        30, FIGHTING,      PHYSICAL,   100, 10,   0
+	move THIEF,        EFFECT_THIEF,              70, DARK,          PHYSICAL,    100, 10, 100
 	move SPIDER_WEB,   EFFECT_MEAN_LOOK,           0, BUG,           STATUS,     100, 10,   0
 	move MIND_READER,  EFFECT_LOCK_ON,             0, NORMAL,        STATUS,     100,  5,   0
 	move NIGHTMARE,    EFFECT_NIGHTMARE,           0, GHOST,         STATUS,     100, 15,   0

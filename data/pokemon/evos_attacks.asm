@@ -965,9 +965,8 @@ TentacoolEvosAttacks:
 	db 12, CONSTRICT
 	db 19, SLUDGE
 	db 30, WRAP
-	db 32, RECOVER
+	db 32, AURORA_BEAM
 	db 36, BARRIER
-	db 43, OCTAZOOKA
 	db 49, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
@@ -978,11 +977,11 @@ TentacruelEvosAttacks:
 	db 1, CONSTRICT
 	db 6, SUPERSONIC
 	db 12, CONSTRICT
-	db 19, SLUDGE
+	db 19, ACID
 	db 30, WRAP
-	db 32, RECOVER
+	db 32, AURORA_BEAM
 	db 38, BARRIER
-	db 47, OCTAZOOKA
+	db 40, SLUDGE
 	db 55, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
@@ -1813,7 +1812,7 @@ EeveeEvosAttacks:
 	db 1, TACKLE
 	db 1, TAIL_WHIP
 	db 8, SAND_ATTACK
-	db 16, GROWL
+	db 16, GROWTH
 	db 23, QUICK_ATTACK
 	db 30, BITE
 	db 36, BATON_PASS
@@ -2538,7 +2537,7 @@ PolitoedEvosAttacks:
 	db 1, HYPNOSIS
 	db 1, DOUBLESLAP
 	db 1, PERISH_SONG
-	db 35, FAKE_OUT
+	db 40, METRONOME
 	db 45, ENCORE
 	db 51, HYDRO_PUMP
 	db 0 ; no more level-up moves
