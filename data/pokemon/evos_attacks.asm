@@ -191,7 +191,7 @@ ButterfreeEvosAttacks:
 	db 23, WHIRLWIND
 	db 28, GUST
 	db 34, PSYBEAM
-	db 40, SAFEGUARD
+	db 40, SPORE
 	db 0 ; no more level-up moves
 
 WeedleEvosAttacks:
