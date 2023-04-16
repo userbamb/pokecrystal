@@ -521,7 +521,7 @@ WesleyGaveGiftText:
 
 WesleyWednesdayText:
 	text "WESLEY: Since you"
-	line "are so training,"
+	line "are training,"
 
 	para "do you want to"
 	line "battle again?"
