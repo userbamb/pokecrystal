@@ -134,6 +134,8 @@ MonicaScript:
 	end
     
 .done:
+    readvar VAR_WEEKDAY
+	ifnotequal MONDAY, .NotMonday
     writetext MonicaMondayText ;PARLA DEI FRATELLI
 	yesorno
 	iffalse .no

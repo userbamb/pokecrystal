@@ -213,6 +213,8 @@ TuscanyTuesdayScript:
 	end
 
 .TuscanyDoneScript:
+    readvar VAR_WEEKDAY
+	ifnotequal TUESDAY, TuscanyNotTuesdayScript
     writetext TuscanyTuesdayText
 	yesorno
 	iffalse .no

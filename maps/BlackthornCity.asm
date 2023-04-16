@@ -128,6 +128,8 @@ SantosScript:
 	closetext
 	end
 .Done:
+    readvar VAR_WEEKDAY
+	ifnotequal SATURDAY, .NotSaturday
 	writetext SantosSaturdayText
 	yesorno
 	iffalse .no

@@ -237,6 +237,8 @@ WesleyWednesdayScript:
 	end
 
 .WesleyDoneScript:
+    readvar VAR_WEEKDAY
+	ifnotequal WEDNESDAY, WesleyNotWednesdayScript
 	writetext WesleyWednesdayText
 	yesorno
 	iffalse .no

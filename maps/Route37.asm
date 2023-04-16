@@ -112,6 +112,8 @@ SunnySundayScript:
 	end
 
 .SunnyDoneScript:
+    readvar VAR_WEEKDAY
+	ifnotequal SUNDAY, SunnyNotSundayScript
 	writetext SunnySundayText
 	yesorno
 	iffalse .no

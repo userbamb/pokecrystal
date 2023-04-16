@@ -490,6 +490,8 @@ FriedaScript:
 	closetext
 	end
 .Done:
+    readvar VAR_WEEKDAY
+	ifnotequal FRIDAY, .NotFriday
 	writetext FriedaFridayText
 	yesorno
 	iffalse .no

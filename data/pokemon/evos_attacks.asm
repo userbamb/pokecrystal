@@ -711,6 +711,7 @@ PersianEvosAttacks:
 	db 38, SCREECH
 	db 46, FURY_SWIPES
 	db 53, SLASH
+	db 55, SWORDS_DANCE
 	db 0 ; no more level-up moves
 
 PsyduckEvosAttacks:

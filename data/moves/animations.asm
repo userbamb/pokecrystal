@@ -3204,12 +3204,11 @@ BattleAnim_TripleKick:
 
 BattleAnim_Thief:
 	anim_1gfx ANIM_GFX_HIT
-	anim_bgp $f8
-	anim_obp0 $7c
 	anim_call BattleAnim_TargetObj_1Row
 	anim_bgeffect ANIM_BG_TACKLE, $0, BG_EFFECT_USER, $0
 	anim_wait 16
 	anim_sound 0, 1, SFX_THIEF
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $3
 	anim_obj ANIM_OBJ_HIT_YFIX, 128, 48, $0
 	anim_wait 16
 	anim_call BattleAnim_ShowMon_0

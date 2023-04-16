@@ -342,6 +342,8 @@ ArthurScript:
 	end
 
 .BagFull:
+    readvar VAR_WEEKDAY
+	ifnotequal THURSDAY, ArthurNotThursdayScript
 	writetext ArthurThursdayText
 	yesorno
 	iffalse .no
