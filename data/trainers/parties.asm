@@ -222,6 +222,9 @@ PKMNTrainerGroup:
 	db 50, MEGANIUM
 	db 50, TYPHLOSION
 	db 50, FERALIGATR
+	db 50, SUDOWOODO
+	db 50, TOGETIC
+	db 50, GYARADOS
 	db -1 ; end
 
 BrunoGroup:

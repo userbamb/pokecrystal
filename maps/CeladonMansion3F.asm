@@ -102,10 +102,50 @@ GameFreakGraphicArtistScript:
 	end
 
 GameFreakProgrammerScript:
-	jumptextfaceplayer GameFreakProgrammerText
+	faceplayer
+	opentext
+	checkevent EVENT_ENABLE_DIPLOMA_PRINTING
+	iftrue .wowdex
+	writetext GameFreakProgrammerText
+	waitbutton
+	closetext
+	end
+
+.wowdex:
+	writetext GameFreakProgrammerPrintDiplomaText
+	waitbutton
+	verbosegiveitem ITEM_88
+	iffalse .BagFull
+	waitbutton
+	closetext
+	end
+
+.BagFull:
+	closetext
+	end
 
 GameFreakCharacterDesignerScript:
-	jumptextfaceplayer GameFreakCharacterDesignerText
+	faceplayer
+	opentext
+	checkevent EVENT_ENABLE_DIPLOMA_PRINTING
+	iftrue .wowdexi
+	writetext GameFreakCharacterDesignerText
+	waitbutton
+	closetext
+	end
+
+.wowdexi:
+	writetext GameFreakCharacterPrintDiplomaText
+	waitbutton
+	verbosegiveitem ITEM_78
+	iffalse .BagFulll
+	waitbutton
+	closetext
+	end
+
+.BagFulll:
+	closetext
+	end
 
 CeladonMansion3FDevRoomSign:
 	jumptext CeladonMansion3FDevRoomSignText
@@ -157,7 +197,10 @@ GameFreakGameDesignerAfterDiplomaText:
 	cont "DIPLOMA for you."
 
 	para "You should go show"
-	line "it off."
+	line "it off to anyone"
+	cont "in this room!"
+
+
 	done
 
 GameFreakGraphicArtistText:
@@ -198,6 +241,14 @@ GameFreakProgrammerText:
 	line "machines!"
 	done
 
+GameFreakProgrammerPrintDiplomaText:
+    text "Since you completed"
+	line "your #DEX."
+
+	para "You can get access"
+	line "to this item!"
+	done
+
 GameFreakCharacterDesignerText:
 	text "Aren't the TWINS"
 	line "adorable?"
@@ -206,6 +257,14 @@ GameFreakCharacterDesignerText:
 	line "too."
 
 	para "Oh, I love them!"
+	done
+
+GameFreakCharacterPrintDiplomaText:
+    text "Since you completed"
+	line "your #DEX."
+
+	para "You can get access"
+	line "to this item!"
 	done
 
 CeladonMansion3FDevRoomSignText:

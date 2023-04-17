@@ -729,7 +729,7 @@ FocusBandDesc:
 	next "ing. (HOLD)@"
 
 TeruSama8Desc:
-	db   "Teru Sama's grace.@"
+	db   "All DV max out.@"
 
 EnergyPowderDesc:
 	db   "Restores #MON"
@@ -790,7 +790,8 @@ RoofKeyDesc:
 	db   "It reads: ROOF.@"
 
 TeruSama10Desc:
-	db   "?@"
+	db   "A strange, shiny"
+	next "orb.@"
 
 TeruSama11Desc:
 	db   "?@"
