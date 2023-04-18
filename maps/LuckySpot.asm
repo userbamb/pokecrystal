@@ -30,7 +30,7 @@ LuckySpotMon2Script:
 	writetext LuckySpotMon2Text
 	cry POLIWAG
 	waitbutton
-	verbosegiveitem ITEM_78
+	verbosegiveitem MIST_STONE
 	iffalse .BagFull
 	waitbutton
 	closetext

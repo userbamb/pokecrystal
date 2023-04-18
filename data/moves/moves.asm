@@ -154,7 +154,7 @@ Moves:
 	move DREAM_EATER,  EFFECT_DREAM_EATER,       100, PSYCHIC_TYPE,  SPECIAL,    100, 15,   0
 	move POISON_GAS,   EFFECT_POISON,              0, POISON,        PHYSICAL,    55, 40,   0
 	move BARRAGE,      EFFECT_MULTI_HIT,          15, NORMAL,        PHYSICAL,    85, 20,   0
-	move LEECH_LIFE,   EFFECT_LEECH_HIT,          90, BUG,           PHYSICAL,   100, 15,   0
+	move LEECH_LIFE,   EFFECT_LEECH_HIT,          70, BUG,           PHYSICAL,   100, 15,   0
 	move LOVELY_KISS,  EFFECT_SLEEP,               0, NORMAL,        STATUS,      85, 10,   0
 	move SKY_ATTACK,   EFFECT_RECOIL_HIT,        140, FLYING,        PHYSICAL,    90, 10,   0
 	move TRANSFORM,    EFFECT_TRANSFORM,           0, NORMAL,        STATUS,     100, 10,   0
@@ -215,7 +215,7 @@ Moves:
 	move LOCK_ON,      EFFECT_LOCK_ON,             0, NORMAL,        STATUS,     100,  5,   0
 	move OUTRAGE,      EFFECT_RAMPAGE,            90, DRAGON,        PHYSICAL,   100, 15,   0
 	move SANDSTORM,    EFFECT_SANDSTORM,           0, ROCK,          STATUS,     100, 10,   0
-	move GIGA_DRAIN,   EFFECT_LEECH_HIT,          90, GRASS,         SPECIAL,    100, 10,   0
+	move GIGA_DRAIN,   EFFECT_LEECH_HIT,         100, GRASS,         SPECIAL,    100, 10,   0
 	move ENDURE,       EFFECT_ENDURE,              0, NORMAL,        STATUS,     100, 10,   0
 	move CHARM,        EFFECT_ATTACK_DOWN_2,       0, NORMAL,        STATUS,     100, 20,   0
 	move ROLLOUT,      EFFECT_ROLLOUT,            30, ROCK,          PHYSICAL,    90, 20,   0
