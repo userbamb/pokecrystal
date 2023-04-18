@@ -215,7 +215,7 @@ Moves:
 	move LOCK_ON,      EFFECT_LOCK_ON,             0, NORMAL,        STATUS,     100,  5,   0
 	move OUTRAGE,      EFFECT_RAMPAGE,            90, DRAGON,        PHYSICAL,   100, 15,   0
 	move SANDSTORM,    EFFECT_SANDSTORM,           0, ROCK,          STATUS,     100, 10,   0
-	move GIGA_DRAIN,   EFFECT_LEECH_HIT,         100, GRASS,         SPECIAL,    100, 10,   0
+	move GIGA_DRAIN,   EFFECT_LEECH_HIT,          90, GRASS,         SPECIAL,    100, 10,   0
 	move ENDURE,       EFFECT_ENDURE,              0, NORMAL,        STATUS,     100, 10,   0
 	move CHARM,        EFFECT_ATTACK_DOWN_2,       0, NORMAL,        STATUS,     100, 20,   0
 	move ROLLOUT,      EFFECT_ROLLOUT,            30, ROCK,          PHYSICAL,    90, 20,   0
@@ -261,7 +261,7 @@ Moves:
 	move EXTREMESPEED, EFFECT_PRIORITY_HIT,       85, NORMAL,        PHYSICAL,   100,  8,   0
 	move ANCIENTPOWER, EFFECT_ALL_UP_HIT,         60, ROCK,          SPECIAL,    100, 15,  20
 	move SHADOW_BALL,  EFFECT_SP_DEF_DOWN_HIT,    80, GHOST,         SPECIAL,    100, 15,  20
-	move FUTURE_SIGHT, EFFECT_FUTURE_SIGHT,       80, PSYCHIC_TYPE,  SPECIAL,     90, 15,   0
+	move FUTURE_SIGHT, EFFECT_FUTURE_SIGHT,      120, PSYCHIC_TYPE,  SPECIAL,     90, 15,   0
 	move ROCK_SMASH,   EFFECT_FLINCH_HIT,         65, FIGHTING,      PHYSICAL,   100, 15,    30
 	move WHIRLPOOL,    EFFECT_TRAP_TARGET,        15, WATER,         PHYSICAL,    70, 15,   0
 	move BEAT_UP,      EFFECT_BEAT_UP,            10, DARK,          PHYSICAL,   100, 10,   0
