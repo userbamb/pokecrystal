@@ -510,6 +510,8 @@ PokemonPicPointers::
 	dba_pic CelebiBackpic
 	dba_pic MettoFrontpic
 	dba_pic MettoBackpic
+	dba_pic DragonhighFrontpic
+	dba_pic DragonhighBackpic
 	assert_table_length NUM_POKEMON
 	dba_pic EggPic
 	dbw -1, -1 ; unused

@@ -2011,6 +2011,7 @@ DratiniEvosAttacks:
 
 DragonairEvosAttacks:
 	db EVOLVE_LEVEL, 55, DRAGONITE
+	db EVOLVE_ITEM, MIST_STONE, DRAGONHIGH
 	db 0 ; no more evolutions
 	db 1, WRAP
 	db 1, LEER
@@ -3447,3 +3448,14 @@ MettoEvosAttacks:
 	db 50, SPIKE_CANNON
 	db 0 ; no more level-up moves
 	
+DragonhighEvosAttacks:
+	db 0 ; no more evolutions
+	db 38, AGILITY
+	db 47, SAFEGUARD
+	db 55, RAZOR_WIND
+	db 57, METRONOME
+	db 61, PRESENT
+	db 61, OUTRAGE
+	db 62, SKY_ATTACK
+	db 70, AEROBLAST
+	db 0 ; no more level-up moves

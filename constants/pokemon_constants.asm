@@ -272,8 +272,9 @@ DEF JOHTO_POKEMON EQU const_value
 	const HO_OH      ; fa
 	const CELEBI     ; fb
 	const METTO      ; fc
+	const DRAGONHIGH ; FD
 DEF NUM_POKEMON EQU const_value - 1
-	const EGG        ; fd
+	const EGG        ; fE
 
 ; Unown forms
 ; indexes for:

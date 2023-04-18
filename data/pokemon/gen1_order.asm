@@ -254,4 +254,5 @@ Pokered_MonIndices:
 	db WOBBUFFET
 	db WOBBUFFET
 	db METTO
+	db DRAGONHIGH
 	assert_table_length NUM_POKEMON + 1

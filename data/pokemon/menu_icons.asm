@@ -254,4 +254,5 @@ MonMenuIcons:
 	db ICON_HO_OH       ; HO_OH
 	db ICON_HUMANSHAPE  ; CELEBI
 	db ICON_BLOB        ; METTO 
+	db ICON_BIGMON      ; DRAGONHIGH
 	assert_table_length NUM_POKEMON

@@ -142,7 +142,7 @@
 	const PASS         ; 86
 	const ROOF_KEY     ; 87
 	const ITEM_88      ; 88
-	const ITEM_89      ; 89
+	const MIST_STONE      ; 89 MIST STONE
 	const CHARCOAL     ; 8a
 	const BERRY_JUICE  ; 8b
 	const SCOPE_LENS   ; 8c

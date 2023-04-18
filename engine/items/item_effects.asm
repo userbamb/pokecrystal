@@ -150,7 +150,7 @@ ItemEffects:
 	dw NoEffect            ; PASS
 	dw RoofKeyEffect       ; ROOF_KEY
 	dw SciainiEffect           ; ITEM_88 TRY SHINY
-	dw NoEffect            ; ITEM_89
+	dw EvoStoneEffect            ; MIST STONE
 	dw NoEffect            ; CHARCOAL
 	dw RestoreHPEffect     ; BERRY_JUICE
 	dw NoEffect            ; SCOPE_LENS
