@@ -786,10 +786,9 @@ SECTION "Pics 22", ROMX
 MettoFrontpic:       INCBIN "gfx/pokemon/metto/front.animated.2bpp.lz"
 MettoBackpic:        INCBIN "gfx/pokemon/metto/back.2bpp.lz"
 RhydonFrontpic:      INCBIN "gfx/pokemon/rhydon/front.animated.2bpp.lz"
-DragonhighFrontpic:       INCBIN "gfx/pokemon/dragonhigh/front.animated.2bpp.lz"
-DragonhighBackpic:        INCBIN "gfx/pokemon/dragonhigh/back.2bpp.lz"
-
 
 SECTION "Pics 23", ROMX
+DragonhighFrontpic:       INCBIN "gfx/pokemon/dragonhigh/front.animated.2bpp.lz"
+DragonhighBackpic:        INCBIN "gfx/pokemon/dragonhigh/back.2bpp.lz"
 
 SECTION "Pics 24", ROMX

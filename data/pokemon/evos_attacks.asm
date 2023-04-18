@@ -3459,3 +3459,4 @@ DragonhighEvosAttacks:
 	db 62, SKY_ATTACK
 	db 70, AEROBLAST
 	db 0 ; no more level-up moves
+	
