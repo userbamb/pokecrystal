@@ -3454,9 +3454,7 @@ DragonhighEvosAttacks:
 	db 47, SAFEGUARD
 	db 55, RAZOR_WIND
 	db 57, METRONOME
-	db 61, PRESENT
-	db 61, OUTRAGE
-	db 62, SKY_ATTACK
-	db 70, AEROBLAST
+	db 62, OUTRAGE
+	db 64, SKY_ATTACK
 	db 0 ; no more level-up moves
 	

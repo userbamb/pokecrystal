@@ -794,7 +794,7 @@ TeruSama10Desc:
 	next "orb.@"
 
 TeruSama11Desc:
-	db   "?@"
+	db   "A rare stone.@"
 
 CharcoalDesc:
 	db   "Powers up fire-"

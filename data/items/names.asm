@@ -136,7 +136,7 @@ ItemNames::
 	li "PASS"
 	li "ROOF KEYS"
 	li "SHINY ORB"
-	li "TERU-SAMA"
+	li "MIST STONE"
 	li "CHARCOAL"
 	li "BERRY JUICE"
 	li "SCOPE LENS"
