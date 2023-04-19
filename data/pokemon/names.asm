@@ -252,7 +252,7 @@ PokemonNames::
 	db "HO-OH@@@@@"
 	db "CELEBI@@@@"
 	db "METTO@@@@@"
-	db "DRAGONHIGH"
+	db "DRAGONITE@"
 	assert_table_length NUM_POKEMON
 	db "EGG@@@@@@@"
 	assert_table_length EGG
