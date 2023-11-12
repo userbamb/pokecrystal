@@ -830,14 +830,14 @@ LeftoversDesc:
 	db   "Restores HP during"
 	next "battle. (HOLD)@"
 
-TeruSama15Desc:
-	db   "?@"
-
+TeruSama15Desc: ;HELIX 
 TeruSama16Desc:
-	db   "?@"
+	db   "A fossilized"
+	next "#MON shell.@"
 
 TeruSama17Desc:
-	db   "?@"
+	db   "Fossilized resin"
+	next "containing DNA.@"
 
 MysteryBerryDesc:
 	db   "A self-restore"

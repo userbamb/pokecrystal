@@ -28,25 +28,6 @@ BeastsCheck:
 	ld [wScriptVar], a
 	ret
 
-MewCheck:
-; Check if the player owns MEW.
-; They must exist in either party or PC, and have the player's OT and ID.
-; Return the result in wScriptVar.
-
-	ld a, MEW
-	ld [wScriptVar], a
-	call CheckOwnMonAnywhere
-	jr nc, .notexist
-	; itexist
-	ld a, 1
-	ld [wScriptVar], a
-	ret
-
-.notexist
-	xor a
-	ld [wScriptVar], a
-	ret
-
 MonCheck:
 ; Check if the player owns any Pokémon of the species in wScriptVar.
 ; Return the result in wScriptVar.

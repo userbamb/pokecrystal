@@ -81,3 +81,35 @@ CheckForHiddenItems:
 	call GetFarByte
 	inc hl
 	ret
+
+RockItemEncounter:
+	ld hl, .RockItems
+	call Random
+.loop
+	sub [hl]
+	jr c, .ok
+	inc hl
+	inc hl
+	jr .loop
+
+.ok
+	ld a, [hli]
+	inc a
+	jr z, .done
+	ld a, [hli]
+.done
+	ld [wScriptVar], a
+	ret
+	
+.RockItems:
+	db 2, HELIX_FOSSIL
+	db 2, DOME_FOSSIL
+	db 1, OLD_AMBER
+	db 6, MAX_REVIVE
+	db 12, METAL_COAT
+	db 18, ETHER
+	db 24, HARD_STONE
+	db 24, SOFT_SAND
+	db 48, PEARL
+	db 64, BRICK_PIECE
+	db -1

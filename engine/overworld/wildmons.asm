@@ -493,14 +493,11 @@ InitRoamMons:
 	ld [wRoamMon1Species], a
 	ld a, ENTEI
 	ld [wRoamMon2Species], a
-	ld a, MEW
-	ld [wRoamMon3Species], a
 
 ; level
 	ld a, 40
 	ld [wRoamMon1Level], a
 	ld [wRoamMon2Level], a
-	ld [wRoamMon3Level], a
 
 ; raikou starting map
 	ld a, GROUP_ROUTE_42
@@ -513,12 +510,6 @@ InitRoamMons:
 	ld [wRoamMon2MapGroup], a
 	ld a, MAP_ROUTE_37
 	ld [wRoamMon2MapNumber], a
-
-; mew starting map
-	ld a, GROUP_ROUTE_15
-	ld [wRoamMon3MapGroup], a
-	ld a, MAP_ROUTE_15
-	ld [wRoamMon3MapNumber], a
 
 ; hp
 	xor a ; generate new stats
@@ -615,19 +606,6 @@ UpdateRoamMons:
 	ld a, c
 	ld [wRoamMon3MapNumber], a
 
-.SkipMew:
-	ld a, [wRoamMon4MapGroup]
-	cp GROUP_N_A
-	jr z, .Finished
-	ld b, a
-	ld a, [wRoamMon4MapNumber]
-	ld c, a
-	call .Update
-	ld a, b
-	ld [wRoamMon4MapGroup], a
-	ld a, c
-	ld [wRoamMon4MapNumber], a
-
 .Finished:
 	jp _BackUpMapIndices
 
@@ -717,16 +695,6 @@ JumpRoamMons:
 	ld [wRoamMon3MapGroup], a
 	ld a, c
 	ld [wRoamMon3MapNumber], a
-
-.SkipMew:
-	ld a, [wRoamMon4MapGroup]
-	cp GROUP_N_A
-	jr z, .Finished
-	call JumpRoamMon
-	ld a, b
-	ld [wRoamMon4MapGroup], a
-	ld a, c
-	ld [wRoamMon4MapNumber], a
 
 .Finished:
 	jp _BackUpMapIndices

@@ -221,6 +221,9 @@ endc
 	inc hl
 	ld [hl], LOW(MOM_MONEY)
 
+	ld a, 50
+	ld [wLevelCap], a
+
 	call InitializeNPCNames
 
 	farcall InitDecorations
