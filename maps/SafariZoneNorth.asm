@@ -113,8 +113,9 @@ MewFoundScript:
 	end
 
 .Position2:
-	scall .CryAndCheckFacing
+	readvar VAR_FACING
 	ifequal DOWN, .Position2_Down
+	scall .CryAndCheckFacingGood
 	applymovement SAFARIZONENORTH_MEW, MewMovement
 	moveobject SAFARIZONENORTH_MEW, 20, 6
 	disappear SAFARIZONENORTH_MEW
@@ -123,6 +124,7 @@ MewFoundScript:
 	end
 
 .Position2_Down:
+    scall .CryAndCheckFacingGood
 	applymovement SAFARIZONENORTH_MEW, MewMovement
 	moveobject SAFARIZONENORTH_MEW, 11, 17
 	disappear SAFARIZONENORTH_MEW
@@ -131,7 +133,7 @@ MewFoundScript:
 	end
 
 .Position3:
-	scall .CryAndCheckFacing
+	scall .CryAndCheckFacingGood
 	applymovement SAFARIZONENORTH_MEW, MewMovement
 	moveobject SAFARIZONENORTH_MEW, 28, 22
 	disappear SAFARIZONENORTH_MEW
@@ -140,8 +142,9 @@ MewFoundScript:
 	end
 
 .Position4:
-	scall .CryAndCheckFacing
+    readvar VAR_FACING
 	ifequal UP, .Position4_Up
+    scall .CryAndCheckFacingGood
 	applymovement SAFARIZONENORTH_MEW, MewMovement
 	moveobject SAFARIZONENORTH_MEW, 18, 13
 	disappear SAFARIZONENORTH_MEW
@@ -150,6 +153,7 @@ MewFoundScript:
 	end
 
 .Position4_Up:
+    scall .CryAndCheckFacingBad
 	applymovement SAFARIZONENORTH_MEW, MewMovement
 	moveobject SAFARIZONENORTH_MEW, 20, 6
 	disappear SAFARIZONENORTH_MEW
@@ -158,10 +162,11 @@ MewFoundScript:
 	end
 
 .Position5:
-	scall .CryAndCheckFacing
+	readvar VAR_FACING
 	ifequal UP, .Position5_Up
 	ifequal LEFT, .Position5_Left
 	ifequal RIGHT, .Position5_Right
+	scall .CryAndCheckFacingGood
 	applymovement SAFARIZONENORTH_MEW, MewMovement
 	moveobject SAFARIZONENORTH_MEW, 24, 35
 	disappear SAFARIZONENORTH_MEW
@@ -170,6 +175,7 @@ MewFoundScript:
 	end
 
 .Position5_Left:
+    scall .CryAndCheckFacingGood
 	applymovement SAFARIZONENORTH_MEW, MewMovement
 	moveobject SAFARIZONENORTH_MEW, 14, 4
 	disappear SAFARIZONENORTH_MEW
@@ -178,14 +184,8 @@ MewFoundScript:
 	end
 
 .Position5_Up:
-	applymovement SAFARIZONENORTH_MEW, MewMovement
-	moveobject SAFARIZONENORTH_MEW, 28, 22
-	disappear SAFARIZONENORTH_MEW
-	appear SAFARIZONENORTH_MEW
-	loadmem wMewPosition, 4
-	end
-
 .Position5_Right:
+    scall .CryAndCheckFacingBad
 	applymovement SAFARIZONENORTH_MEW, MewMovement
 	moveobject SAFARIZONENORTH_MEW, 28, 22
 	disappear SAFARIZONENORTH_MEW
@@ -194,8 +194,9 @@ MewFoundScript:
 	end
 
 .Position6:
-	scall .CryAndCheckFacing
+	readvar VAR_FACING
 	ifequal RIGHT, .Position6_Right
+	scall .CryAndCheckFacingGood
 	applymovement SAFARIZONENORTH_MEW, MewMovement
 	moveobject SAFARIZONENORTH_MEW, 14, 4
 	disappear SAFARIZONENORTH_MEW
@@ -204,6 +205,7 @@ MewFoundScript:
 	end
 
 .Position6_Right:
+    scall .CryAndCheckFacingBad
 	applymovement SAFARIZONENORTH_MEW, MewMovement
 	moveobject SAFARIZONENORTH_MEW, 18, 13
 	disappear SAFARIZONENORTH_MEW
@@ -212,7 +214,7 @@ MewFoundScript:
 	end
 
 .Position7:
-	scall .CryAndCheckFacing
+	scall .CryAndCheckFacingGood
 	applymovement SAFARIZONENORTH_MEW, MewMovement
 	moveobject SAFARIZONENORTH_MEW, 11, 17
 	disappear SAFARIZONENORTH_MEW
@@ -221,10 +223,11 @@ MewFoundScript:
 	end
 
 .Position8:
-	scall .CryAndCheckFacing
+	readvar VAR_FACING
 	ifequal UP, .Position8_Up
 	ifequal LEFT, .Position8_Left
 	ifequal RIGHT, .Position8_Right
+	scall .CryAndCheckFacingGood
 	applymovement SAFARIZONENORTH_MEW, MewMovement
 	moveobject SAFARIZONENORTH_MEW, 4, 10
 	disappear SAFARIZONENORTH_MEW
@@ -233,6 +236,7 @@ MewFoundScript:
 	end
 
 .Position8_Right:
+    scall .CryAndCheckFacingBad
 	applymovement SAFARIZONENORTH_MEW, MewMovement
 	moveobject SAFARIZONENORTH_MEW, 28, 22
 	disappear SAFARIZONENORTH_MEW
@@ -242,6 +246,7 @@ MewFoundScript:
 
 .Position8_Up:
 .Position8_Left:
+    scall .CryAndCheckFacingBad
 	applymovement SAFARIZONENORTH_MEW, MewMovement
 	moveobject SAFARIZONENORTH_MEW, 15, 25
 	disappear SAFARIZONENORTH_MEW
@@ -250,11 +255,12 @@ MewFoundScript:
 	end
 
 .Position9:
-	scall .CryAndCheckFacing
+	readvar VAR_FACING
 	ifequal DOWN, .Position9_Down
 	ifequal RIGHT, .Position9_Right
 	ifequal LEFT, .Position9_Left
-	applymovement SAFARIZONENORTH_MEW, MewMovement
+	scall .CryAndCheckFacingGood
+	applymovement SAFARIZONENORTH_MEW, MewMovementdx
 	moveobject SAFARIZONENORTH_MEW, 2, 2
 	disappear SAFARIZONENORTH_MEW
 	appear SAFARIZONENORTH_MEW
@@ -262,15 +268,9 @@ MewFoundScript:
 	end
 
 .Position9_Right:
-	applymovement SAFARIZONENORTH_MEW, MewMovement
-	moveobject SAFARIZONENORTH_MEW, 15, 25
-	disappear SAFARIZONENORTH_MEW
-	appear SAFARIZONENORTH_MEW
-	loadmem wMewPosition, 2
-	end
-	
 .Position9_Left:
 .Position9_Down:
+    scall .CryAndCheckFacingBad
 	applymovement SAFARIZONENORTH_MEW, MewMovement
 	moveobject SAFARIZONENORTH_MEW, 15, 25
 	disappear SAFARIZONENORTH_MEW
@@ -283,7 +283,7 @@ MewFoundScript:
 	opentext
 	writetext Text_Qwaaaa
 	cry MEW
-	showemote EMOTE_HAPPY, SAFARIZONENORTH_MEW, 10
+	showemote EMOTE_HEART, SAFARIZONENORTH_MEW, 20
 	pause 5
 	closetext
 	setevent EVENT_SAFARI_ZONE_MEW_SCARED
@@ -294,19 +294,36 @@ MewFoundScript:
 	reloadmapafterbattle
 	end
 
-.CryAndCheckFacing:
+.CryAndCheckFacingGood:
 	faceplayer
 	opentext
-	writetext Text_waaaa
-	cry MEW
+	showemote EMOTE_HAPPY, SAFARIZONENORTH_MEW, 15
+	writetext Text_ywaaaa
+	cry PARAS
 	waitbutton
 	closetext
-	readvar VAR_FACING
 	end
 
+.CryAndCheckFacingBad:
+	faceplayer
+	opentext
+	showemote EMOTE_SAD, SAFARIZONENORTH_MEW, 15
+	writetext Text_waaaa
+	cry MEWTWO
+	waitbutton
+	closetext
+	end
+
+MewMovementdx:
+	set_sliding
+	fast_jump_step UP
+	fast_jump_step UP
+	fast_jump_step UP
+	fast_jump_step UP
+	remove_sliding
+	step_end
 
 MewMovement:
-	teleport_from
 	step_end
 
 SafariZoneNorthAreaSign:
@@ -364,8 +381,12 @@ Text_Mew:
 	line "mirage!"
 	done
 
+Text_ywaaaa:
+    text "MEW: Mew!"
+	done
+
 Text_waaaa:
-	text "MEW: M..ew?"
+	text "MEW: Mew..."
 	done
 
 Text_Qwaaaa:
