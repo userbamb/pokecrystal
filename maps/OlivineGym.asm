@@ -30,6 +30,7 @@ OlivineGymJasmineScript:
 .FightDone:
 	checkevent EVENT_GOT_TM23_IRON_TAIL
 	iftrue .GotIronTail
+	loadmem wLevelCap, 45
 	writetext Jasmine_BadgeSpeech
 	promptbutton
 	verbosegiveitem TM_IRON_TAIL

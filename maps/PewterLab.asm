@@ -201,7 +201,7 @@ FossilScientistMonText:
 	para "It is fossil of"
 	line "@"
 	text_ram wStringBuffer3
-	text ", a"#
+	text ", a"
 
 
 	para "#MON that is"

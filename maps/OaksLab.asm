@@ -40,6 +40,7 @@ Oak:
 .OpenMtSilver:
 	writetext OakOpenMtSilverText
 	promptbutton
+	loadmem wLevelCap, 90
 	setevent EVENT_OPENED_MT_SILVER
 	setevent EVENT_OPENED_CERUCAVE
 	sjump .CheckPokedex

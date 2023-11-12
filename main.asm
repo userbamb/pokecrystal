@@ -305,8 +305,6 @@ INCLUDE "mobile/mobile_22_2.asm"
 INCLUDE "engine/events/bulbasaur.asm"
 INCLUDE "engine/events/squirtle.asm"
 INCLUDE "engine/events/charmander.asm"
-INCLUDE "engine/events/kabuto.asm"
-INCLUDE "engine/events/omanyte.asm"
 
 
 

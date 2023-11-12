@@ -64,6 +64,7 @@ BlackthornGymClairScript:
 .AlreadyGotBadge:
 	checkevent EVENT_GOT_TM24_DRAGONBREATH
 	iftrue .GotTM24
+	loadmem wLevelCap, 80
 	writetext BlackthornGymClairText_YouKeptMeWaiting
 	promptbutton
 	giveitem TM_DRAGONBREATH

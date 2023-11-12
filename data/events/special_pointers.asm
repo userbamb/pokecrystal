@@ -183,5 +183,4 @@ SpecialsPointers::
 	add_special GiveCharmander
 	add_special GiveSquirtle
 	add_special GiveBulbasaur
-	add_special GiveKabuto
-	add_special GiveOmanyte
+

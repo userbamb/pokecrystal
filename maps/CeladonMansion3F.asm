@@ -68,6 +68,7 @@ GameFreakGameDesignerScript:
 	writetext GameFreakGameDesignerAfterDiplomaText
 	waitbutton
 	closetext
+	loadmem wLevelCap, 100
 	setevent EVENT_ENABLE_DIPLOMA_PRINTING
 	end
 
@@ -245,8 +246,8 @@ GameFreakProgrammerPrintDiplomaText:
     text "Since you completed"
 	line "your #DEX."
 
-	para "You can get access"
-	line "to this item!"
+	para "You can have"
+	line "this item!"
 	done
 
 GameFreakCharacterDesignerText:
@@ -263,8 +264,8 @@ GameFreakCharacterPrintDiplomaText:
     text "Since you completed"
 	line "your #DEX."
 
-	para "You can get access"
-	line "to this item!"
+	para "You can have"
+	line "this item!"
 	done
 
 CeladonMansion3FDevRoomSignText:
