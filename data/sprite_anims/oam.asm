@@ -149,7 +149,10 @@ SpriteAnimOAMData:
 	spriteanimoam $00, .OAMData_GameFreakLogo4_11        ; SPRITE_ANIM_OAMSET_GAMEFREAK_LOGO_11
 	spriteanimoam $00, .OAMData_TreeWalk                  ; SPRITE_ANIM_OAMSET_RED_WALK_1
 	spriteanimoam $04, .OAMData_TreeWalk                  ; SPRITE_ANIM_OAMSET_RED_WALK_2
-	
+	spriteanimoam $00, .OAMData_MagnetTrainPink        ; SPRITE_ANIM_OAMSET_MAGNET_TRAIN_GREEN_1
+	spriteanimoam $04, .OAMData_MagnetTrainPink        ; SPRITE_ANIM_OAMSET_MAGNET_TRAIN_GREEN_2
+	spriteanimoam $00, .OAMData_PinkWalk                ; SPRITE_ANIM_OAMSET_BROWN_WALK_1
+	spriteanimoam $04, .OAMData_PinkWalk                ; SPRITE_ANIM_OAMSET_BROWN_WALK_2
 	assert_table_length NUM_SPRITE_ANIM_OAMSETS
 
 .OAMData_1x1_Palette0:
@@ -1143,3 +1146,17 @@ SpriteAnimOAMData:
 	dbsprite  0, -1,  0,  0, $01, PAL_OW_TREE
 	dbsprite -1,  0,  0,  0, $02, PAL_OW_TREE
 	dbsprite  0,  0,  0,  0, $03, PAL_OW_TREE
+
+.OAMData_PinkWalk:
+	db 4
+	dbsprite -1, -1,  0,  0, $00, PAL_OW_PINK
+	dbsprite  0, -1,  0,  0, $01, PAL_OW_PINK
+	dbsprite -1,  0,  0,  0, $02, PAL_OW_PINK
+	dbsprite  0,  0,  0,  0, $03, PAL_OW_PINK
+
+.OAMData_MagnetTrainPink:
+	db 4
+	dbsprite -1, -1,  0,  0, $00, PAL_OW_PINK | PRIORITY
+	dbsprite  0, -1,  0,  0, $01, PAL_OW_PINK | PRIORITY
+	dbsprite -1,  0,  0,  0, $02, PAL_OW_PINK | PRIORITY
+	dbsprite  0,  0,  0,  0, $03, PAL_OW_PINK | PRIORITY
