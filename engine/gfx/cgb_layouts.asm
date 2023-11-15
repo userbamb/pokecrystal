@@ -620,7 +620,7 @@ _CGB_TrainerCard:
 	xor a ; CHRIS
 	call GetTrainerPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
-	ld a, KRIS
+	ld a, FALKNER
 	call GetTrainerPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
 	ld a, BUGSY
@@ -632,13 +632,13 @@ _CGB_TrainerCard:
 	ld a, MORTY
 	call GetTrainerPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
-	ld a, FALKNER ; CLAIR
+	ld a, CHUCK
 	call GetTrainerPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
 	ld a, JASMINE
 	call GetTrainerPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
-	ld a, PRYCE ; CHUCK
+	ld a, PRYCE 
 	call GetTrainerPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
 	ld a, PREDEFPAL_CGB_BADGE
@@ -650,7 +650,7 @@ _CGB_TrainerCard:
 	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
 	ld a, [wPlayerGender]
 	and a
-	ld a, $1 ; kris
+	ld a, $0 ; kris
 	jr z, .got_gender
 	ld a, $0 ; chris
 .got_gender
@@ -662,7 +662,7 @@ _CGB_TrainerCard:
 	and a
 	ld a, $0 ; chris
 	jr z, .got_gender2
-	ld a, $1 ; kris
+	ld a, $0 ; kris
 .got_gender2
 	call FillBoxCGB
 	; top-right corner still uses the border's palette
@@ -670,7 +670,7 @@ _CGB_TrainerCard:
 	ld [hl], $1
 	hlcoord 2, 11, wAttrmap
 	lb bc, 2, 4
-	ld a, $5 ; falkner
+	ld a, $1 ; falkner
 	call FillBoxCGB
 	hlcoord 6, 11, wAttrmap
 	lb bc, 2, 4
@@ -686,7 +686,7 @@ _CGB_TrainerCard:
 	call FillBoxCGB
 	hlcoord 2, 14, wAttrmap
 	lb bc, 2, 4
-	ld a, $7 ; chuck
+	ld a, $5 ; chuck
 	call FillBoxCGB
 	hlcoord 6, 14, wAttrmap
 	lb bc, 2, 4
@@ -696,18 +696,23 @@ _CGB_TrainerCard:
 	lb bc, 2, 4
 	ld a, $7 ; pryce
 	call FillBoxCGB
-	hlcoord 14, 14, wAttrmap
-	lb bc, 2, 4
-	ld a, $5 ; clair
-	call FillBoxCGB
-; top-right corner still uses the border's palette
- 	hlcoord 18, 1, wAttrmap
+	; clair uses kris's palette
 	ld a, [wPlayerGender]
 	and a
-	ld a, $1 ; kris
+	push af
 	jr z, .got_gender3
-	ld a, $0 ; chris
+	hlcoord 14, 14, wAttrmap
+	lb bc, 2, 4
+	ld a, $1 ; clair
+	call FillBoxCGB
 .got_gender3
+	pop af
+	ld c, $0
+	jr nz, .got_gender4
+	inc c
+.got_gender4
+	ld a, c
+	hlcoord 18, 1, wAttrmap
 	ld [hl], a
 	call ApplyAttrmap
 	call ApplyPals
