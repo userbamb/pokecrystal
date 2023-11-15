@@ -104,12 +104,12 @@ RockItemEncounter:
 .RockItems:
 	db 2, HELIX_FOSSIL
 	db 2, DOME_FOSSIL
-	db 1, OLD_AMBER
+	db 2, OLD_AMBER
 	db 6, MAX_REVIVE
-	db 12, METAL_COAT
-	db 18, ETHER
+	db 12, ETHER
+	db 18, METAL_COAT
+	db 24, NUGGET
 	db 24, HARD_STONE
-	db 24, SOFT_SAND
-	db 48, PEARL
-	db 64, BRICK_PIECE
+	db 48, SOFT_SAND
+	db 64, PEARL
 	db -1

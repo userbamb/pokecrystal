@@ -13,8 +13,6 @@ MoveRelearner:
 	call PrintMoveRelearnerText
 	call YesNoBox
 	jp c, .cancel
-	checkitem BRICK_PIECE
-	iffalse .not_enough_money
 	ld a, MOVERELEARNERTEXT_WHICHMON
 	call PrintMoveRelearnerText
 	call JoyWaitAorB
@@ -385,13 +383,12 @@ PrintMoveRelearnerText:
 	line "moves that can be"
 
 	para "learned for each"
-	line "#MON. For just"
+	line "#MON."
 
-	para "one HEART SCALE,"
-	line "I can share that"
+	para "I can share that"
+	line "knowledge with"
 
-	para "knowledge with"
-	line "you. How about it?"
+	para "you if you want."
 	done
 .WhichMon
 	text "Excellent! Which"
@@ -417,8 +414,8 @@ PrintMoveRelearnerText:
 	line "a #MON!"
 	done
 .NotEnoughMoney
-	text "You don't have"
-	line "any."
+	text "Come speak to me"
+	line "when you need it!"
 	done
 .NoMovesToLearn
 	text "This #MON can't"
