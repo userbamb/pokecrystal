@@ -11,17 +11,10 @@
 MoveRelearner:
 	ld a, MOVERELEARNERTEXT_INTRO
 	call PrintMoveRelearnerText
-	farcall PlaceMoneyTopRight
 	call YesNoBox
 	jp c, .cancel
-	ld hl, .cost_to_relearn
-	ld de, hMoneyTemp
-	ld bc, 3
-	call CopyBytes
-	ld bc, hMoneyTemp
-	ld de, wMoney
-	farcall CompareMoney
-	jp c, .not_enough_money
+	checkitem BRICK_PIECE
+	iffalse .not_enough_money
 	ld a, MOVERELEARNERTEXT_WHICHMON
 	call PrintMoveRelearnerText
 	call JoyWaitAorB
@@ -58,17 +51,8 @@ MoveRelearner:
 	ld a, b
 	and a
 	jr z, .skip_learn
-	ld hl, .cost_to_relearn
-	ld de, hMoneyTemp
-	ld bc, 3
-	call CopyBytes
-	ld bc, hMoneyTemp
-	ld de, wMoney
-	farcall TakeMoney
-	ld de, SFX_TRANSACTION
-	call PlaySFX
-	call WaitSFX
 .skip_learn
+    takeitem BRICK_PIECE
 	call CloseSubmenu
 	call SpeechTextbox
 .cancel
@@ -91,9 +75,6 @@ MoveRelearner:
 	ld a, MOVERELEARNERTEXT_NOMOVESTOLEARN
 	call PrintMoveRelearnerText
 	ret
-
-.cost_to_relearn
-	dt 1000
 
 GetRelearnableMoves:
 	; Get moves relearnable by CurPartyMon
@@ -404,10 +385,10 @@ PrintMoveRelearnerText:
 	line "moves that can be"
 
 	para "learned for each"
-	line "#MON."
+	line "#MON. For just"
 
-	para "For just ¥1000, I"
-	line "can share that"
+	para "one HEART SCALE,"
+	line "I can share that"
 
 	para "knowledge with"
 	line "you. How about it?"
@@ -437,7 +418,7 @@ PrintMoveRelearnerText:
 	done
 .NotEnoughMoney
 	text "You don't have"
-	line "enough money."
+	line "any."
 	done
 .NoMovesToLearn
 	text "This #MON can't"
