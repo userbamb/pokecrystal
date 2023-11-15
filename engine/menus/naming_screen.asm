@@ -208,7 +208,7 @@ NamingScreen:
 	ld [hli], a
 	ld [hl], a
 	pop de
-	ld b, SPRITE_ANIM_INDEX_PINK_WALK
+	ld b, SPRITE_ANIM_INDEX_RED_WALK
 	ld a, d
 	cp HIGH(ChrisSpriteGFX)
 	jr nz, .not_chris

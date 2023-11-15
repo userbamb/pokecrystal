@@ -650,9 +650,9 @@ _CGB_TrainerCard:
 	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
 	ld a, [wPlayerGender]
 	and a
-	ld a, $0 ; kris
+	ld a, $1 ; kris
 	jr z, .got_gender
-	ld a, $0 ; chris
+	ld a, $1 ; chris
 .got_gender
 	call ByteFill
 	; fill trainer sprite area with same-gender palette
@@ -667,7 +667,7 @@ _CGB_TrainerCard:
 	call FillBoxCGB
 	; top-right corner still uses the border's palette
 	hlcoord 18, 1, wAttrmap
-	ld [hl], $1
+	ld [hl], $0
 	hlcoord 2, 11, wAttrmap
 	lb bc, 2, 4
 	ld a, $1 ; falkner
@@ -696,23 +696,19 @@ _CGB_TrainerCard:
 	lb bc, 2, 4
 	ld a, $7 ; pryce
 	call FillBoxCGB
-	; clair uses kris's palette
-	ld a, [wPlayerGender]
-	and a
-	push af
-	jr z, .got_gender3
 	hlcoord 14, 14, wAttrmap
 	lb bc, 2, 4
 	ld a, $1 ; clair
 	call FillBoxCGB
+
+	; top-right corner still uses the border's palette
+ 	hlcoord 18, 1, wAttrmap
+	ld a, [wPlayerGender]
+	and a
+	ld a, $0 ; kris
+	jr z, .got_gender3
+	ld a, $0 ; chris
 .got_gender3
-	pop af
-	ld c, $0
-	jr nz, .got_gender4
-	inc c
-.got_gender4
-	ld a, c
-	hlcoord 18, 1, wAttrmap
 	ld [hl], a
 	call ApplyAttrmap
 	call ApplyPals
@@ -755,9 +751,9 @@ _CGB_TrainerCardKanto:
 	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
 	ld a, [wPlayerGender]
 	and a
-	ld a, $1 ; kris
+	ld a, $3 ; kris
 	jr z, .got_gender
-	ld a, $0 ; chris
+	ld a, $3 ; chris
 .got_gender
 	call ByteFill
 	; fill trainer sprite area with same-gender palette
@@ -772,22 +768,22 @@ _CGB_TrainerCardKanto:
 	call FillBoxCGB
 	; top-right corner still uses the border's palette
 	hlcoord 18, 1, wAttrmap
-	ld [hl], $1
+	ld [hl], $0
 	hlcoord 2, 11, wAttrmap
 	lb bc, 2, 4
 	ld a, $2 ; brock
 	call FillBoxCGB
 	hlcoord 6, 11, wAttrmap
 	lb bc, 2, 4
-	ld a, $0 ; mysti
+	ld a, $3 ; mysti
 	call FillBoxCGB
 	hlcoord 10, 11, wAttrmap
 	lb bc, 2, 4
-	ld a, $3 ; ltsurge/erka
+	ld a, $7 ; ltsurge/erka
 	call FillBoxCGB
 	hlcoord 14, 11, wAttrmap
 	lb bc, 2, 4
-	ld a, $3 ; erika ltsurge
+	ld a, $2 ; erika ltsurge
 	call FillBoxCGB
 	hlcoord 2, 14, wAttrmap
 	lb bc, 2, 4
@@ -799,16 +795,16 @@ _CGB_TrainerCardKanto:
 	call FillBoxCGB
 	hlcoord 10, 14, wAttrmap
 	lb bc, 2, 4
-	ld a, $6 ; blaine
+	ld a, $3 ; blaine
 	call FillBoxCGB
 	hlcoord 14, 14, wAttrmap
 	lb bc, 2, 4
-	ld a, $7 ; blue
+	ld a, $1 ; blue
 	call FillBoxCGB
 	; top-right corner still uses the border's palette
 	ld a, [wPlayerGender]
 	and a
-	ld a, $1 ; kris
+	ld a, $0 ; kris
 	jr z, .got_gender3
 	ld a, $0 ; chris
 .got_gender3
