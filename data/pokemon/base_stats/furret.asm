@@ -1,9 +1,9 @@
 	db FURRET ; 162
 
-	db  125,  96,  76,  90,  75,  75
+	db  105,  86,  76,  90,  75,  75
 	;   hp  atk  def  spd  sat  sdf
 
-	db NORMAL, GRASS ; type
+	db NORMAL, NORMAL ; type
 	db 90 ; catch rate
 	db 116 ; base exp
 	db BERRY, GOLD_BERRY ; items
