@@ -101,7 +101,7 @@
 	tilecoll FLOOR, WALL, FLOOR, WALL ; 64
 	tilecoll FLOOR, FLOOR, WALL, FLOOR ; 65
 	tilecoll WALL, FLOOR, WALL, FLOOR ; 66
-	tilecoll WALL, WALL, WALL, WALL ; 67
+	tilecoll DIVE_DOWN, DIVE_DOWN, DIVE_DOWN, DIVE_DOWN ; 67
 	tilecoll WALL, FLOOR, WALL, FLOOR ; 68
 	tilecoll FLOOR, WALL, FLOOR, WALL ; 69
 	tilecoll WALL, UP_WALL, WALL, FLOOR ; 6a

@@ -2067,7 +2067,7 @@ DefenseCurl:
 	statupfailtext
 	endmove
 
-FakeOut:
+Surf:
 	checkobedience
 	usedmovetext
 	doturn
@@ -2076,13 +2076,37 @@ FakeOut:
 	damagecalc
 	stab
 	damagevariation
+	doubleunderwaterdamage
 	checkhit
-	fakeout
 	moveanim
 	failuretext
 	applydamage
 	criticaltext
 	supereffectivetext
-	checkfaint
+	checkdestinybond
+	buildopponentrage
 	kingsrock
 	endmove
+
+Whirlpool:
+	checkobedience
+	usedmovetext
+	doturn
+	checkhit
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	doubleunderwaterdamage
+	clearmissdamage
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkdestinybond
+	buildopponentrage
+	traptarget
+	endmove
+	

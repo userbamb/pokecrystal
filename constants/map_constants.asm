@@ -523,6 +523,8 @@ ENDM
 	map_const VIRIDIAN_FOREST_HOUSE,                        5,  4 ;  4
 	endgroup
 
-
+    newgroup UNDERWATER                                              ;28
+	map_const UNDERWATER_1,                                20, 14 ;  1
+	endgroup
 
 DEF NUM_MAP_GROUPS EQU const_value ; 29

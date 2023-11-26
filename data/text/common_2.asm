@@ -358,6 +358,37 @@ _AskWaterfallText::
 	line "WATERFALL?"
 	done
 
+_CantDiveText::
+	text "SUB can't be"
+	line "used here."
+	prompt
+
+_CanDiveText::
+	text "The sea is deep."
+
+	para "A #MON can"
+	line "SUB here."
+	done
+
+_AskDiveDownText::
+	text "The sea is deep."
+	line "Want to SUB?"
+	done
+
+_AskDiveUpText::
+	text "Light is filter-"
+	line "ing from above."
+	cont "Want to SUB?"
+	done
+
+_UsedDiveText::
+	text_from_ram wStringBuffer2
+	text " used"
+	line "SUB!"
+	done
+
+
+
 _UseDigText::
 	text_ram wStringBuffer2
 	text " used"
@@ -734,6 +765,12 @@ _BattleDugText::
 	text_start
 	line "dug a hole!"
 	prompt
+
+_BattleDiveText::
+	text_start
+	line "hid underwater!"
+	prompt
+
 
 _ActorNameText::
 	text "<USER>@"

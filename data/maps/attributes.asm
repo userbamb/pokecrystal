@@ -708,3 +708,5 @@ ENDM
 	map_attributes Route8LavenderGate, ROUTE_8_LAVENDER_GATE, $00, 0
 	map_attributes Route12LavenderGate, ROUTE_12_LAVENDER_GATE, $00, 0
 	map_attributes LuckySpot, LUCKY_SPOT, $00, 0
+	map_attributes Underwater, UNDERWATER_1, $00, 0
+

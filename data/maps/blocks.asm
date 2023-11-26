@@ -378,8 +378,8 @@ BetaCinnabarPokemonLabRoom1_Blocks: ; unreferenced
 BetaCinnabarPokemonLabRoom2_Blocks: ; unreferenced
 	INCBIN "maps/unused/BetaCinnabarPokemonLabRoom2.blk"
 
-BetaCinnabarPokemonLabRoom3_Blocks: ; unreferenced
-	INCBIN "maps/unused/BetaCinnabarPokemonLabRoom3.blk"
+Underwater1_Blocks:
+	INCBIN "maps/Underwater1.blk"
 
 GoldenrodDeptStore1F_Blocks:
 CeladonDeptStore1F_Blocks:

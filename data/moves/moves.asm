@@ -70,7 +70,7 @@ Moves:
 	move MIST,         EFFECT_MIST,                0, ICE,           STATUS,     100, 30,   0
 	move WATER_GUN,    EFFECT_NORMAL_HIT,         70, WATER,         PHYSICAL,   100, 25,  0
 	move HYDRO_PUMP,   EFFECT_NORMAL_HIT,        120, WATER,         SPECIAL,     85, 15,   0
-	move SURF,         EFFECT_CONFUSE_HIT,        95, WATER,         SPECIAL,    100, 15,   0
+	move SURF,         EFFECT_SURF,        95, WATER,         SPECIAL,    100, 15,   0
 	move ICE_BEAM,     EFFECT_FREEZE_HIT,         95, ICE,           SPECIAL,    100, 10,  10
 	move BLIZZARD,     EFFECT_FREEZE_HIT,        120, ICE,           SPECIAL,     85,  5,  10
 	move PSYBEAM,      EFFECT_CONFUSE_HIT,        65, PSYCHIC_TYPE,  SPECIAL,    100, 20,  10
@@ -263,7 +263,7 @@ Moves:
 	move SHADOW_BALL,  EFFECT_SP_DEF_DOWN_HIT,    80, GHOST,         SPECIAL,    100, 15,  20
 	move FUTURE_SIGHT, EFFECT_FUTURE_SIGHT,      120, PSYCHIC_TYPE,  SPECIAL,     90, 15,   0
 	move ROCK_SMASH,   EFFECT_FLINCH_HIT,         65, FIGHTING,      PHYSICAL,   100, 15,    30
-	move WHIRLPOOL,    EFFECT_TRAP_TARGET,        15, WATER,         PHYSICAL,    70, 15,   0
+	move WHIRLPOOL,    EFFECT_WHIRLPOOL,        15, WATER,         PHYSICAL,    70, 15,   0
 	move BEAT_UP,      EFFECT_BEAT_UP,            10, DARK,          PHYSICAL,   100, 10,   0
-	move FAKE_OUT,     EFFECT_FAKE_OUT,  		  44, NORMAL,        PHYSICAL,   100, 10, 100
+	move DIVE,     EFFECT_FLY,  		  80, NORMAL,        PHYSICAL,   100, 10, 100
 	assert_table_length NUM_ATTACKS

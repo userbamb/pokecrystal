@@ -41,6 +41,7 @@ MapGroupRoofs:
 	db -1             ; 27 (Safari)
 	db -1             ; 28 (Cerucave)
 	db -1             ; 29 (viridianfor)
+	db -1             ; 30 UNDERWATER
 	assert_table_length NUM_MAP_GROUPS + 1
 
 Roofs:

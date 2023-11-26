@@ -53,4 +53,5 @@ Tilesets::
 	tileset TilesetSafari
 	tileset TilesetCerucave
 	tileset TilesetKantoModern 
+	tileset TilesetUnderwater
 	assert_table_length NUM_TILESETS + 1

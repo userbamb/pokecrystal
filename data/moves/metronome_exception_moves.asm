@@ -179,7 +179,7 @@ MetronomeExcepts:
 	db ROCK_SMASH
 	db WHIRLPOOL
 	db BEAT_UP
-	db FAKE_OUT
+	db DIVE
     db POISONPOWDER
 	db STUN_SPORE
 	db SLEEP_POWDER

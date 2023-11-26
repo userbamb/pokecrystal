@@ -3250,7 +3250,7 @@ wSafariTimeRemaining:: dw
 
 wPhoneList:: ds CONTACT_LIST_SIZE + 1
 
-	ds 22
+	ds 21
 
 wLuckyNumberShowFlag:: db
 wRepelType:: db
@@ -3276,7 +3276,10 @@ wBackupWarpNumber:: db
 wBackupMapGroup::   db
 wBackupMapNumber::  db
 
-	ds 3
+wDiveMapGroup:: db
+wDiveMapNumber:: db
+wDiveDeltaX:: db
+wDiveDeltaY:: db
 
 wLastSpawnMapGroup:: db
 wLastSpawnMapNumber:: db

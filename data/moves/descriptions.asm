@@ -252,7 +252,7 @@ MoveDescriptions::
 	dw RockSmashDescription
 	dw WhirlpoolDescription
 	dw BeatUpDescription
-	dw FakeOutDescription
+	dw DiveDescription
 	assert_table_length NUM_ATTACKS
 	dw MoveFDDescription
 	dw MoveFEDescription
@@ -1270,6 +1270,6 @@ BeatUpDescription:
 	db   "Party #MON join"
 	next "in the attack.@"
 
-FakeOutDescription:
-	db   "Always flinches."
-	next "First turn only.@"
+DiveDescription:
+    db   "1st turn: Dive"
+	next "2nd turn: Attack@"

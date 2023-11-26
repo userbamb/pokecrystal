@@ -251,8 +251,8 @@ ItemNames::
 	li "HM05"
 	li "HM06"
 	li "HM07"
+	li "HM08"
 	assert_list_length NUM_ITEMS + NUM_TMS + 2 + NUM_HMS ; count ITEM_C3 and ITEM_DC
-	li "TERU-SAMA"
 	li "TERU-SAMA"
 	li "TERU-SAMA"
 	li "TERU-SAMA"

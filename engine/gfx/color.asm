@@ -1265,6 +1265,8 @@ LoadMapPals:
 	ld a, BANK(wOBPals1)
 	call FarCopyWRAM
 
+farcall LoadSpecialMapObjectPalette
+
 	ld a, [wEnvironment]
 	cp TOWN
 	jr z, .outside

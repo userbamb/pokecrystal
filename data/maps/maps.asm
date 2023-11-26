@@ -46,6 +46,7 @@ MapGroupPointers::
 	dw MapGroup_Safari      ; 27
 	dw MapGroup_Cerucave    ; 28
 	dw MapGroup_Viridianfor  ;29
+	dw MapGroup_Underwater
 	assert_table_length NUM_MAP_GROUPS
 
 MapGroup_Olivine:
@@ -565,3 +566,6 @@ MapGroup_Viridianfor:
 	map ViridianGateNorth, TILESET_GATE, GATE, LANDMARK_ROUTE_2, MUSIC_ROUTE_2, FALSE, PALETTE_DAY, FISHGROUP_SHORE
 	map ViridianForestHouse, TILESET_PLAYERS_HOUSE, INDOOR, LANDMARK_VIRIDIAN_FOREST, MUSIC_LIGHTHOUSE, TRUE, PALETTE_DAY, FISHGROUP_SHORE
 	assert_table_length NUM_VIRIDIANFOR_MAPS
+
+MapGroup_Underwater:
+	map Route41Underwater, TILESET_UNDERWATER, ROUTE, LANDMARK_UNDERWATER, MUSIC_MOBILE_ADAPTER, TRUE, PALETTE_NITE, FISHGROUP_NONE
