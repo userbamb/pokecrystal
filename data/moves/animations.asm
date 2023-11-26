@@ -4698,7 +4698,7 @@ BattleAnim_Dive:
 	anim_2gfx ANIM_GFX_SAND, ANIM_GFX_WATER
 	anim_if_param_equal $0, .hit
 	anim_if_param_equal $2, .fail
-	anim_call BattleAnim_FollowPlayerHead_0
+	anim_call BattleAnim_TargetObj_2Row
 	anim_bgeffect ANIM_BG_DIG, $0, $1, $1
 	anim_obj ANIM_OBJ_DIVE_2, 72, 104, $0
 	anim_sound 0, 0, SFX_BUBBLEBEAM
@@ -4714,18 +4714,18 @@ BattleAnim_Dive:
 	anim_ret
 
 .hit
-	anim_bgeffect ANIM_BG_30, $0, $0, $0
+	anim_bgeffect ANIM_BG_START_WATER, $0, $0, $0
 	anim_sound 0, 1, SFX_HYDRO_PUMP
 	anim_obj ANIM_OBJ_HYDRO_PUMP, 124, 72, $0
 	anim_obj ANIM_OBJ_HYDRO_PUMP, 140, 72, $0
-	anim_bgeffect ANIM_BG_31, $30, $0, $0
+	anim_bgeffect ANIM_BG_WATER, $30, $0, $0
 	anim_wait 12
 	anim_obj ANIM_OBJ_HYDRO_PUMP, 132, 72, $0
-	anim_bgeffect ANIM_BG_31, $1c, $0, $0
+	anim_bgeffect ANIM_BG_WATER, $1c, $0, $0
 	anim_wait 24
-	anim_bgeffect ANIM_BG_31, $8, $0, $0
+	anim_bgeffect ANIM_BG_WATER, $8, $0, $0
 	anim_wait 24
-	anim_bgeffect ANIM_BG_32, $0, $0, $0
+	anim_bgeffect ANIM_BG_END_WATER, $0, $0, $0
 	anim_wait 16
 .fail
 	anim_bgeffect ANIM_BG_ENTER_MON, $0, $1, $0

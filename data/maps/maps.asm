@@ -568,4 +568,6 @@ MapGroup_Viridianfor:
 	assert_table_length NUM_VIRIDIANFOR_MAPS
 
 MapGroup_Underwater:
+    table_width MAP_LENGTH, MapGroup_Underwater
 	map Underwater1, TILESET_UNDERWATER, ROUTE, LANDMARK_UNDERWATER, MUSIC_MOBILE_ADAPTER, TRUE, PALETTE_NITE, FISHGROUP_NONE
+	assert_table_length NUM_UNDERWATER_MAPS
