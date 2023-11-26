@@ -360,11 +360,11 @@ INCBIN "data/tilesets/pokecom_center_metatiles.bin"
 TilesetPokeComCenterColl::
 INCLUDE "data/tilesets/pokecom_center_collision.asm"
 
-TilesetUnderwaterGFX:
+TilesetUnderwaterGFX::
 INCBIN "gfx/tilesets/underwater.2bpp.lz"
 
-TilesetUnderwaterMeta:
+TilesetUnderwaterMeta::
 INCBIN "data/tilesets/underwater_metatiles.bin"
 
-TilesetUnderwaterColl:
+TilesetUnderwaterColl::
 INCLUDE "data/tilesets/underwater_collision.asm"

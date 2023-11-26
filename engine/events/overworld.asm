@@ -1855,7 +1855,7 @@ DiveFunction:
 	ret
 
 .DoDive:
-	call GetPartyNick
+	call GetPartyNickname
 	ld hl, DiveFromMenuScript
 	call QueueScript
 	ld a, $81
@@ -1863,7 +1863,7 @@ DiveFunction:
 
 .FailDive:
 	ld hl, CantDiveText
-	call MenuTextBoxBackup
+	call MenuTextboxBackup
 	ld a, $80
 	ret
 
@@ -1900,7 +1900,7 @@ TryDiveOW::
 	call CheckPartyMove
 	jr c, .cant
 
-	call GetPartyNick
+	call GetPartyNickname
 	ld a, BANK(AskDiveScript)
 	ld hl, AskDiveScript
 	call CallScript

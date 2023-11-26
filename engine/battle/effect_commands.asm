@@ -24,7 +24,6 @@ DoTurn:
 	xor a
 	ld [wTurnEnded], a
 
-	; Effect command checkturn is called for every move.
 	call CheckTurn
 
 	ld a, [wTurnEnded]
@@ -62,7 +61,6 @@ DoMove:
 	ld [wBattleScriptBufferAddress + 1], a
 
 .ReadMoveEffectCommand:
-; ld a, [wBattleScriptBufferAddress++]
 	ld a, [wBattleScriptBufferAddress]
 	ld l, a
 	ld a, [wBattleScriptBufferAddress + 1]
@@ -101,9 +99,7 @@ DoMove:
 
 CheckTurn:
 BattleCommand_CheckTurn:
-; Repurposed as hardcoded turn handling. Useless as a command.
 
-; Move $ff immediately ends the turn.
 	ld a, BATTLE_VARS_MOVE
 	call GetBattleVar
 	inc a
@@ -169,7 +165,6 @@ BattleCommand_CheckTurn:
 	ld hl, FastAsleepText
 	call StdBattleTextbox
 
-	; Snore and Sleep Talk bypass sleep.
 	ld a, [wCurPlayerMove]
 	cp SNORE
 	jr z, .not_asleep
@@ -244,7 +239,6 @@ BattleCommand_CheckTurn:
 	ld de, ANIM_CONFUSED
 	call FarPlayBattleAnimation
 
-	; 50% chance of hitting itself
 	call BattleRandom
 	cp 50 percent + 1
 	jr nc, .not_confused
@@ -328,6 +322,9 @@ CantMove:
 	jr z, .fly_dig_dive
 
 	cp DIG
+	jr z, .fly_dig_dive
+
+	cp DIVE
 	ret nz
 
 .fly_dig_dive
@@ -463,12 +460,10 @@ CheckEnemyTurn:
 	ld de, ANIM_CONFUSED
 	call FarPlayBattleAnimation
 
-	; 50% chance of hitting itself
 	call BattleRandom
 	cp 50 percent + 1
 	jr nc, .not_confused
 
-	; clear confusion-dependent substatus
 	ld hl, wEnemySubStatus3
 	ld a, [hl]
 	and 1 << SUBSTATUS_CONFUSED
@@ -484,7 +479,6 @@ CheckEnemyTurn:
 	xor a
 	ld [wNumHits], a
 
-	; Flicker the monster pic unless flying or underground.
 	ld de, ANIM_HIT_CONFUSION
 	ld a, BATTLE_VARS_SUBSTATUS3_OPP
 	call GetBattleVar
@@ -527,12 +521,10 @@ CheckEnemyTurn:
 
 .not_infatuated
 
-	; We can't disable a move that doesn't exist.
 	ld a, [wEnemyDisabledMove]
 	and a
 	jr z, .no_disabled_move
 
-	; Are we using the disabled move?
 	ld hl, wCurEnemyMove
 	cp [hl]
 	jr nz, .no_disabled_move
@@ -548,7 +540,6 @@ CheckEnemyTurn:
 	bit PAR, [hl]
 	ret z
 
-	; 25% chance to be fully paralyzed
 	call BattleRandom
 	cp 25 percent
 	ret nc
@@ -565,7 +556,6 @@ EndTurn:
 	jp ResetDamage
 
 MoveDisabled:
-	; Make sure any charged moves fail
 	ld a, BATTLE_VARS_SUBSTATUS3
 	call GetBattleVarAddr
 	res SUBSTATUS_CHARGED, [hl]
@@ -592,7 +582,6 @@ HitConfusion:
 	xor a
 	ld [wNumHits], a
 
-	; Flicker the monster pic unless flying or underground.
 	ld de, ANIM_HIT_CONFUSION
 	ld a, BATTLE_VARS_SUBSTATUS3_OPP
 	call GetBattleVar
@@ -613,7 +602,6 @@ HitConfusion:
 	jp BattleCommand_RaiseSub
 
 BattleCommand_CheckObedience:
-	; Enemy can't disobey
 	ldh a, [hBattleTurn]
 	and a
 	ret nz
@@ -621,7 +609,6 @@ BattleCommand_CheckObedience:
 	call CheckUserIsCharging
 	ret nz
 
-	; If we've already checked this turn
 	ld a, [wAlreadyDisobeyed]
 	and a
 	ret nz
@@ -629,8 +616,6 @@ BattleCommand_CheckObedience:
 	xor a
 	ld [wAlreadyDisobeyed], a
 
-	; No obedience in link battles
-	; (since no handling exists for enemy)
 	ld a, [wLinkMode]
 	and a
 	ret nz
@@ -639,8 +624,6 @@ BattleCommand_CheckObedience:
 	and a
 	ret nz
 
-	; If the monster's id doesn't match the player's,
-	; some conditions need to be met.
 	ld a, MON_ID
 	call BattlePartyAttr
 
@@ -653,36 +636,27 @@ BattleCommand_CheckObedience:
 	ret z
 
 .obeylevel
-	; The maximum obedience level is constrained by owned badges:
 	ld hl, wJohtoBadges
 
-	; risingbadge
 	bit RISINGBADGE, [hl]
 	ld a, MAX_LEVEL + 1
 	jr nz, .getlevel
 
-	; stormbadge
 	bit STORMBADGE, [hl]
 	ld a, 70
 	jr nz, .getlevel
 
-	; fogbadge
 	bit FOGBADGE, [hl]
 	ld a, 50
 	jr nz, .getlevel
 
-	; hivebadge
 	bit HIVEBADGE, [hl]
 	ld a, 30
 	jr nz, .getlevel
 
-	; no badges
 	ld a, 10
 
 .getlevel
-; c = obedience level
-; d = monster level
-; b = c + d
 
 	ld b, a
 	ld c, a
@@ -693,57 +667,43 @@ BattleCommand_CheckObedience:
 	add b
 	ld b, a
 
-; No overflow (this should never happen)
 	jr nc, .checklevel
 	ld b, $ff
 
 .checklevel
-; If the monster's level is lower than the obedience level, it will obey.
 	ld a, c
 	cp d
 	ret nc
 
-; Random number from 0 to obedience level + monster level
 .rand1
 	call BattleRandom
 	swap a
 	cp b
 	jr nc, .rand1
 
-; The higher above the obedience level the monster is,
-; the more likely it is to disobey.
 	cp c
 	ret c
 
-; Sleep-only moves have separate handling, and a higher chance of
-; being ignored. Lazy monsters like their sleep.
 	call IgnoreSleepOnly
 	ret c
 
-; Another random number from 0 to obedience level + monster level
 .rand2
 	call BattleRandom
 	cp b
 	jr nc, .rand2
 
-; A second chance.
 	cp c
 	jr c, .UseInstead
 
-; No hope of using a move now.
-
-; b = number of levels the monster is above the obedience level
 	ld a, d
 	sub c
 	ld b, a
 
-; The chance of napping is the difference out of 256.
 	call BattleRandom
 	swap a
 	sub b
 	jr c, .Nap
 
-; The chance of not hitting itself is the same.
 	cp b
 	jr nc, .DoNothing
 
@@ -765,7 +725,6 @@ BattleCommand_CheckObedience:
 	jr .Print
 
 .DoNothing:
-	; 4 random choices
 	call BattleRandom
 	and %11
 
@@ -788,12 +747,10 @@ BattleCommand_CheckObedience:
 	jp .EndDisobedience
 
 .UseInstead:
-; Can't use another move if the monster only has one!
 	ld a, [wBattleMonMoves + 1]
 	and a
 	jr z, .DoNothing
 
-; Don't bother trying to handle Disable.
 	ld a, [wDisabledMove]
 	and a
 	jr nz, .DoNothing
@@ -812,7 +769,6 @@ BattleCommand_CheckObedience:
 	dec c
 	jr z, .CheckMovePP
 
-; Stop at undefined moves.
 	inc de
 	ld a, [de]
 	and a
@@ -825,20 +781,17 @@ BattleCommand_CheckObedience:
 	ld d, 0
 	add hl, de
 
-; Can't use another move if only one move has PP.
 	ld a, [hl]
 	and PP_MASK
 	cp b
 	jr z, .DoNothing
 
-; Make sure we can actually use the move once we get there.
 	ld a, 1
 	ld [wAlreadyDisobeyed], a
 
 	ld a, [w2DMenuNumRows]
 	ld b, a
 
-; Save the move we originally picked for afterward.
 	ld a, [wCurMoveNum]
 	ld c, a
 	push af
@@ -850,11 +803,9 @@ BattleCommand_CheckObedience:
 	cp b
 	jr nc, .RandomMove
 
-; Not the move we were trying to use.
 	cp c
 	jr z, .RandomMove
 
-; Make sure it has PP.
 	ld [wCurMoveNum], a
 	ld hl, wBattleMonPP
 	ld e, a
@@ -864,7 +815,6 @@ BattleCommand_CheckObedience:
 	and PP_MASK
 	jr z, .RandomMove
 
-; Use it.
 	ld a, [wCurMoveNum]
 	ld c, a
 	ld b, 0
@@ -877,7 +827,6 @@ BattleCommand_CheckObedience:
 	call UpdateMoveData
 	call DoMove
 
-; Restore original move choice.
 	pop af
 	ld [wCurMoveNum], a
 
@@ -886,7 +835,6 @@ BattleCommand_CheckObedience:
 	ld [wLastPlayerMove], a
 	ld [wLastPlayerCounterMove], a
 
-	; Break Encore too.
 	ld hl, wPlayerSubStatus5
 	res SUBSTATUS_ENCORED, [hl]
 	xor a
@@ -1456,8 +1404,6 @@ CheckTypeMatchup:
 	ret
 
 BattleCommand_ResetTypeMatchup:
-; Reset the type matchup multiplier to 1.0, if the type matchup is not 0.
-; If there is immunity in play, the move automatically misses.
 	call BattleCheckTypeMatchup
 	ld a, [wTypeMatchup]
 	and a
@@ -1479,11 +1425,6 @@ INCLUDE "engine/battle/ai/switch.asm"
 INCLUDE "data/types/type_matchups.asm"
 
 BattleCommand_DamageVariation:
-; Modify the damage spread between 85% and 100%.
-
-; Because of the method of division the probability distribution
-; is not consistent. This makes the highest damage multipliers
-; rarer than normal.
 
 ; No point in reducing 1 or 0 damage.
 	ld hl, wCurDamage
@@ -5664,7 +5605,7 @@ BattleCommand_Charge:
 	ld hl, .BattleDugText
     jr z, .done
 
-	cp DIG
+	cp DIVE
 	ld hl, .BattleDiveText
 
 .done
@@ -6457,8 +6398,6 @@ INCLUDE "engine/battle/move_effects/attract.asm"
 
 INCLUDE "engine/battle/move_effects/return.asm"
 
-INCLUDE "engine/battle/move_effects/present.asm"
-
 INCLUDE "engine/battle/move_effects/frustration.asm"
 
 INCLUDE "engine/battle/move_effects/safeguard.asm"
@@ -6863,7 +6802,6 @@ AppearUserRaiseSub:
 	ret
 
 _CheckBattleScene:
-; Checks the options.  Returns carry if battle animations are disabled.
 	push hl
 	push de
 	push bc
