@@ -2213,7 +2213,6 @@ FeraligatrEvosAttacks:
 SentretEvosAttacks:
 	db EVOLVE_ITEM, LEAF_STONE, FURRET
 	db 0 ; no more evolutions
-	db 1, FAKE_OUT
 	db 5, DEFENSE_CURL
 	db 11, VINE_WHIP
 	db 17, FURY_SWIPES
@@ -2277,7 +2276,7 @@ LedybaEvosAttacks:
 	db 22, REFLECT
 	db 22, AGILITY
 	db 28, BATON_PASS
-	db 36, FAKE_OUT
+	db 36, SWORDS_DANCE
 	db 43, AGILITY
 	db 0 ; no more level-up moves
 
@@ -2291,7 +2290,7 @@ LedianEvosAttacks:
 	db 24, REFLECT
 	db 24, AGILITY
 	db 33, BATON_PASS
-	db 42, FAKE_OUT
+	db 42, SWORDS_DANCE
 	db 51, FLAME_WHEEL
 	db 58, LEECH_LIFE
 	db 0 ; no more level-up moves
@@ -2402,7 +2401,7 @@ IgglybuffEvosAttacks:
 TogepiEvosAttacks:
 	db EVOLVE_HAPPINESS, TR_ANYTIME, TOGETIC
 	db 0 ; no more evolutions
-	db 1, FAKE_OUT
+	db 1, POUND
 	db 1, CHARM
 	db 7, METRONOME
 	db 18, SWEET_KISS
@@ -2413,7 +2412,7 @@ TogepiEvosAttacks:
 
 TogeticEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, FAKE_OUT
+	db 1, POUND
 	db 1, CHARM
 	db 7, METRONOME
 	db 18, SWEET_KISS
@@ -2482,7 +2481,7 @@ AmpharosEvosAttacks:
 	db 9, THUNDERSHOCK
 	db 18, THUNDER_WAVE
 	db 27, COTTON_SPORE
-	db 30, FAKE_OUT
+	db 30, REFLECT
 	db 42, LIGHT_SCREEN
 	db 57, THUNDER
 	db 0 ; no more level-up moves
@@ -2506,7 +2505,7 @@ MarillEvosAttacks:
 	db 15, ROLLOUT
 	db 21, BUBBLEBEAM
 	db 28, DOUBLE_EDGE
-	db 36, FAKE_OUT
+	db 36, DIVE
 	db 0 ; no more level-up moves
 
 AzumarillEvosAttacks:
@@ -2521,14 +2520,14 @@ AzumarillEvosAttacks:
 	db 15, ROLLOUT
 	db 25, BUBBLEBEAM
 	db 36, DOUBLE_EDGE
-	db 48, FAKE_OUT
+	db 48, DIVE
 	db 0 ; no more level-up moves
 
 SudowoodoEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, ROCK_THROW
 	db 1, MIMIC
-	db 10, FAKE_OUT
+	db 10, POUND
 	db 19, LOW_KICK
 	db 28, ROCK_SLIDE
 	db 37, FAINT_ATTACK
@@ -2549,7 +2548,7 @@ PolitoedEvosAttacks:
 HoppipEvosAttacks:
 	db EVOLVE_LEVEL, 18, SKIPLOOM
 	db 0 ; no more evolutions
-	db 1, FAKE_OUT
+	db 1, TACKLE
 	db 5, SYNTHESIS
 	db 5, TAIL_WHIP
 	db 10, TACKLE
@@ -2564,7 +2563,7 @@ HoppipEvosAttacks:
 SkiploomEvosAttacks:
 	db EVOLVE_LEVEL, 27, JUMPLUFF
 	db 0 ; no more evolutions
-	db 1, FAKE_OUT
+	db 1, TACKLE
 	db 1, SYNTHESIS
 	db 1, TAIL_WHIP
 	db 1, TACKLE
@@ -2581,7 +2580,7 @@ SkiploomEvosAttacks:
 
 JumpluffEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, FAKE_OUT
+	db 1, TACKLE
 	db 1, SYNTHESIS
 	db 1, TAIL_WHIP
 	db 1, TACKLE
@@ -2601,7 +2600,7 @@ AipomEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, TAIL_WHIP
-	db 6, FAKE_OUT
+	db 6, TACKLE
 	db 12, BATON_PASS
 	db 19, FURY_SWIPES
 	db 27, SWIFT
@@ -2657,7 +2656,7 @@ WooperEvosAttacks:
 	db EVOLVE_LEVEL, 20, QUAGSIRE
 	db 0 ; no more evolutions
 	db 1, WATER_GUN
-	db 1, FAKE_OUT
+	db 1, TACKLE
 	db 11, SLAM
 	db 21, AMNESIA
 	db 31, EARTHQUAKE
@@ -2669,7 +2668,7 @@ WooperEvosAttacks:
 QuagsireEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, WATER_GUN
-	db 1, FAKE_OUT
+	db 1, TACKLE
 	db 11, SLAM
 	db 23, AMNESIA
 	db 35, EARTHQUAKE
@@ -2702,7 +2701,6 @@ UmbreonEvosAttacks:
 	db 30, CONFUSE_RAY
 	db 36, FAINT_ATTACK
 	db 42, MEAN_LOOK
-	db 47, FAKE_OUT
 	db 52, MOONLIGHT
 	db 0 ; no more level-up moves
 
@@ -2730,7 +2728,7 @@ SlowkingEvosAttacks:
 	db 15, WATER_GUN
 	db 20, CONFUSION
 	db 29, DISABLE
-	db 34, FAKE_OUT
+	db 34, AMNESIA
 	db 43, SWAGGER
 	db 48, PSYCHIC_M
 	db 0 ; no more level-up moves
@@ -2740,7 +2738,6 @@ MisdreavusEvosAttacks:
 	db 1, ABSORB
 	db 1, CONSTRICT
 	db 4, STUN_SPORE
-	db 7, FAKE_OUT
 	db 10, MEGA_DRAIN
 	db 13, BIND
 	db 19, VINE_WHIP
@@ -2862,7 +2859,7 @@ SnubbullEvosAttacks:
 	db 8, CHARM
 	db 13, BITE
 	db 19, LICK
-	db 26, FAKE_OUT
+	db 26, MEGA_PUNCH
 	db 34, RAGE
 	db 43, TAKE_DOWN
 	db 0 ; no more level-up moves
@@ -2875,7 +2872,7 @@ GranbullEvosAttacks:
 	db 8, CHARM
 	db 13, BITE
 	db 19, LICK
-	db 28, FAKE_OUT
+	db 28, MEGA_PUNCH
 	db 38, RAGE
 	db 51, TAKE_DOWN
 	db 0 ; no more level-up moves
@@ -2960,7 +2957,7 @@ TeddiursaEvosAttacks:
 	db 22, FAINT_ATTACK
 	db 29, REST
 	db 36, SLASH
-	db 43, FAKE_OUT
+	db 43, MEGA_PUNCH
 	db 50, THRASH
 	db 0 ; no more level-up moves
 
@@ -2975,7 +2972,7 @@ UrsaringEvosAttacks:
 	db 22, FAINT_ATTACK
 	db 31, RECOVER
 	db 39, SLASH
-	db 49, FAKE_OUT
+	db 49, MEGA_PUNCH
 	db 59, BODY_SLAM
 	db 0 ; no more level-up moves
 
@@ -3162,7 +3159,7 @@ PhanpyEvosAttacks:
 	db 1, TACKLE
 	db 1, GROWL
 	db 9, DEFENSE_CURL
-	db 17, FAKE_OUT
+	db 17, MEGA_KICK
 	db 25, TAKE_DOWN
 	db 33, ROLLOUT
 	db 41, ENDURE
@@ -3174,7 +3171,7 @@ DonphanEvosAttacks:
 	db 1, HORN_ATTACK
 	db 1, GROWL
 	db 9, DEFENSE_CURL
-	db 17, FAKE_OUT
+	db 17, MEGA_KICK
 	db 25, FURY_ATTACK
 	db 33, ROLLOUT
 	db 41, RAPID_SPIN

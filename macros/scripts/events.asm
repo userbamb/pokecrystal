@@ -1064,8 +1064,8 @@ MACRO checksave
 	db checksave_command
 ENDM
 
-    enum divemap_command
-divemap: MACRO
+    const divemap_command
+MACRO divemap
 if _NARG == 1
 	divemap \1, 0, 0
 else
@@ -1076,8 +1076,8 @@ else
 endc
 ENDM
 
-	enum divewarp_command
-divewarp: MACRO
+	const divewarp_command
+MACRO divewarp
 	db divewarp_command
 ENDM
 
