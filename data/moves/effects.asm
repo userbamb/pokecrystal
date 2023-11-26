@@ -2083,7 +2083,6 @@ Surf:
 	applydamage
 	criticaltext
 	supereffectivetext
-	checkdestinybond
 	buildopponentrage
 	kingsrock
 	endmove
@@ -2105,7 +2104,6 @@ Whirlpool:
 	applydamage
 	criticaltext
 	supereffectivetext
-	checkdestinybond
 	buildopponentrage
 	traptarget
 	endmove

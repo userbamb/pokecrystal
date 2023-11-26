@@ -118,3 +118,7 @@
 	RGB 17,27,31, 05,15,31 ; morn/day
 	RGB 07,08,22, 07,07,16 ; nite
 	
+; group 29 (Viridianforesta)
+	RGB 17,27,31, 05,15,31 ; morn/day
+	RGB 07,08,22, 07,07,16 ; nite
+	
