@@ -142,7 +142,7 @@ MoveEffectsPointers:
 	dw DefenseUpHit
 	dw AttackUpHit
 	dw AllUpHit
-	dw FakeOut
+    dw Surf
 	dw BellyDrum
 	dw PsychUp
 	dw MirrorCoat
@@ -158,6 +158,5 @@ MoveEffectsPointers:
 	dw BeatUp
 	dw Fly
 	dw DefenseCurl
-	dw Surf
 	dw Whirlpool
 	assert_table_length NUM_MOVE_EFFECTS

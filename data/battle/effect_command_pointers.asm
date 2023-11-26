@@ -152,7 +152,7 @@ BattleCommandPointers:
 	dw BattleCommand_StatDownAnim
 	dw BattleCommand_StatUpAnim
 	dw BattleCommand_SwitchTurn
-	dw BattleCommand_FakeOut
+	dw BattleCommand_DoubleUnderwaterDamage
 	dw BattleCommand_BellyDrum
 	dw BattleCommand_PsychUp
 	dw BattleCommand_Rage
@@ -180,5 +180,4 @@ BattleCommandPointers:
 	dw BattleCommand_SuperEffectiveLoopText
 	dw BattleCommand_StartLoop
 	dw BattleCommand_Curl
-	dw BattleCommand_DoubleUnderwaterDamage
 	assert_table_length NUM_EFFECT_COMMANDS

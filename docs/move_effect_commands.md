@@ -444,7 +444,7 @@ Defined in [macros/scripts/battle_commands.asm](https://github.com/pret/pokecrys
 ## `$93`: `switchturn`
 
 
-## `$94`: `fakeout`
+## `$94`: `doubleunderwaterdamage`
 
 
 ## `$95`: `bellydrum`

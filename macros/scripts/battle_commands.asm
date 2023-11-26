@@ -152,7 +152,7 @@ ENDM
 	command statdownanim            ; 91
 	command statupanim              ; 92
 	command switchturn              ; 93
-	command fakeout                 ; 94
+	command doubleunderwaterdamage
 	command bellydrum               ; 95
 	command psychup                 ; 96
 	command rage                    ; 97
@@ -180,7 +180,6 @@ ENDM
 	command supereffectivelooptext  ; ad
 	command startloop               ; ae
 	command curl                    ; af
-	command doubleunderwaterdamage
 DEF NUM_EFFECT_COMMANDS EQU const_value - 1
 
 	const_def -1, -1
