@@ -46,3 +46,4 @@ tilecoll WALL, WALL, WALL, WALL ; 00
 	tilecoll WALL, WALL, WALL, WALL ; 2d
 	tilecoll WALL, WALL, WALL, WALL ; 2e
 	tilecoll WALL, WALL, WALL, WALL ; 2f
+	
