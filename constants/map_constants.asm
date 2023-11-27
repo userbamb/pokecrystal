@@ -524,7 +524,7 @@ ENDM
 	endgroup
 
     newgroup UNDERWATER                                              ;28
-	map_const UNDERWATER,                                20, 14 ;  1
+	map_const UNDERWATER_1,                                20, 18 ;  1
 	endgroup
 
 DEF NUM_MAP_GROUPS EQU const_value ; 29

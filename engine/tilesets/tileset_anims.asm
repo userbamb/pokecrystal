@@ -94,7 +94,7 @@ TilesetSafariAnim:
 
 TilesetJohtoAnim:
 	dw vTiles2 tile $14, AnimateWaterTile
-	dw vTiles2 tile $49, AnimateWaterTile
+	dw vTiles2 tile $49, AnimateDeepWaterTile
 	dw NULL,  WaitTileAnimation
 	dw NULL,  AnimateWaterPalette
 	dw NULL,  WaitTileAnimation
@@ -491,6 +491,41 @@ AnimateWaterTile:
 
 .WaterTileFrames:
 	INCBIN "gfx/tilesets/water/water.2bpp"
+
+AnimateDeepWaterTile:
+; Draw a deep water tile for the current frame in VRAM tile at de.
+
+; Save sp in bc (see WriteTile).
+	ld hl, sp+0
+	ld b, h
+	ld c, l
+
+	ld a, [wTileAnimationTimer]
+
+; 4 tile graphics, updated every other frame.
+	and %110
+
+; 2 x 8 = 16 bytes per tile
+	add a
+	add a
+	add a
+
+	add LOW(DeepWaterTileFrames)
+	ld l, a
+	ld a, 0
+	adc HIGH(DeepWaterTileFrames)
+	ld h, a
+
+; The stack now points to the start of the tile for this frame.
+	ld sp, hl
+
+	ld l, e
+	ld h, d
+
+	jp WriteTile
+
+DeepWaterTileFrames:
+	INCBIN "gfx/tilesets/water/deep-water.2bpp"
 
 ForestTreeLeftAnimation:
 ; Save the stack pointer in bc for WriteTile to restore
