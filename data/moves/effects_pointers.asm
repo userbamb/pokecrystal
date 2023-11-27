@@ -123,7 +123,6 @@ MoveEffectsPointers:
 	dw FuryCutter
 	dw Attract
 	dw Return
-	dw HealBell
 	dw Frustration
 	dw Safeguard
 	dw SacredFire
