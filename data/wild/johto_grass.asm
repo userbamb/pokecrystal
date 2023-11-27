@@ -1710,7 +1710,7 @@ JohtoGrassWildMons:
 	db 44, METTO
 	end_grass_wildmons
 	
-	def_grass_wildmons UNDERWATER
+	def_grass_wildmons UNDERWATER_1
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 20, CHINCHOU

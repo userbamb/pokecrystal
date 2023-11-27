@@ -1927,7 +1927,7 @@ CanDiveText:
 
 AskDiveScript:
 	opentext
-	copybytetovar wPlayerTile
+	readmem wPlayerTile
 	ifequal COLL_DIVE_UP, .up
 	writetext AskDiveDownText
 	jump .continue

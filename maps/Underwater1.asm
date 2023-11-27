@@ -1,15 +1,19 @@
     object_const_def
-	const UNDERWATER1_ROCK
+	
 
-Underwater_MapScripts:
+Underwater1_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+    callback MAPCALLBACK_NEWMAP, .DiveMap
+
+.DiveMap:
+	divemap NEW_BARK_TOWN
+	return
 
 
 
-
-Underwater_MapEvents:
+Underwater1_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
