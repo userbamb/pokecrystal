@@ -123,7 +123,7 @@ MoveEffectsPointers:
 	dw FuryCutter
 	dw Attract
 	dw Return
-	dw Present
+	dw HealBell
 	dw Frustration
 	dw Safeguard
 	dw SacredFire
@@ -142,7 +142,6 @@ MoveEffectsPointers:
 	dw DefenseUpHit
 	dw AttackUpHit
 	dw AllUpHit
-    dw Surf
 	dw BellyDrum
 	dw PsychUp
 	dw MirrorCoat
@@ -158,5 +157,6 @@ MoveEffectsPointers:
 	dw BeatUp
 	dw Fly
 	dw DefenseCurl
+	dw Surf
 	dw Whirlpool
 	assert_table_length NUM_MOVE_EFFECTS

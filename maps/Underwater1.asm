@@ -1,7 +1,7 @@
     object_const_def
 	const UNDERWATER1_ROCK
 
-Underwater1_MapScripts:
+Underwater_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
@@ -9,7 +9,7 @@ Underwater1_MapScripts:
 
 
 
-Underwater1_MapEvents:
+Underwater_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events

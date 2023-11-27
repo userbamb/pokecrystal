@@ -265,5 +265,5 @@ Moves:
 	move ROCK_SMASH,   EFFECT_FLINCH_HIT,         65, FIGHTING,      PHYSICAL,   100, 15,    30
 	move WHIRLPOOL,    EFFECT_WHIRLPOOL,        15, WATER,         PHYSICAL,    70, 15,   0
 	move BEAT_UP,      EFFECT_BEAT_UP,            10, DARK,          PHYSICAL,   100, 10,   0
-	move DIVE,     EFFECT_FLY,  		  80, NORMAL,        PHYSICAL,   100, 10, 100
+	move DIVE,         EFFECT_FLY,  		  80, WATER,        PHYSICAL,   100, 10, 100
 	assert_table_length NUM_ATTACKS

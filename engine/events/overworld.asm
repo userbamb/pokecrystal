@@ -1878,7 +1878,7 @@ CheckMapCanDive:
 	ld a, [wDiveMapNumber]
 	and a
 	jr z, .failed
-	ld a, [wPlayerStandingTile]
+	ld a, [wPlayerTile]
 	call CheckDiveTile
 	jr nz, .failed
 	xor a
@@ -1927,7 +1927,7 @@ CanDiveText:
 
 AskDiveScript:
 	opentext
-	copybytetovar wPlayerStandingTile
+	copybytetovar wPlayerTile
 	ifequal COLL_DIVE_UP, .up
 	writetext AskDiveDownText
 	jump .continue
