@@ -705,9 +705,9 @@ _CGB_TrainerCard:
  	hlcoord 18, 1, wAttrmap
 	ld a, [wPlayerGender]
 	and a
-	ld a, $0 ; kris
+	ld a, $1 ; kris
 	jr z, .got_gender3
-	ld a, $0 ; chris
+	ld a, $1 ; chris
 .got_gender3
 	ld [hl], a
 	call ApplyAttrmap
@@ -721,7 +721,7 @@ _CGB_TrainerCardKanto:
 	xor a ; CHRIS
 	call GetTrainerPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
-	ld a, KRIS
+	ld a, FALKNER
 	call GetTrainerPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
 	ld a, BROCK
@@ -751,9 +751,9 @@ _CGB_TrainerCardKanto:
 	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
 	ld a, [wPlayerGender]
 	and a
-	ld a, $0 ; kris
+	ld a, $1 ; kris
 	jr z, .got_gender
-	ld a, $0 ; chris
+	ld a, $1 ; chris
 .got_gender
 	call ByteFill
 	; fill trainer sprite area with same-gender palette
@@ -761,14 +761,14 @@ _CGB_TrainerCardKanto:
 	lb bc, 7, 5
 	ld a, [wPlayerGender]
 	and a
-	ld a, $0 ; chris
+	ld a, $1 ; chris
 	jr z, .got_gender2
-	ld a, $0 ; kris
+	ld a, $1 ; kris
 .got_gender2
 	call FillBoxCGB
 	; top-right corner still uses the border's palette
 	hlcoord 18, 1, wAttrmap
-	ld [hl], $0
+	ld [hl], $1
 	hlcoord 2, 11, wAttrmap
 	lb bc, 2, 4
 	ld a, $2 ; brock
@@ -799,14 +799,14 @@ _CGB_TrainerCardKanto:
 	call FillBoxCGB
 	hlcoord 14, 14, wAttrmap
 	lb bc, 2, 4
-	ld a, $0 ; blue
+	ld a, $1 ; blue
 	call FillBoxCGB
 	; top-right corner still uses the border's palette
 	ld a, [wPlayerGender]
 	and a
-	ld a, $0 ; kris
+	ld a, $1 ; kris
 	jr z, .got_gender3
-	ld a, $0 ; chris
+	ld a, $1 ; chris
 .got_gender3
 	hlcoord 18, 1, wAttrmap
 	ld [hl], a
