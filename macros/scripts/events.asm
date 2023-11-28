@@ -1066,10 +1066,10 @@ ENDM
 
     const divemap_command
 MACRO divemap
+	db divemap_command
 	if _NARG == 1
-		divemap \1, 0, 0
+		map_id \1
 	else
-		db divemap_command
 		map_id \1 ; map
 		db \2 ; delta x
 		db \3 ; delta y

@@ -1840,15 +1840,9 @@ DiveFunction:
  	dw .FailDive
 
 .TryDive:
-	ld de, ENGINE_CASCADEBADGE
-	call CheckBadge
-	jr c, .nocascadebadge
 	call CheckMapCanDive
-	jr nz, .cannotdive
+	jr c, .cannotdive
 	ld a, $1
-	ret
-.nocascadebadge
-	ld a, $80
 	ret
 .cannotdive
 	ld a, $2
@@ -1867,6 +1861,10 @@ DiveFunction:
 	ld a, $80
 	ret
 
+UsedDiveText:
+	text_jump _UsedDiveText
+	db "@"
+	
 CantDiveText:
 	text_jump _CantDiveText
 	db "@"
@@ -1879,8 +1877,11 @@ CheckMapCanDive:
 	and a
 	jr z, .failed
 	ld a, [wPlayerTile]
-	call CheckDiveTile
+	cp COLL_DIVE_UP
+	jr z, .ok
+	cp COLL_DIVE_DOWN
 	jr nz, .failed
+.ok
 	xor a
 	ret
 
@@ -1891,10 +1892,6 @@ CheckMapCanDive:
 TryDiveOW::
 	call CheckMapCanDive
 	jr c, .failed
-
-	ld de, ENGINE_CASCADEBADGE
-	call CheckEngineFlag
-	jr c, .cant
 
 	ld d, DIVE
 	call CheckPartyMove
@@ -1948,6 +1945,7 @@ AskDiveUpText:
 	db "@"
 
 DiveFromMenuScript:
+	reloadmappart
 	special UpdateTimePals
 
 UsedDiveScript:
@@ -1959,7 +1957,3 @@ UsedDiveScript:
 	divewarp
 	end
 
-UsedDiveText:
-	text_jump _UsedDiveText
-	db "@"
-	

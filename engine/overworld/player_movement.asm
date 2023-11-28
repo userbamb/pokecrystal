@@ -34,7 +34,7 @@ DoPlayerMovement::
 	cp PLAYER_NORMAL
 	jr z, .Normal
 	cp PLAYER_DIVE
-	jr z, .Normal
+	jr z, .Dive
 	cp PLAYER_SURF
 	jr z, .Surf
 	cp PLAYER_SURF_PIKA
@@ -46,6 +46,21 @@ DoPlayerMovement::
 
 .Normal:
 	call .CheckForced
+	call .GetAction
+	call .CheckTile
+	ret c
+	call .CheckTurning
+	ret c
+	call .TryStep
+	ret c
+	call .TryJump
+	ret c
+	call .CheckWarp
+	ret c
+	jr .NotMoving
+	
+.Dive:
+    call .CheckForced
 	call .GetAction
 	call .CheckTile
 	ret c

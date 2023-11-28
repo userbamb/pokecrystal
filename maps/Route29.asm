@@ -15,6 +15,11 @@ Route29_MapScripts:
 
 	def_callbacks
 	callback MAPCALLBACK_OBJECTS, Route29TuscanyCallback
+	callback MAPCALLBACK_NEWMAP, .DiveMap
+
+.DiveMap:
+	divemap UNDERWATER_1,  12, 15
+	return
 
 Route29Noop1Scene:
 	end

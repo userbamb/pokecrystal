@@ -2505,7 +2505,7 @@ MarillEvosAttacks:
 	db 15, ROLLOUT
 	db 21, BUBBLEBEAM
 	db 28, DOUBLE_EDGE
-	db 36, DIVE
+	db 36, WATERFALL
 	db 0 ; no more level-up moves
 
 AzumarillEvosAttacks:
@@ -2520,7 +2520,7 @@ AzumarillEvosAttacks:
 	db 15, ROLLOUT
 	db 25, BUBBLEBEAM
 	db 36, DOUBLE_EDGE
-	db 48, DIVE
+	db 48, WATERFALL
 	db 0 ; no more level-up moves
 
 SudowoodoEvosAttacks:

@@ -751,9 +751,9 @@ _CGB_TrainerCardKanto:
 	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
 	ld a, [wPlayerGender]
 	and a
-	ld a, $3 ; kris
+	ld a, $0 ; kris
 	jr z, .got_gender
-	ld a, $3 ; chris
+	ld a, $0 ; chris
 .got_gender
 	call ByteFill
 	; fill trainer sprite area with same-gender palette
@@ -763,7 +763,7 @@ _CGB_TrainerCardKanto:
 	and a
 	ld a, $0 ; chris
 	jr z, .got_gender2
-	ld a, $1 ; kris
+	ld a, $0 ; kris
 .got_gender2
 	call FillBoxCGB
 	; top-right corner still uses the border's palette
@@ -775,7 +775,7 @@ _CGB_TrainerCardKanto:
 	call FillBoxCGB
 	hlcoord 6, 11, wAttrmap
 	lb bc, 2, 4
-	ld a, $3 ; mysti
+	ld a, $5 ; mysti
 	call FillBoxCGB
 	hlcoord 10, 11, wAttrmap
 	lb bc, 2, 4
@@ -799,7 +799,7 @@ _CGB_TrainerCardKanto:
 	call FillBoxCGB
 	hlcoord 14, 14, wAttrmap
 	lb bc, 2, 4
-	ld a, $1 ; blue
+	ld a, $0 ; blue
 	call FillBoxCGB
 	; top-right corner still uses the border's palette
 	ld a, [wPlayerGender]

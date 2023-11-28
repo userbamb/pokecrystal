@@ -8,7 +8,7 @@ Underwater1_MapScripts:
     callback MAPCALLBACK_NEWMAP, .DiveMap
 
 .DiveMap:
-	divemap NEW_BARK_TOWN
+	divemap ROUTE_29,  46, 8
 	return
 
 
