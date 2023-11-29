@@ -749,9 +749,9 @@ _CGB_TrainerCardKanto:
 	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
 	ld a, [wPlayerGender]
 	and a
-	ld a, $0 ; kris
+	ld a, $1 ; kris
 	jr z, .got_gender
-	ld a, $1 ; chris
+	ld a, $0 ; chris
 .got_gender
 	call ByteFill
 	; fill trainer sprite area with same-gender palette
