@@ -46,8 +46,8 @@ SpriteAnimFrameData:
 	dw .Frameset_EZChatCursor5
 	dw .Frameset_EZChatCursor6
 	dw .Frameset_EZChatCursor7
-	dw .Frameset_PinkWalk
-	dw .Frameset_MagnetTrainPink
+	dw .Frameset_BlueWalk
+	dw .Frameset_MagnetTrainBlue
 	dw .Frameset_MobileTradeSentBall
 	dw .Frameset_MobileTradeOTBall
 	dw .Frameset_MobileTradeCableBulge
@@ -111,18 +111,18 @@ SpriteAnimFrameData:
 	oamframe SPRITE_ANIM_OAMSET_RED_WALK_2,  8, OAM_X_FLIP
 	oamrestart
 
-.Frameset_PinkWalk:
-	oamframe SPRITE_ANIM_OAMSET_PINK_WALK_1,  8
-	oamframe SPRITE_ANIM_OAMSET_PINK_WALK_2,  8
-	oamframe SPRITE_ANIM_OAMSET_PINK_WALK_1,  8
-	oamframe SPRITE_ANIM_OAMSET_PINK_WALK_2,  8, OAM_X_FLIP
+.Frameset_BlueWalk:
+	oamframe SPRITE_ANIM_OAMSET_BLUE_WALK_1,  8
+	oamframe SPRITE_ANIM_OAMSET_BLUE_WALK_2,  8
+	oamframe SPRITE_ANIM_OAMSET_BLUE_WALK_1,  8
+	oamframe SPRITE_ANIM_OAMSET_BLUE_WALK_2,  8, OAM_X_FLIP
 	oamrestart
 
-.Frameset_MagnetTrainPink:
-	oamframe SPRITE_ANIM_OAMSET_MAGNET_TRAIN_PINK_1,  8
-	oamframe SPRITE_ANIM_OAMSET_MAGNET_TRAIN_PINK_2,  8
-	oamframe SPRITE_ANIM_OAMSET_MAGNET_TRAIN_PINK_1,  8
-	oamframe SPRITE_ANIM_OAMSET_MAGNET_TRAIN_PINK_2,  8, OAM_X_FLIP
+.Frameset_MagnetTrainBlue:
+	oamframe SPRITE_ANIM_OAMSET_MAGNET_TRAIN_BLUE_1,  8
+	oamframe SPRITE_ANIM_OAMSET_MAGNET_TRAIN_BLUE_2,  8
+	oamframe SPRITE_ANIM_OAMSET_MAGNET_TRAIN_BLUE_1,  8
+	oamframe SPRITE_ANIM_OAMSET_MAGNET_TRAIN_BLUE_2,  8, OAM_X_FLIP
 	oamrestart
 
 .Frameset_GSTitleTrail:

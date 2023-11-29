@@ -650,7 +650,7 @@ _CGB_TrainerCard:
 	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
 	ld a, [wPlayerGender]
 	and a
-	ld a, $1 ; kris
+	ld a, $0 ; kris
 	jr z, .got_gender
 	ld a, $1 ; chris
 .got_gender
@@ -660,14 +660,12 @@ _CGB_TrainerCard:
 	lb bc, 7, 5
 	ld a, [wPlayerGender]
 	and a
-	ld a, $0 ; chris
+	ld a, $1 ; chris
 	jr z, .got_gender2
 	ld a, $0 ; kris
 .got_gender2
 	call FillBoxCGB
-	; top-right corner still uses the border's palette
-	hlcoord 18, 1, wAttrmap
-	ld [hl], $0
+
 	hlcoord 2, 11, wAttrmap
 	lb bc, 2, 4
 	ld a, $1 ; falkner
@@ -707,7 +705,7 @@ _CGB_TrainerCard:
 	and a
 	ld a, $1 ; kris
 	jr z, .got_gender3
-	ld a, $1 ; chris
+	ld a, $0 ; chris
 .got_gender3
 	ld [hl], a
 	call ApplyAttrmap
@@ -751,7 +749,7 @@ _CGB_TrainerCardKanto:
 	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
 	ld a, [wPlayerGender]
 	and a
-	ld a, $1 ; kris
+	ld a, $0 ; kris
 	jr z, .got_gender
 	ld a, $1 ; chris
 .got_gender
@@ -761,14 +759,12 @@ _CGB_TrainerCardKanto:
 	lb bc, 7, 5
 	ld a, [wPlayerGender]
 	and a
-	ld a, $1 ; chris
+	ld a, $0 ; chris
 	jr z, .got_gender2
 	ld a, $1 ; kris
 .got_gender2
 	call FillBoxCGB
-	; top-right corner still uses the border's palette
-	hlcoord 18, 1, wAttrmap
-	ld [hl], $1
+
 	hlcoord 2, 11, wAttrmap
 	lb bc, 2, 4
 	ld a, $2 ; brock
@@ -806,9 +802,8 @@ _CGB_TrainerCardKanto:
 	and a
 	ld a, $1 ; kris
 	jr z, .got_gender3
-	ld a, $1 ; chris
+	ld a, $0 ; chris
 .got_gender3
-	hlcoord 18, 1, wAttrmap
 	ld [hl], a
 	call ApplyAttrmap
 	call ApplyPals
