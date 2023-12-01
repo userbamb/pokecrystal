@@ -12,6 +12,12 @@ CherrygroveCity_MapScripts:
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, CherrygroveCityFlypointCallback
+	callback MAPCALLBACK_NEWMAP, .DiveMap
+
+.DiveMap:
+	divemap UNDERWATER_1, 0, 0
+	return
+
 
 CherrygroveCityNoop1Scene:
 	end

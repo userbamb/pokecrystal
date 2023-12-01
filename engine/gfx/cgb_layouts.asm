@@ -650,9 +650,9 @@ _CGB_TrainerCard:
 	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
 	ld a, [wPlayerGender]
 	and a
-	ld a, $0 ; kris
+	ld a, $1 ; kris
 	jr z, .got_gender
-	ld a, $1 ; chris
+	ld a, $0 ; chris
 .got_gender
 	call ByteFill
 	; fill trainer sprite area with same-gender palette
@@ -660,9 +660,9 @@ _CGB_TrainerCard:
 	lb bc, 7, 5
 	ld a, [wPlayerGender]
 	and a
-	ld a, $1 ; chris
+	ld a, $0 ; chris
 	jr z, .got_gender2
-	ld a, $0 ; kris
+	ld a, $1 ; kris
 .got_gender2
 	call FillBoxCGB
 
@@ -703,9 +703,9 @@ _CGB_TrainerCard:
  	hlcoord 18, 1, wAttrmap
 	ld a, [wPlayerGender]
 	and a
-	ld a, $1 ; kris
+	ld a, $0 ; kris
 	jr z, .got_gender3
-	ld a, $0 ; chris
+	ld a, $1 ; chris
 .got_gender3
 	ld [hl], a
 	call ApplyAttrmap
@@ -800,9 +800,9 @@ _CGB_TrainerCardKanto:
 	; top-right corner still uses the border's palette
 	ld a, [wPlayerGender]
 	and a
-	ld a, $1 ; kris
+	ld a, $0 ; kris
 	jr z, .got_gender3
-	ld a, $0 ; chris
+	ld a, $1 ; chris
 .got_gender3
 	ld [hl], a
 	call ApplyAttrmap

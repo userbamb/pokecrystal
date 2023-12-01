@@ -66,11 +66,7 @@ DoPlayerMovement::
 	ret c
 	call .CheckTurning
 	ret c
-	call .TryStep
-	ret c
-	call .TryJump
-	ret c
-	call .CheckWarp
+	call .TryDive
 	ret c
 	jr .NotMoving
 
@@ -268,6 +264,37 @@ DoPlayerMovement::
 
 .not_turning
 	xor a
+	ret
+
+.TryDive:
+	call .CheckLandPerms
+	jr c, .bump
+
+	call .CheckNPC
+	and a
+	jr z, .bump
+	cp 2
+	jr z, .bump
+
+	ld a, [wPlayerTile]
+	call CheckIceTile
+	jr nc, .ice
+
+; Downhill riding is slower when not moving down.
+	call .Underwatercheck
+	jr c, .GetOutOfDeep
+
+	ld a, STEP_WALK
+	call .DoStep
+	scf
+	ret
+
+.GetOutOfDeep:
+	push bc
+	ld a, PLAYER_SURF
+	ld [wPlayerState], a
+	call UpdatePlayerSprite ; UpdateSprites
+	pop bc
 	ret
 
 .TryStep:
@@ -766,6 +793,13 @@ ENDM
 	cp PLAYER_BIKE
 	ret z
 	cp PLAYER_SKATE
+	ret
+
+.Underwatercheck:
+	ld a, [wMapTileset]
+	cp TILESET_UNDERWATER
+	ret z 
+	cp PLAYER_DIVE
 	ret
 
 .CheckWalkable:

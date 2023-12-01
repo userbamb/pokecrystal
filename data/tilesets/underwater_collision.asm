@@ -1,4 +1,4 @@
-    tilecoll WALL, WALL, WALL, WALL ; 00
+	tilecoll WALL, WALL, WALL, WALL ; 00
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 01
 	tilecoll DIVE_UP, DIVE_UP, DIVE_UP, DIVE_UP ; 02
 	tilecoll LONG_GRASS, LONG_GRASS, LONG_GRASS, LONG_GRASS ; 03
@@ -42,7 +42,7 @@
 	tilecoll FLOOR, FLOOR, WALL, FLOOR ; 29
 	tilecoll FLOOR, WALL, FLOOR, FLOOR ; 2a
 	tilecoll FLOOR, FLOOR, FLOOR, WALL ; 2b
-	tilecoll WALL, WALL, WALL, CAVE ; 1c
+	tilecoll WALL, WALL, WALL, CAVE ; 2c
 	tilecoll WALL, WALL, WALL, WALL ; 2d
 	tilecoll WALL, WALL, WALL, WALL ; 2e
 	tilecoll WALL, WALL, WALL, WALL ; 2f

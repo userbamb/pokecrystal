@@ -8,7 +8,7 @@ Underwater1_MapScripts:
     callback MAPCALLBACK_NEWMAP, .DiveMap
 
 .DiveMap:
-	divemap ROUTE_29,  46, 8
+	divemap CHERRYGROVE_CITY, 0, 0
 	return
 
 
