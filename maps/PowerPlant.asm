@@ -46,6 +46,7 @@ PowerPlantGuardPhoneScript:
 PowerPlantOfficerScript:
 	faceplayer
 	opentext
+	setevent EVENT_FOUGHT_LUGIA ;DEBUG
 	checkevent EVENT_RETURNED_MACHINE_PART
 	iftrue .ReturnedMachinePart
 	checkevent EVENT_MET_MANAGER_AT_POWER_PLANT
@@ -392,6 +393,7 @@ PowerPlant_MapEvents:
 	def_warp_events
 	warp_event  2, 17, ROUTE_10_NORTH, 2
 	warp_event  3, 17, ROUTE_10_NORTH, 2
+	warp_event  19, 2, ROUTE_10_NORTH, 3
 
 	def_coord_events
 	coord_event  5, 12, SCENE_POWERPLANT_GUARD_GETS_PHONE_CALL, PowerPlantGuardPhoneScript
