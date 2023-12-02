@@ -514,7 +514,7 @@ Route44_MapEvents:
 
 	def_bg_events
 	bg_event 53,  7, BGEVENT_READ, Route44Sign1
-	bg_event  6, 10, BGEVENT_READ, Route44Sign2
+	bg_event  5, 11, BGEVENT_READ, Route44Sign2
 	bg_event 32,  9, BGEVENT_ITEM, Route44HiddenElixer
 
 	def_object_events

@@ -318,7 +318,7 @@ Route42_MapEvents:
 	coord_event 24, 14, SCENE_ROUTE42_SUICUNE, Route42SuicuneScript
 
 	def_bg_events
-	bg_event  4, 10, BGEVENT_READ, Route42Sign1
+	bg_event  2, 10, BGEVENT_READ, Route42Sign1
 	bg_event  7,  5, BGEVENT_READ, MtMortarSign1
 	bg_event 45,  9, BGEVENT_READ, MtMortarSign2
 	bg_event 54,  8, BGEVENT_READ, Route42Sign2

@@ -1138,7 +1138,7 @@ SpriteAnimOAMData:
 	
 	.OAMData_TreeWalk:
 	db 4
-	dbsprite -1, -1,  0,  0, $00, PAL_OW_TREE
-	dbsprite  0, -1,  0,  0, $01, PAL_OW_TREE
-	dbsprite -1,  0,  0,  0, $02, PAL_OW_TREE
-	dbsprite  0,  0,  0,  0, $03, PAL_OW_TREE
+	dbsprite -1, -1,  0,  0, $00, PAL_OW_PINK
+	dbsprite  0, -1,  0,  0, $01, PAL_OW_PINK
+	dbsprite -1,  0,  0,  0, $02, PAL_OW_PINK
+	dbsprite  0,  0,  0,  0, $03, PAL_OW_PINK

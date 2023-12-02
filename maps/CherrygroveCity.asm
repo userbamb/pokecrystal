@@ -11,8 +11,9 @@ CherrygroveCity_MapScripts:
 	scene_script CherrygroveCityNoop2Scene, SCENE_CHERRYGROVECITY_MEET_RIVAL
 
 	def_callbacks
-	callback MAPCALLBACK_NEWMAP, CherrygroveCityFlypointCallback
 	callback MAPCALLBACK_NEWMAP, .DiveMap
+	callback MAPCALLBACK_NEWMAP, CherrygroveCityFlypointCallback
+	
 
 .DiveMap:
 	divemap UNDERWATER_1, 0, 0

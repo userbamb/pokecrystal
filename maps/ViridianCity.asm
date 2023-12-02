@@ -226,7 +226,7 @@ ViridianCity_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 17, 17, BGEVENT_READ, ViridianCitySign
+	bg_event 15, 15, BGEVENT_READ, ViridianCitySign
 	bg_event 27,  7, BGEVENT_READ, ViridianGymSign
 	bg_event 17, 29, BGEVENT_READ, ViridianCityWelcomeSign
 	bg_event 21, 15, BGEVENT_READ, TrainerHouseSign

@@ -1945,6 +1945,7 @@ AskDiveUpText:
 	db "@"
 
 DiveFromMenuScript:
+	reloadmappart
 	special UpdateTimePals
 
 UsedDiveScript:

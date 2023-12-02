@@ -417,7 +417,7 @@ DragonsDenB1F_MapEvents:
 	def_bg_events
 	bg_event 18, 24, BGEVENT_READ, DragonShrineSignpost
 	bg_event 33, 29, BGEVENT_ITEM, DragonsDenB1FHiddenRevive
-	bg_event  9, 21, BGEVENT_ITEM, DragonsDenB1FHiddenMaxPotion
+	bg_event  8, 20, BGEVENT_ITEM, DragonsDenB1FHiddenMaxPotion
 	bg_event 31, 15, BGEVENT_ITEM, DragonsDenB1FHiddenMaxElixer
 
 	def_object_events
