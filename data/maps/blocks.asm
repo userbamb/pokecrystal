@@ -332,6 +332,7 @@ SaffronMart_Blocks:
 CherrygroveMart_Blocks:
 	INCBIN "maps/Mart.blk"
 
+Route10NorthInside_Blocks:
 Route10North_Blocks:
 	INCBIN "maps/Route10North.blk"
 
