@@ -46,7 +46,6 @@ PowerPlantGuardPhoneScript:
 PowerPlantOfficerScript:
 	faceplayer
 	opentext
-	setevent EVENT_FOUGHT_LUGIA ;DEBUG
 	checkevent EVENT_RETURNED_MACHINE_PART
 	iftrue .ReturnedMachinePart
 	checkevent EVENT_MET_MANAGER_AT_POWER_PLANT
@@ -190,6 +189,7 @@ PowerPlantManager:
 Forest:
 	faceplayer
 	opentext
+	setevent EVENT_FOUGHT_LUGIA ;DEBUG
 	trade NPC_TRADE_FOREST
 	waitbutton
 	closetext

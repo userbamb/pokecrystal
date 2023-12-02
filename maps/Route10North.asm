@@ -5,8 +5,8 @@ Route10North_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
-	callback MAPCALLBACK_OBJECTS, ZapdosCallback
     callback MAPCALLBACK_NEWMAP, RockTunnelFlypointCallback
+	callback MAPCALLBACK_OBJECTS, ZapdosCallback
 
 ZapdosCallback:
 	checkevent EVENT_FOUGHT_ZAPDOS
@@ -14,15 +14,13 @@ ZapdosCallback:
 	checkevent EVENT_FOUGHT_LUGIA
 	iftrue .Appear
 	sjump .NoAppear
-
 .Appear:
+	clearevent EVENT_APPEARS_ZAPDOS
 	appear ROUTE_10_NORTH_ZAPDOS
 	endcallback
-
 .NoAppear:
 	disappear ROUTE_10_NORTH_ZAPDOS
 	endcallback
-
 Zapdos:
 	faceplayer
 	opentext
@@ -36,6 +34,12 @@ Zapdos:
 	startbattle
 	disappear ROUTE_10_NORTH_ZAPDOS
 	reloadmapafterbattle
+	setevent EVENT_FOUGHT_ZAPDOS
+	setevent EVENT_APPEARS_ZAPDOS
+	end
+
+.Zapdosbattled:
+    setevent EVENT_FOUGHT_ZAPDOS
 	end
 
 ZapdosText:
@@ -71,4 +75,4 @@ Route10North_MapEvents:
 	bg_event 12,  1, BGEVENT_READ, Route10PokecenterSign
 
 	def_object_events
-    object_event 6, 4, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, Zapdos, EVENT_FOUGHT_ZAPDOS
+    object_event 6, 4, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_OW_PINK, OBJECTTYPE_SCRIPT, 0, Zapdos, EVENT_APPEARS_ZAPDOS

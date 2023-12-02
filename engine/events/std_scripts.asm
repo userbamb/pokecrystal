@@ -615,6 +615,9 @@ InitializeEventsScript:
 	setevent EVENT_INDIGO_PLATEAU_POKECENTER_RIVAL
 	setevent EVENT_CERULEANB1F_MEWTWO
 	setevent EVENT_INITIALIZED_EVENTS
+	setevent EVENT_APPEARS_ZAPDOS
+	setevent EVENT_APPEARS_ARTICUNO
+	setevent EVENT_APPEARS_MOLTRES
 	endcallback
 
 AskNumber1MScript:
