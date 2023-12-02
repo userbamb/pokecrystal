@@ -1,5 +1,5 @@
     object_const_def
-	const ROUTE_10_NORTH_INSIDE_ZAPDOS
+	const ROUTE_10_NORTH_ZAPDOS
 
 Route10NorthInside_MapScripts:
 	def_scene_scripts

@@ -189,7 +189,6 @@ PowerPlantManager:
 Forest:
 	faceplayer
 	opentext
-	setevent EVENT_FOUGHT_LUGIA ;DEBUG
 	trade NPC_TRADE_FOREST
 	waitbutton
 	closetext

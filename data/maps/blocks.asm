@@ -551,6 +551,7 @@ LakeOfRage_Blocks:
 BlackthornCity_Blocks:
 	INCBIN "maps/BlackthornCity.blk"
 
+SilverCaveOutsideInside_Blocks:
 SilverCaveOutside_Blocks:
 	INCBIN "maps/SilverCaveOutside.blk"
 

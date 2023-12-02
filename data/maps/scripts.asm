@@ -499,3 +499,6 @@ INCLUDE "maps/Route8LavenderGate.asm"
 INCLUDE "maps/Route12LavenderGate.asm"
 INCLUDE "maps/LuckySpot.asm"
 INCLUDE "maps/Underwater1.asm"
+
+SECTION "Map Scripts 26", ROMX
+INCLUDE "maps/SilverCaveOutsideInside.asm"

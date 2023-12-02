@@ -113,4 +113,7 @@ OverworldSprites:
 	overworld_sprite ChrisRunSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
  	overworld_sprite KrisRunSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
 	overworld_sprite DiveSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite ZapdosSpriteGFX, 8, STANDING_SPRITE, PAL_OW_RED
+	overworld_sprite MortresSpriteGFX, 8, STANDING_SPRITE, PAL_OW_RED
+	overworld_sprite ArticunoSpriteGFX, 8, STANDING_SPRITE, PAL_OW_RED
 	assert_table_length NUM_OVERWORLD_SPRITES
