@@ -1715,16 +1715,16 @@ JohtoGrassWildMons:
 	; morn
 	db 20, CHINCHOU
 	db 22, CHINCHOU
-	db 21, MARILL
-	db 23, MARILL
-	db 22, OCTILLERY
+	db 21, HORSEA
+	db 23, HORSEA
+	db 22, HORSEA
 	db 24, OCTILLERY
 	db 20, OCTILLERY
 	; day
 	db 20, CHINCHOU
 	db 22, CHINCHOU
-	db 21, MARILL
-	db 23, MARILL
+	db 21, KRABBY
+	db 23, HORSEA
 	db 22, KRABBY
 	db 24, OCTILLERY
 	db 20, OCTILLERY
@@ -1733,9 +1733,65 @@ JohtoGrassWildMons:
 	db 22, CHINCHOU
 	db 21, STARYU
 	db 23, STARYU
-	db 22, CHINCHOU
+	db 22, SEADRA
 	db 24, OCTILLERY
 	db 20, OCTILLERY
+	end_grass_wildmons
+
+	def_grass_wildmons UNDERWATER_LABI
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 20, CHINCHOU
+	db 22, CHINCHOU
+	db 21, HORSEA
+	db 23, HORSEA
+	db 22, HORSEA
+	db 24, OCTILLERY
+	db 20, OCTILLERY
+	; day
+	db 20, CHINCHOU
+	db 22, CHINCHOU
+	db 21, KRABBY
+	db 23, HORSEA
+	db 22, KRABBY
+	db 24, OCTILLERY
+	db 20, OCTILLERY
+	; nite
+	db 20, CHINCHOU
+	db 22, CHINCHOU
+	db 21, STARYU
+	db 23, STARYU
+	db 22, SEADRA
+	db 24, OCTILLERY
+	db 20, OCTILLERY
+	end_grass_wildmons
+
+	def_grass_wildmons DRAGON_UNDERWATER
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 20, HORSEA
+	db 22, STARYU
+	db 21, HORSEA
+	db 23, HORSEA
+	db 22, HORSEA
+	db 24, DRATINI
+	db 20, DRATINI
+	; day
+	db 20, STARYU
+	db 22, HORSEA
+	db 21, KRABBY
+	db 23, HORSEA
+	db 22, DRATINI
+	db 24, DRATINI
+	db 20, DRATINI
+	; nite
+	db 20, STARYU
+	db 22, DRATINI
+	db 21, DRATINI
+	db 23, DRATINI
+	db 22, SEADRA
+	db 24, DRATINI
+	db 40, DRAGONAIR
 	end_grass_wildmons
 
 	db -1 ; end

@@ -710,6 +710,8 @@ ENDM
 	map_attributes LuckySpot, LUCKY_SPOT, $00, 0
 	map_attributes Underwater1, UNDERWATER_1, $09, 0
 	map_attributes Route10NorthInside, ROUTE_10_NORTH_INSIDE, $00, 0
-	map_attributes SilverCaveOutsideInside, SILVER_CAVE_OUTSIDE_INSIDE, $00, 0
-
-
+	map_attributes SilverCaveOutsideInside, SILVER_CAVE_OUTSIDE_INSIDE, $2c, 0
+	map_attributes DragonUnderwater, DRAGON_UNDERWATER, $09, 0
+	map_attributes LakeUnderwater, LAKE_UNDERWATER, $09, 0
+	map_attributes RuinUnderwater, RUIN_UNDERWATER, $09, 0
+	map_attributes UnderwaterLabi, UNDERWATER_LABI, $09, 0

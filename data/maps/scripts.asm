@@ -502,3 +502,7 @@ INCLUDE "maps/Underwater1.asm"
 
 SECTION "Map Scripts 26", ROMX
 INCLUDE "maps/SilverCaveOutsideInside.asm"
+INCLUDE "maps/DragonUnderwater.asm"
+INCLUDE "maps/LakeUnderwater.asm"
+INCLUDE "maps/RuinUnderwater.asm"
+INCLUDE "maps/UnderwaterLabi.asm"

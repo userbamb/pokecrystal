@@ -364,20 +364,20 @@ CherrygrovePokecenter1F_Blocks:
 BetaPewterMuseumOfScience1F_Blocks: ; unreferenced
 	INCBIN "maps/unused/BetaPewterMuseumOfScience1F.blk"
 
-BetaPewterMuseumOfScience2F_Blocks: ; unreferenced
-	INCBIN "maps/unused/BetaPewterMuseumOfScience2F.blk"
+UnderwaterLabi_Blocks:
+	INCBIN "maps/UnderwaterLabi.blk"
 
 EarlsPokemonAcademy_Blocks:
 	INCBIN "maps/EarlsPokemonAcademy.blk"
 
-BetaCinnabarPokemonLabHallway_Blocks: ; unreferenced
-	INCBIN "maps/unused/BetaCinnabarPokemonLabHallway.blk"
+RuinUnderwater_Blocks:
+	INCBIN "maps/RuinUnderwater.blk"
 
-BetaCinnabarPokemonLabRoom1_Blocks: ; unreferenced
-	INCBIN "maps/unused/BetaCinnabarPokemonLabRoom1.blk"
+LakeUnderwater_Blocks:
+	INCBIN "maps/LakeUnderwater.blk"
 
-BetaCinnabarPokemonLabRoom2_Blocks: ; unreferenced
-	INCBIN "maps/unused/BetaCinnabarPokemonLabRoom2.blk"
+DragonUnderwater_Blocks:
+	INCBIN "maps/DragonUnderwater.blk"
 
 Underwater1_Blocks:
 	INCBIN "maps/Underwater1.blk"
