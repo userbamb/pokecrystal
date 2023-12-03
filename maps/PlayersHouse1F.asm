@@ -159,6 +159,7 @@ MomScript:
 NeighborScript:
 	faceplayer
 	opentext
+	setevent EVENT_FOUGHT_LUGIA ;debug
 	checktime MORN
 	iftrue .MornScript
 	checktime DAY
