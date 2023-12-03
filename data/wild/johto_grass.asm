@@ -1709,48 +1709,48 @@ JohtoGrassWildMons:
 	db 44, GOLBAT
 	db 44, METTO
 	end_grass_wildmons
-	
-	def_grass_wildmons UNDERWATER_1
+
+	def_grass_wildmons LAKE_UNDERWATER
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 20, CHINCHOU
-	db 22, CHINCHOU
-	db 21, HORSEA
-	db 23, HORSEA
-	db 22, HORSEA
-	db 24, OCTILLERY
-	db 20, OCTILLERY
+	db 20, MAGIKARP
+	db 22, MAGIKARP
+	db 21, MAGIKARP
+	db 23, MAGIKARP
+	db 22, MAGIKARP
+	db 24, GOLDEEN
+	db 20, GOLDEEN
 	; day
-	db 20, CHINCHOU
-	db 22, CHINCHOU
-	db 21, KRABBY
-	db 23, HORSEA
-	db 22, KRABBY
-	db 24, OCTILLERY
-	db 20, OCTILLERY
+	db 20, MAGIKARP
+	db 22, MAGIKARP
+	db 21, MAGIKARP
+	db 23, GYARADOS
+	db 22, MAGIKARP
+	db 24, GYARADOS
+	db 20, GOLDEEN
 	; nite
-	db 20, CHINCHOU
-	db 22, CHINCHOU
-	db 21, STARYU
-	db 23, STARYU
-	db 22, SEADRA
-	db 24, OCTILLERY
-	db 20, OCTILLERY
+	db 20, MAGIKARP
+	db 22, MAGIKARP
+	db 21, MAGIKARP
+	db 23, MAGIKARP
+	db 22, MAGIKARP
+	db 24, GYARADOS
+	db 20, MAGIKARP
 	end_grass_wildmons
 
 	def_grass_wildmons UNDERWATER_LABI
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 20, CHINCHOU
-	db 22, CHINCHOU
+	db 20, WOOPER
+	db 22, WOOPER
 	db 21, HORSEA
 	db 23, HORSEA
 	db 22, HORSEA
 	db 24, OCTILLERY
 	db 20, OCTILLERY
 	; day
-	db 20, CHINCHOU
-	db 22, CHINCHOU
+	db 20, WOOPER
+	db 22, WOOPER
 	db 21, KRABBY
 	db 23, HORSEA
 	db 22, KRABBY

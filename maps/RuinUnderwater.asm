@@ -1,23 +1,23 @@
     object_const_def
 	
 
-Underwater1_MapScripts:
+RuinUnderwater_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
     callback MAPCALLBACK_NEWMAP, .DiveMap
 
 .DiveMap:
-	divemap CHERRYGROVE_CITY, 0, 0
+	divemap RUINS_OF_ALPH_OUTSIDE, 0, 0
 	return
 
 
 
-Underwater1_MapEvents:
+RuinUnderwater_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-
+    warp_event  15,  27, RUIN_UNDERWATER, 1 ;1ST ROOM
 
 	def_coord_events
 

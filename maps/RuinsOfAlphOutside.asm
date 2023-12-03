@@ -12,6 +12,11 @@ RuinsOfAlphOutside_MapScripts:
 
 	def_callbacks
 	callback MAPCALLBACK_OBJECTS, RuinsOfAlphOutsideScientistCallback
+	callback MAPCALLBACK_NEWMAP, .DiveMap
+
+.DiveMap:
+	divemap RUIN_UNDERWATER, 0, 0
+	return
 
 RuinsOfAlphOutsideNoop1Scene:
 	end

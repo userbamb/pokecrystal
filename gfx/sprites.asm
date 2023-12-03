@@ -93,6 +93,7 @@ PaperSpriteGFX::               INCBIN "gfx/sprites/paper.2bpp"
 VirtualBoySpriteGFX::          INCBIN "gfx/sprites/virtual_boy.2bpp"
 OldLinkReceptionistSpriteGFX:: INCBIN "gfx/sprites/old_link_receptionist.2bpp"
 RockSpriteGFX::                INCBIN "gfx/sprites/rock.2bpp"
+FossilSpriteGFX::                INCBIN "gfx/sprites/fossil.2bpp" ;unreferenced
 BoulderSpriteGFX::             INCBIN "gfx/sprites/boulder.2bpp"
 SnesSpriteGFX::                INCBIN "gfx/sprites/snes.2bpp"
 FamicomSpriteGFX::             INCBIN "gfx/sprites/famicom.2bpp"
