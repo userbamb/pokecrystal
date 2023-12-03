@@ -17,7 +17,8 @@ Underwater1_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-
+	warp_event  5,  13, LAKE_UNDERWATER, 4
+	warp_event  35, 15, LAKE_UNDERWATER, 5
 
 	def_coord_events
 

@@ -16,6 +16,11 @@ DragonsDenB1F_MapScripts:
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, DragonsDenB1FCheckRivalCallback
+	 callback MAPCALLBACK_NEWMAP, .DiveMap
+
+.DiveMap:
+	divemap DRAGON_UNDERWATER, 0, 0
+	return
 
 DragonsDenB1FNoop1Scene:
 	end
