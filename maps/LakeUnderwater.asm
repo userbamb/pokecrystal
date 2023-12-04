@@ -6,14 +6,9 @@ LakeUnderwater_MapScripts:
 
 	def_callbacks
     callback MAPCALLBACK_NEWMAP, .DiveMap
-	callback MAPCALLBACK_NEWMAP, .DiveMap1
 
 .DiveMap:
 	divemap LAKE_OF_RAGE, 0, 0
-	return
-
-.DiveMap1:
-	divemap ICE_PATH_1F, 0, 0
 	return
 
 LakeUnderwater_MapEvents:

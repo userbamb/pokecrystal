@@ -18,8 +18,14 @@ LakeOfRage_MapScripts:
 	scene_script LakeOfRageNoop2Scene ; unusable
 
 	def_callbacks
+	callback MAPCALLBACK_NEWMAP, .DiveMap
 	callback MAPCALLBACK_NEWMAP, LakeOfRageFlypointCallback
 	callback MAPCALLBACK_OBJECTS, LakeOfRageWesleyCallback
+
+
+.DiveMap:
+	divemap LAKE_UNDERWATER, 0, 0
+	return
 
 LakeOfRageNoop1Scene:
 	end
