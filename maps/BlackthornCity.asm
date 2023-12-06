@@ -335,8 +335,7 @@ BlackthornGymSignText:
 	done
 
 MoveDeletersHouseSignText:
-	text "MOVE DELETER'S"
-	line "HOUSE"
+	text "MOVES FAN CLUB"
 	done
 
 DragonDensSignText:

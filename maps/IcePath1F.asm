@@ -13,7 +13,7 @@ IcePath1F_MapScripts:
 	callback MAPCALLBACK_OBJECTS, ArticunoCallback
 
 .DiveMap1:
-	divemap LAKE_UNDERWATER, 0, 0
+	divemap UNDERWATER_LABI, 0, 0
 	return
 
 ArticunoCallback:

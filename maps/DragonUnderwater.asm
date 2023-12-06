@@ -17,7 +17,7 @@ DragonUnderwater_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  27,  9, LAKE_UNDERWATER, 3
+	warp_event  27,  9, UNDERWATER_LABI, 27
 
 	def_coord_events
 

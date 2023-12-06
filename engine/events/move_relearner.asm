@@ -11,8 +11,17 @@
 MoveRelearner:
 	ld a, MOVERELEARNERTEXT_INTRO
 	call PrintMoveRelearnerText
+	farcall PlaceMoneyTopRight
 	call YesNoBox
 	jp c, .cancel
+	ld hl, .cost_to_relearn
+	ld de, hMoneyTemp
+	ld bc, 3
+	call CopyBytes
+	ld bc, hMoneyTemp
+	ld de, wMoney
+	farcall CompareMoney
+	jp c, .not_enough_money
 	ld a, MOVERELEARNERTEXT_WHICHMON
 	call PrintMoveRelearnerText
 	call JoyWaitAorB
@@ -49,8 +58,17 @@ MoveRelearner:
 	ld a, b
 	and a
 	jr z, .skip_learn
+	ld hl, .cost_to_relearn
+	ld de, hMoneyTemp
+	ld bc, 3
+	call CopyBytes
+	ld bc, hMoneyTemp
+	ld de, wMoney
+	farcall TakeMoney
+	ld de, SFX_TRANSACTION
+	call PlaySFX
+	call WaitSFX
 .skip_learn
-    takeitem BRICK_PIECE
 	call CloseSubmenu
 	call SpeechTextbox
 .cancel
@@ -73,6 +91,9 @@ MoveRelearner:
 	ld a, MOVERELEARNERTEXT_NOMOVESTOLEARN
 	call PrintMoveRelearnerText
 	ret
+
+.cost_to_relearn
+	dt 1000
 
 GetRelearnableMoves:
 	; Get moves relearnable by CurPartyMon
@@ -226,7 +247,7 @@ ChooseMoveToLearn:
 
 .MenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 1, 1, SCREEN_WIDTH - 1, 11
+	menu_coords 1, 1, SCREEN_WIDTH - 10, 11
 	dw .MenuData
 	db 1 ; default option
 
@@ -253,9 +274,8 @@ ChooseMoveToLearn:
 	ld a, " "
 	call ByteFill
 	ld a, [wMenuSelection]
-	inc a
+	cp $ff
 	ret z
-	dec a
 	push de
 	dec a
 	ld bc, MOVE_LENGTH
@@ -263,42 +283,19 @@ ChooseMoveToLearn:
 	call AddNTimes
 	ld a, BANK(Moves)
 	call GetFarByte
-	ld [wTempSpecies], a
-	; get move type
-	; 6 characters
-	ld c, a ;character width loaded into c
-	add a ;double a (two characters)
-	add c ;add c to a (three charaters)
-	add a ;double a (six characters)
-	add c ;add c to a (seven charaters, needed for blank space at the end)
-	ld c, a
-	ld b, 0
-	ld hl, .Types
-	add hl, bc
-	ld d, h
-	ld e, l
-	ld hl, wStringBuffer1
-	ld bc, 7
-	call PlaceString
+	ld [wd265], a
 
-	ld hl, wStringBuffer1 + 7
-	ld [hl], "P"
-	inc hl
-	ld [hl], "P"
-	inc hl
-	ld [hl], ":"
 	ld a, [wMenuSelection]
 	dec a
 	ld bc, MOVE_LENGTH
-	ld hl, Moves + MOVE_PP
+	ld hl, Moves 
 	call AddNTimes
 	ld a, BANK(Moves)
 	call GetFarByte
-	ld [wCurCoordEvent], a ;Changed from wEngineBuffer1
+	ld [wCurCoordEvent], a
 	ld hl, wStringBuffer1 + 10
-	ld de, wCurCoordEvent ;Changed from wEngineBuffer1
+	ld de, wCurCoordEvent
 	ld bc, $102
-	call PrintNum
 	ld hl, wStringBuffer1 + 12
 	ld [hl], "@"
 
@@ -312,34 +309,35 @@ ChooseMoveToLearn:
 	ret
 
 .Types
-	db "NORMAL@"
-	db "FIGHT@@"
-	db "FLYING@"
-	db "POISON@"
-	db "GROUND@"
-	db "ROCK@@@"
-	db "BIRD@@@"
-	db "BUG@@@@"
-	db "GHOST@@"
-	db "STEEL@@"
-	db "UNUSED@"
-	db "UNUSED@"
-	db "UNUSED@"
-	db "UNUSED@"
-	db "UNUSED@"
-	db "UNUSED@"
-	db "UNUSED@"
-	db "UNUSED@"
-	db "UNUSED@"
-	db "CURSE@@"
-	db "FIRE@@@"
-	db "WATER@@"
-	db "GRASS@@"
-	db "ELECTR@"
-	db "PSYCH@@"
-	db "ICE@@@@"
-	db "DRAGON@"
-	db "DARK@@@"
+	db "@@@@@"
+	db "@@@@@"
+	db "@@@@@"
+	db "@@@@@"
+	db "@@@@@"
+	db "@@@@@"
+	db "@@@@@"
+	db "@@@@@"
+	db "@@@@@"
+	db "@@@@@"
+
+    db "@@@@@"
+	db "@@@@@"
+	db "@@@@@"
+	db "@@@@@"
+	db "@@@@@"
+	db "@@@@@"
+	db "@@@@@"
+	db "@@@@@"
+	db "@@@@@"
+
+	db "@@@@@"
+	db "@@@@@"
+	db "@@@@@"
+	db "@@@@@"
+	db "@@@@@"
+	db "@@@@@"
+	db "@@@@@"
+	db "@@@@@"
 
 .PrintMoveDesc
 	push de
@@ -385,10 +383,11 @@ PrintMoveRelearnerText:
 	para "learned for each"
 	line "#MON."
 
-	para "I can share that"
-	line "knowledge with"
+	para "For just ¥1000, I"
+	line "can share that"
 
-	para "you if you want."
+	para "knowledge with"
+	line "you. How about it?"
 	done
 .WhichMon
 	text "Excellent! Which"
@@ -414,12 +413,12 @@ PrintMoveRelearnerText:
 	line "a #MON!"
 	done
 .NotEnoughMoney
-	text "Come speak to me"
-	line "when you need it!"
+	text "You don't have"
+	line "enough money."
 	done
 .NoMovesToLearn
 	text "This #MON can't"
 	line "learn any moves"
 	cont "from me."
 	done
-    
+	

@@ -68,6 +68,8 @@ DoPlayerMovement::
 	ret c
 	call .TryDive
 	ret c
+	call .CheckWarp
+	ret c
 	jr .NotMoving
 
 .Surf:
