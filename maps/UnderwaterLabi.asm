@@ -8,7 +8,7 @@ UnderwaterLabi_MapScripts:
     callback MAPCALLBACK_NEWMAP, .DiveMap
 
 .DiveMap:
-	divemap CHERRYGROVE_CITY, 0, 0
+	divemap ICE_PATH_1F, 0, 0
 	return
 
 
@@ -17,7 +17,7 @@ UnderwaterLabi_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-    warp_event  31,  3, RUIN_UNDERWATER, 1 ;1ST ROOM
+	warp_event  31,  3, RUIN_UNDERWATER, 1 ;1ST ROOM
 	warp_event  29,  11, UNDERWATER_LABI, 5
 	warp_event  25,  11, UNDERWATER_LABI, 13
 ;2ND ROOM
@@ -27,7 +27,7 @@ UnderwaterLabi_MapEvents:
 	warp_event  49,  7, UNDERWATER_LABI, 15
 	warp_event  55,  7, UNDERWATER_LABI, 12
 ;3RD ROOM
-	warp_event  9,  31, UNDERWATER_LABI, 22
+	warp_event 21, 31, UNDERWATER_LABI, 22
 	warp_event  23,  27, UNDERWATER_LABI, 4  ;10
 	warp_event  37,  19, UNDERWATER_LABI, 21
 	warp_event  51,  15, UNDERWATER_LABI, 8
@@ -53,6 +53,7 @@ UnderwaterLabi_MapEvents:
 	warp_event  7,  9, UNDERWATER_LABI, 26
 ;FOSSIL ROOM
 	warp_event  5,  41, UNDERWATER_LABI, 25
+	warp_event  3,  35, DRAGON_UNDERWATER, 1 
 
 	def_coord_events
 
