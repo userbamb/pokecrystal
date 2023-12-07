@@ -1,5 +1,5 @@
     object_const_def
-	CERULEAN_CAVE_B1F_MEWTWO
+	const CERULEANCAVEB1F_MEWTWO
 
 CeruleanCaveB1F_MapScripts:
 	def_scene_scripts
@@ -10,11 +10,11 @@ CeruleanCaveB1F_MapScripts:
 CeruleanMewtwoCallback:
 	checkevent EVENT_FOUGHT_MEWTWO
 	iftrue .NoAppear
-	appear CERULEAN_CAVE_B1F_MEWTWO 
+	appear CERULEANCAVEB1F_MEWTWO 
 	endcallback
 
 .NoAppear:
-	disappear CERULEAN_CAVE_B1F_MEWTWO 
+	disappear CERULEANCAVEB1F_MEWTWO 
 	endcallback
 
 Mewtwo:
@@ -28,7 +28,7 @@ Mewtwo:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
 	loadwildmon MEWTWO, 80
 	startbattle
-	disappear CERULEAN_CAVE_B1F_MEWTWO
+	disappear CERULEANCAVEB1F_MEWTWO
 	reloadmapafterbattle
 	end
 

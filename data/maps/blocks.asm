@@ -1041,9 +1041,6 @@ CeruleanCave2F_Blocks:
 CeruleanCaveB1F_Blocks:
     INCBIN "maps/CeruleanCaveB1F.blk"
 
-CeruleanMewtwo_Blocks:
-    INCBIN "maps/CeruleanMewtwo.blk"
-
 ViridianForest_Blocks:
     INCBIN "maps/ViridianForest.blk"
 

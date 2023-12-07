@@ -117,6 +117,6 @@ ZapdosSpriteGFX::                 INCBIN "gfx/icons/zapdos.2bpp"
 MortresSpriteGFX::                 INCBIN "gfx/icons/moltres.2bpp"
 ArticunoSpriteGFX::                 INCBIN "gfx/icons/articuno.2bpp"
 FossilSpriteGFX::                 INCBIN "gfx/sprites/fossil.2bpp"
-MewtwoSpriteGFX::                 INCBIN "gfx/sprites/mewtwo.2bpp"
+MewtwoSpriteGFX::                 INCBIN "gfx/icons/mewtwo.2bpp"
 
 

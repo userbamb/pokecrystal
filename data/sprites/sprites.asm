@@ -117,4 +117,5 @@ OverworldSprites:
 	overworld_sprite MortresSpriteGFX, 8, STANDING_SPRITE, PAL_OW_RED
 	overworld_sprite ArticunoSpriteGFX, 8, STANDING_SPRITE, PAL_OW_RED
 	overworld_sprite FossilSpriteGFX, 4, STILL_SPRITE, PAL_OW_RED
+	overworld_sprite MewtwoSpriteGFX, 8, STANDING_SPRITE, PAL_OW_RED
 	assert_table_length NUM_OVERWORLD_SPRITES

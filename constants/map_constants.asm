@@ -515,7 +515,6 @@ ENDM
 	map_const CERULEAN_CAVE_1F,                            20, 14 ;  1
 	map_const CERULEAN_CAVE_2F,                            20, 14 ;  2
 	map_const CERULEAN_CAVE_B1F,                           20, 14 ;  3
-	map_const CERULEAN_MEWTWO,                              5,  5 ;  4
 	endgroup
 
     newgroup VIRIDIANFOR                                          ;29
