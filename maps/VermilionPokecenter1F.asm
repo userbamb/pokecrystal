@@ -3,6 +3,7 @@
 	const VERMILIONPOKECENTER1F_FISHING_GURU
 	const VERMILIONPOKECENTER1F_SAILOR
 	const VERMILIONPOKECENTER1F_BUG_CATCHER
+	const VERMILIONPOKECENTER1F_SQUIRTLE
 
 VermilionPokecenter1F_MapScripts:
 	def_scene_scripts
@@ -32,9 +33,11 @@ VermilionPokecenter1FFishingGuruScript:
 
 .GiveSquirtle:
 	writetext GiveSquirtleText
-	waitbutton
+	yesorno
+	iffalse .saidno
 	readvar VAR_PARTYCOUNT
 	ifequal PARTY_LENGTH, .PartyFull
+	disappear VERMILIONPOKECENTER1F_SQUIRTLE
 	writetext PlayerReceivedSquirtleText
 	playsound SFX_CAUGHT_MON
 	waitsfx
@@ -42,6 +45,12 @@ VermilionPokecenter1FFishingGuruScript:
 	special GiveSquirtle
 	setevent EVENT_GOT_SQUIRTLE
 	writetext VermilionPokecenter1FFishingGuruText_FoughtSnorlax
+	waitbutton
+	closetext
+	end
+
+.saidno:
+	writetext SquirtlePartyFullText
 	waitbutton
 	closetext
 	end
@@ -102,6 +111,10 @@ PlayerReceivedSquirtleText:
 	line "SQUIRTLE!"
 	done
 
+VermilionPokecenter1FSquirtleText:
+    text "SQUIRTLE: Squir!"
+	done
+	
 VermilionPokecenter1FSailorText:
 	text "The FAST SHIP is a"
 	line "great place to"
@@ -136,3 +149,4 @@ VermilionPokecenter1F_MapEvents:
 	object_event  7,  2, SPRITE_FISHING_GURU, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, VermilionPokecenter1FFishingGuruScript, -1
 	object_event  6,  5, SPRITE_SAILOR, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, VermilionPokecenter1FSailorScript, -1
 	object_event  1,  5, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, VermilionPokecenter1FBugCatcherScript, -1
+	object_event  7,  1, SPRITE_SQUIRTLE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, VermilionPokecenter1FSquirtleText, EVENT_GOT_SQUIRTLE

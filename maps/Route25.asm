@@ -10,7 +10,6 @@
 	const ROUTE25_SUPER_NERD
 	const ROUTE25_COOLTRAINER_M2
 	const ROUTE25_POKE_BALL
-	const ROUTE25_YOUNGSTER4
 
 Route25_MapScripts:
 	def_scene_scripts
@@ -24,75 +23,6 @@ Route25Noop1Scene:
 
 Route25Noop2Scene:
 	end
-
-BadTrainerScript:
-	opentext
-	checkevent EVENT_GOT_CHARMANDER
-	iffalse .GiveCharmander
-	writetext PorcodioText
-	waitbutton
-	closetext
-	end 
-	
-.GiveCharmander:
-	writetext GiveCharmanderBad1Text
-	waitbutton
-	showemote EMOTE_SHOCK, ROUTE25_YOUNGSTER4, 15
-	faceplayer
-	writetext GiveCharmanderBad2Text
-	waitbutton
-	readvar VAR_PARTYCOUNT
-	ifequal PARTY_LENGTH, .PartyFull
-	writetext PlayerReceivedCharmanderText
-	playsound SFX_CAUGHT_MON
-	waitsfx
-	givepoke CHARMANDER, 5
-	special GiveCharmander
-	setevent EVENT_GOT_CHARMANDER
-	writetext PorcodioText
-	waitbutton
-	closetext
-	end
-
-.PartyFull:
-	writetext CharmanderPartyFullText
-	waitbutton
-	closetext
-	end
-
-GiveCharmanderBad1Text:
-    text "(What are you"
-	line "doing, you use-"
-    cont  "less #MON…)"
-    done
-
-GiveCharmanderBad2Text:
-    text "And you are?"
-	line "…Nevermind, I"
-
-	para "don't wanna know."
-	line "Here, take this,"
-
-	para "I can't train a"
-	line "CHARMANDER that"
-
-	para "is so weak…"
-	done
-
-PlayerReceivedCharmanderText:
-	text "<PLAYER> received"
-	line "CHARMANDER!"
-	done
-
-PorcodioText:
-    text "Go away."
-	done
-
-
-CharmanderPartyFullText:
-    text "Of course you"
-	line "don't want it."
-	done
 
 Route25MistyDate1Script:
 	showemote EMOTE_HEART, ROUTE25_MISTY, 15
@@ -512,7 +442,6 @@ Route25_MapEvents:
 	bg_event  4,  5, BGEVENT_ITEM, Route25HiddenPotion
 
 	def_object_events
-	object_event  3,  5, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BadTrainerScript, -1
 	object_event 46,  9, SPRITE_MISTY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ROUTE_25_MISTY_BOYFRIEND
 	object_event 46, 10, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ROUTE_25_MISTY_BOYFRIEND
 	object_event 12,  8, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSchoolboyDudley, -1

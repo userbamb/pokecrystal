@@ -3,6 +3,7 @@
     const VIRIDIANFOREST_MON1
     const VIRIDIANFOREST_MON2
     const VIRIDIANFOREST_MON3
+	const VIRIDIANFOREST_MON4
 
 ViridianForestHouse_MapScripts:
 	def_scene_scripts
@@ -21,9 +22,11 @@ ViridianForestLadyScript:
 
 .GiveBulbasaur:
 	writetext LadyTakeBulbasaurText
-	waitbutton
+	yesorno
+	iffalse .saidno
 	readvar VAR_PARTYCOUNT
 	ifequal PARTY_LENGTH, .PartyFull
+	disappear VIRIDIANFOREST_MON4
 	writetext PlayerReceivedBulbasaurText
 	playsound SFX_CAUGHT_MON
 	waitsfx
@@ -31,6 +34,12 @@ ViridianForestLadyScript:
 	special GiveBulbasaur
 	setevent EVENT_GOT_BULBASAUR
 	writetext LadyBasicText
+	waitbutton
+	closetext
+	end
+
+.saidno:
+	writetext ViridianForestnobText
 	waitbutton
 	closetext
 	end
@@ -66,14 +75,26 @@ ViridianForestMon3Script:
 	closetext
 	end
 
+ViridianForestMon4Script:
+	opentext
+	writetext ViridianForestMon4Text
+	cry BULBASAUR
+	waitbutton
+	closetext
+	end
+
 LadyTakeBulbasaurText:
-    text "How did you get"
-	line "here?!"
+    text "MARGI: Hi! How"
+	line "did you get"
+	cont "here?!"
 
-	para "…I built this hou-"
+	para "I built this hou-"
 	line "se to take care of"
-	cont "the #MON…"
-
+	cont "POKEMONS in need…"
+	
+	para "You seem like a"
+	line "good trainer!"
+	
 	para "Would you help me"
 	line "me with this one?"
 
@@ -90,8 +111,13 @@ LadyBasicText:
 	done
 
 ViridianForestPartyFullText:
-    text "Please! It needs"
-	line "your help!"
+    text "Your party is"
+	line "full!"
+	done
+
+ViridianForestnobText:
+    text "I didn't want to"
+	line "bother you!"
 	done
 
 ViridianForestMon1Text:
@@ -99,11 +125,15 @@ ViridianForestMon1Text:
 	done
 
 ViridianForestMon2Text:
-    text "BUTTERFREE: Free!"
+    text "BUTTERFREE: Free?!"
 	done 
 	
 ViridianForestMon3Text:
-    text "PIKACHU: Pika!"
+    text "PIKACHU: Pika-pi!"
+	done
+
+ViridianForestMon4Text:
+    text "BULBASAUR: SAUR!"
 	done
 
 ViridianForestHouse_MapEvents:
@@ -120,5 +150,6 @@ ViridianForestHouse_MapEvents:
 	def_object_events
 	object_event  0,  4, SPRITE_DAISY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianForestLadyScript, -1
 	object_event  8,  5, SPRITE_ODDISH, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ViridianForestMon1Script, -1
-	object_event  4,  2, SPRITE_BUTTERFREE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ViridianForestMon2Script, -1
-	object_event  2,  5, SPRITE_PIKACHU, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianForestMon3Script, -1
+	object_event  4,  2, SPRITE_BUTTERFREE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ViridianForestMon2Script, -1
+	object_event  2,  5, SPRITE_PIKACHU, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, ViridianForestMon3Script, -1
+	object_event  1,  4, SPRITE_BULBASAUR, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_SCRIPT, 0, ViridianForestMon4Script, EVENT_GOT_BULBASAUR
