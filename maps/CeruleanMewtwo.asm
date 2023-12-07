@@ -14,7 +14,7 @@ CeruleanMewtwoCallback:
 	endcallback
 
 .NoAppear:
-	disappear CERULEANMEWTWO_MEWTWO
+	disappear CERULEANMEWTWO_MEWTWO 
 	endcallback
 
 Mewtwo:
