@@ -21,7 +21,6 @@ CeladonMansionManager:
 	end
     
 .Charmander:
-	opentext
 	checkevent EVENT_GOT_CHARMANDER
 	iffalse .GiveCharmander
 	writetext CeladonMansionManagerText
@@ -30,14 +29,11 @@ CeladonMansionManager:
 	end 
 	
 .GiveCharmander:
-
-
     writetext GiveCharmanderBad1Text
 	waitbutton
 	cry CHARMANDER
-	showemote EMOTE_HAPPY, CELADONMANSION1F_CHAR, 15
+	showemote EMOTE_HAPPY, CELADONMANSION1F_CHAR, 25
 	applymovement CELADONMANSION1F_CHAR, Charmovement
-
 	showemote EMOTE_QUESTION, CELADONMANSION1F_GRANNY, 15
 	applymovement CELADONMANSION1F_GRANNY, Grannymovement
 	writetext GiveCharmanderBad2Text
@@ -55,6 +51,7 @@ CeladonMansionManager:
 	givepoke CHARMANDER, 5
 	special GiveCharmander
 	setevent EVENT_GOT_CHARMANDER
+	writetext Finalchartext
 	waitbutton
 	closetext
 	end
@@ -62,6 +59,7 @@ CeladonMansionManager:
 .saidno:
 	applymovement CELADONMANSION1F_GRANNY, Grannymovement
 	writetext CharmanderPartyno
+	cry CHARMANDER
 	waitbutton
 	closetext
 	end
@@ -98,8 +96,8 @@ Grannymovement:
 
 Charmovement:
 	set_sliding
-	jump_step UP
-	jump_step DOWN
+	fast_jump_step UP
+	fast_jump_step DOWN
 	remove_sliding
 	step_end
 
@@ -116,6 +114,11 @@ CharmanderPartyno:
 CharmanderPartyFullText:
     text "Your party is"
 	line "full, <PLAYER>!"
+	done
+
+Finalchartext:
+    text "You both take ca-"
+	line "re!"
 	done
 
 CeladonMansion1FMeowth:

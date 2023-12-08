@@ -315,8 +315,8 @@ SECTION "Map Blocks 2", ROMX
 Route14_Blocks:
 	INCBIN "maps/Route14.blk"
 
-BetaSproutTower8_Blocks: ; unreferenced
-	INCBIN "maps/unused/BetaSproutTower8.blk"
+CinnabarPokecenter1F_Blocks:
+	INCBIN "maps/CinnabarPokecenter.blk"
 
 OlivineMart_Blocks:
 EcruteakMart_Blocks:
@@ -343,7 +343,6 @@ OlivinePokecenter1F_Blocks:
 MahoganyPokecenter1F_Blocks:
 EcruteakPokecenter1F_Blocks:
 BlackthornPokecenter1F_Blocks:
-CinnabarPokecenter1F_Blocks:
 CeruleanPokecenter1F_Blocks:
 Route10Pokecenter1F_Blocks:
 AzaleaPokecenter1F_Blocks:

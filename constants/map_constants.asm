@@ -181,7 +181,7 @@ ENDM
 	endgroup
 
 	newgroup CINNABAR                                             ;  6
-	map_const CINNABAR_POKECENTER_1F,                       5,  4 ;  1
+	map_const CINNABAR_POKECENTER_1F,                          8,  4 ;  1
 	map_const CINNABAR_POKECENTER_2F_BETA,                  8,  4 ;  2
 	map_const ROUTE_19_FUCHSIA_GATE,                        5,  4 ;  3
 	map_const SEAFOAM_GYM,                                  5,  4 ;  4

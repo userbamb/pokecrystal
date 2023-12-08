@@ -82,7 +82,7 @@ Route10South_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 11,  5, BGEVENT_READ, Route10Sign
+	bg_event 10,  5, BGEVENT_READ, Route10Sign
 
 	def_object_events
 	object_event 23,  5, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerHikerJim, -1
