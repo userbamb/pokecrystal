@@ -5,7 +5,11 @@ CinnabarUnderwater_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
-
+	callback MAPCALLBACK_NEWMAP, .DiveMap
+	
+.DiveMap:
+	divemap CINNABAR_ISLAND, 0, 0
+	return
 
 CinnabarUnderwater_MapEvents:
 	db 0, 0 ; filler

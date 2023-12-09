@@ -5,7 +5,12 @@ CinnabarIsland_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+	callback MAPCALLBACK_NEWMAP, .DiveMap
 	callback MAPCALLBACK_NEWMAP, CinnabarIslandFlypointCallback
+
+.DiveMap:
+	divemap CINNABAR_UNDERWATER, 0, 0
+	return
 
 CinnabarIslandFlypointCallback:
 	setflag ENGINE_FLYPOINT_CINNABAR
