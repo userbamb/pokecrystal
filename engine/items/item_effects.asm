@@ -148,7 +148,7 @@ ItemEffects:
 	dw NoEffect            ; STAR_PIECE
 	dw BasementKeyEffect   ; BASEMENT_KEY
 	dw NoEffect            ; PASS
-	dw RoofKeyEffect       ; ROOF_KEY
+	dw NoEffect       ; ROOF_KEY
 	dw SciainiEffect           ; ITEM_88 TRY SHINY
 	dw EvoStoneEffect            ; MIST STONE
 	dw NoEffect            ; CHARCOAL
@@ -2580,10 +2580,6 @@ BasementKeyEffect:
 
 HubKeyEffect:
 	farcall _HubKey
-	ret
-
-RoofKeyEffect:
-	farcall _RoofKey
 	ret
 
 SacredAshEffect:

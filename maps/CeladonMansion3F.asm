@@ -267,7 +267,6 @@ CeladonMansion3F_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  0,  0, BGEVENT_READ, RoofDoorScript
 	bg_event  5,  8, BGEVENT_UP, CeladonMansion3FDevRoomSign
 	bg_event  4,  3, BGEVENT_UP, CeladonMansion3FDrawing
 	bg_event  1,  6, BGEVENT_UP, CeladonMansion3FGameProgram
