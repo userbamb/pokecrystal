@@ -787,7 +787,8 @@ PassDesc:
 	next "MAGNET TRAIN.@"
 
 RoofKeyDesc:
-	db   "It reads: ROOF.@"
+	db   "An old CERULEAN"
+	next "CITY MAP.@"
 
 TeruSama10Desc:
 	db   "A strange, shiny"

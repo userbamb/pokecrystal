@@ -145,14 +145,6 @@ GameFreakGameDesignerPauseForDiplomaText:
 	text "…"
 	done
 
-RoofDoorsLockedText:
-    text "The roof is not"
-	line "accessible."
-	done
-
-RoofKeyOpenedDoorText:
-    text "The door opened!"
-	done
 
 GameFreakGameDesignerAfterDiplomaText:
 	text "The GRAPHIC ARTIST"

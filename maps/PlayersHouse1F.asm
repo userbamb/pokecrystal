@@ -83,7 +83,7 @@ MeetMomScript:
 	givepoke FERALIGATR, 50 ; can use Surf and Dive
 	giveitem HM_SURF
 	giveitem HM_DIVE
-	giveitem HELIX_FOSSIL
+	giveitem ROOF_KEY
 	giveitem DOME_FOSSIL
 	giveitem OLD_AMBER
 	setflag ENGINE_FOGBADGE ; allows Surf
@@ -397,7 +397,7 @@ PlayersHouse1F_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  6,  7, PEWTER_LAB, 1
+	warp_event  6,  7, CERULEAN_GYM, 1
 	warp_event  7,  7, NEW_BARK_TOWN, 2
 	warp_event  9,  0, PLAYERS_HOUSE_2F, 1
 

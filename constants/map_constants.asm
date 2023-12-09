@@ -530,6 +530,8 @@ ENDM
 	map_const LAKE_UNDERWATER,                                20, 18 ;  1
 	map_const RUIN_UNDERWATER,                                10, 18 ;  1
 	map_const UNDERWATER_LABI,                                30, 30 ;  1
+	map_const CINNABAR_UNDERWATER,                                17, 30 ;  1
+	map_const CINNABAR_1F,                                18, 26 ;  1
 	endgroup
 
 DEF NUM_MAP_GROUPS EQU const_value ; 29

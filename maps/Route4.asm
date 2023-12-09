@@ -9,6 +9,56 @@ Route4_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+	callback MAPCALLBACK_TILES, Route4callback
+
+Route4callback:
+	checkevent EVENT_USED_ROOF_KEY
+	iffalse .LockCave
+	endcallback
+
+.LockCave:
+	changeblock 38, 2, $57 ; locked door
+	endcallback
+
+RoofDoorScript::
+	opentext
+	checkevent EVENT_USED_ROOF_KEY
+	iftrue .Open
+	checkitem ROOF_KEY
+	iftrue .Unlock
+	writetext TheDoorsLockedText
+	waitbutton
+	closetext
+	end
+
+.Unlock:
+	playsound SFX_STRENGTH
+	earthquake 30
+	pause 20
+	showemote EMOTE_SHOCK, PLAYER, 15
+	writetext KeyOpenedDoorText
+	waitbutton
+	closetext
+	changeblock 38, 2, $06 ; unlocked door
+	reloadmappart
+	closetext
+	setevent EVENT_USED_ROOF_KEY
+	end
+
+.Open:
+	closetext
+	end
+
+TheDoorsLockedText:
+	text "There' s a small"
+	line "indent in the wall…"
+	done
+
+KeyOpenedDoorText:
+	text "The ground shook."
+	line "Discovered a small"
+	cont "cavern!"
+	done
 
 Route4SupernerdScript:
     jumptextfaceplayer SuperNerd4ScriptText

@@ -30,14 +30,14 @@ Route2_Blocks:
 ElmsHouse_Blocks:
 	INCBIN "maps/ElmsHouse.blk"
 
-BetaSproutTower1_Blocks: ; unreferenced
-	INCBIN "maps/unused/BetaSproutTower1.blk"
+Cinnabar1F_Blocks:
+	INCBIN "maps/Cinnabar1F.blk"
 
 Route11_Blocks:
 	INCBIN "maps/Route11.blk"
 
-BetaSproutTower5_Blocks: ; unreferenced
-	INCBIN "maps/unused/BetaSproutTower5.blk"
+CinnabarUnderwater_Blocks: 
+	INCBIN "maps/CinnabarUnderwater.blk"
 
 Route15_Blocks:
 	INCBIN "maps/Route15.blk"

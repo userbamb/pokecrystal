@@ -134,7 +134,7 @@ ItemNames::
 	li "STAR PIECE"
 	li "BASEMENT KEY"
 	li "PASS"
-	li "ROOF KEYS"
+	li "ANCIENT MAP"
 	li "SHINY ORB"
 	li "MIST STONE"
 	li "CHARCOAL"

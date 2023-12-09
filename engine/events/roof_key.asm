@@ -1,11 +1,11 @@
 _RoofKey:
 ; Are we even in the right map to use this?
 	ld a, [wMapGroup]
-	cp GROUP_CELADON_MANSION_3F
+	cp GROUP_ROUTE_4
 	jr nz, .nope
 
 	ld a, [wMapNumber]
-	cp MAP_CELADON_MANSION_3F
+	cp MAP_ROUTE_4
 	jr nz, .nope
 ; Are we on the tile in front of the door?
 	call GetFacingTileCoord

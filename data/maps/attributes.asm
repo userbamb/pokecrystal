@@ -714,3 +714,6 @@ ENDM
 	map_attributes LakeUnderwater, LAKE_UNDERWATER, $09, 0
 	map_attributes RuinUnderwater, RUIN_UNDERWATER, $09, 0
 	map_attributes UnderwaterLabi, UNDERWATER_LABI, $09, 0
+	map_attributes CinnabarUnderwater, CINNABAR_UNDERWATER, $09, 0
+	map_attributes Cinnabar1F, CINNABAR_1F, $00, 0
+
