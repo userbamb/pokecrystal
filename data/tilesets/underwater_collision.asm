@@ -46,3 +46,40 @@
 	tilecoll WALL, WALL, WALL, WALL ; 2d
 	tilecoll WALL, WALL, WALL, WALL ; 2e
 	tilecoll WALL, WALL, WALL, WALL ; 2f
+	tilecoll FLOOR, WALL, FLOOR, WALL ; 30
+	tilecoll WALL, WALL, WALL, WALL ; 31
+	tilecoll WALL, FLOOR, WALL, FLOOR ; 32
+	tilecoll WALL, WALL, WALL, WALL ; 33
+	tilecoll , , ,  ; 34
+	tilecoll , , ,  ; 35
+	tilecoll , , ,  ; 36
+	tilecoll , , ,  ; 37
+	tilecoll , , ,  ; 38
+	tilecoll , , ,  ; 39
+	tilecoll , , ,  ; 3a
+	tilecoll , , ,  ; 3b
+	tilecoll , , ,  ; 3c
+	tilecoll , , ,  ; 3d
+	tilecoll , , ,  ; 3e
+	tilecoll , , ,  ; 3f
+	tilecoll , , ,  ; 40
+	tilecoll , , ,  ; 41
+	tilecoll , , ,  ; 42
+	tilecoll , , ,  ; 43
+	tilecoll , , ,  ; 44
+	tilecoll , , ,  ; 45
+	tilecoll , , ,  ; 46
+	tilecoll , , ,  ; 47
+	tilecoll , , ,  ; 48
+	tilecoll , , ,  ; 49
+	tilecoll , , ,  ; 4a
+	tilecoll , , ,  ; 4b
+	tilecoll , , ,  ; 4c
+	tilecoll , , ,  ; 4d
+	tilecoll , , ,  ; 4e
+	tilecoll , , ,  ; 4f
+	tilecoll , , ,  ; 50
+	tilecoll , , ,  ; 51
+	tilecoll , , ,  ; 52
+	tilecoll , , ,  ; 53
+	tilecoll , , ,  ; 54

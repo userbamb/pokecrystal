@@ -39,7 +39,7 @@ CinnabarPokecenter1F_MapEvents:
 	warp_event  3,  7, CINNABAR_ISLAND, 1
 	warp_event  4,  7, CINNABAR_ISLAND, 1
 	warp_event  0,  7, POKECENTER_2F, 1
-	warp_event  13,  2, CINNABAR_ISLAND, 2
+	warp_event 14,  0, CINNABAR_ISLAND, 2
 
 
 	def_coord_events

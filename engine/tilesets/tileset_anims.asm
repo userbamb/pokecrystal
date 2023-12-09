@@ -37,7 +37,6 @@ _AnimateTileset::
 
 Tileset0Anim:
 TilesetJohtoModernAnim:
-TilesetKantoAnim:
 TilesetKantoModernAnim:
 	dw vTiles2 tile $14, AnimateWaterTile
     dw NULL,  WaitTileAnimation
@@ -51,6 +50,19 @@ TilesetKantoModernAnim:
 	dw NULL,  StandingTileFrame8
 	dw NULL,  DoneTileAnimation
 
+TilesetKantoAnim:
+	dw vTiles2 tile $14, AnimateWaterTile
+	dw vTiles2 tile $0a, AnimateDeepWaterTile
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
+	dw NULL,  AnimateWaterPalette
+	dw NULL,  WaitTileAnimation
+	dw NULL,  AnimateFlowerTile
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
+	dw NULL,  StandingTileFrame8
+	dw NULL,  DoneTileAnimation
+	
 TilesetParkAnim:
 	dw vTiles2 tile $14, AnimateWaterTile
 	dw NULL,  WaitTileAnimation

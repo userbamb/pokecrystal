@@ -102,9 +102,9 @@ RockItemEncounter:
 	ret
 	
 .RockItems:
-	db 2, HELIX_FOSSIL
-	db 2, DOME_FOSSIL
-	db 2, OLD_AMBER
+	db 2, NUGGET
+	db 2, METAL_COAT
+	db 2, NUGGET
 	db 6, MAX_REVIVE
 	db 12, ETHER
 	db 18, METAL_COAT
