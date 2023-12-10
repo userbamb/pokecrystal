@@ -1,5 +1,9 @@
     object_const_def
-	
+	const UNDERWATERLABI_DOME
+	const UNDERWATERLABI_HELIX
+	const UNDERWATER_POKE_BALL_1
+	const UNDERWATER_POKE_BALL_2
+	const UNDERWATER_POKE_BALL_3
 
 UnderwaterLabi_MapScripts:
 	def_scene_scripts
@@ -11,6 +15,92 @@ UnderwaterLabi_MapScripts:
 	divemap ICE_PATH_1F, 0, 0
 	return
 
+Underwateritem1:
+	itemball PEARL
+
+Underwateritem2:
+	itemball REVIVE
+
+Underwateritem3:
+	itemball COOL_CHARM
+
+DomeScript:
+; This whole script is written out rather than as an itemball
+; because it's left over from the GS event.
+	giveitem DOME_FOSSIL
+	iffalse .BagFull
+	disappear UNDERWATERLABI_DOME
+	opentext
+	getitemname STRING_BUFFER_3, DOME_FOSSIL
+	writetext Text_FoundDome
+	playsound SFX_ITEM
+	waitsfx
+	itemnotify
+	closetext
+	end
+
+.BagFull:
+	opentext
+	getitemname STRING_BUFFER_3, DOME_FOSSIL
+	writetext Text_Found
+	promptbutton
+	writetext Text_NoRoomFor
+	waitbutton
+	closetext
+	end
+
+HelixScript:
+; This whole script is written out rather than as an itemball
+; because it's left over from the GS event.
+	giveitem HELIX_FOSSIL
+	iffalse .BagFull
+	disappear UNDERWATERLABI_HELIX
+	opentext
+	getitemname STRING_BUFFER_3, HELIX_FOSSIL
+	writetext Text_Found
+	playsound SFX_ITEM
+	waitsfx
+	itemnotify
+	closetext
+	end
+
+.BagFull:
+	opentext
+	getitemname STRING_BUFFER_3, HELIX_FOSSIL
+	writetext Text_Found
+	promptbutton
+	writetext Text_NoRoomFor
+	waitbutton
+	closetext
+	end
+
+Text_Found:
+	text "<PLAYER> found"
+	line "@"
+	text_ram wStringBuffer3
+	text "!"
+	done
+
+Text_NoRoomFor:
+	text "But <PLAYER> can't"
+	line "carry any more"
+	cont "items."
+	done
+
+HiddenRareCandy1:
+ 	hiddenitem RARE_CANDY, EVENT_GOT_UNDERWATER_RARECANDY1
+
+HiddenRareCandy2:
+ 	hiddenitem RARE_CANDY, EVENT_GOT_UNDERWATER_RARECANDY2
+
+HiddenNugget1:
+ 	hiddenitem NUGGET, EVENT_GOT_UNDERWATER_NUGGET1
+
+HiddenNugget2:
+ 	hiddenitem NUGGET, EVENT_GOT_UNDERWATER_NUGGET2
+
+HiddenBigpearl1:
+ 	hiddenitem BIG_PEARL, EVENT_GOT_UNDERWATER_BIG_PEARL1
 
 
 UnderwaterLabi_MapEvents:
@@ -58,6 +148,15 @@ UnderwaterLabi_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 27,  4, BGEVENT_ITEM, HiddenRareCandy1
+	bg_event 21,  40, BGEVENT_ITEM, HiddenRareCandy2
+	bg_event 43,  56, BGEVENT_ITEM, HiddenNugget1
+	bg_event 17,  38, BGEVENT_ITEM, HiddenBigpearl1
+	bg_event 53,  6, BGEVENT_ITEM, HiddenNugget2
 
 	def_object_events
-	
+	object_event 39, 49, SPRITE_FOSSIL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DomeScript, EVENT_FOUND_DOME
+	object_event 40, 49, SPRITE_FOSSIL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, HelixScript, EVENT_FOUND_HELIX
+	object_event 32, 22, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 1, OBJECTTYPE_ITEMBALL, 0, Underwateritem1, EVENT_UNDERWATER_LABI_ITEM1
+	object_event 11, 4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 1, OBJECTTYPE_ITEMBALL, 0, Underwateritem2, EVENT_UNDERWATER_LABI_ITEM2
+	object_event 17, 42, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 1, OBJECTTYPE_ITEMBALL, 0, Underwateritem3, EVENT_UNDERWATER_LABI_ITEM3

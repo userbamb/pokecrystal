@@ -716,4 +716,5 @@ ENDM
 	map_attributes UnderwaterLabi, UNDERWATER_LABI, $09, 0
 	map_attributes CinnabarUnderwater, CINNABAR_UNDERWATER, $09, 0
 	map_attributes Cinnabar1F, CINNABAR_1F, $00, 0
-
+	map_attributes CianwoodUnderwater, CIANWOOD_UNDERWATER, $09, 0
+	map_attributes Route41Underwater, ROUTE_41_UNDERWATER, $09, 0

@@ -1743,55 +1743,83 @@ JohtoGrassWildMons:
 	; morn
 	db 20, WOOPER
 	db 22, WOOPER
-	db 21, HORSEA
-	db 23, HORSEA
-	db 22, HORSEA
-	db 24, OCTILLERY
+	db 41, QUAGSIRE
+	db 38, SEADRA
+	db 35, STARYU
+	db 33, STARYU
 	db 20, OCTILLERY
 	; day
 	db 20, WOOPER
 	db 22, WOOPER
 	db 21, KRABBY
 	db 23, HORSEA
-	db 22, KRABBY
-	db 24, OCTILLERY
-	db 20, OCTILLERY
+	db 47, KINGLER
+	db 40, CLOYSTER
+	db 20, SHELLDER
 	; nite
-	db 20, CHINCHOU
-	db 22, CHINCHOU
-	db 21, STARYU
-	db 23, STARYU
-	db 22, SEADRA
-	db 24, OCTILLERY
-	db 20, OCTILLERY
+	db 30, STARYU
+	db 32, STARYU
+	db 31, STARYU
+	db 33, HORSEA
+	db 42, STARMIE
+	db 24, STARMIE
+	db 20, SLOWPOKE
 	end_grass_wildmons
 
 	def_grass_wildmons DRAGON_UNDERWATER
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 20, HORSEA
-	db 22, STARYU
-	db 21, HORSEA
-	db 23, HORSEA
-	db 22, HORSEA
-	db 24, DRATINI
-	db 20, DRATINI
+	db 30, HORSEA
+	db 32, STARYU
+	db 31, HORSEA
+	db 33, HORSEA
+	db 32, HORSEA
+	db 34, DRATINI
+	db 30, DRATINI
 	; day
-	db 20, STARYU
-	db 22, HORSEA
-	db 21, KRABBY
-	db 23, HORSEA
-	db 22, DRATINI
-	db 24, DRATINI
-	db 20, DRATINI
+	db 30, STARYU
+	db 32, HORSEA
+	db 31, KRABBY
+	db 33, HORSEA
+	db 32, DRATINI
+	db 34, DRATINI
+	db 30, DRATINI
 	; nite
-	db 20, STARYU
-	db 22, DRATINI
-	db 21, DRATINI
-	db 23, DRATINI
-	db 22, SEADRA
-	db 24, DRATINI
-	db 40, DRAGONAIR
+	db 30, STARYU
+	db 32, DRATINI
+	db 31, DRATINI
+	db 33, DRATINI
+	db 44, SEADRA
+	db 34, DRATINI
+	db 50, DRAGONAIR
+	end_grass_wildmons
+
+	def_grass_wildmons ROUTE_41_UNDERWATER
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 20, TENTACOOL
+	db 22, TENTACOOL
+	db 41, TENTACRUEL
+	db 38, SEADRA
+	db 35, STARYU
+	db 33, STARYU
+	db 20, OCTILLERY
+	; day
+	db 20, TENTACOOL
+	db 22, KRABBY
+	db 21, KRABBY
+	db 43, SEADRA
+	db 47, KINGLER
+	db 40, CLOYSTER
+	db 20, SHELLDER
+	; nite
+	db 30, CHINCHOU
+	db 32, CHINCHOU
+	db 31, STARYU
+	db 33, HORSEA
+	db 42, STARMIE
+	db 43, LANTURN
+	db 39, LANTURN
 	end_grass_wildmons
 
 	db -1 ; end

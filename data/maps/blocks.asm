@@ -15,8 +15,8 @@ Route44_Blocks:
 Route28_Blocks:
 	INCBIN "maps/Route28.blk"
 
-BetaPlayersHouse2F_Blocks: ; unreferenced
-	INCBIN "maps/unused/BetaPlayersHouse2F.blk"
+Route41Underwater_Blocks:
+	INCBIN "maps/Route41Underwater.blk"
 
 CeladonCity_Blocks:
 	INCBIN "maps/CeladonCity.blk"
@@ -99,8 +99,8 @@ PewterCity_Blocks:
 Route12_Blocks:
 	INCBIN "maps/Route12.blk"
 
-BetaGoldenrodCity_Blocks: ; unreferenced
-	INCBIN "maps/unused/BetaGoldenrodCity.blk"
+CianwoodUnderwater_Blocks:
+	INCBIN "maps/CianwoodUnderwater.blk"
 
 Route20_Blocks:
 	INCBIN "maps/Route20.blk"

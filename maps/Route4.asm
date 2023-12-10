@@ -32,42 +32,45 @@ RoofDoorScript::
 
 .Unlock:
 	writetext TheDoorsLockedText1
-	showemote EMOTE_SHOCK, PLAYER, 15
+	showemote EMOTE_SHOCK, PLAYER, 25
 	playsound SFX_STRENGTH
-	earthquake 30
+	earthquake 20
 	pause 20
-	writetext KeyOpenedDoorText
-	waitbutton
-	closetext
+
 	changeblock 38, 3, $06 ; unlocked door
 	reloadmappart
+	closetext
+	opentext
+	writetext KeyOpenedDoorText
+	waitbutton
 	closetext
 	setevent EVENT_USED_ROOF_KEY
 	end
 
 .Open:
-	closetext
+	
 	end
 
 TheDoorsLockedText:
 	text "There' s a small"
-	line "indent in the wall…"
+	line "hole in the wall…"
 	done
 
 TheDoorsLockedText1:
 	text "There' s a small"
-	line "indent in the wall…"
+	line "hole in the wall…"
 
-	para "The OLD MAP indica-"
-	line "tes a CAVE here…"
+	para "The OLD MAP indi-"
+	line "cates a CAVE here…"
 	
 	done
 
 
 KeyOpenedDoorText:
-	text "The wall collapsed!"
-	line "Discovered a small"
-	cont "cavern!"
+	text "The wall has"
+	line "collapsed!"
+	para "Discovered a small"
+	line "cavern!"
 	done
 
 
