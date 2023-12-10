@@ -10,10 +10,10 @@ _RoofKey:
 ; Are we on the tile in front of the door?
 	call GetFacingTileCoord
 	ld a, d
-	cp 4
+	cp 42
 	jr nz, .nope
 	ld a, e
-	cp 4
+	cp 7
 	jr nz, .nope
 ; Let's use the Hub Key
 	ld hl, .RoofKeyScript
@@ -28,5 +28,5 @@ _RoofKey:
 	ret
 
 .RoofKeyScript:
-	closetext
+	closetext 
 	farsjump RoofDoorScript

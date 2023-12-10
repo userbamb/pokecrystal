@@ -203,7 +203,7 @@ ENDM
 	map_const ROUTE_10_POKECENTER_2F_BETA,                  8,  4 ;  9
 	map_const POWER_PLANT,                                 10,  9 ; 10
 	map_const BILLS_HOUSE,                                  4,  4 ; 11
-	map_const ROUTE_4,                                     20,  9 ; 12
+	map_const ROUTE_4,                                     21,  9 ; 12
 	map_const ROUTE_9,                                     30,  9 ; 13
 	map_const ROUTE_10_NORTH,                              10,  9 ; 14
 	map_const ROUTE_10_NORTH_INSIDE,                              10,  9 ; 14

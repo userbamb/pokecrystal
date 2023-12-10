@@ -3,7 +3,6 @@
 	const ROUTE4_LASS1
 	const ROUTE4_LASS2
 	const ROUTE4_POKE_BALL
-    const ROUTE4_SUPERNERD
 
 Route4_MapScripts:
 	def_scene_scripts
@@ -13,11 +12,11 @@ Route4_MapScripts:
 
 Route4callback:
 	checkevent EVENT_USED_ROOF_KEY
-	iffalse .LockCave
+	iftrue .UnlockCave
 	endcallback
 
-.LockCave:
-	changeblock 38, 2, $57 ; locked door
+.UnlockCave:
+	changeblock 38, 3, $06 ; locked door
 	endcallback
 
 RoofDoorScript::
@@ -32,14 +31,15 @@ RoofDoorScript::
 	end
 
 .Unlock:
+	writetext TheDoorsLockedText1
+	showemote EMOTE_SHOCK, PLAYER, 15
 	playsound SFX_STRENGTH
 	earthquake 30
 	pause 20
-	showemote EMOTE_SHOCK, PLAYER, 15
 	writetext KeyOpenedDoorText
 	waitbutton
 	closetext
-	changeblock 38, 2, $06 ; unlocked door
+	changeblock 38, 3, $06 ; unlocked door
 	reloadmappart
 	closetext
 	setevent EVENT_USED_ROOF_KEY
@@ -54,14 +54,22 @@ TheDoorsLockedText:
 	line "indent in the wall…"
 	done
 
+TheDoorsLockedText1:
+	text "There' s a small"
+	line "indent in the wall…"
+
+	para "The OLD MAP indica-"
+	line "tes a CAVE here…"
+	
+	done
+
+
 KeyOpenedDoorText:
-	text "The ground shook."
+	text "The wall collapsed!"
 	line "Discovered a small"
 	cont "cavern!"
 	done
 
-Route4SupernerdScript:
-    jumptextfaceplayer SuperNerd4ScriptText
 
 
 TrainerBirdKeeperHank:
@@ -180,18 +188,11 @@ CeruleanCaveSignText:
 	text "CERULEAN CAVE"
 
 	para "Definition of"
-	line "vicious."
+	line "vicious, was once"
+	para "accessible from"
+	line "here…"
 	done
 
-SuperNerd4ScriptText:
-    text "This place is"
-	line "dangerous. I'm"
-	
-	para "blocking the ent-"
-	line "rance so no one"
-
-	cont "gets hurt!"
-	done
 
 Route4_MapEvents:
 	db 0, 0 ; filler
@@ -203,6 +204,7 @@ Route4_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 38,  3, BGEVENT_READ, RoofDoorScript
 	bg_event  5,  7, BGEVENT_READ, MtMoonSquareSign
 	bg_event 10,  3, BGEVENT_ITEM, Route4HiddenUltraBall
 	bg_event 39,  5, BGEVENT_READ, CeruleanCaveSign
@@ -212,5 +214,4 @@ Route4_MapEvents:
 	object_event  9,  8, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerPicnickerHope, -1
 	object_event 21,  6, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerPicnickerSharon, -1
 	object_event 26,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route4HPUp, EVENT_ROUTE_4_HP_UP
-	object_event 38,  4, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route4SupernerdScript, EVENT_OPENED_CERUCAVE
 	
