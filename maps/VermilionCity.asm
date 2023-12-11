@@ -43,9 +43,9 @@ VermilionSnorlax:
 	special SnorlaxAwake
 	iftrue .Awake
 	writetext VermilionCitySnorlaxSleepingText
-	showemote EMOTE_SLEEP, PLAYER, 20
 	waitbutton
 	closetext
+	showemote EMOTE_SLEEP, PLAYER, 30
 	end
 
 .Awake:

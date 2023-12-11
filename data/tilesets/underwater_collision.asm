@@ -18,7 +18,7 @@
 	tilecoll FLOOR, FLOOR, WALL, FLOOR ; 11
 	tilecoll FLOOR, FLOOR, WALL, FLOOR ; 12
 	tilecoll FLOOR, DOWN_WALL, WALL, CAVE ; 13
-	tilecoll FLOOR, DIVE_UP, DIVE_UP, DIVE_UP ; 14
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 14
 	tilecoll DIVE_UP, DIVE_UP, FLOOR, DIVE_UP ; 15
 	tilecoll DIVE_UP, FLOOR, DIVE_UP, DIVE_UP ; 16
 	tilecoll DIVE_UP, DIVE_UP, DIVE_UP, FLOOR ; 17

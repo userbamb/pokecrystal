@@ -1,6 +1,4 @@
     object_const_def
-	const UNDERWATERLABI_DOME
-	const UNDERWATERLABI_HELIX
 	const UNDERWATER_POKE_BALL_1
 	const UNDERWATER_POKE_BALL_2
 	const UNDERWATER_POKE_BALL_3
@@ -23,69 +21,6 @@ Underwateritem2:
 
 Underwateritem3:
 	itemball COOL_CHARM
-
-DomeScript:
-; This whole script is written out rather than as an itemball
-; because it's left over from the GS event.
-	giveitem DOME_FOSSIL
-	iffalse .BagFull
-	disappear UNDERWATERLABI_DOME
-	opentext
-	getitemname STRING_BUFFER_3, DOME_FOSSIL
-	writetext Text_FoundDome
-	playsound SFX_ITEM
-	waitsfx
-	itemnotify
-	closetext
-	end
-
-.BagFull:
-	opentext
-	getitemname STRING_BUFFER_3, DOME_FOSSIL
-	writetext Text_Found
-	promptbutton
-	writetext Text_NoRoomFor
-	waitbutton
-	closetext
-	end
-
-HelixScript:
-; This whole script is written out rather than as an itemball
-; because it's left over from the GS event.
-	giveitem HELIX_FOSSIL
-	iffalse .BagFull
-	disappear UNDERWATERLABI_HELIX
-	opentext
-	getitemname STRING_BUFFER_3, HELIX_FOSSIL
-	writetext Text_Found
-	playsound SFX_ITEM
-	waitsfx
-	itemnotify
-	closetext
-	end
-
-.BagFull:
-	opentext
-	getitemname STRING_BUFFER_3, HELIX_FOSSIL
-	writetext Text_Found
-	promptbutton
-	writetext Text_NoRoomFor
-	waitbutton
-	closetext
-	end
-
-Text_Found:
-	text "<PLAYER> found"
-	line "@"
-	text_ram wStringBuffer3
-	text "!"
-	done
-
-Text_NoRoomFor:
-	text "But <PLAYER> can't"
-	line "carry any more"
-	cont "items."
-	done
 
 HiddenRareCandy1:
  	hiddenitem RARE_CANDY, EVENT_GOT_UNDERWATER_RARECANDY1
@@ -140,7 +75,7 @@ UnderwaterLabi_MapEvents:
 
 ;8th ROOM
 	warp_event  13,  9, UNDERWATER_LABI, 19
-	warp_event  7,  9, UNDERWATER_LABI, 26
+	warp_event  7,  9, CIANWOOD_UNDERWATER, 2
 ;FOSSIL ROOM
 	warp_event  5,  41, UNDERWATER_LABI, 25
 	warp_event  3,  35, DRAGON_UNDERWATER, 1 
@@ -155,8 +90,6 @@ UnderwaterLabi_MapEvents:
 	bg_event 53,  6, BGEVENT_ITEM, HiddenNugget2
 
 	def_object_events
-	object_event 39, 49, SPRITE_FOSSIL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DomeScript, EVENT_FOUND_DOME
-	object_event 40, 49, SPRITE_FOSSIL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, HelixScript, EVENT_FOUND_HELIX
 	object_event 32, 22, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 1, OBJECTTYPE_ITEMBALL, 0, Underwateritem1, EVENT_UNDERWATER_LABI_ITEM1
 	object_event 11, 4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 1, OBJECTTYPE_ITEMBALL, 0, Underwateritem2, EVENT_UNDERWATER_LABI_ITEM2
 	object_event 17, 42, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 1, OBJECTTYPE_ITEMBALL, 0, Underwateritem3, EVENT_UNDERWATER_LABI_ITEM3

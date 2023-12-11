@@ -532,7 +532,7 @@ ENDM
 	map_const UNDERWATER_LABI,                                30, 30 ;  1
 	map_const CINNABAR_UNDERWATER,                                17, 30 ;  1
 	map_const CINNABAR_1F,                                18, 26 ;  1
-	map_const CIANWOOD_UNDERWATER,                                20, 9 ;  1
+	map_const CIANWOOD_UNDERWATER,                                20, 18 ;  1
 	map_const ROUTE_41_UNDERWATER,                                25, 27 ;  1
 	endgroup
 

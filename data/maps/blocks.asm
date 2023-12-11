@@ -279,12 +279,6 @@ BetaAzaleaTown_Blocks: ; unreferenced
 VermilionCity_Blocks:
 	INCBIN "maps/VermilionCity.blk"
 
-BetaOlivineCity_Blocks: ; unreferenced
-	INCBIN "maps/unused/BetaOlivineCity.blk"
-
-BetaNewBarkTown_Blocks: ; unreferenced
-	INCBIN "maps/unused/BetaNewBarkTown.blk"
-
 ElmsLab_Blocks:
 	INCBIN "maps/ElmsLab.blk"
 

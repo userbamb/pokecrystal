@@ -18,7 +18,12 @@ CianwoodCity_MapScripts:
 	scene_script CianwoodCityNoop2Scene, SCENE_CIANWOODCITY_SUICUNE_AND_EUSINE
 
 	def_callbacks
+	callback MAPCALLBACK_NEWMAP, .DiveMap
 	callback MAPCALLBACK_NEWMAP, CianwoodCityFlypointAndSuicuneCallback
+
+.DiveMap:
+	divemap CIANWOOD_UNDERWATER, 0, 0
+	return
 
 CianwoodCityNoop1Scene:
 	end
