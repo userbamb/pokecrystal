@@ -16,8 +16,6 @@ CinnabarUnderwater_MapEvents:
 
 	def_warp_events
 	warp_event 5, 9, CINNABAR_1F, 1
-	warp_event 9, 43, CINNABAR_1F, 6
-	warp_event 21, 38, CINNABAR_1F, 5
 
 	def_coord_events
 
