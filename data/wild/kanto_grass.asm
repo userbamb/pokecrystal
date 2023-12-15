@@ -941,7 +941,7 @@ KantoGrassWildMons:
 	db 42, PONYTA
 	db 42, KANGASKHAN
 	db 44, RAPIDASH
-	db 41, DODUO
+	db 10, DUNSPARCE
 	db 43, DODRIO
 	db 43, DODRIO
 	; nite

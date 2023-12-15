@@ -53,8 +53,7 @@ SafariHubIsOpenText:
 	done
 
 SafariHubKeyOpenedDoorText:
-	text "The HUB KEY"
-	line "opened the door."
+	text "The door opened!"
 	done
 
 SafariZoneFuchsiaGate_MapEvents:

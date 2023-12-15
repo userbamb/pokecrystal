@@ -75,10 +75,19 @@ GameFreakProgrammerScript:
 	end
 
 .wowdex:
+	checkevent EVENT_GOT_GORGEOUS_BOX
+	iftrue .Alreadygot
 	writetext GameFreakProgrammerPrintDiplomaText
 	waitbutton
-	verbosegiveitem ITEM_88
+	verbosegiveitem GORGEOUS_BOX
 	iffalse .BagFull
+	setevent EVENT_GOT_GORGEOUS_BOX
+	waitbutton
+	closetext
+	end
+
+.Alreadygot:
+	writetext GameFreakProgrammerText
 	waitbutton
 	closetext
 	end
@@ -90,23 +99,8 @@ GameFreakProgrammerScript:
 GameFreakCharacterDesignerScript:
 	faceplayer
 	opentext
-	checkevent EVENT_ENABLE_DIPLOMA_PRINTING
-	iftrue .wowdexi
 	writetext GameFreakCharacterDesignerText
 	waitbutton
-	closetext
-	end
-
-.wowdexi:
-	writetext GameFreakCharacterPrintDiplomaText
-	waitbutton
-	verbosegiveitem ITEM_78
-	iffalse .BagFulll
-	waitbutton
-	closetext
-	end
-
-.BagFulll:
 	closetext
 	end
 

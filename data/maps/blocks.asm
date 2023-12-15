@@ -262,7 +262,6 @@ PlayersHouse1F_Blocks:
 
 Route38EcruteakGate_Blocks:
 Route42EcruteakGate_Blocks:
-Route32RuinsOfAlphGate_Blocks:
 IlexForestAzaleaGate_Blocks:
 Route15FuchsiaGate_Blocks:
 Route8SaffronGate_Blocks:
@@ -273,8 +272,8 @@ Route31VioletGate_Blocks:
 Route8LavenderGate_Blocks:
 	INCBIN "maps/EastWestGate.blk"
 
-BetaAzaleaTown_Blocks: ; unreferenced
-	INCBIN "maps/unused/BetaAzaleaTown.blk"
+Route32RuinsOfAlphGate_Blocks:
+	INCBIN "maps/Route32RuinsOfAlphGate.blk"
 
 VermilionCity_Blocks:
 	INCBIN "maps/VermilionCity.blk"

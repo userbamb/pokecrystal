@@ -1,5 +1,10 @@
 	object_const_def
 	const CINNABAR_OLDMAP
+	const EVENT_CINNABAR_1F_BALL_1
+	const EVENT_CINNABAR_1F_BALL_2
+	const EVENT_CINNABAR_1F_BALL_3
+	const EVENT_CINNABAR_1F_BALL_4
+	const EVENT_CINNABAR_1F_BALL_5
 
 
 Cinnabar1F_MapScripts:
@@ -33,6 +38,18 @@ StatuesCallback:
 
 Oldmapscript:
 	itemball ROOF_KEY
+
+Ball1script:
+	itemball MOON_STONE
+
+Ball2script:
+	itemball NUGGET
+
+Ball3script:
+	itemball THUNDER_STONE
+
+Ball4script:
+	itemball NORMAL_BOX
 
 Statue1:
     opentext
@@ -231,3 +248,7 @@ Cinnabar1F_MapEvents:
 
 	def_object_events
 	object_event 18, 14, SPRITE_PAPER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_ITEMBALL, 0, Oldmapscript, EVENT_GOT_UNDERWATER_OLD_MAP
+	object_event  5, 42, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Ball1script, EVENT_CINNABAR_1F_BALL_1
+	object_event  16,  44, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Ball2script, EVENT_CINNABAR_1F_BALL_2
+	object_event  38,  48, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Ball3script, EVENT_CINNABAR_1F_BALL_3
+	object_event  5,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Ball4script, EVENT_CINNABAR_1F_BALL_4
