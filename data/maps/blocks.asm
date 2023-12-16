@@ -260,6 +260,7 @@ Route39_Blocks:
 PlayersHouse1F_Blocks:
 	INCBIN "maps/PlayersHouse1F.blk"
 
+Route32RuinsOfAlphGate_Blocks:
 Route38EcruteakGate_Blocks:
 Route42EcruteakGate_Blocks:
 IlexForestAzaleaGate_Blocks:
@@ -271,9 +272,6 @@ Route17Route18Gate_Blocks:
 Route31VioletGate_Blocks:
 Route8LavenderGate_Blocks:
 	INCBIN "maps/EastWestGate.blk"
-
-Route32RuinsOfAlphGate_Blocks:
-	INCBIN "maps/Route32RuinsOfAlphGate.blk"
 
 VermilionCity_Blocks:
 	INCBIN "maps/VermilionCity.blk"

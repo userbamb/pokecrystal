@@ -77,8 +77,8 @@ ENDM
 	map_const TIN_TOWER_9F,                                10,  9 ; 12
 	map_const BURNED_TOWER_1F,                             10,  9 ; 13
 	map_const BURNED_TOWER_B1F,                            10,  9 ; 14
-	map_const NATIONAL_PARK,                               20, 27 ; 15
-	map_const NATIONAL_PARK_BUG_CONTEST,                   20, 27 ; 16
+	map_const NATIONAL_PARK,                               27, 27 ; 15
+	map_const NATIONAL_PARK_BUG_CONTEST,                   27, 27 ; 16
 	map_const RADIO_TOWER_1F,                               9,  4 ; 17
 	map_const RADIO_TOWER_2F,                               9,  4 ; 18
 	map_const RADIO_TOWER_3F,                               9,  4 ; 19
@@ -243,7 +243,7 @@ ENDM
 	map_const VIOLET_NICKNAME_SPEECH_HOUSE,                 4,  4 ;  9
 	map_const VIOLET_POKECENTER_1F,                         5,  4 ; 10
 	map_const VIOLET_KYLES_HOUSE,                           4,  4 ; 11
-	map_const ROUTE_32_RUINS_OF_ALPH_GATE,                  6,  4 ; 12
+	map_const ROUTE_32_RUINS_OF_ALPH_GATE,                  5,  4 ; 12
 	map_const ROUTE_32_POKECENTER_1F,                       5,  4 ; 13
 	map_const ROUTE_35_GOLDENROD_GATE,                      5,  4 ; 14
 	map_const ROUTE_35_NATIONAL_PARK_GATE,                  4,  4 ; 15
