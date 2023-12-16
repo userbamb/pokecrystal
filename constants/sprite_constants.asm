@@ -113,6 +113,9 @@
 	const SPRITE_ARTICUNO
 	const SPRITE_FOSSIL
 	const SPRITE_MEWTWO
+	const SPRITE_TOTO
+	const SPRITE_CIKO
+	const SPRITE_CIND
 DEF NUM_OVERWORLD_SPRITES EQU const_value - 1
 
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)

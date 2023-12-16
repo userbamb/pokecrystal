@@ -1,10 +1,10 @@
 	object_const_def
 	const CINNABAR_OLDMAP
-	const EVENT_CINNABAR_1F_BALL_1
-	const EVENT_CINNABAR_1F_BALL_2
-	const EVENT_CINNABAR_1F_BALL_3
-	const EVENT_CINNABAR_1F_BALL_4
-	const EVENT_CINNABAR_1F_BALL_5
+	const CINNABAR_1F_BALL_1
+	const CINNABAR_1F_BALL_2
+	const CINNABAR_1F_BALL_3
+	const CINNABAR_1F_BALL_4
+	const CINNABAR_1F_BALL_5
 
 
 Cinnabar1F_MapScripts:
@@ -46,7 +46,7 @@ Ball2script:
 	itemball NUGGET
 
 Ball3script:
-	itemball THUNDER_STONE
+	itemball THUNDERSTONE
 
 Ball4script:
 	itemball NORMAL_BOX
