@@ -580,7 +580,11 @@ wLastEnemyMove:: db
 wPlayerFutureSightCount:: db
 wEnemyFutureSightCount:: db
 
-    ds 8
+wGivingExperienceToExpShareHolders:: db
+
+wBackupEnemyMonBaseStats:: ds NUM_EXP_STATS
+wBackupEnemyMonCatchRate:: db
+wBackupEnemyMonBaseExp:: db
 wPlayerFutureSightDamage:: dw
 wEnemyFutureSightDamage:: dw
 wPlayerRageCounter:: db
@@ -3022,7 +3026,7 @@ wRegisteredItem:: db
 wPlayerState:: db
 
 wHallOfFameCount:: db
-wExpShareToggle:: db
+	ds 1
 wTradeFlags:: flag_array NUM_NPC_TRADES
 	ds 1
 wMooMooBerries:: db

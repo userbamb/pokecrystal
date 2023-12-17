@@ -70,7 +70,7 @@ ItemEffects:
 	dw CoinCaseEffect      ; COIN_CASE
 	dw ItemfinderEffect    ; ITEMFINDER
 	dw PokeFluteEffect     ; POKE_FLUTE
-	dw ExpShareEffect      ; EXP_SHARE
+	dw NoEffect      	; EXP_SHARE
 	dw OldRodEffect        ; OLD_ROD
 	dw GoodRodEffect       ; GOOD_ROD
 	dw NoEffect            ; SILVER_LEAF
@@ -184,7 +184,7 @@ ItemEffects:
 	dw GorgeousBoxEffect   ; GORGEOUS_BOX
 	dw EvoStoneEffect      ; SUN_STONE
 	dw NoEffect            ; POLKADOT_BOW
-	dw NoEffect            ; ITEM_AB
+	dw PocketPCEffect            ; POCKET_PC
 	dw NoEffect            ; UP_GRADE
 	dw RestoreHPEffect     ; BERRY
 	dw RestoreHPEffect     ; GOLD_BERRY
@@ -1924,16 +1924,9 @@ LoadCurHPIntoBuffer3:
 	ld [wHPBuffer3], a
 	ret
 
-ExpShareEffect:
-	ld a, [wExpShareToggle]
-	xor 1
-	ld [wExpShareToggle], a
-	and a
-	ld hl, ExpShareToggleOn
-	jp nz, PrintText
-
-	ld hl, ExpShareToggleOff
-	jp PrintText
+PocketPCEffect:
+	farcall PocketPCFunction
+	ret
 
 LoadCurHPIntoBuffer2:
 	ld a, MON_HP
@@ -2745,14 +2738,6 @@ BallBoxFullText:
 
 ItemUsedText:
 	text_far _ItemUsedText
-	text_end
-
-ExpShareToggleOff:
-	text_far _ExpShareToggleOff
-	text_end
- 
-ExpShareToggleOn:
-	text_far _ExpShareToggleOn
 	text_end
 
 ApplyPPUp:

@@ -460,6 +460,7 @@ AideScript_WalkPotion1:
 	applymovement ELMSLAB_ELMS_AIDE, AideWalksRight1
 	turnobject PLAYER, DOWN
 	scall AideScript_GivePotion
+	scall AideScript_GiveExpShare
 	applymovement ELMSLAB_ELMS_AIDE, AideWalksLeft1
 	end
 
@@ -467,6 +468,7 @@ AideScript_WalkPotion2:
 	applymovement ELMSLAB_ELMS_AIDE, AideWalksRight2
 	turnobject PLAYER, DOWN
 	scall AideScript_GivePotion
+	scall AideScript_GiveExpShare
 	applymovement ELMSLAB_ELMS_AIDE, AideWalksLeft2
 	end
 
@@ -476,6 +478,16 @@ AideScript_GivePotion:
 	promptbutton
 	verbosegiveitem POTION
 	writetext AideText_AlwaysBusy
+	waitbutton
+	closetext
+	end
+
+AideScript_GiveExpShare:
+	opentext
+	writetext AideText_GetExpShareText
+	promptbutton
+	giveitem EXP_SHARE
+	writetext AideText_ExpShareInfoText
 	waitbutton
 	closetext
 	setscene SCENE_ELMSLAB_NOOP
@@ -1368,6 +1380,18 @@ ElmsLabPCText:
 	line "screen…"
 	done
 
++AideText_GetPocketPCText:
+	text "Oh, I have this"
+	line "for you too."
+
+	para "It's a EXP SHARE!"
+	done
+	
+AideText_PocketPCInfoText:
+	text "Use this to train"
+	line "your party."
+	done
+
 ElmsLab_MapEvents:
 	db 0, 0 ; filler
 
@@ -1407,6 +1431,6 @@ ElmsLab_MapEvents:
 	object_event  5,  2, SPRITE_ELM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ProfElmScript, -1
 	object_event  2,  9, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ElmsAideScript, EVENT_ELMS_AIDE_IN_LAB
 	object_event  6,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CyndaquilPokeBallScript, EVENT_CYNDAQUIL_POKEBALL_IN_ELMS_LAB
-	object_event  7,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TotodilePokeBallScript, EVENT_TOTODILE_POKEBALL_IN_ELMS_LAB
-	object_event  8,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ChikoritaPokeBallScript, EVENT_CHIKORITA_POKEBALL_IN_ELMS_LAB
+	object_event  7,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TotodilePokeBallScript, EVENT_TOTODILE_POKEBALL_IN_ELMS_LAB
+	object_event  8,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ChikoritaPokeBallScript, EVENT_CHIKORITA_POKEBALL_IN_ELMS_LAB
 	object_event  5,  3, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CopScript, EVENT_COP_IN_ELMS_LAB

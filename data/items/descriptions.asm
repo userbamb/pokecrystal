@@ -171,7 +171,7 @@ ItemDescriptions:
 	dw GorgeousBoxDesc
 	dw SunStoneDesc
 	dw PolkadotBowDesc
-	dw TeruSama22Desc
+	dw PocketPCDesc
 	dw UpGradeDesc
 	dw BerryDesc
 	dw GoldBerryDesc
@@ -483,7 +483,7 @@ TeruSama5Desc:
 
 ExpShareDesc:
 	db   "Shares battle EXP."
-	next "Points.@"
+	next "Points. (HOLD)@"
 
 OldRodDesc:
 	db   "Use by water to"
@@ -920,8 +920,9 @@ PolkadotBowDesc:
 	db   "Powers up normal-"
 	next "type moves. (HOLD)@"
 
-TeruSama22Desc:
-	db   "?@"
+PocketPCDesc:
+	db   "Access the PC"
+	next "right here!@"
 
 UpGradeDesc:
 	db   "A mysterious box"
