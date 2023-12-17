@@ -79,6 +79,15 @@ MeetMomScript:
 .FinishPhone:
 	writetext InstructionsNextText
 	waitbutton
+	; debug party and items for testing
+	givepoke FERALIGATR, 50 ; can use Surf and Dive
+	giveitem HM_SURF
+	giveitem HM_DIVE
+	giveitem ROOF_KEY
+	giveitem DOME_FOSSIL
+	giveitem HUB_KEY
+	setflag ENGINE_FOGBADGE ; allows Surf
+	setflag ENGINE_CASCADEBADGE ; allows Dive
 	closetext
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	iftrue .FromRight

@@ -1380,14 +1380,14 @@ ElmsLabPCText:
 	line "screen…"
 	done
 
-+AideText_GetPocketPCText:
+AideText_GetExpShareText:
 	text "Oh, I have this"
 	line "for you too."
 
 	para "It's a EXP SHARE!"
 	done
 	
-AideText_PocketPCInfoText:
+AideText_ExpShareInfoText:
 	text "Use this to train"
 	line "your party."
 	done
