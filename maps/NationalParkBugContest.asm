@@ -11,11 +11,22 @@
 	const NATIONALPARKBUGCONTEST_YOUNGSTER7
 	const NATIONALPARKBUGCONTEST_POKE_BALL1
 	const NATIONALPARKBUGCONTEST_POKE_BALL2
+	const NATIONALPARKBUGCONTEST_OFFICER
 
 NationalParkBugContest_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+
+
+
+BugCatchingContestOfficerScript:
+	faceplayer
+	opentext
+	writetext BugCatchingContestOfficerText
+	waitbutton
+	closetext
+	end
 
 BugCatchingContestant1AScript:
 	faceplayer
@@ -114,6 +125,11 @@ NationalParkBugContestTMDig:
 
 NationalParkBugContestHiddenFullHeal:
 	hiddenitem FULL_HEAL, EVENT_NATIONAL_PARK_HIDDEN_FULL_HEAL
+
+BugCatchingContestOfficerText:
+	text "Good luck! Catch"
+	line "the biggest bug!"
+	done
 
 BugCatchingContestant1AText:
 	text "DON: I'm going to"
@@ -248,3 +264,4 @@ NationalParkBugContest_MapEvents:
 	object_event 17, 34, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 3, 3, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BugCatchingContestant10AScript, EVENT_BUG_CATCHING_CONTESTANT_10A
 	object_event 35, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, NationalParkBugContestParlyzHeal, EVENT_NATIONAL_PARK_PARLYZ_HEAL
 	object_event  1, 43, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, NationalParkBugContestTMDig, EVENT_NATIONAL_PARK_TM_DIG
+	object_event 27,  6, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BugCatchingContestOfficerScript, -1

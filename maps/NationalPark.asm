@@ -18,6 +18,33 @@ NationalPark_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+	callback MAPCALLBACK_OBJECTS, NationalCikoCallback
+
+NationalCikoCallback:
+	checkevent EVENT_FOUGHT_TOTO
+	iffalse .NoAppear
+	appear NATIONALPARK_YOUNGSTER2 
+	endcallback
+
+.NoAppear:
+	disappear NATIONALPARK_YOUNGSTER2 
+	endcallback
+
+Chikorita:
+	faceplayer
+	opentext
+	showemote EMOTE_SHOCK, NATIONALPARK_YOUNGSTER2, 15
+	writetext NationalParkYoungster2Text
+	cry CHIKORITA
+	pause 15
+	closetext
+	setevent EVENT_FOUGHT_CIKO
+	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
+	loadwildmon CHIKORITA, 7
+	startbattle
+	disappear NATIONALPARK_YOUNGSTER2
+	reloadmapafterbattle
+	end
 
 NationalParkLassScript:
 	jumptextfaceplayer NationalParkLassText
@@ -45,11 +72,9 @@ NationalParkTeacher1Script:
 NationalParkYoungster1Script:
 	jumptextfaceplayer NationalParkYoungster1Text
 
-NationalParkYoungster2Script:
-	jumptextfaceplayer NationalParkYoungster2Text
 
 NationalParkTeacher2Script:
-	jumptextfaceplayer NationalParkTeacher2Text
+	
 
 NationalParkPersian:
 	faceplayer
@@ -357,8 +382,7 @@ NationalParkYoungster1Text:
 	done
 
 NationalParkYoungster2Text:
-	text "That's a wild"
-	line "CHIKORITA!"
+	text "Criiiiiii…"
 	done
 
 NationalParkTeacher2Text:
@@ -530,8 +554,8 @@ NationalPark_MapEvents:
 	object_event 15, 24, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NationalParkLassScript, -1
 	object_event 14,  4, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NationalParkPokefanFScript, -1
 	object_event 27, 40, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NationalParkTeacher1Script, -1
-	object_event 33, 48, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, NationalParkYoungster1Script, -1
-	object_event 45, 35, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, NationalParkYoungster2Script, -1
+	object_event 33, 49, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, NationalParkYoungster1Script, EVENT_FOUGHT_TOTO
+	object_event 45, 35, SPRITE_CIKO, SPRITEMOVEDATA_WANDER, 3, 3, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Chikorita, EVENT_NATIO_CIKO
 	object_event 17, 41, SPRITE_TEACHER, SPRITEMOVEDATA_WANDER, 1, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NationalParkTeacher2Script, -1
 	object_event 26, 40, SPRITE_GROWLITHE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NationalParkPersian, -1
 	object_event 27, 23, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSchoolboyJack1, -1
@@ -539,5 +563,5 @@ NationalPark_MapEvents:
 	object_event 16,  9, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerPokefanmWilliam, -1
 	object_event  8, 14, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerLassKrise, -1
 	object_event 35, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, NationalParkParlyzHeal, EVENT_NATIONAL_PARK_PARLYZ_HEAL
-	object_event 26,  6, SPRITE_GAMEBOY_KID, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NationalParkGameboyKidScript, -1
+	object_event 10, 40, SPRITE_GAMEBOY_KID, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NationalParkGameboyKidScript, -1
 	object_event  1, 43, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, NationalParkTMDig, EVENT_NATIONAL_PARK_TM_DIG
