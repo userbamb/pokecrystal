@@ -314,7 +314,7 @@ RadioTower1FLuckyNumberManScript:
 	playsound SFX_2ND_PLACE
 	waitsfx
 	promptbutton
-	giveitem HP_UP
+	giveitem EXP_SHARE
 	iffalse .BagFull
 	itemnotify
 	setflag ENGINE_LUCKY_NUMBER_SHOW
@@ -507,7 +507,8 @@ RadioTower1FLuckyNumberManOkayMatchText:
 	cont "three numbers!"
 
 	para "You've won second"
-	line "prize, a HP UP."
+	line "prize, an EXP."
+	cont "SHARE!"
 	done
 
 RadioTower1FLuckyNumberManWeakMatchText:

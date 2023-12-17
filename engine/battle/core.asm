@@ -2161,7 +2161,7 @@ UpdateBattleStateAndExperienceAfterEnemyFaint:
 	call LoadTilemapToTempTilemap
 	ld a, [wBattleResult]
 	and BATTLERESULT_BITMASK
-	ld [wBattleResult], a ; WIN	
+	ld [wBattleResult], a ; WIN
 	call IsAnyMonHoldingExpShare
 	jr z, .skip_exp
 	ld hl, wEnemyMonBaseStats
@@ -2181,10 +2181,27 @@ UpdateBattleStateAndExperienceAfterEnemyFaint:
 	ld [wGivingExperienceToExpShareHolders], a
 	call GiveExperiencePoints
 	call IsAnyMonHoldingExpShare
+
+
+
 	ret z
+
+
 	ld a, [wBattleParticipantsNotFainted]
 	push af
 	ld a, d
+
+	ld [wBattleParticipantsNotFainted], a
+	ld hl, wBackupEnemyMonBaseStats
+	ld de, wEnemyMonBaseStats
+	ld bc, wEnemyMonEnd - wEnemyMonBaseStats
+	call CopyBytes
+	ld a, $1
+	ld [wGivingExperienceToExpShareHolders], a
+	call GiveExperiencePoints
+	pop af
+	ld [wBattleParticipantsNotFainted], a
+	ret
 
 IsAnyMonHoldingExpShare:
 	ld a, [wPartyCount]
@@ -2239,18 +2256,6 @@ IsAnyMonHoldingExpShare:
 	jr nz, .loop2
 	ld a, e
 	and a
-	ret
-
-	ld [wBattleParticipantsNotFainted], a
-	ld hl, wBackupEnemyMonBaseStats
-	ld de, wEnemyMonBaseStats
-	ld bc, wEnemyMonEnd - wEnemyMonBaseStats
-	call CopyBytes
-	ld a, $1
-	ld [wGivingExperienceToExpShareHolders], a
-	call GiveExperiencePoints
-	pop af
-	ld [wBattleParticipantsNotFainted], a
 	ret
 
 StopDangerSound:

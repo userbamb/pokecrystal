@@ -1331,30 +1331,6 @@ BattleAnim_RazorWind:
 	anim_call BattleAnimSub_Glimmer2
 	anim_ret
 
-BattleAnim_Sonicboom_JP: ; unreferenced
-	anim_2gfx ANIM_GFX_WHIP, ANIM_GFX_HIT
-.loop
-	anim_sound 3, 0, SFX_RAZOR_WIND
-	anim_obj ANIM_OBJ_SONICBOOM_JP, 64, 80, $3
-	anim_wait 8
-	anim_sound 3, 0, SFX_RAZOR_WIND
-	anim_obj ANIM_OBJ_SONICBOOM_JP, 64, 88, $2
-	anim_wait 8
-	anim_sound 3, 0, SFX_RAZOR_WIND
-	anim_obj ANIM_OBJ_SONICBOOM_JP, 64, 96, $4
-	anim_wait 8
-	anim_loop 2, .loop
-	anim_wait 32
-	anim_incobj 1
-	anim_incobj 2
-	anim_incobj 3
-	anim_incobj 4
-	anim_incobj 5
-	anim_incobj 6
-	anim_obj ANIM_OBJ_HIT_YFIX, 136, 56, $0
-	anim_wait 16
-	anim_ret
-
 BattleAnim_Gust:
 BattleAnim_Sonicboom:
 	anim_2gfx ANIM_GFX_WIND, ANIM_GFX_HIT
@@ -4696,16 +4672,9 @@ BattleAnim_BeatUp:
 
 
 BattleAnim_Dive:
-	anim_2gfx ANIM_GFX_SPEED, ANIM_GFX_WATER
-	anim_if_param_equal $0, .hit
-	anim_if_param_equal $2, .fail
-	anim_call BattleAnim_TargetObj_2Row
-	anim_bgeffect ANIM_BG_CYCLE_OBPALS_GRAY_AND_YELLOW, $0, $1, $0
-	anim_bgeffect ANIM_BG_HIDE_MON, $0, BG_EFFECT_USER, $0
-	anim_call BattleAnimSub_WarpAwaySub
-	anim_wait 64
-
-.hit
+	anim_1gfx ANIM_GFX_WATER
+	anim_if_param_equal $1, .turn1
+	anim_if_param_equal $2, .miss
 	anim_bgeffect ANIM_BG_START_WATER, $0, $0, $0
 	anim_sound 0, 1, SFX_HYDRO_PUMP
 	anim_obj ANIM_OBJ_HYDRO_PUMP, 124, 72, $0
@@ -4719,11 +4688,18 @@ BattleAnim_Dive:
 	anim_wait 24
 	anim_bgeffect ANIM_BG_END_WATER, $0, $0, $0
 	anim_wait 16
-.fail
-	anim_bgeffect ANIM_BG_ENTER_MON, $0, $1, $0
+.miss:
+	anim_bgeffect ANIM_BG_SHOW_MON, $0, BG_EFFECT_USER, $0
 	anim_wait 32
 	anim_ret
 
+.turn1:
+	anim_1gfx ANIM_GFX_SPEED
+	anim_bgeffect ANIM_BG_CYCLE_OBPALS_GRAY_AND_YELLOW, $0, $1, $0
+	anim_bgeffect ANIM_BG_HIDE_MON, $0, BG_EFFECT_USER, $0
+	anim_call BattleAnimSub_WarpAwaySub
+	anim_wait 64
+	anim_ret
 
 BattleAnimSub_Drain:
 	anim_obj ANIM_OBJ_DRAIN, 132, 44, $0
