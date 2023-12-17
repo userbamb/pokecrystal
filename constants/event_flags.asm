@@ -1524,7 +1524,13 @@
 	const EVENT_CINNABAR_1F_BALL_3
 	const EVENT_CINNABAR_1F_BALL_4
 	const EVENT_GOT_GORGEOUS_BOX
-; Unused: next 15 events
+	const EVENT_FOUGHT_TOTO
+	const EVENT_FOUGHT_CIKO
+	const EVENT_FOUGHT_CIND
+	const EVENT_UNDER_TOTO
+	const EVENT_NATIO_CIKO
+	const EVENT_BATT_CIND
+; Unused: next 8 events
 
 	const_next 2048
 DEF NUM_EVENTS EQU const_value ; 800

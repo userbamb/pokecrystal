@@ -121,5 +121,3 @@ MewtwoSpriteGFX::                 INCBIN "gfx/icons/mewtwo.2bpp"
 TotoSpriteGFX::                 INCBIN "gfx/sprites/totodile.2bpp"
 CikoSpriteGFX::                 INCBIN "gfx/sprites/chikorita.2bpp"
 CindSpriteGFX::                 INCBIN "gfx/sprites/cyndaquil.2bpp"
-
-
