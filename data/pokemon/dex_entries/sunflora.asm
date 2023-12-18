@@ -1,10 +1,10 @@
-	db "LOUDCAT@" ; species name
-	dw 207, 410 ; height, weight
+	db "DARKNESS@" ; species name
+	dw 108, 50 ; height, weight
 
-	db   "Each clan has its"
-	next "own distinctive"
-	next "pitch to their"
+	db   "It hides any shiny"
+	next "object it finds in"
+	next "a secret location."
 
-	page "bell chime. They"
-	next "communicate using"
-	next "chime sequences.@"
+	page "MURKROW and"
+	next "MEOWTH loot one"
+	next "another's stashes.@"

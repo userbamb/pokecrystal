@@ -386,9 +386,9 @@ JohtoGrassWildMons:
 	db 22, SMEARGLE
 	; nite
 	db 20, NATU
-	db 22, SUNKERN
-	db 18, SUNKERN
-	db 24, SUNKERN
+	db 22, NATU
+	db 18, SUNFLORA
+	db 24, SUNFLORA
 	db 22, WOOPER
 	db 22, QUAGSIRE
 	db 22, QUAGSIRE
@@ -779,9 +779,9 @@ JohtoGrassWildMons:
 	; nite
 	db 23, JYNX
 	db 24, ZUBAT
-	db 24, GOLBAT
+	db 24, SUNKERN
 	db 25, JYNX
-	db 26, GOLBAT
+	db 26, SUNKERN
 	db 22, CORSOLA
 	db 24, JYNX
 	end_grass_wildmons
@@ -808,7 +808,7 @@ JohtoGrassWildMons:
 	db 23, JYNX
 	db 24, ZUBAT
 	db 24, GOLBAT
-	db 25, GOLBAT
+	db 25, SUNKERN
 	db 26, GOLBAT
 	db 22, CORSOLA
 	db 10, CORSOLA
@@ -833,7 +833,7 @@ JohtoGrassWildMons:
 	db 24, JYNX
 	db 26, JYNX
 	; nite
-	db 24, CORSOLA
+	db 24, SUNKERN
 	db 25, ZUBAT
 	db 25, GOLBAT
 	db 26, CORSOLA
@@ -1509,8 +1509,8 @@ JohtoGrassWildMons:
 	db 16, RATICATE
 	db 16, MAGNEMITE
 	db 16, NOCTOWL
-	db 16, SUNKERN
-	db 16, SUNKERN
+	db 16, SUNFLORA
+	db 16, SUNFLORA
 	db 16, MEOWTH
 	end_grass_wildmons
 

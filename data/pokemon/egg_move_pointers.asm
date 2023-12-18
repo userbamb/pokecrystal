@@ -197,16 +197,16 @@ EggMovePointers::
 	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw NoEggMoves ;LEAFEON
+	dw NoEggMoves ;BELLMITT
 	dw NoEggMoves
-	dw TangelaEggMoves
+	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw GirafarigEggMoves
 	dw PinecoEggMoves
 	dw NoEggMoves
 	dw DunsparceEggMoves
-	dw DunsparceEggMoves ;RAITORA
+	dw NoEggMoves ;RAITORA
 	dw NoEggMoves
 	dw SnubbullEggMoves
 	dw NoEggMoves

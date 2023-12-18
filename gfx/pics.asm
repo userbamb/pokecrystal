@@ -761,7 +761,7 @@ INCBIN "gfx/pokemon/unown_r/back.2bpp.lz"
 ; but entries for their banks exist in FixPicBank (see engine/gfx/load_pics.asm).
 
 SECTION "Pics 20", ROMX
-MurkrowFrontpic:     INCBIN "gfx/pokemon/murkrow/front.animated.2bpp.lz" ;LEAFEON
+MurkrowFrontpic:     INCBIN "gfx/pokemon/murkrow/front.animated.2bpp.lz" ;BELMITT
 NoctowlBackpic:      INCBIN "gfx/pokemon/noctowl/back.2bpp.lz"
 BellossomBackpic:    INCBIN "gfx/pokemon/bellossom/back.2bpp.lz"
 Porygon2Frontpic:    INCBIN "gfx/pokemon/porygon2/front.animated.2bpp.lz"

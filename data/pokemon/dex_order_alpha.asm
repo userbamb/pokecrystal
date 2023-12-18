@@ -15,8 +15,8 @@ AlphabeticalPokedexOrder:
 	db BAYLEEF
 	db BEEDRILL
 	db BELLOSSOM
-	db SUNFLORA ;bellrun
 	db BELLSPROUT
+	db MURKROW ; BELMITT
 	db BLASTOISE
 	db BLISSEY
 	db BULBASAUR
@@ -112,7 +112,6 @@ AlphabeticalPokedexOrder:
 	db LANTURN
 	db LAPRAS
 	db LARVITAR
-	db MURKROW ; LEAFEON
 	db LEDIAN
 	db LEDYBA
 	db LICKITUNG
@@ -142,6 +141,7 @@ AlphabeticalPokedexOrder:
 	db MOLTRES
 	db MR__MIME
 	db MUK
+	db SUNFLORA ;murko
 	db NATU
 	db NIDOKING
 	db NIDOQUEEN
@@ -190,7 +190,6 @@ AlphabeticalPokedexOrder:
 	db OCTILLERY ;remoraid
 	db RHYDON
 	db RHYHORN
-	db SUNKERN ;rinrin 
 	db SANDSHREW
 	db SANDSLASH
 	db SCIZOR
@@ -209,6 +208,7 @@ AlphabeticalPokedexOrder:
 	db SLUGMA
 	db SMEARGLE
 	db SMOOCHUM
+	db SUNKERN ;snisol
 	db SNORLAX
 	db SNUBBULL
 	db SPEAROW

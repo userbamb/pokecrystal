@@ -106,7 +106,7 @@ SwarmGrassWildMons:
 	db 16, MILTANK
 	db 16, MAGNEMITE
 	db 16, MILTANK
-	db 16, SUNKERN
+	db 16, SUNFLORA
 	db 16, TYROGUE
 	db 16, MEOWTH
 ; DITTO swarm

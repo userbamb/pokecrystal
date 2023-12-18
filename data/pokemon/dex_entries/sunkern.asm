@@ -1,10 +1,10 @@
-	db "LOUDCAT@" ; species name
-	dw 109, 220 ; height, weight
+	db "SHARP CLAW@" ; species name
+	dw 211, 620 ; height, weight
 
-	db   "This noisy #MON"
-	next "rings its bell"
-	next "for food, pets,"
+	db   "This cunning"
+	next "#MON hides"
+	next "under the cover"
 
-	page "and most of all"
-	next "the attention of"
-	next "its trainer.@"
+	page "of darkness,"
+	next "waiting to attack"
+	next "its prey.@"

@@ -1,6 +1,6 @@
-	db MURKROW ; 198 LEAFEON 
+	db MURKROW ; 198 BELLMITT 
 
-	db  95,  60, 130,  65, 110,  75
+	db  80, 110,  75,  105, 65, 70
 	;   hp  atk  def  spd  sat  sdf
 
 	db GRASS, GRASS ; type

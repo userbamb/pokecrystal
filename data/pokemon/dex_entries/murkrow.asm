@@ -1,10 +1,10 @@
-	db "LEAF@" ; species name
-	dw 211, 580 ; height, weight
+	db "FLYCATCHER@" ; species name
+	dw 403, 270 ; height, weight
 
-	db   "The root tips at"
-	next "the ends of its"
-	next "legs extend down"
-	
-	page "into the ground to"
-	next "absorb nutrients."
-	next "Loves to sunbathe.@"
+	db   "A surprisingly"
+	next "speedy plant. Able"
+	next "to move on the"
+
+	page "ground much more"
+	next "quickly than its"
+	next "previous forms.@"

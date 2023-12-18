@@ -937,6 +937,7 @@ BellsproutEvosAttacks:
 
 WeepinbellEvosAttacks:
 	db EVOLVE_ITEM, LEAF_STONE, VICTREEBEL
+	db EVOLVE_ITEM, SUN_STONE, MURKROW   ;BELMITT
 	db 0 ; no more evolutions
 	db 1, VINE_WHIP
 	db 1, GROWTH
@@ -1808,7 +1809,6 @@ EeveeEvosAttacks:
 	db EVOLVE_ITEM, THUNDERSTONE, JOLTEON
 	db EVOLVE_ITEM, WATER_STONE, VAPOREON
 	db EVOLVE_ITEM, FIRE_STONE, FLAREON
-	db EVOLVE_ITEM, LEAF_STONE, MURKROW   ;LEAFEON
 	db EVOLVE_HAPPINESS, TR_MORNDAY, ESPEON
 	db EVOLVE_HAPPINESS, TR_NITE, UMBREON
 	db 0 ; no more evolutions
@@ -2609,34 +2609,34 @@ AipomEvosAttacks:
 	db 0 ; no more level-up moves
 
 SunkernEvosAttacks:
-	db EVOLVE_HAPPINESS, TR_ANYTIME, SUNFLORA
 	db 0 ; no more evolutions
 	db 1, SCRATCH
-	db 1, GROWL
-	db 6, PURSUIT
-	db 10, DISABLE
-	db 20, BATON_PASS
-	db 24, FAINT_ATTACK
-	db 29, FURY_SWIPES
-	db 34, HEAL_BELL
-	db 38, CONFUSE_RAY
-	db 43, CRUNCH
-	db 48, GROWTH
+	db 1, LEER
+	db 9, QUICK_ATTACK
+	db 17, SCREECH
+	db 25, FAINT_ATTACK
+	db 33, FURY_SWIPES
+	db 41, POWDER_SNOW
+	db 49, SLASH
+	db 57, BEAT_UP
+	db 65, CRUNCH
+	db 69, HEAL_BELL
 	db 0 ; no more level-up moves
 
 SunfloraEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, SCRATCH
-	db 1, GROWL
-	db 6, PURSUIT
-	db 10, DISABLE
-	db 20, BATON_PASS
-	db 24, FAINT_ATTACK
-	db 30, FURY_SWIPES
-	db 35, HEAL_BELL
-	db 41, CONFUSE_RAY
-	db 47, CRUNCH
-	db 52, GROWTH
+	db 1, PECK
+	db 11, PURSUIT
+	db 16, HAZE
+	db 26, NIGHT_SHADE
+	db 31, FAINT_ATTACK
+	db 31, LOVELY_KISS
+	db 35, METRONOME
+	db 41, MEAN_LOOK
+	db 42, RAZOR_WIND
+	db 47, GUST
+	db 52, SMOKESCREEN
+	db 55, TRI_ATTACK
 	db 0 ; no more level-up moves
 
 YanmaEvosAttacks:
@@ -2707,15 +2707,13 @@ UmbreonEvosAttacks:
 MurkrowEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
-	db 1, TAIL_WHIP
-	db 8, SAND_ATTACK
+	db 8, POISONPOWDER
 	db 16, RAZOR_LEAF
 	db 23, QUICK_ATTACK
 	db 25, SYNTHESIS
-	db 30, LEECH_SEED
-	db 36, MEGA_DRAIN
-	db 42, SPORE
-	db 45, SOLARBEAM
+	db 36, STUN_SPORE
+	db 42, BODY_SLAM
+	db 45, PETAL_DANCE
 	db 47, AGILITY
 	db 52, MEAN_LOOK
 	db 0 ; no more level-up moves

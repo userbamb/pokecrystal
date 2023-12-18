@@ -97,7 +97,7 @@ Moves:
 	move STRING_SHOT,  EFFECT_SPEED_DOWN,          0, BUG,           STATUS,      95, 40,   0
 	move DRAGON_RAGE,  EFFECT_STATIC_DAMAGE,      40, DRAGON,        SPECIAL,    100, 10,   0
 	move FIRE_SPIN,    EFFECT_TRAP_TARGET,        15, FIRE,          SPECIAL,    100, 15,   0
-	move THUNDERSHOCK, EFFECT_PARALYZE_HIT,       40, ELECTRIC,      SPECIAL,    100, 30,  10
+	move THUNDERSHOCK, EFFECT_PARALYZE_HIT,       65, ELECTRIC,      SPECIAL,    100, 30,  10
 	move THUNDERBOLT,  EFFECT_PARALYZE_HIT,       95, ELECTRIC,      SPECIAL,    100, 15,  10
 	move THUNDER_WAVE, EFFECT_PARALYZE,            0, ELECTRIC,      STATUS,     100, 20,   0
 	move THUNDER,      EFFECT_THUNDER,           120, ELECTRIC,      SPECIAL,     85, 15,  30
@@ -198,7 +198,7 @@ Moves:
 	move PROTECT,      EFFECT_PROTECT,             0, NORMAL,        STATUS,     100, 10,   0
 	move MACH_PUNCH,   EFFECT_PRIORITY_HIT,       85, FIGHTING,      PHYSICAL,   100, 5,   0
 	move SCARY_FACE,   EFFECT_SPEED_DOWN_2,        0, NORMAL,        STATUS,      90, 10,   0
-	move FAINT_ATTACK, EFFECT_ALWAYS_HIT,         60, DARK,          PHYSICAL,   100, 20,   0
+	move FAINT_ATTACK, EFFECT_ALWAYS_HIT,         80, DARK,          SPECIAL,   100, 20,   0
 	move SWEET_KISS,   EFFECT_CONFUSE,             0, NORMAL,        STATUS,      75, 10,   0
 	move BELLY_DRUM,   EFFECT_BELLY_DRUM,          0, NORMAL,        STATUS,     100, 10,   0
 	move SLUDGE_BOMB,  EFFECT_POISON_HIT,         90, POISON,        PHYSICAL,   100, 10,  30

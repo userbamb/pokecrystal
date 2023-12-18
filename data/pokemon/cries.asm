@@ -196,14 +196,14 @@ PokemonCries::
 	mon_cry CRY_CLEFFA,       39,  312 ; SKIPLOOM
 	mon_cry CRY_CLEFFA,        0,  384 ; JUMPLUFF
 	mon_cry CRY_AIPOM,       -81,  232 ; AIPOM
-	mon_cry CRY_MARILL,      299,  184 ; SUNKERN
-	mon_cry CRY_MARILL,    -32,  384 ; SUNFLORA
+	mon_cry CRY_WOOPER,       83,  175 ; SUNKERN snisol
+	mon_cry CRY_MARILL,      -31,  384 ; SUNFLORA murko
 	mon_cry CRY_TOTODILE,     49,  200 ; YANMA
 	mon_cry CRY_WOOPER,      147,  175 ; WOOPER
 	mon_cry CRY_WOOPER,     -198,  320 ; QUAGSIRE
 	mon_cry CRY_AIPOM,       162,  320 ; ESPEON
 	mon_cry CRY_VENONAT,    -233,  240 ; UMBREON
-	mon_cry CRY_AIPOM,       $0d2,  $100 ; MURKROW LEAFEON
+	mon_cry CRY_PSYDUCK,     $06d,  $160 ; MURKROW BELLMITT
 	mon_cry CRY_SLOWKING,    260,  512 ; SLOWKING
 	mon_cry CRY_GOLEM,      -$010,  $1a0 ; MISDREAVUS GELANIA
 	mon_cry CRY_HOOTHOOT,    354,  256 ; UNOWN

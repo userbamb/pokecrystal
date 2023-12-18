@@ -210,14 +210,14 @@ DEF JOHTO_POKEMON EQU const_value
 	const SKIPLOOM   ; bc
 	const JUMPLUFF   ; bd
 	const AIPOM      ; be
-	const SUNKERN    ; bf  ;rinrin
-	const SUNFLORA   ; c0  ;bellrun
+	const SUNKERN    ; bf  ;SNisol
+	const SUNFLORA   ; c0  ;murko
 	const YANMA      ; c1
 	const WOOPER     ; c2
 	const QUAGSIRE   ; c3
 	const ESPEON     ; c4
 	const UMBREON    ; c5
-	const MURKROW    ; c6 LEAFEON
+	const MURKROW    ; c6 BELMITT
 	const SLOWKING   ; c7
 	const MISDREAVUS ; c8 GELANIA
 	const UNOWN      ; c9
