@@ -190,8 +190,8 @@ PokemonNames::
 	db "SKIPLOOM@@"
 	db "JUMPLUFF@@"
 	db "AIPOM@@@@@"
-	db "RINRIN@@@@"  ;RINRIN
-	db "BELLRUN@@@"  ;BELLRUN
+	db "SNEASEL@@@"  ;RINRIN
+	db "MURKROW@@@"  ;BELLRUN
 	db "YANMA@@@@@"
 	db "WOOPER@@@@" ;quagsire
 	db "QUAGSIRE@@" 

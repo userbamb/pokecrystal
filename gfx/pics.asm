@@ -468,9 +468,7 @@ DelibirdBackpic:     INCBIN "gfx/pokemon/delibird/back.2bpp.lz"
 SabrinaPic:          INCBIN "gfx/trainers/sabrina.2bpp.lz"
 MagikarpBackpic:     INCBIN "gfx/pokemon/magikarp/back.2bpp.lz"
 AriadosBackpic:      INCBIN "gfx/pokemon/ariados/back.2bpp.lz"
-SneaselBackpic:      INCBIN "gfx/pokemon/sneasel/back.2bpp.lz"
 UmbreonBackpic:      INCBIN "gfx/pokemon/umbreon/back.2bpp.lz"
-MurkrowBackpic:      INCBIN "gfx/pokemon/murkrow/back.2bpp.lz"
 IvysaurBackpic:      INCBIN "gfx/pokemon/ivysaur/back.2bpp.lz"
 SlowbroBackpic:      INCBIN "gfx/pokemon/slowbro/back.2bpp.lz"
 PsychicTPic:         INCBIN "gfx/trainers/psychic_t.2bpp.lz"
@@ -786,9 +784,13 @@ SECTION "Pics 22", ROMX
 MettoFrontpic:       INCBIN "gfx/pokemon/metto/front.animated.2bpp.lz"
 MettoBackpic:        INCBIN "gfx/pokemon/metto/back.2bpp.lz"
 RhydonFrontpic:      INCBIN "gfx/pokemon/rhydon/front.animated.2bpp.lz"
+MurkrowBackpic:      INCBIN "gfx/pokemon/murkrow/back.2bpp.lz"
+
 
 SECTION "Pics 23", ROMX
 DragonhighFrontpic:       INCBIN "gfx/pokemon/dragonhigh/front.animated.2bpp.lz"
 DragonhighBackpic:        INCBIN "gfx/pokemon/dragonhigh/back.2bpp.lz"
+SneaselBackpic:      INCBIN "gfx/pokemon/sneasel/back.2bpp.lz"
+
 
 SECTION "Pics 24", ROMX
