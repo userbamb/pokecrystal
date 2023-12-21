@@ -1239,19 +1239,19 @@ JohtoGrassWildMons:
 	; morn
 	db 2, MURKROW
 	db 2, MURKROW
-	db 3, CHARIZARD
+	db 3, HOUNDOOM
 	db 3, SUNFLORA
 	db 2, SUNFLORA
-	db 3, SUNKERN
-	db 3, SUNKERN
+	db 3, HOUNDOOM
+	db 3, HOUNDOOM
 	; day
 	db 2, MURKROW
 	db 2, MURKROW
 	db 3, CHARIZARD
 	db 3, SUNFLORA
 	db 2, SUNFLORA
-	db 3, SUNKERN
-	db 3, SUNKERN
+	db 3, HOUNDOOM
+	db 3, HOUNDOOM
 	; nite
 	db 2, HOOTHOOT
 	db 2, RATTATA
