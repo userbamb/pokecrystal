@@ -191,6 +191,8 @@ PokedexDataPointerTable:
 	dw SkiploomPokedexEntry
 	dw JumpluffPokedexEntry
 	dw AipomPokedexEntry
+	dw QwilfishPokedexEntry
+	dw DragonhighPokedexEntry
 	dw SunkernPokedexEntry
 	dw SunfloraPokedexEntry
 	dw YanmaPokedexEntry
@@ -211,7 +213,6 @@ PokedexDataPointerTable:
 	dw SteelixPokedexEntry
 	dw SnubbullPokedexEntry
 	dw GranbullPokedexEntry
-	dw QwilfishPokedexEntry
 	dw ScizorPokedexEntry
 	dw ShucklePokedexEntry
 	dw HeracrossPokedexEntry
@@ -253,5 +254,4 @@ PokedexDataPointerTable:
 	dw HoOhPokedexEntry
 	dw CelebiPokedexEntry
 	dw MettoPokedexEntry
-	dw DragonhighPokedexEntry
 	assert_table_length NUM_POKEMON

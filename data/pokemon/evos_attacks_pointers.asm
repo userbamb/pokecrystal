@@ -192,6 +192,8 @@ EvosAttacksPointers::
 	dw SkiploomEvosAttacks
 	dw JumpluffEvosAttacks
 	dw AipomEvosAttacks
+	dw QwilfishEvosAttacks
+	dw DragonhighEvosAttacks
 	dw SunkernEvosAttacks
 	dw SunfloraEvosAttacks
 	dw YanmaEvosAttacks
@@ -212,7 +214,6 @@ EvosAttacksPointers::
 	dw SteelixEvosAttacks
 	dw SnubbullEvosAttacks
 	dw GranbullEvosAttacks
-	dw QwilfishEvosAttacks
 	dw ScizorEvosAttacks
 	dw ShuckleEvosAttacks
 	dw HeracrossEvosAttacks
@@ -254,5 +255,4 @@ EvosAttacksPointers::
 	dw HoOhEvosAttacks
 	dw CelebiEvosAttacks
 	dw MettoEvosAttacks
-	dw DragonhighEvosAttacks
 	assert_table_length NUM_POKEMON

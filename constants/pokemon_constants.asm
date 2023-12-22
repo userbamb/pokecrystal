@@ -210,6 +210,8 @@ DEF JOHTO_POKEMON EQU const_value
 	const SKIPLOOM   ; bc
 	const JUMPLUFF   ; bd
 	const AIPOM      ; be
+	const QWILFISH   ; d3 SUNKERNN
+	const DRAGONHIGH ; FD
 	const SUNKERN    ; bf  ;SNisol
 	const SUNFLORA   ; c0  ;murko
 	const YANMA      ; c1
@@ -230,7 +232,6 @@ DEF JOHTO_POKEMON EQU const_value
 	const STEELIX    ; d0
 	const SNUBBULL   ; d1
 	const GRANBULL   ; d2
-	const QWILFISH   ; d3 GLIGAR
 	const SCIZOR     ; d4
 	const SHUCKLE    ; d5
 	const HERACROSS  ; d6
@@ -271,8 +272,7 @@ DEF JOHTO_POKEMON EQU const_value
 	const LUGIA      ; f9
 	const HO_OH      ; fa
 	const CELEBI     ; fb
-	const METTO      ; fc
-	const DRAGONHIGH ; FD
+	const METTO      ; f
 DEF NUM_POKEMON EQU const_value - 1
 	const EGG        ; fE
 

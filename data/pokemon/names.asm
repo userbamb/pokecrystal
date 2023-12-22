@@ -190,6 +190,8 @@ PokemonNames::
 	db "SKIPLOOM@@"
 	db "JUMPLUFF@@"
 	db "AIPOM@@@@@"
+	db "SUNKERN@@@"  ;QWILFISH
+	db "SUNFLORA@@"
 	db "SNEASEL@@@"  ;RINRIN
 	db "MURKROW@@@"  ;BELLRUN
 	db "YANMA@@@@@"
@@ -210,7 +212,6 @@ PokemonNames::
 	db "STEELIX@@@"
 	db "SNUBBULL@@"
 	db "GRANBULL@@"
-	db "GLIGAR@@@@"  ;QWILFISH
 	db "SCIZOR@@@@"
 	db "SHUCKLE@@@" ;EXEGGUTORAKOL
 	db "HERACROSS@"
@@ -252,7 +253,6 @@ PokemonNames::
 	db "HO-OH@@@@@"
 	db "CELEBI@@@@"
 	db "METTO@@@@@"
-	db "DRAGONITE@"
 	assert_table_length NUM_POKEMON
 	db "EGG@@@@@@@"
 	assert_table_length EGG

@@ -587,6 +587,14 @@ AipomEggMoves:
 	db BEAT_UP
 	db -1 ; end
 
+QwilfishEggMoves:
+    db VINE_WHIP
+	db COUNTER
+	db ANCIENTPOWER
+	db PRESENT
+	db GROWTH
+	db -1 ; end
+
 YanmaEggMoves:
 	db WHIRLWIND
 	db REVERSAL
@@ -631,13 +639,6 @@ SnubbullEggMoves:
 	db HEAL_BELL
 	db LICK
 	db LEER
-	db -1 ; end
-
-QwilfishEggMoves:
-    db METAL_CLAW
-	db WING_ATTACK
-	db RAZOR_WIND
-	db COUNTER
 	db -1 ; end
 
 ShuckleEggMoves:

@@ -190,6 +190,8 @@ FramesPointers:
 	dw SkiploomFrames
 	dw JumpluffFrames
 	dw AipomFrames
+	dw QwilfishFrames
+	dw DragonhighFrames
 	dw SunkernFrames
 	dw SunfloraFrames
 	dw YanmaFrames
@@ -210,7 +212,6 @@ FramesPointers:
 	dw SteelixFrames
 	dw SnubbullFrames
 	dw GranbullFrames
-	dw QwilfishFrames
 	dw ScizorFrames
 	dw ShuckleFrames
 	dw HeracrossFrames
@@ -252,5 +253,4 @@ FramesPointers:
 	dw HoOhFrames
 	dw CelebiFrames
 	dw MettoFrames
-	dw DragonhighFrames
 	assert_table_length NUM_POKEMON

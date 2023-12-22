@@ -383,6 +383,10 @@ PokemonPicPointers::
 	dba_pic JumpluffBackpic
 	dba_pic AipomFrontpic
 	dba_pic AipomBackpic
+	dba_pic QwilfishFrontpic
+	dba_pic QwilfishBackpic
+	dba_pic DragonhighFrontpic
+	dba_pic DragonhighBackpic
 	dba_pic SunkernFrontpic
 	dba_pic SunkernBackpic
 	dba_pic SunfloraFrontpic
@@ -426,8 +430,6 @@ PokemonPicPointers::
 	dba_pic SnubbullBackpic
 	dba_pic GranbullFrontpic
 	dba_pic GranbullBackpic
-	dba_pic QwilfishFrontpic
-	dba_pic QwilfishBackpic
 	dba_pic ScizorFrontpic
 	dba_pic ScizorBackpic
 	dba_pic ShuckleFrontpic
@@ -510,8 +512,6 @@ PokemonPicPointers::
 	dba_pic CelebiBackpic
 	dba_pic MettoFrontpic
 	dba_pic MettoBackpic
-	dba_pic DragonhighFrontpic
-	dba_pic DragonhighBackpic
 	assert_table_length NUM_POKEMON
 	dba_pic EggPic
 	dbw -1, -1 ; unused

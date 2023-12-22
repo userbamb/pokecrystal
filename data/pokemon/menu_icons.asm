@@ -192,6 +192,8 @@ MonMenuIcons:
 	db ICON_ODDISH      ; SKIPLOOM
 	db ICON_ODDISH      ; JUMPLUFF
 	db ICON_MONSTER     ; AIPOM
+	db ICON_ODDISH      ; SUNKERN
+	db ICON_ODDISH      ; DRAGONHIGH
 	db ICON_FOX      ; SUNKERN SNisol
 	db ICON_BIRD     ; SUNFLORA MURR
 	db ICON_BUG         ; YANMA
@@ -212,7 +214,6 @@ MonMenuIcons:
 	db ICON_SERPENT     ; STEELIX
 	db ICON_MONSTER     ; SNUBBULL
 	db ICON_MONSTER     ; GRANBULL
-	db ICON_BUG       ; QWILFISH GLIGAR
 	db ICON_BUG         ; SCIZOR
 	db ICON_BUG         ; SHUCKLE
 	db ICON_BUG         ; HERACROSS
@@ -254,5 +255,4 @@ MonMenuIcons:
 	db ICON_HO_OH       ; HO_OH
 	db ICON_HUMANSHAPE  ; CELEBI
 	db ICON_BLOB        ; METTO 
-	db ICON_BIGMON      ; DRAGONHIGH
 	assert_table_length NUM_POKEMON

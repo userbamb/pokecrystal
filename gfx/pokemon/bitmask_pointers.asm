@@ -190,6 +190,8 @@ BitmasksPointers:
 	dw SkiploomBitmasks
 	dw JumpluffBitmasks
 	dw AipomBitmasks
+	dw QwilfishBitmasks
+	dw DragonhighBitmasks
 	dw SunkernBitmasks
 	dw SunfloraBitmasks
 	dw YanmaBitmasks
@@ -210,7 +212,6 @@ BitmasksPointers:
 	dw SteelixBitmasks
 	dw SnubbullBitmasks
 	dw GranbullBitmasks
-	dw QwilfishBitmasks
 	dw ScizorBitmasks
 	dw ShuckleBitmasks
 	dw HeracrossBitmasks
@@ -252,5 +253,4 @@ BitmasksPointers:
 	dw HoOhBitmasks
 	dw CelebiBitmasks
 	dw MettoBitmasks
-	dw DragonhighBitmasks
 	assert_table_length NUM_POKEMON

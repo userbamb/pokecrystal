@@ -190,6 +190,8 @@ EggMovePointers::
 	dw NoEggMoves
 	dw NoEggMoves
 	dw AipomEggMoves
+	dw QwilfishEggMoves
+	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw YanmaEggMoves
@@ -210,7 +212,6 @@ EggMovePointers::
 	dw NoEggMoves
 	dw SnubbullEggMoves
 	dw NoEggMoves
-	dw QwilfishEggMoves
 	dw NoEggMoves
 	dw ShuckleEggMoves
 	dw HeracrossEggMoves
@@ -246,7 +247,6 @@ EggMovePointers::
 	dw NoEggMoves
 	dw NoEggMoves
 	dw LarvitarEggMoves
-	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves

@@ -2013,7 +2013,6 @@ DratiniEvosAttacks:
 
 DragonairEvosAttacks:
 	db EVOLVE_LEVEL, 55, DRAGONITE
-	db EVOLVE_ITEM, MIST_STONE, DRAGONHIGH
 	db 0 ; no more evolutions
 	db 1, WRAP
 	db 1, LEER
@@ -2608,6 +2607,37 @@ AipomEvosAttacks:
 	db 46, AGILITY
 	db 0 ; no more level-up moves
 
+QwilfishEvosAttacks: ;SUNKERN
+	db EVOLVE_ITEM, SUN_STONE, DRAGONHIGH
+	db 0 ; no more evolutions
+	db 1, TACKLE
+	db 1, GROWTH
+	db 4, ABSORB
+	db 10, MEGA_DRAIN
+	db 14, RAZOR_LEAF
+	db 19, LEECH_SEED
+	db 24, GIGA_DRAIN
+	db 29, SYNTHESIS
+	db 35, SOLARBEAM
+	db 41, DOUBLE_EDGE
+	db 47, SUNNY_DAY
+	db 0 ; no more level-up moves
+
+DragonhighEvosAttacks:
+	db 0 ; no more evolutions
+	db 1, TACKLE
+	db 1, GROWTH
+	db 4, ABSORB
+	db 10, MEGA_DRAIN
+	db 14, RAZOR_LEAF
+	db 19, LEECH_SEED
+	db 24, GIGA_DRAIN
+	db 29, PETAL_DANCE
+	db 35, SOLARBEAM
+	db 41, PRESENT
+	db 47, SUNNY_DAY
+	db 0 ; no more level-up moves
+
 SunkernEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SCRATCH
@@ -2873,18 +2903,6 @@ GranbullEvosAttacks:
 	db 28, MEGA_PUNCH
 	db 38, RAGE
 	db 51, TAKE_DOWN
-	db 0 ; no more level-up moves
-
-QwilfishEvosAttacks: ;GLIGAR
-	db 0 ; no more evolutions
-	db 1, POISON_STING
-	db 6, SAND_ATTACK
-	db 13, HARDEN
-	db 20, QUICK_ATTACK
-	db 28, FAINT_ATTACK
-	db 36, SLASH
-	db 44, RAZOR_WIND
-	db 52, GUILLOTINE
 	db 0 ; no more level-up moves
 
 ScizorEvosAttacks:
@@ -3443,15 +3461,5 @@ MettoEvosAttacks:
 	db 1, TRANSFORM
 	db 40, SPIKES
 	db 50, SPIKE_CANNON
-	db 0 ; no more level-up moves
-	
-DragonhighEvosAttacks:
-	db 0 ; no more evolutions
-	db 38, AGILITY
-	db 47, SAFEGUARD
-	db 55, RAZOR_WIND
-	db 57, METRONOME
-	db 62, OUTRAGE
-	db 64, SKY_ATTACK
 	db 0 ; no more level-up moves
 	

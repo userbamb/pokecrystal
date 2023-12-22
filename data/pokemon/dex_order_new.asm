@@ -165,6 +165,7 @@ NewPokedexOrder:
 	db NATU
 	db XATU
 	db QWILFISH
+	db DRAGONHIGH
 	db TENTACOOL
 	db TENTACRUEL
 	db KRABBY
@@ -249,7 +250,6 @@ NewPokedexOrder:
 	db LARVITAR
 	db PUPITAR
 	db TYRANITAR
-	db DRAGONHIGH
 	db LUGIA
 	db HO_OH
 	db MEWTWO

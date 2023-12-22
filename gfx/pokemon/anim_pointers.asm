@@ -190,6 +190,8 @@ AnimationPointers:
 	dw SkiploomAnimation
 	dw JumpluffAnimation
 	dw AipomAnimation
+	dw QwilfishAnimation
+	dw DragonhighAnimation
 	dw SunkernAnimation
 	dw SunfloraAnimation
 	dw YanmaAnimation
@@ -210,7 +212,6 @@ AnimationPointers:
 	dw SteelixAnimation
 	dw SnubbullAnimation
 	dw GranbullAnimation
-	dw QwilfishAnimation
 	dw ScizorAnimation
 	dw ShuckleAnimation
 	dw HeracrossAnimation
@@ -252,5 +253,4 @@ AnimationPointers:
 	dw HoOhAnimation
 	dw CelebiAnimation
 	dw MettoAnimation
-	dw DragonhighAnimation
 	assert_table_length NUM_POKEMON

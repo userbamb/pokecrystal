@@ -44,7 +44,6 @@ AlphabeticalPokedexOrder:
 	db DODUO
 	db DONPHAN
 	db DRAGONAIR
-	db DRAGONHIGH
 	db DRAGONITE
 	db DRATINI
 	db DROWZEE
@@ -70,7 +69,6 @@ AlphabeticalPokedexOrder:
 	db GENGAR
 	db GEODUDE
 	db GIRAFARIG
-    db QWILFISH ;GLIGAR
 	db GLOOM
 	db GOLBAT
 	db GOLDEEN
@@ -219,6 +217,8 @@ AlphabeticalPokedexOrder:
 	db STEELIX
 	db SUDOWOODO
 	db SUICUNE
+	db DRAGONHIGH
+	db QWILFISH ;sunkern
 	db SWINUB
 	db TANGELA
 	db TAUROS

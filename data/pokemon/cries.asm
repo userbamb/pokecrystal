@@ -196,6 +196,8 @@ PokemonCries::
 	mon_cry CRY_CLEFFA,       39,  312 ; SKIPLOOM
 	mon_cry CRY_CLEFFA,        0,  384 ; JUMPLUFF
 	mon_cry CRY_AIPOM,       -81,  232 ; AIPOM
+	mon_cry CRY_MARILL,      $12b,  $0b8 ; SUNKERN
+	mon_cry CRY_SUNFLORA,   -$020,  $180 ; dragonhigh
 	mon_cry CRY_WOOPER,       83,  175 ; SUNKERN snisol
 	mon_cry CRY_MARILL,      -31,  384 ; SUNFLORA murko
 	mon_cry CRY_TOTODILE,     49,  200 ; YANMA
@@ -216,7 +218,6 @@ PokemonCries::
 	mon_cry CRY_TYPHLOSION,  239,  247 ; STEELIX
 	mon_cry CRY_DUNSPARCE,   274,  232 ; SNUBBULL
 	mon_cry CRY_DUNSPARCE,     0,  384 ; GRANBULL
-	mon_cry CRY_GLIGAR,     -$102,  $100 ; QWILFISH GLIGAR
 	mon_cry CRY_AMPHAROS,      0,  352 ; SCIZOR
 	mon_cry CRY_DUNSPARCE,   656,  168 ; SHUCKLE
 	mon_cry CRY_AMPHAROS,     53,  224 ; HERACROSS
@@ -258,7 +259,6 @@ PokemonCries::
 	mon_cry CRY_AIPOM,         0,  384 ; HO_OH
 	mon_cry CRY_ENTEI,       330,  273 ; CELEBI
 	mon_cry CRY_PIDGEY,      $162,  $120 ; METTO
-	mon_cry CRY_BULBASAUR,   1132,  320 ; DRAGONHIGH
 	assert_table_length NUM_POKEMON
 	mon_cry CRY_NIDORAN_M,     0,    0 ; 254
 	mon_cry CRY_NIDORAN_M,     0,    0 ; 255
