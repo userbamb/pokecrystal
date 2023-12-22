@@ -157,7 +157,7 @@ NeighborScript:
 	iftrue .MornScript
 	checktime DAY
 	iftrue .DayScript
-	checktime NITE
+	checktime EVE | NITE
 	iftrue .NiteScript
 
 .MornScript:

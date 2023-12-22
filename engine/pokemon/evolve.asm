@@ -132,13 +132,13 @@ EvolveAfterBattle_MasterLoop:
 ; TR_NITE
 	ld a, [wTimeOfDay]
 	cp NITE_F
-	jp nz, .dont_evolve_3
+	jp c, .dont_evolve_3
 	jr .proceed
 
 .happiness_daylight
 	ld a, [wTimeOfDay]
 	cp NITE_F
-	jp z, .dont_evolve_3
+	jp nc, .dont_evolve_3
 	jr .proceed
 
 .trade
