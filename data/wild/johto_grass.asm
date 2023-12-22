@@ -1239,17 +1239,17 @@ JohtoGrassWildMons:
 	; morn
 	db 2, METTO
 	db 2, METTO
-	db 3, CHARIZARD
-	db 3, CHARIZARD
+	db 3, QWILFISH
+	db 3, DRAGONHIGH
 	db 2, SUNFLORA
 	db 3, HOUNDOOM
 	db 3, HOUNDOOM
 	; day
 	db 2, METTO
 	db 2, METTO
-	db 3, CHARIZARD
-	db 3, CHARIZARD
-	db 2, CHARIZARD
+	db 3, QWILFISH
+	db 3, DRAGONHIGH
+	db 3, QWILFISH
 	db 3, HOUNDOOM
 	db 3, HOUNDOOM
 	; nite
