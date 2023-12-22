@@ -1,10 +1,11 @@
-	db "FLYSCORPIO@" ; species name
-	dw 307, 1430 ; height, weight
+	db "SEED@" ; species name
+	dw 100, 40 ; height, weight
 
-	db   "It builds its nest"
-	next "on a steep cliff."
-	next "When it is done"
+	db   "It is very weak."
+	next "Its only means of"
+	next "defense is to"
+
+	page "shake its leaves"
+	next "desperately at its"
+	next "attacker.@"
 	
-	page "gliding, it hops"
-	next "along the ground"
-	next "back to its nest.@"
