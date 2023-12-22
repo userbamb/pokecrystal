@@ -1,6 +1,6 @@
 	db SUNFLORA ; 192 BELLRUN
 
-	db 100,  80,  70, 71,  125,  75
+	db 85,  80,  70, 71,  105,  75
 	;   hp  atk  def  spd  sat  sdf
 
 	db DARK, FLYING ; type

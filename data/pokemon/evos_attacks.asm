@@ -2635,7 +2635,7 @@ SunfloraEvosAttacks:
 	db 41, MEAN_LOOK
 	db 42, RAZOR_WIND
 	db 47, GUST
-	db 52, SMOKESCREEN
+	db 52, SWIFT
 	db 55, TRI_ATTACK
 	db 0 ; no more level-up moves
 
@@ -3094,9 +3094,9 @@ MantineEvosAttacks:
 	db 22, BUBBLEBEAM
 	db 33, CONFUSE_RAY
 	db 38, BARRIER
-	db 44, RECOVER
+	db 44, BARRAGE
 	db 49, HYDRO_PUMP
-	db 52, MEAN_LOOK
+	db 52, RECOVER
 	db 60, ENCORE
 	db 0 ; no more level-up moves
 

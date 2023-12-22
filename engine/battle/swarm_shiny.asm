@@ -50,12 +50,12 @@ GenerateSwarmShiny:
    jr .rollshiny
 .clefairy
    ld a, [wCurPartySpecies]
-   cp CLEFAIRY
+   cp SMEARGLE
    jr nz, .skipshine
    jr .rollshiny
 .miltank
    ld a, [wCurPartySpecies]
-   cp MILTANK
+   cp MARILL
    jr nz, .skipshine
    jr .rollshiny
 .yanma

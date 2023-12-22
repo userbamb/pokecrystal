@@ -1237,19 +1237,19 @@ JohtoGrassWildMons:
 	def_grass_wildmons ROUTE_29
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 2, MURKROW
-	db 2, MURKROW
-	db 3, HOUNDOOM
-	db 3, SUNFLORA
+	db 2, METTO
+	db 2, METTO
+	db 3, CHARIZARD
+	db 3, CHARIZARD
 	db 2, SUNFLORA
 	db 3, HOUNDOOM
 	db 3, HOUNDOOM
 	; day
-	db 2, MURKROW
-	db 2, MURKROW
+	db 2, METTO
+	db 2, METTO
 	db 3, CHARIZARD
-	db 3, SUNFLORA
-	db 2, SUNFLORA
+	db 3, CHARIZARD
+	db 2, CHARIZARD
 	db 3, HOUNDOOM
 	db 3, HOUNDOOM
 	; nite

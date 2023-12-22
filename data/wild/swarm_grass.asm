@@ -9,7 +9,7 @@ SwarmGrassWildMons:
 	db 28, PONYTA
 	db 32, PONYTA
 	db 28, PONYTA
-	db 5, CYNDAQUIL
+	db 23, PONYTA
 	db 27, SCYTHER
 	db 31, PONYTA
 	; day
@@ -18,13 +18,13 @@ SwarmGrassWildMons:
 	db 32, PONYTA
 	db 28, PONYTA
 	db 28, SCYTHER
-	db 5, CYNDAQUIL
+	db 23, PONYTA
 	db 31, PONYTA
 	; nite
 	db 30, PONYTA
 	db 28, PONYTA
 	db 32, PONYTA
-	db 5, CYNDAQUIL
+	db 23, PONYTA
 	db 28, CHANSEY
 	db 27, ARBOK
 	db 31, PONYTA
@@ -36,41 +36,41 @@ SwarmGrassWildMons:
 	db 22, TEDDIURSA
 	db 18, TEDDIURSA
 	db 24, TEDDIURSA
-	db 22, TEDDIURSA
-	db 5, CHIKORITA
-	db 22, SMEARGLE
+	db 20, PHANPY
+	db 23, PHANPY
+	db 22, WOBBUFFET
 	; day
 	db 19, TEDDIURSA
 	db 22, TEDDIURSA
 	db 18, TEDDIURSA
-	db 24, TEDDIURSA
-	db 5, CHIKORITA
-	db 5, CHIKORITA
+	db 22, PHANPY
+	db 23, PHANPY
+	db 20, PHANPY
 	db 22, WOBBUFFET
 	; nite
 	db 20, TEDDIURSA
 	db 22, TEDDIURSA
 	db 18, TEDDIURSA
 	db 24, TEDDIURSA
-	db 5,  CHIKORITA
+	db 23,  ZUBAT
 	db 22, TEDDIURSA
-	db 22, SMEARGLE
+	db 22, WOBBUFFET
 ; CLEFAIRY swarm
 	map_id RUINS_OF_ALPH_OUTSIDE
     db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 20, NATU
 	db 22, CLEFAIRY
-	db 18, CLEFAIRY
-	db 24, CLEFAIRY
+	db 18, SMEARGLE
+	db 24, SMEARGLE
 	db 20, ELEKID
 	db 22, ELEKID
 	db 22, SMEARGLE
 	; day
 	db 20, CHANSEY
 	db 22, CLEFAIRY
-	db 18, CLEFAIRY
-	db 24, CLEFAIRY
+	db 18, SMEARGLE
+	db 24, SMEARGLE
 	db 20, ELEKID
 	db 22, ELEKID
 	db 22, SMEARGLE
@@ -79,8 +79,8 @@ SwarmGrassWildMons:
 	db 22, CLEFAIRY
 	db 18, CLEFAIRY
 	db 24, CLEFAIRY
-	db 22, CLEFAIRY
-	db 22, CLEFAIRY
+	db 22, SMEARGLE
+	db 22, SMEARGLE
 	db 22, ELEKID
 ; MILTANK swarm
 	map_id ROUTE_38
@@ -88,26 +88,26 @@ SwarmGrassWildMons:
 	; morn
 	db 16, TYROGUE
 	db 16, PINECO
-	db 16, MAGNEMITE
-	db 16, MILTANK
+	db 16, PIKACHU
+	db 16, MARILL
 	db 13, TAUROS
-	db 13, MILTANK
-	db 13, MILTANK
+	db 13, MARILL
+	db 13, MARILL
 	; day
 	db 16, TYROGUE
-	db 16, MILTANK
-	db 16, MAGNEMITE
-	db 16, MILTANK
+	db 16, PIKACHU
+	db 16, MARILL
+	db 16, MARILL
 	db 13, TAUROS
-	db 13, MILTANK
-	db 13, MILTANK
+	db 13, MARILL
+	db 13, HOUNDOUR
 	; nite
-	db 16, MILTANK
-	db 16, MILTANK
-	db 16, MAGNEMITE
-	db 16, MILTANK
+	db 16, MARILL
+	db 16, HOUNDOUR
+	db 16, MARILL
+	db 16, HOUNDOUR
 	db 16, SUNFLORA
-	db 16, TYROGUE
+	db 16, HOUNDOUR
 	db 16, MEOWTH
 ; DITTO swarm
 	map_id ROUTE_34
@@ -142,7 +142,7 @@ SwarmGrassWildMons:
 	; morn
 	db 17, GIRAFARIG
 	db 17, MAREEP
-	db 5, TOTODILE
+	db 17, GIRAFARIG
 	db 16, GIRAFARIG
 	db 13, MAREEP
 	db 14, MAREEP
@@ -150,7 +150,7 @@ SwarmGrassWildMons:
 	; day
 	db 15, GIRAFARIG
 	db 17, MAREEP
-	db 5, TOTODILE
+	db 17, GIRAFARIG
 	db 16, GIRAFARIG
 	db 15, MAREEP
 	db 15, MAREEP
@@ -159,7 +159,7 @@ SwarmGrassWildMons:
 	db 17, WOBBUFFET
 	db 15, MAREEP
 	db 15, DUNSPARCE
-	db 5, TOTODILE
+	db 17, GIRAFARIG
 	db 15, MAREEP
 	db 16, MAREEP
 	db 14, MAREEP

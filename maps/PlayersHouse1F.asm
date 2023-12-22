@@ -355,7 +355,7 @@ PlayersHouse1FStoveText:
 	text "Mom's specialty!"
 
 	para "CINNABAR VOLCANO"
-	line "BURGER!"
+	line "PARMIGIANA!"
 	done
 
 PlayersHouse1FSinkText:
@@ -387,7 +387,7 @@ PlayersHouse1F_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  6,  7, SAFARI_ZONE_NORTH, 1
+	warp_event  6,  7, NEW_BARK_TOWN, 2
 	warp_event  7,  7, NEW_BARK_TOWN, 2
 	warp_event  9,  0, PLAYERS_HOUSE_2F, 1
 

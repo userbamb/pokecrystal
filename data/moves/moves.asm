@@ -153,7 +153,7 @@ Moves:
 	move GLARE,        EFFECT_PARALYZE,            0, NORMAL,        STATUS,      75, 30,   0
 	move DREAM_EATER,  EFFECT_DREAM_EATER,       100, PSYCHIC_TYPE,  SPECIAL,    100, 15,   0
 	move POISON_GAS,   EFFECT_POISON,              0, POISON,        PHYSICAL,    55, 40,   0
-	move BARRAGE,      EFFECT_MULTI_HIT,          15, NORMAL,        PHYSICAL,    85, 20,   0
+	move BARRAGE,      EFFECT_MULTI_HIT,          25, STEEL,        SPECIAL,    100, 20,   0
 	move LEECH_LIFE,   EFFECT_LEECH_HIT,          70, BUG,           PHYSICAL,   100, 15,   0
 	move LOVELY_KISS,  EFFECT_SLEEP,               0, NORMAL,        STATUS,      85, 10,   0
 	move SKY_ATTACK,   EFFECT_RECOIL_HIT,        140, FLYING,        PHYSICAL,    90, 10,   0
@@ -181,7 +181,7 @@ Moves:
 	move STRUGGLE,     EFFECT_RECOIL_HIT,         50, NORMAL,        PHYSICAL,   100,  1,   0
 	move SKETCH,       EFFECT_SKETCH,              0, NORMAL,        STATUS,     100,  1,   0
 	move TRIPLE_KICK,  EFFECT_TRIPLE_KICK,        30, FIGHTING,      PHYSICAL,   100, 10,   0
-	move THIEF,        EFFECT_THIEF,              70, DARK,          PHYSICAL,    100, 10, 100
+	move THIEF,        EFFECT_THIEF,              70, DARK,          SPECIAL,    100, 10, 100
 	move SPIDER_WEB,   EFFECT_MEAN_LOOK,           0, BUG,           STATUS,     100, 10,   0
 	move MIND_READER,  EFFECT_LOCK_ON,             0, NORMAL,        STATUS,     100,  5,   0
 	move NIGHTMARE,    EFFECT_NIGHTMARE,           0, GHOST,         STATUS,     100, 15,   0

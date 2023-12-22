@@ -140,7 +140,7 @@ SwarmMiltankText:
 	cont "say?"
 
 	para "Oh yes! There's a"
-	line "swarm of MILTANK"
+	line "swarm of MARILL"
 	cont "on ROUTE 38."
 	done
 
@@ -220,7 +220,7 @@ SwarmClefairyText:
 	cont "say?"
 
 	para "Oh yes! There's a"
-	line "swarm of CLEFAIRY"
+	line "swarm of SMEARGLE"
 	para "…At the RUINS OF"
 	line "ALPH?!"
 	done
