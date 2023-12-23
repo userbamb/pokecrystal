@@ -4080,11 +4080,12 @@ BattleAnim_SacredFire:
 	anim_loop 8, .loop
 	anim_wait 96
 	anim_sound 0, 0, SFX_SHINE
-	anim_obj ANIM_OBJ_SKULLB, 48, 56, $0
+	anim_obj ANIM_OBJ_SKULLB, 48, 70, $0
 	anim_wait 16
 	anim_sound 0, 0, SFX_SHINE
-	anim_obj ANIM_OBJ_SKULLB, 48, 56, $0
-	anim_wait 8
+	anim_obj ANIM_OBJ_SKULLB, 48, 70, $0
+	anim_wait 16
+
 .loop3
 	anim_sound 0, 1, SFX_EMBER
     anim_obj ANIM_OBJ_BURNED, 136, 56, $10
