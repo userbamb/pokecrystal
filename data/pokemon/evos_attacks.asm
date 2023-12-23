@@ -3448,12 +3448,14 @@ CelebiEvosAttacks:
 	db 1, LEECH_SEED
 	db 1, CONFUSION
 	db 1, RECOVER
-	db 1, HEAL_BELL
+	db 1, PRESENT
 	db 10, SAFEGUARD
 	db 20, ANCIENTPOWER
 	db 30, FUTURE_SIGHT
+	db 36, MEGA_DRAIN
 	db 40, BATON_PASS
-	db 50, PERISH_SONG
+	db 50, SING
+	db 56, GROWTH
 	db 0 ; no more level-up moves
 
 MettoEvosAttacks:

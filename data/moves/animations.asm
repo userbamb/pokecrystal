@@ -3786,7 +3786,7 @@ BattleAnim_GigaDrain:
 	anim_incbgeffect ANIM_BG_FADE_MONS_TO_BLACK_REPEATING
 	anim_call BattleAnim_ShowMon_0
 	anim_bgeffect ANIM_BG_WHITE_HUES, $0, $8, $0
-	anim_call BattleAnimSub_Glimmer2
+	anim_call BattleAnimSub_Glimmer3
 	anim_wait 16
 	anim_ret
 
@@ -4896,6 +4896,23 @@ BattleAnimSub_Glimmer2:
 	anim_obj ANIM_OBJ_GLIMMER, 56, 64, $0
 	anim_wait 5
 	anim_obj ANIM_OBJ_GLIMMER, 40, 84, $0
+	anim_wait 5
+	anim_loop 2, .loop
+	anim_wait 16
+	anim_ret
+
+BattleAnimSub_Glimmer3:
+	anim_sound 0, 0, SFX_METRONOME
+.loop
+	anim_obj ANIM_OBJ_GLIMMERG, 24, 64, $0
+	anim_wait 5
+	anim_obj ANIM_OBJ_GLIMMERG, 56, 104, $0
+	anim_wait 5
+	anim_obj ANIM_OBJ_GLIMMERG, 24, 104, $0
+	anim_wait 5
+	anim_obj ANIM_OBJ_GLIMMERG, 56, 64, $0
+	anim_wait 5
+	anim_obj ANIM_OBJ_GLIMMERG, 40, 84, $0
 	anim_wait 5
 	anim_loop 2, .loop
 	anim_wait 16
