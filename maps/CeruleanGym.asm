@@ -292,12 +292,12 @@ MistyAnotherMementoText:
 
 MistyDiveSpeechText:
 	text "MISTY: It contains"
-	line "the move DIVE."
+	line "the move SUB."
 
 	para "With the CASCADE-"
 	line "BADGE, you can"
 
-	para "use DIVE outside"
+	para "use SUB outside"
 	line "of battle to get"
 	cont "to the seafloor."
 

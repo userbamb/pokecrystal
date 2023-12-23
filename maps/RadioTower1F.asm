@@ -17,7 +17,7 @@ SwarmGrampsScript:
 	opentext
 	checkflag ENGINE_SWARM
 	iftrue .skiprandomswarm
-	random 12
+	random 11
 	ifequal 0, .mareep
 	ifequal 1, .yanma
 	ifequal 2, .vulpix
@@ -29,15 +29,6 @@ SwarmGrampsScript:
 	ifequal 8, .teddiursa
 	ifequal 9, .chinchouz
 	ifequal 10, .ponyta
-	ifequal 11, .murkrow
-
-.murkrow
-	setflag ENGINE_SWARM
-	swarm ROUTE_33
-	writetext SwarmMurkrowText
-	waitbutton
-	closetext
-	end
 
 .ponyta
 	setflag ENGINE_SWARM
@@ -201,16 +192,6 @@ SwarmPonytaText:
 	para "Oh yes! PONYTA"
 	line "is swarming on"
 	cont "ROUTE 26."
-	done
-
-SwarmMurkrowText:
-	text "Let me see…"
-	line "What did the news"
-	cont "say?"
-
-	para "Oh yes! MURKROW"
-	line "is swarming on"
-	cont "ROUTE 33."
 	done
 
 SwarmChinchouzText:

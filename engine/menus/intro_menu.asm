@@ -221,7 +221,7 @@ endc
 	inc hl
 	ld [hl], LOW(MOM_MONEY)
 
-	ld a, 14
+	ld a, 16
 	ld [wLevelCap], a
 
 	call InitializeNPCNames

@@ -26,15 +26,8 @@ GenerateSwarmShiny:
    jr z, .chinchouz
    cp LANDMARK_ROUTE_26
    jr z, .ponyta
-   cp LANDMARK_ROUTE_33
-   jr z, .murkrow
    jr .skipshine
 
-.murkrow
-   ld a, [wCurPartySpecies]
-   cp SUNFLORA
-   jr nz, .skipshine
-   jr .rollshiny
 .ponyta
    ld a, [wCurPartySpecies]
    cp PONYTA
@@ -43,6 +36,16 @@ GenerateSwarmShiny:
 .chinchouz
    ld a, [wCurPartySpecies]
    cp CHINCHOU
+   jr nz, .skipshine
+   jr .rollshiny
+.mareep
+   ld a, [wCurPartySpecies]
+   cp MAREEP
+   jr nz, .skipshine
+   jr .rollshiny
+.vulpix
+   ld a, [wCurPartySpecies]
+   cp VULPIX
    jr nz, .skipshine
    jr .rollshiny
 .teddiursa
@@ -78,16 +81,6 @@ GenerateSwarmShiny:
 .kotora
    ld a, [wCurPartySpecies]
    cp DUNSPARCE
-   jr nz, .skipshine
-   jr .rollshiny
-.mareep
-   ld a, [wCurPartySpecies]
-   cp MAREEP
-   jr nz, .skipshine
-   jr .rollshiny
-.vulpix
-   ld a, [wCurPartySpecies]
-   cp VULPIX
    jr nz, .skipshine
    jr .rollshiny
 

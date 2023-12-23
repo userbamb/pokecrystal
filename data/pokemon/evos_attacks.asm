@@ -3153,6 +3153,7 @@ HoundoomEvosAttacks:
 	db 30, FAINT_ATTACK
 	db 41, FLAMETHROWER
 	db 52, CRUNCH
+	db 56, SACRED_FIRE
 	db 0 ; no more level-up moves
 
 KingdraEvosAttacks:

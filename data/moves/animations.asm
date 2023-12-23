@@ -3741,53 +3741,31 @@ BattleAnim_Sandstorm:
 	anim_ret
 
 BattleAnim_GigaDrain:
-    anim_2gfx ANIM_GFX_CHARGE, ANIM_GFX_SHINE
-	anim_call BattleAnim_TargetObj_1Row
-	anim_bgeffect ANIM_BG_FADE_MONS_TO_BLACK_REPEATING, $0, BG_EFFECT_TARGET, $10
-	anim_setvar $0
-.loop
+	anim_2gfx ANIM_GFX_BUBBLE, ANIM_GFX_CHARGE
+	anim_bgp $90
 	anim_sound 6, 3, SFX_GIGA_DRAIN
-	anim_obj ANIM_OBJ_ABSORB, 128, 48, $2
-	anim_wait 6
-	anim_sound 6, 3, SFX_GIGA_DRAIN
-	anim_obj ANIM_OBJ_ABSORB, 136, 64, $3
-	anim_wait 6
-	anim_sound 6, 3, SFX_GIGA_DRAIN
-	anim_obj ANIM_OBJ_ABSORB, 136, 32, $4
-	anim_wait 6
-	anim_incvar
-	anim_if_var_equal $7, .done
-	anim_if_var_equal $1, .spawn1
-	anim_if_var_equal $2, .spawn2
-	anim_if_var_equal $3, .spawn
-	anim_if_var_equal $4, .spawn3
-	anim_if_var_equal $5, .spawn4
-	anim_jump .loop
-
-.spawn1
-	anim_obj ANIM_OBJ_SOLAR_BEAM_CHARGE, 44, 88, $8
-	anim_jump .loop
-.spawn2
-	anim_obj ANIM_OBJ_SOLAR_BEAM_CHARGE, 44, 88, $18
-	anim_jump .loop
-.spawn3
-	anim_obj ANIM_OBJ_SOLAR_BEAM_CHARGE, 44, 88, $28
-	anim_jump .loop
-.spawn4
-	anim_obj ANIM_OBJ_SOLAR_BEAM_CHARGE, 44, 88, $38
-	anim_jump .loop
-
-.spawn
-	anim_obj ANIM_OBJ_ABSORB_CENTER, 44, 88, $2
-	anim_jump .loop
-
-.done
-	anim_wait 64
+	anim_call BattleAnimSub_DrainG
+	anim_wait 48
+	anim_wait 128
 	anim_incbgeffect ANIM_BG_FADE_MONS_TO_BLACK_REPEATING
 	anim_call BattleAnim_ShowMon_0
-	anim_bgeffect ANIM_BG_WHITE_HUES, $0, $8, $0
-	anim_call BattleAnimSub_Glimmer3
-	anim_wait 16
+	anim_wait 1
+	anim_1gfx ANIM_GFX_SHINE
+	anim_bgeffect ANIM_BG_CYCLE_MID_OBPALS_GRAY_AND_YELLOW, $0, $0, $0
+.loop
+	anim_sound 0, 0, SFX_METRONOME
+	anim_obj ANIM_OBJ_GLIMMERG, 24, 64, $0
+	anim_wait 5
+	anim_obj ANIM_OBJ_GLIMMERG, 56, 104, $0
+	anim_wait 5
+	anim_obj ANIM_OBJ_GLIMMERG, 24, 104, $0
+	anim_wait 5
+	anim_obj ANIM_OBJ_GLIMMERG, 56, 64, $0
+	anim_wait 5
+	anim_obj ANIM_OBJ_GLIMMERG, 40, 84, $0
+	anim_wait 5
+	anim_loop 2, .loop
+	anim_wait 32
 	anim_ret
 
 BattleAnim_Endure:
@@ -4092,7 +4070,7 @@ BattleAnim_PainSplit:
 	anim_ret
 
 BattleAnim_SacredFire:
-	anim_2gfx ANIM_GFX_FIRE, ANIM_GFX_PSYCHIC
+	anim_2gfx ANIM_GFX_FIRE, ANIM_GFX_POISON
     anim_bgeffect ANIM_BG_CYCLE_OBPALS_GRAY_AND_YELLOW, $0, $2, $0
 	anim_bgeffect ANIM_BG_CYCLE_BGPALS_INVERTED, $0, $4, $0
 	anim_sound 6, 6, SFX_PROTECT
@@ -4101,12 +4079,12 @@ BattleAnim_SacredFire:
 	anim_wait 8
 	anim_loop 8, .loop
 	anim_wait 96
-	anim_obj ANIM_OBJ_MEAN_LOOK, 48, 56, $0
-	anim_wait 32
-	anim_sound 0, 1, SFX_SHINE
-	anim_wait 8
-	anim_sound 0, 1, SFX_SHINE
+	anim_sound 0, 0, SFX_SHINE
+	anim_obj ANIM_OBJ_SKULLB, 48, 56, $0
 	anim_wait 16
+	anim_sound 0, 0, SFX_SHINE
+	anim_obj ANIM_OBJ_SKULLB, 48, 56, $0
+	anim_wait 8
 .loop3
 	anim_sound 0, 1, SFX_EMBER
     anim_obj ANIM_OBJ_BURNED, 136, 56, $10
@@ -4712,6 +4690,17 @@ BattleAnimSub_Drain:
 	anim_obj ANIM_OBJ_DRAIN, 132, 44, $38
 	anim_ret
 
+BattleAnimSub_DrainG:
+	anim_obj ANIM_OBJ_DRAING, 132, 44, $0
+	anim_obj ANIM_OBJ_DRAING, 132, 44, $8
+	anim_obj ANIM_OBJ_DRAING, 132, 44, $10
+	anim_obj ANIM_OBJ_DRAING, 132, 44, $18
+	anim_obj ANIM_OBJ_DRAING, 132, 44, $20
+	anim_obj ANIM_OBJ_DRAING, 132, 44, $28
+	anim_obj ANIM_OBJ_DRAING, 132, 44, $30
+	anim_obj ANIM_OBJ_DRAING, 132, 44, $38
+	anim_ret
+
 BattleAnimSub_EyeBeams:
 	anim_sound 6, 2, SFX_LEER
 	anim_obj ANIM_OBJ_LEER, 72, 84, $0
@@ -4896,23 +4885,6 @@ BattleAnimSub_Glimmer2:
 	anim_obj ANIM_OBJ_GLIMMER, 56, 64, $0
 	anim_wait 5
 	anim_obj ANIM_OBJ_GLIMMER, 40, 84, $0
-	anim_wait 5
-	anim_loop 2, .loop
-	anim_wait 16
-	anim_ret
-
-BattleAnimSub_Glimmer3:
-	anim_sound 0, 0, SFX_METRONOME
-.loop
-	anim_obj ANIM_OBJ_GLIMMERG, 24, 64, $0
-	anim_wait 5
-	anim_obj ANIM_OBJ_GLIMMERG, 56, 104, $0
-	anim_wait 5
-	anim_obj ANIM_OBJ_GLIMMERG, 24, 104, $0
-	anim_wait 5
-	anim_obj ANIM_OBJ_GLIMMERG, 56, 64, $0
-	anim_wait 5
-	anim_obj ANIM_OBJ_GLIMMERG, 40, 84, $0
 	anim_wait 5
 	anim_loop 2, .loop
 	anim_wait 16
