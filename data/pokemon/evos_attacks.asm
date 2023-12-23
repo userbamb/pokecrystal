@@ -1128,7 +1128,7 @@ MagnetonEvosAttacks:
 	db 0 ; no more level-up moves
 
 FarfetchDEvosAttacks:
-    db EVOLVE_LEVEL, 37, STANTLER
+    db EVOLVE_LEVEL, 31, STANTLER
 	db 0 ; no more evolutions
 	db 1, PECK
 	db 7, SAND_ATTACK
@@ -3218,7 +3218,7 @@ StantlerEvosAttacks:
 	db 25, FAINT_ATTACK
 	db 31, SLASH
 	db 39, SWORDS_DANCE
-	db 46, AGILITY
+	db 46, RAZOR_WIND
 	db 54, PURSUIT
 	db 61, SKY_ATTACK
 	db 0 ; no more level-up moves

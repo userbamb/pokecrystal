@@ -245,3 +245,32 @@ SwarmGrassWildMons:
 	db 26, CHANSEY
 	db 26, DUNSPARCE
 	db -1 ; end
+
+; MURKROW swarm
+	map_id ROUTE_33
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 6, RATTATA
+	db 6, SPEAROW
+	db 6, GEODUDE
+	db 6, SUNFLORA
+	db 7, EKANS
+	db 7, SUNFLORA
+	db 7, HOPPIP
+	; day
+	db 6, RATTATA
+	db 6, SPEAROW
+	db 6, GEODUDE
+	db 6, SUNFLORA
+	db 7, EKANS
+	db 7, SUNFLORA
+	db 7, HOPPIP
+	; nite
+	db 6, RATTATA
+	db 6, ZUBAT
+	db 6, SUNFLORA
+	db 6, ZUBAT
+	db 7, SUNFLORA
+	db 7, SUNFLORA
+	db 7, SUNFLORA
+	db -1 ; end

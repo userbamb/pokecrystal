@@ -347,7 +347,7 @@ JohtoGrassWildMons:
 	db 13, PIDGEY
 	db 10, CATERPIE
 	db 10, CATERPIE
-	db 10, SENTRET
+	db 10, QWILFISH
 	; day
 	db 12, NIDORAN_F
 	db 12, NIDORAN_M
@@ -355,15 +355,15 @@ JohtoGrassWildMons:
 	db 13, PIDGEY
 	db 10, CATERPIE
 	db 10, WEEDLE
-	db 10, SENTRET
+	db 10, QWILFISH
 	; nite
 	db 12, PSYDUCK
 	db 13, HOOTHOOT
 	db 14, SPINARAK
 	db 15, HOOTHOOT
 	db 10, VENONAT
-	db 12, SENTRET
-	db 12, SENTRET 
+	db 12, QWILFISH
+	db 12, HOOTHOOT 
 	end_grass_wildmons
 
 	def_grass_wildmons RUINS_OF_ALPH_OUTSIDE
@@ -1237,21 +1237,21 @@ JohtoGrassWildMons:
 	def_grass_wildmons ROUTE_29
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 2, METTO
-	db 2, METTO
-	db 3, QWILFISH
-	db 3, DRAGONHIGH
-	db 2, SUNFLORA
-	db 3, HOUNDOOM
-	db 3, HOUNDOOM
+	db 2, PIDGEY
+	db 2, SENTRET
+	db 3, PIDGEY
+	db 3, SENTRET
+	db 2, RATTATA
+	db 3, HOPPIP
+	db 3, HOPPIP
 	; day
-	db 2, METTO
-	db 2, METTO
-	db 3, QWILFISH
-	db 3, DRAGONHIGH
-	db 3, QWILFISH
-	db 3, HOUNDOOM
-	db 3, HOUNDOOM
+	db 2, PIDGEY
+	db 2, SENTRET
+	db 3, PIDGEY
+	db 3, SENTRET
+	db 2, RATTATA
+	db 3, HOPPIP
+	db 3, HOPPIP
 	; nite
 	db 2, HOOTHOOT
 	db 2, RATTATA

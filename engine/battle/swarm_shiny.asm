@@ -26,8 +26,15 @@ GenerateSwarmShiny:
    jr z, .chinchouz
    cp LANDMARK_ROUTE_26
    jr z, .ponyta
+   cp LANDMARK_ROUTE_33
+   jr z, .murkrow
    jr .skipshine
 
+.murkrow
+   ld a, [wCurPartySpecies]
+   cp SUNFLORA
+   jr nz, .skipshine
+   jr .rollshiny
 .ponyta
    ld a, [wCurPartySpecies]
    cp PONYTA
