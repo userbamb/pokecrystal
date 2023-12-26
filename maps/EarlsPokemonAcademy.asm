@@ -279,12 +279,6 @@ AcademyPoisonText:
 	line "#MON steadily"
 	cont "loses HP."
 
-	para "Poison lingers"
-	line "after the battle,"
-
-	para "and HP is lost as"
-	line "you walk."
-
 	para "To cure it, use an"
 	line "ANTIDOTE."
 	done

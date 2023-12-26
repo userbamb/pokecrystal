@@ -10,9 +10,10 @@ BattleTowerOutside_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+	callback MAPCALLBACK_OBJECTS, CindaquilCallback
 	callback MAPCALLBACK_TILES, BattleTowerOutsideNoopCallback
 	callback MAPCALLBACK_OBJECTS, BattleTowerOutsideShowCiviliansCallback
-	callback MAPCALLBACK_OBJECTS, CindaquilCallback
+	
 
 CindaquilCallback:
 	checkevent EVENT_FOUGHT_TOTO

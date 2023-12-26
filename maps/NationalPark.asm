@@ -74,7 +74,8 @@ NationalParkYoungster1Script:
 
 
 NationalParkTeacher2Script:
-	
+	jumptextfaceplayer NationalParkTeacher2Text
+
 
 NationalParkPersian:
 	faceplayer
@@ -386,14 +387,18 @@ NationalParkYoungster2Text:
 	done
 
 NationalParkTeacher2Text:
-	text "I take walks in"
-	line "the PARK, but I"
+	text "There is a guy in"
+	line "the RADIO TOWER"
 
-	para "never go into the"
-	line "grass."
+	para "that always watc-"
+	line "hes the news for"
 
-	para "Trainers always"
-	line "want to battle…"
+	para "SWARMS. One time"
+	line "I saw a #MON"
+	para "that was somehow"
+	line "different than the"
+	para "others of the"
+	line "SWARM!"
 	done
 
 NationalParkPersianText:
