@@ -595,7 +595,7 @@ BattleAnim_InWhirlpool:
 	anim_bgeffect ANIM_BG_WHIRLPOOL, $0, $0, $0
 	anim_sound 0, 1, SFX_SURF
 .loop
-	anim_obj ANIM_OBJ_GUST, 132, 72, $0
+	anim_obj ANIM_OBJ_SKULLB, 132, 72, $0
 	anim_wait 6
 	anim_loop 6, .loop
 	anim_incbgeffect ANIM_BG_WHIRLPOOL
@@ -4070,7 +4070,7 @@ BattleAnim_PainSplit:
 	anim_ret
 
 BattleAnim_SacredFire:
-	anim_2gfx ANIM_GFX_FIRE, ANIM_GFX_POISON
+	anim_1gfx ANIM_GFX_FIRE
     anim_bgeffect ANIM_BG_CYCLE_OBPALS_GRAY_AND_YELLOW, $0, $2, $0
 	anim_bgeffect ANIM_BG_CYCLE_BGPALS_INVERTED, $0, $4, $0
 	anim_sound 6, 6, SFX_PROTECT
@@ -4079,12 +4079,9 @@ BattleAnim_SacredFire:
 	anim_wait 8
 	anim_loop 8, .loop
 	anim_wait 96
-	anim_sound 0, 0, SFX_SHINE
-	anim_obj ANIM_OBJ_SKULLB, 48, 70, $0
-	anim_wait 16
-	anim_sound 0, 0, SFX_SHINE
-	anim_obj ANIM_OBJ_SKULLB, 48, 70, $0
-	anim_wait 16
+	anim_sound 6, 2, SFX_SLUDGE_BOMB
+	anim_obj ANIM_OBJ_DRAGON_RAGE, 64, 92, $0
+	anim_wait 32
 
 .loop3
 	anim_sound 0, 1, SFX_EMBER
@@ -4419,7 +4416,7 @@ BattleAnim_Twister:
 	anim_2gfx ANIM_GFX_WIND, ANIM_GFX_HIT
 .loop1
 	anim_sound 0, 0, SFX_RAZOR_WIND
-	anim_obj ANIM_OBJ_GUST, 64, 112, $0
+	anim_obj ANIM_OBJ_SKULLB, 64, 112, $0
 	anim_wait 6
 	anim_loop 9, .loop1
 .loop2
@@ -4621,7 +4618,7 @@ BattleAnim_Whirlpool:
 	anim_sound 0, 1, SFX_SURF
 	anim_wait 16
 .loop
-	anim_obj ANIM_OBJ_GUST, 132, 72, $0
+	anim_obj ANIM_OBJ_SKULLB, 132, 72, $0
 	anim_wait 6
 	anim_loop 9, .loop
 	anim_wait 64
