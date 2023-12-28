@@ -2842,8 +2842,8 @@ DunsparceEvosAttacks:
 	db 15, THUNDER_WAVE
 	db 19, MORNING_SUN
 	db 24, SPARK
-	db 28, TAKE_DOWN
-	db 33, SUPER_FANG
+	db 28, METRONOME
+	db 33, DEFENSE_CURL
 	db 37, CRUNCH
 	db 42, THUNDERBOLT
 	db 0 ; no more level-up moves
@@ -2857,8 +2857,8 @@ GligarEvosAttacks:
 	db 15, THUNDER_WAVE
 	db 19, SCARY_FACE
 	db 24, SPARK
-	db 28, TAKE_DOWN
-	db 35, SUPER_FANG
+	db 28, METRONOME
+	db 35, DEFENSE_CURL
 	db 42, CRUNCH
 	db 49, THUNDERBOLT
 	db 56, THUNDER
