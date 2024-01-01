@@ -4011,14 +4011,14 @@ BattleAnim_Return:
 	anim_ret
 
 BattleAnim_Present:
-	anim_1gfx ANIM_GFX_MISC
+	anim_1gfx ANIM_GFX_FLOWER
 	anim_bgp $90
 .loop
 	anim_sound 0, 1, SFX_SWEET_SCENT_2
-	anim_obj ANIM_OBJ_COTTON_SPORE, 48, 56, $0
-	anim_wait 8
-	anim_loop 5, .loop
-	anim_wait 96
+	anim_obj ANIM_OBJ_PETAL_DANCE, 48, 56, $0
+	anim_wait 11
+	anim_loop 8, .loop
+	anim_wait 128
 	anim_ret
 
 BattleAnim_Frustration:
