@@ -1,6 +1,6 @@
 	db REMORAID ; 223 wolfman
 
-	db 110,  90, 110, 90,  90,  85
+	db 110,  90, 90, 85,  65,  115
 	;   hp  atk  def  spd  sat  sdf
 
 	db ICE, ICE ; type
@@ -9,7 +9,7 @@
 	db ICE_BERRY, NEVERMELTICE ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
-	db 20 ; step cycles to hatch
+	db 10 ; step cycles to hatch
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/remoraid/front.dimensions"
 	dw NULL, NULL ; unused (beta front/back pics)

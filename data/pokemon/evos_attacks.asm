@@ -356,9 +356,9 @@ PikachuEvosAttacks:
 	db 8, THUNDER_WAVE
 	db 11, QUICK_ATTACK
 	db 15, DOUBLE_TEAM
-	db 20, SLAM
+	db 20, SPARK
 	db 26, THUNDERBOLT
-	db 33, AGILITY
+	db 33, METRONOME
 	db 41, THUNDER
 	db 50, LIGHT_SCREEN
 	db 0 ; no more level-up moves
@@ -2840,9 +2840,7 @@ DunsparceEvosAttacks:
 	db 6, THUNDERSHOCK
 	db 10, BITE
 	db 15, THUNDER_WAVE
-	db 19, MORNING_SUN
 	db 24, SPARK
-	db 28, METRONOME
 	db 33, DEFENSE_CURL
 	db 37, CRUNCH
 	db 42, THUNDERBOLT
@@ -2857,11 +2855,9 @@ GligarEvosAttacks:
 	db 15, THUNDER_WAVE
 	db 19, SCARY_FACE
 	db 24, SPARK
-	db 28, METRONOME
 	db 35, DEFENSE_CURL
 	db 42, CRUNCH
 	db 49, THUNDERBOLT
-	db 56, THUNDER
 	db 60, EXTREMESPEED
 	db 0 ; no more level-up moves
 
@@ -3054,6 +3050,7 @@ CorsolaEvosAttacks: ;WOLFAN
 	db 12, FURY_SWIPES
 	db 18, LOW_KICK
 	db 23, MOONLIGHT
+	db 31, DEFENSE_CURL
 	db 0 ; no more level-up moves
 
 RemoraidEvosAttacks: ;WARWOLF

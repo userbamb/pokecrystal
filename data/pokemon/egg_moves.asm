@@ -682,7 +682,7 @@ SwinubEggMoves:
 
 CorsolaEggMoves:
 	db COUNTER
-	db DYNAMICPUNCH
+	db FLAME_WHEEL
 	db MIST
 	db OUTRAGE
 	db PURSUIT
