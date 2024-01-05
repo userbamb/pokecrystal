@@ -344,14 +344,14 @@ JohtoGrassWildMons:
 	db 12, NIDORAN_M
 	db 12, NIDORAN_F
 	db 14, LEDYBA
-	db 13, PIDGEY
-	db 10, CATERPIE
+	db 13, QWILFISH
+	db 10, QWILFISH
 	db 10, CATERPIE
 	db 10, QWILFISH
 	; day
 	db 12, NIDORAN_F
 	db 12, NIDORAN_M
-	db 14, PSYDUCK
+	db 14, QWILFISH
 	db 13, PIDGEY
 	db 10, CATERPIE
 	db 10, WEEDLE
