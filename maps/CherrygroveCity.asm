@@ -16,6 +16,7 @@ CherrygroveCity_MapScripts:
 	
 
 .DiveMap:
+	setflag ENGINE_FLYPOINT_CHERRYGROVE
 	divemap UNDERWATER_1, 0, 0
 	return
 

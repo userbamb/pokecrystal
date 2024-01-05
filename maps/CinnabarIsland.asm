@@ -9,6 +9,7 @@ CinnabarIsland_MapScripts:
 	callback MAPCALLBACK_NEWMAP, CinnabarIslandFlypointCallback
 
 .DiveMap:
+	setflag ENGINE_FLYPOINT_CINNABAR
 	divemap CINNABAR_UNDERWATER, 0, 0
 	return
 

@@ -22,6 +22,7 @@ CianwoodCity_MapScripts:
 	callback MAPCALLBACK_NEWMAP, CianwoodCityFlypointAndSuicuneCallback
 
 .DiveMap:
+	setflag ENGINE_FLYPOINT_CIANWOOD
 	divemap CIANWOOD_UNDERWATER, 0, 0
 	return
 
