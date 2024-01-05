@@ -589,7 +589,7 @@ AipomEggMoves:
 
 QwilfishEggMoves:
     db VINE_WHIP
-	db COUNTER
+	db SPORE
 	db ANCIENTPOWER
 	db PRESENT
 	db GROWTH

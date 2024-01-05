@@ -247,7 +247,7 @@ ChooseMoveToLearn:
 
 .MenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 1, 1, SCREEN_WIDTH - 10, 11
+	menu_coords 1, 1, SCREEN_WIDTH - 1, 11
 	dw .MenuData
 	db 1 ; default option
 
@@ -274,28 +274,52 @@ ChooseMoveToLearn:
 	ld a, " "
 	call ByteFill
 	ld a, [wMenuSelection]
-	cp $ff
+	inc a
 	ret z
-	push de
 	dec a
-	ld bc, MOVE_LENGTH
-	ld hl, Moves + MOVE_TYPE
-	call AddNTimes
-	ld a, BANK(Moves)
-	call GetFarByte
-	ld [wd265], a
-
-	ld a, [wMenuSelection]
+	push de
 	dec a
 	ld bc, MOVE_LENGTH
 	ld hl, Moves 
 	call AddNTimes
 	ld a, BANK(Moves)
 	call GetFarByte
-	ld [wCurCoordEvent], a
+	ld [wTempSpecies], a
+	; get move type
+	; 6 characters
+	ld c, a ;character width loaded into c
+	add a ;double a (two characters)
+	add c ;add c to a (three charaters)
+	add a ;double a (six characters)
+	add c ;add c to a (seven charaters, needed for blank space at the end)
+	ld c, a
+	ld b, 0
+	ld hl, .Types
+	add hl, bc
+	ld d, h
+	ld e, l
+	ld hl, wStringBuffer1
+	ld bc, 7
+	call PlaceString
+
+	ld hl, wStringBuffer1 + 7
+	ld [hl], "P"
+	inc hl
+	ld [hl], "P"
+	inc hl
+	ld [hl], ":"
+	ld a, [wMenuSelection]
+	dec a
+	ld bc, MOVE_LENGTH
+	ld hl, Moves + MOVE_PP
+	call AddNTimes
+	ld a, BANK(Moves)
+	call GetFarByte
+	ld [wCurCoordEvent], a ;Changed from wEngineBuffer1
 	ld hl, wStringBuffer1 + 10
-	ld de, wCurCoordEvent
+	ld de, wCurCoordEvent ;Changed from wEngineBuffer1
 	ld bc, $102
+	call PrintNum
 	ld hl, wStringBuffer1 + 12
 	ld [hl], "@"
 
@@ -309,35 +333,33 @@ ChooseMoveToLearn:
 	ret
 
 .Types
-	db "@@@@@"
-	db "@@@@@"
-	db "@@@@@"
-	db "@@@@@"
-	db "@@@@@"
-	db "@@@@@"
-	db "@@@@@"
-	db "@@@@@"
-	db "@@@@@"
-	db "@@@@@"
-
-    db "@@@@@"
-	db "@@@@@"
-	db "@@@@@"
-	db "@@@@@"
-	db "@@@@@"
-	db "@@@@@"
-	db "@@@@@"
-	db "@@@@@"
-	db "@@@@@"
-
-	db "@@@@@"
-	db "@@@@@"
-	db "@@@@@"
-	db "@@@@@"
-	db "@@@@@"
-	db "@@@@@"
-	db "@@@@@"
-	db "@@@@@"
+	db "@@@@@@@"
+	db "@@@@@@@"
+	db "@@@@@@@"
+	db "@@@@@@@"
+	db "@@@@@@@"
+	db "@@@@@@@"
+	db "@@@@@@@"
+	db "@@@@@@@"
+	db "@@@@@@@"
+	db "@@@@@@@"
+	db "@@@@@@@"
+	db "@@@@@@@"
+	db "@@@@@@@"
+	db "@@@@@@@"
+	db "@@@@@@@"
+	db "@@@@@@@"
+	db "@@@@@@@"
+	db "@@@@@@@"
+	db "@@@@@@@"
+	db "@@@@@@@"
+	db "@@@@@@@"
+	db "@@@@@@@"
+	db "@@@@@@@"
+	db "@@@@@@@"
+	db "@@@@@@@"
+	db "@@@@@@@"
+	db "@@@@@@@"
 
 .PrintMoveDesc
 	push de

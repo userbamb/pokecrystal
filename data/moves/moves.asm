@@ -202,7 +202,7 @@ Moves:
 	move SWEET_KISS,   EFFECT_CONFUSE,             0, NORMAL,        STATUS,      75, 10,   0
 	move BELLY_DRUM,   EFFECT_BELLY_DRUM,          0, NORMAL,        STATUS,     100, 10,   0
 	move SLUDGE_BOMB,  EFFECT_POISON_HIT,         90, POISON,        PHYSICAL,   100, 10,  30
-	move MUD_SLAP,     EFFECT_SPEED_DOWN_HIT,     65, GROUND,        PHYSICAL,   100, 10, 100
+	move MUD_SLAP,     EFFECT_ACCURACY_DOWN_HIT,     65, GROUND,        PHYSICAL,   100, 10, 100
 	move OCTAZOOKA,    EFFECT_BURN_HIT,           85, WATER,         PHYSICAL,    95, 10,  80
 	move SPIKES,       EFFECT_SPIKES,              0, GROUND,        STATUS,     100, 20,   0
 	move ZAP_CANNON,   EFFECT_PARALYZE_HIT,       95, ELECTRIC,      PHYSICAL,    90,  5,  50

@@ -317,7 +317,8 @@ FearowEvosAttacks:
 	db 26, PURSUIT
 	db 32, MIRROR_MOVE
 	db 40, DRILL_PECK
-	db 47, AGILITY
+	db 47, RAZOR_WIND
+	db 55, SKY_ATTACK
 	db 0 ; no more level-up moves
 
 EkansEvosAttacks:
@@ -365,10 +366,10 @@ PikachuEvosAttacks:
 
 RaichuEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, THUNDERSHOCK
-	db 1, TAIL_WHIP
+	db 1, DOUBLE_TEAM
+	db 1, METRONOME
+	db 1, SPARK
 	db 1, QUICK_ATTACK
-	db 1, THUNDERBOLT
 	db 0 ; no more level-up moves
 
 SandshrewEvosAttacks:
@@ -2627,7 +2628,7 @@ DragonhighEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, GROWTH
-	db 4, ABSORB
+	db 4, SYNTHESIS
 	db 10, MEGA_DRAIN
 	db 14, RAZOR_LEAF
 	db 19, LEECH_SEED
