@@ -358,9 +358,9 @@ JohtoGrassWildMons:
 	db 10, QWILFISH
 	; nite
 	db 12, PSYDUCK
-	db 13, HOOTHOOT
+	db 13, QWILFISH
 	db 14, SPINARAK
-	db 15, HOOTHOOT
+	db 15, QWILFISH
 	db 10, VENONAT
 	db 12, QWILFISH
 	db 12, HOOTHOOT 
