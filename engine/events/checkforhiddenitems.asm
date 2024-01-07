@@ -106,10 +106,10 @@ RockItemEncounter:
 	db 2, METAL_COAT
 	db 2, NUGGET
 	db 6, MAX_REVIVE
-	db 12, ETHER
+	db 12, BRICK_PIECE
 	db 18, METAL_COAT
 	db 24, NUGGET
-	db 24, HARD_STONE
-	db 48, SOFT_SAND
+	db 24, REVIVE
+	db 48, BRICK_PIECE
 	db 64, PEARL
 	db -1

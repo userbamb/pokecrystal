@@ -1,5 +1,6 @@
 	const_def
 	const MOVERELEARNERTEXT_INTRO
+	const MOVERELEARNERTEXT_INTRO2
 	const MOVERELEARNERTEXT_WHICHMON
 	const MOVERELEARNERTEXT_WHICHMOVE
 	const MOVERELEARNERTEXT_COMEAGAIN
@@ -9,19 +10,15 @@
 	const MOVERELEARNERTEXT_NOMOVESTOLEARN
 
 MoveRelearner:
+	ld a, BRICK_PIECE
+	ld [wCurItem], a
+	ld hl, wNumItems
+	call CheckItem
+	jp nc, .cancel2
 	ld a, MOVERELEARNERTEXT_INTRO
 	call PrintMoveRelearnerText
-	farcall PlaceMoneyTopRight
 	call YesNoBox
 	jp c, .cancel
-	ld hl, .cost_to_relearn
-	ld de, hMoneyTemp
-	ld bc, 3
-	call CopyBytes
-	ld bc, hMoneyTemp
-	ld de, wMoney
-	farcall CompareMoney
-	jp c, .not_enough_money
 	ld a, MOVERELEARNERTEXT_WHICHMON
 	call PrintMoveRelearnerText
 	call JoyWaitAorB
@@ -37,63 +34,78 @@ MoveRelearner:
 	call IsAPokemon
 	jr c, .no_mon
 
+
 	call GetRelearnableMoves
 	jr z, .no_moves
 
+.menuloop
 	ld a, MOVERELEARNERTEXT_WHICHMOVE
 	call PrintMoveRelearnerText
 	call JoyWaitAorB
-
 	call ChooseMoveToLearn
-	jr c, .skip_learn
+	jr c, .cancelMoveLearn
+
 	ld a, [wMenuSelection]
-	ld [wTempSpecies], a
+	ld [wd265], a
 	call GetMoveName
-	ld hl, wStringBuffer1
-	ld de, wStringBuffer2
-	ld bc, wStringBuffer2 - wStringBuffer1
-	call CopyBytes
+	ld de, wStringBuffer1
+	call CopyName1
 	ld b, 0
 	predef LearnMove
 	ld a, b
 	and a
-	jr z, .skip_learn
-	ld hl, .cost_to_relearn
-	ld de, hMoneyTemp
-	ld bc, 3
-	call CopyBytes
-	ld bc, hMoneyTemp
-	ld de, wMoney
-	farcall TakeMoney
-	ld de, SFX_TRANSACTION
-	call PlaySFX
-	call WaitSFX
-.skip_learn
+	push af
 	call CloseSubmenu
 	call SpeechTextbox
+	pop af
+	jr z, .reloadmenu
+	
+	ld a, BRICK_PIECE
+	ld [wCurItem], a
+	ld a, 1
+	ld [wItemQuantityChange], a
+	ld a, -1
+	ld [wCurItemQuantity], a
+	ld hl, wNumItems
+	call TossItem
+
+	ld a, MOVERELEARNERTEXT_NOTENOUGHMONEY
+	call PrintMoveRelearnerText
+
+	call JoyWaitAorB
+
 .cancel
 	ld a, MOVERELEARNERTEXT_COMEAGAIN
 	call PrintMoveRelearnerText
 	ret
+
+.cancel2
+	ld a, MOVERELEARNERTEXT_INTRO2
+	call PrintMoveRelearnerText
+	ret
+
+.reloadmenu
+	jp .menuloop
+	
+.cancelMoveLearn
+	call CloseSubmenu
+	jr .cancel
+
 .egg
 	ld a, MOVERELEARNERTEXT_EGG
 	call PrintMoveRelearnerText
 	ret
-.not_enough_money
-	ld a, MOVERELEARNERTEXT_NOTENOUGHMONEY
-	call PrintMoveRelearnerText
-	ret
+
 .no_mon
 	ld a, MOVERELEARNERTEXT_NOTAPOKEMON
 	call PrintMoveRelearnerText
 	ret
+
 .no_moves
 	ld a, MOVERELEARNERTEXT_NOMOVESTOLEARN
 	call PrintMoveRelearnerText
 	ret
 
-.cost_to_relearn
-	dt 1000
 
 GetRelearnableMoves:
 	; Get moves relearnable by CurPartyMon
@@ -102,26 +114,21 @@ GetRelearnableMoves:
 	xor a
 	ld [hli], a
 	ld [hl], $ff
-
 	ld a, MON_SPECIES
-	call GetPartyParamLocation
-	ld a, [hl]
+	call GetPartyParam
 	ld [wCurPartySpecies], a
-
 	push af
 	ld a, MON_LEVEL
-	call GetPartyParamLocation
-	ld a, [hl]
+	call GetPartyParam
 	ld [wCurPartyLevel], a
-
 	ld b, 0
 	ld de, wd002 + 1
-; based on GetEggMove in engine/pokemon/breeding.asm 
+.loop
+	push bc
 	ld a, [wCurPartySpecies]
 	dec a
-	push bc
-	ld b, 0
 	ld c, a
+	ld b, 0
 	ld hl, EvosAttacksPointers
 	add hl, bc
 	add hl, bc
@@ -129,25 +136,22 @@ GetRelearnableMoves:
 	call GetFarWord
 .skip_evos
 	ld a, BANK(EvosAttacks)
-	call GetFarByte
-	inc hl
+	call GetFarByteAndIncrement
 	and a
 	jr nz, .skip_evos
-
 .loop_moves
 	ld a, BANK(EvosAttacks)
-	call GetFarByte
-	inc hl
+	call GetFarByteAndIncrement
 	and a
 	jr z, .done
+
 	ld c, a
 	ld a, [wCurPartyLevel]
 	cp c
+	jr c, .done
 	ld a, BANK(EvosAttacks)
-	call GetFarByte
-	inc hl
-	jr c, .loop_moves
-
+	call GetFarByteAndIncrement
+.okay
 	ld c, a
 	call CheckAlreadyInList
 	jr c, .loop_moves
@@ -163,73 +167,102 @@ GetRelearnableMoves:
 	push bc
 	jr .loop_moves
 .done
+	callfar GetPreEvolution
 	pop bc
+	jr c, .loop
 	pop af
 	ld [wCurPartySpecies], a
 	ld a, b
 	ld [wd002], a
 	and a
 	ret
+    
+GetPartyParam:
+	push hl
+	call GetPartyParamLocation
+	ld a, [hl]
+	pop hl
+	ret
+	
+GetFarByteAndIncrement:
+	call GetFarByte
+	inc hl
+	ret
 
 CheckAlreadyInList:
 	push hl
+	push de
+	push bc
+	ld a, c
 	ld hl, wd002 + 1
+	call IsInSingularArray
+	pop bc
+	pop de
+	pop hl
+	ret
+    
+IsInSingularArray:
+	ld b, l
+	ld d, $ff
+	ld e, a
 .loop
 	ld a, [hli]
-	inc a
-	jr z, .nope
-	dec a
-	cp c
+	cp d
+	jr z, .notInArray
+	cp e
 	jr nz, .loop
-	pop hl
+	dec hl
+	ld a, l
+	sub b 
+	ld b, a
 	scf
 	ret
-.nope
-	pop hl
+
+.notInArray
 	and a
 	ret
 
 CheckPokemonAlreadyKnowsMove:
 	; Check if move c is in the selected pokemon's movepool already.
-	; Returns c if yes.
+	; Returns carry if yes.
 	push hl
 	push bc
 	ld a, MON_MOVES
 	call GetPartyParamLocation
-	ld b, 4
+	ld b, NUM_MOVES
 .loop
 	ld a, [hli]
 	cp c
 	jr z, .yes
 	dec b
 	jr nz, .loop
-	pop bc
-	pop hl
 	and a
-	ret
+	jr .done
 .yes
+	scf
+.done
 	pop bc
 	pop hl
-	scf
 	ret
 
 ChooseMoveToLearn:
-	; Open a full-screen scrolling menu
-	; Number of items stored in wd002
-	; List of items stored in wd002 + 1
-	; Print move names, PP, details, and descriptions
-	; Enable Up, Down, A, and B
-	; Up scrolls up
-	; Down scrolls down
-	; A confirms selection
-	; B backs out
+; Open a full-screen scrolling menu
+; Number of items stored in wd002
+; List of items stored in wd002 + 1
+; Print move names, PP, details, and descriptions
+; Enable Up, Down, A, and B
+; Up scrolls up
+; Down scrolls down
+; A confirms selection
+; B backs out
 	call FadeToMenu
 	farcall BlankScreen
 	call UpdateSprites
-	ld hl, .MenuHeader
+	ld hl, .MenuDataHeader
 	call CopyMenuHeader
 	xor a
 	ld [wMenuCursorPosition], a
+	ld a, 1
 	ld [wMenuScrollPosition], a
 	call ScrollingMenu
 	call SpeechTextbox
@@ -245,17 +278,18 @@ ChooseMoveToLearn:
 	scf
 	ret
 
-.MenuHeader:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 1, 1, SCREEN_WIDTH - 1, 11
-	dw .MenuData
+.MenuDataHeader
+	db $40 ; flags
+	db 01, 01 ; start coords
+	db 11, 19 ; end coords
+	dw .menudata2
 	db 1 ; default option
 
-.MenuData:
-	db SCROLLINGMENU_DISPLAY_ARROWS | SCROLLINGMENU_ENABLE_FUNCTION3 ; item format
+.menudata2
+	db $30 ; pointers
 	db 5, 8 ; rows, columns
-	db SCROLLINGMENU_ITEMS_NORMAL ; horizontal spacing
-	dba  wd002
+	db 1 ; horizontal spacing
+	dbw 0, wd002
 	dba .PrintMoveName
 	dba .PrintDetails
 	dba .PrintMoveDesc
@@ -263,51 +297,67 @@ ChooseMoveToLearn:
 .PrintMoveName
 	push de
 	ld a, [wMenuSelection]
-	ld [wTempSpecies], a
+	ld [wd265], a
 	call GetMoveName
 	pop hl
-	call PlaceString
-	ret
+	jp PlaceString
+
 .PrintDetails
 	ld hl, wStringBuffer1
 	ld bc, wStringBuffer2 - wStringBuffer1
 	ld a, " "
 	call ByteFill
 	ld a, [wMenuSelection]
-	inc a
+	cp $ff
 	ret z
-	dec a
 	push de
 	dec a
 	ld bc, MOVE_LENGTH
-	ld hl, Moves 
+	ld hl, Moves + MOVE_TYPE
 	call AddNTimes
 	ld a, BANK(Moves)
 	call GetFarByte
-	ld [wTempSpecies], a
+	ld [wd265], a
 	; get move type
-	; 6 characters
-	ld c, a ;character width loaded into c
-	add a ;double a (two characters)
-	add c ;add c to a (three charaters)
-	add a ;double a (six characters)
-	add c ;add c to a (seven charaters, needed for blank space at the end)
+	and $3f
+	; 9 characters
+	ld c, a
+	add a
+	add a
+	add a
+	add c
 	ld c, a
 	ld b, 0
 	ld hl, .Types
 	add hl, bc
 	ld d, h
 	ld e, l
-	ld hl, wStringBuffer1
-	ld bc, 7
-	call PlaceString
 
-	ld hl, wStringBuffer1 + 7
-	ld [hl], "P"
-	inc hl
-	ld [hl], "P"
-	inc hl
-	ld [hl], ":"
+	ld hl, wStringBuffer1
+	call PlaceString
+	ld hl, wStringBuffer1 + 9
+	ld [hl], "/"
+	; get move class
+;	ld a, [wd265]
+;	and $c0
+;	rlca
+;	rlca
+;	ld c, a
+;	add a
+;	add a
+;	add c
+;	ld c, a
+;	ld b, 0
+;	ld hl, .Classes
+;	add hl, bc
+;	ld d, h
+;	ld e, l
+;
+;	ld hl, wStringBuffer1 + 5
+;	call PlaceString
+;	ld hl, wStringBuffer1 + 9
+;	ld [hl], "/"
+
 	ld a, [wMenuSelection]
 	dec a
 	ld bc, MOVE_LENGTH
@@ -315,10 +365,10 @@ ChooseMoveToLearn:
 	call AddNTimes
 	ld a, BANK(Moves)
 	call GetFarByte
-	ld [wCurCoordEvent], a ;Changed from wEngineBuffer1
+	ld [wCurCoordEvent], a
 	ld hl, wStringBuffer1 + 10
-	ld de, wCurCoordEvent ;Changed from wEngineBuffer1
-	ld bc, $102
+	ld de, wCurCoordEvent 
+	lb bc, 1, 2
 	call PrintNum
 	ld hl, wStringBuffer1 + 12
 	ld [hl], "@"
@@ -333,46 +383,52 @@ ChooseMoveToLearn:
 	ret
 
 .Types
-	db "@@@@@@@"
-	db "@@@@@@@"
-	db "@@@@@@@"
-	db "@@@@@@@"
-	db "@@@@@@@"
-	db "@@@@@@@"
-	db "@@@@@@@"
-	db "@@@@@@@"
-	db "@@@@@@@"
-	db "@@@@@@@"
-	db "@@@@@@@"
-	db "@@@@@@@"
-	db "@@@@@@@"
-	db "@@@@@@@"
-	db "@@@@@@@"
-	db "@@@@@@@"
-	db "@@@@@@@"
-	db "@@@@@@@"
-	db "@@@@@@@"
-	db "@@@@@@@"
-	db "@@@@@@@"
-	db "@@@@@@@"
-	db "@@@@@@@"
-	db "@@@@@@@"
-	db "@@@@@@@"
-	db "@@@@@@@"
-	db "@@@@@@@"
+	db "  NORMAL@"
+	db "FIGHTING@"
+	db "  FLYING@"
+	db "  POISON@"
+	db "  GROUND@"
+	db "    ROCK@"
+	db "    BIRD@"
+	db "     BUG@"
+	db "   STEEL@"
+	db "   GHOST@"
+	
+	db "  TYPE10@"
+	db "  TYPE11@"
+	db "  TYPE12@"
+	db "  TYPE13@"
+	db "  TYPE14@"
+	db "  TYPE15@"
+	db "  TYPE16@"
+	db "  TYPE17@"
+	db "  TYPE18@"
+	db "     ???@"
+
+	db "    FIRE@"
+	db "   WATER@"
+	db "   GRASS@"
+	db "ELECTRIC@"
+	db " PSYCHIC@"
+	db "     ICE@"
+	db "  DRAGON@"
+	db "    DARK@"
+;.Classes
+;	db "Phys@"
+;	db "Spec@"
+;	db "Stat@"
 
 .PrintMoveDesc
 	push de
 	call SpeechTextbox
 	ld a, [wMenuSelection]
-	inc a
+	cp $ff
 	pop de
 	ret z
-	dec a
 	ld [wCurSpecies], a
 	hlcoord 1, 14
 	predef PrintMoveDescription
-	ret
+    ret
 
 PrintMoveRelearnerText:
 	ld e, a
@@ -387,6 +443,7 @@ PrintMoveRelearnerText:
 	ret
 .TextPointers
 	dw .Intro
+	dw .Intro2
 	dw .WhichMon
 	dw .WhichMove
 	dw .ComeAgain
@@ -405,18 +462,51 @@ PrintMoveRelearnerText:
 	para "learned for each"
 	line "#MON."
 
-	para "For just ¥1000, I"
-	line "can share that"
+	para "For a BRICK PIECE"
+	line "I can share that"
 
 	para "knowledge with"
 	line "you. How about it?"
 	done
+
+.Intro2
+	text "Hello! I am the"
+	line "MOVE RELEARNER."
+
+	para "I know all the"
+	line "moves that can be"
+
+	para "learned for each"
+	line "#MON."
+
+	para "For a BRICK PIECE"
+	line "I can share that"
+
+	para "knowledge with"
+	line "you!"
+	done
+
 .WhichMon
+
 	text "Excellent! Which"
 	line "#MON should"
 	cont "remember a move?"
 	done
 .WhichMove
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	text "Which move should"
 	line "it remember?"
 	done
@@ -431,12 +521,14 @@ PrintMoveRelearnerText:
 	line "moves."
 	done
 .NotMon
+
 	text "What?! That's not"
 	line "a #MON!"
 	done
 .NotEnoughMoney
-	text "You don't have"
-	line "enough money."
+	text "<PLAYER> handed"
+	line "over the BRICK"
+	cont "PIECE."
 	done
 .NoMovesToLearn
 	text "This #MON can't"
