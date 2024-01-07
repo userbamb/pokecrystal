@@ -26,7 +26,7 @@ BulbasaurEvosAttacks:
 	db 15, POISONPOWDER
 	db 15, SLEEP_POWDER
 	db 20, RAZOR_LEAF
-	db 25, PRESENT
+	db 25, VINE_WHIP
 	db 32, GROWTH
 	db 39, SYNTHESIS
 	db 46, SOLARBEAM
@@ -44,7 +44,7 @@ IvysaurEvosAttacks:
 	db 15, POISONPOWDER
 	db 15, SLEEP_POWDER
 	db 22, RAZOR_LEAF
-	db 29, PRESENT
+	db 29, VINE_WHIP
 	db 38, GROWTH
 	db 47, SYNTHESIS
 	db 56, SOLARBEAM
@@ -62,7 +62,7 @@ VenusaurEvosAttacks:
 	db 15, POISONPOWDER
 	db 15, SLEEP_POWDER
 	db 22, RAZOR_LEAF
-	db 29, PRESENT
+	db 29, VINE_WHIP
 	db 41, GROWTH
 	db 53, SYNTHESIS
 	db 65, SOLARBEAM
@@ -598,7 +598,7 @@ VileplumeEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, ABSORB
 	db 37, LEECH_SEED
-	db 50, PRESENT
+	db 50, MOONLIGHT
 	db 58, PETAL_DANCE
 	db 0 ; no more level-up moves
 
@@ -1782,7 +1782,7 @@ GyaradosEvosAttacks:
 	db 35, TWISTER
 	db 40, HYDRO_PUMP
 	db 45, RAZOR_WIND
-	db 50, SUPER_FANG
+	db 50, PRESENT
 	db 0 ; no more level-up moves
 
 LaprasEvosAttacks:
@@ -2044,6 +2044,7 @@ DragoniteEvosAttacks:
 	db 55, WING_ATTACK
 	db 61, OUTRAGE
 	db 62, RAZOR_WIND
+	db 67, PRESENT
 	db 70, SKY_ATTACK
 	db 0 ; no more level-up moves
 
@@ -2116,7 +2117,7 @@ MeganiumEvosAttacks:
 	db 23, SYNTHESIS
 	db 31, BODY_SLAM
 	db 41, LIGHT_SCREEN
-	db 45, PRESENT
+	db 45, BARRIER
 	db 51, LEECH_SEED
 	db 61, SOLARBEAM
 	db 0 ; no more level-up moves
@@ -2232,7 +2233,6 @@ FurretEvosAttacks:
 	db 28, LEECH_SEED
 	db 38, ENCORE
 	db 48, EXTREMESPEED
-	db 50, PRESENT
 	db 53, TRANSFORM
 	db 0 ; no more level-up moves
 
@@ -2635,7 +2635,7 @@ DragonhighEvosAttacks:
 	db 24, GIGA_DRAIN
 	db 29, PETAL_DANCE
 	db 35, SOLARBEAM
-	db 41, PRESENT
+	db 41, SWEET_SCENT
 	db 47, SUNNY_DAY
 	db 0 ; no more level-up moves
 
@@ -3166,6 +3166,7 @@ KingdraEvosAttacks:
 	db 29, TWISTER
 	db 40, OCTAZOOKA
 	db 51, HYDRO_PUMP
+	db 61, PRESENT
 	db 0 ; no more level-up moves
 
 PhanpyEvosAttacks:
@@ -3447,7 +3448,7 @@ CelebiEvosAttacks:
 	db 1, LEECH_SEED
 	db 1, CONFUSION
 	db 1, RECOVER
-	db 1, PRESENT
+	db 1, SWEET_SCENT
 	db 10, SAFEGUARD
 	db 20, ANCIENTPOWER
 	db 30, FUTURE_SIGHT

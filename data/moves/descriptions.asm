@@ -1131,8 +1131,8 @@ ReturnDescription:
 	next "based on loyalty.@"
 
 PresentDescription:
-	db   "Eliminates all"
-	next "status problems.@"
+	db   "A dance that ra-"
+	next "ises all stats.@"
 
 FrustrationDescription:
 	db   "An attack based on"
@@ -1183,8 +1183,8 @@ RapidSpinDescription:
 	next "spinning attack.@"
 
 SweetScentDescription:
-	db   "Reduces the foe's"
-	next "evasiveness.@"
+	db   "Eliminates all"
+	next "status problems.@"
 
 IronTailDescription:
 	db   "An attack that may"

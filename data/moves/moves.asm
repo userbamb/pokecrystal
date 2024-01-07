@@ -135,7 +135,7 @@ Moves:
 	move MIRROR_MOVE,  EFFECT_MIRROR_MOVE,         0, FLYING,        STATUS,     100, 20,   0
 	move SELFDESTRUCT, EFFECT_SELFDESTRUCT,      200, NORMAL,        SPECIAL,    100,  5,   0
 	move EGG_BOMB,     EFFECT_NORMAL_HIT,        100, NORMAL,        SPECIAL,     95, 10,   0
-	move LICK,         EFFECT_PARALYZE_HIT,       20, GHOST,         PHYSICAL,   100, 30,  30
+	move LICK,         EFFECT_PARALYZE_HIT,       50, GHOST,         PHYSICAL,   100, 30,  40
 	move SMOG,         EFFECT_POISON_HIT,         20, POISON,        SPECIAL,     70, 20,  40
 	move SLUDGE,       EFFECT_POISON_HIT,         85, POISON,        SPECIAL,    100, 20,  30
 	move BONE_CLUB,    EFFECT_FLINCH_HIT,         65, GROUND,        PHYSICAL,    85, 20,  10
@@ -230,7 +230,7 @@ Moves:
 	move SLEEP_TALK,   EFFECT_SLEEP_TALK,          0, NORMAL,        STATUS,     100, 10,   0
 	move HEAL_BELL,    EFFECT_HEAL_BELL,           0, NORMAL,        STATUS,     100,  5,   0
 	move RETURN,       EFFECT_RETURN,              1, NORMAL,        PHYSICAL,    100, 20,   0
-	move PRESENT,      EFFECT_HEAL_BELL,           0, NORMAL,       STATUS,       100, 15,   0
+	move PRESENT,      EFFECT_ALL_UP_HIT,          10, DRAGON,       PHYSICAL,       100, 15, 100
 	move FRUSTRATION,  EFFECT_FRUSTRATION,         1, NORMAL,        PHYSICAL,   100, 20,   0
 	move SAFEGUARD,    EFFECT_SAFEGUARD,           0, NORMAL,        STATUS,     100, 25,   0
 	move PAIN_SPLIT,   EFFECT_PAIN_SPLIT,          0, NORMAL,        STATUS,     100, 20,   0
@@ -243,7 +243,7 @@ Moves:
 	move ENCORE,       EFFECT_ENCORE,              0, NORMAL,        STATUS,     100,  5,   0
 	move PURSUIT,      EFFECT_PURSUIT,            50, DARK,          PHYSICAL,   100, 20,   0
 	move RAPID_SPIN,   EFFECT_RAPID_SPIN,         20, NORMAL,        PHYSICAL,   100, 40,   0
-	move SWEET_SCENT,  EFFECT_EVASION_DOWN,        0, NORMAL,        STATUS,     100, 20,   0
+	move SWEET_SCENT,  EFFECT_HEAL_BELL,           0, GRASS,       STATUS,       100, 15,   0
 	move IRON_TAIL,    EFFECT_DEFENSE_DOWN_HIT,  100, STEEL,         PHYSICAL,    75, 15,  30
 	move METAL_CLAW,   EFFECT_ATTACK_UP_HIT,      70, STEEL,         PHYSICAL,   100, 35, 100
 	move VITAL_THROW,  EFFECT_ALWAYS_HIT,         70, FIGHTING,      PHYSICAL,   100, 10,   0

@@ -1317,17 +1317,13 @@ BattleAnim_Thunder:
 
 BattleAnim_RazorWind:
 	anim_bgeffect ANIM_BG_WHITE_HUES, $0, $8, $0
-	anim_2gfx ANIM_GFX_CHARGE, ANIM_GFX_SHINE
-	anim_sound 0, 0, SFX_SWORDS_DANCE
-	anim_obj ANIM_OBJ_GROWTH, 48, 108, $0
-	anim_obj ANIM_OBJ_GROWTH, 48, 108, $8
-	anim_obj ANIM_OBJ_GROWTH, 48, 108, $10
-	anim_obj ANIM_OBJ_GROWTH, 48, 108, $18
-	anim_obj ANIM_OBJ_GROWTH, 48, 108, $20
-	anim_obj ANIM_OBJ_GROWTH, 48, 108, $28
-	anim_obj ANIM_OBJ_GROWTH, 48, 108, $30
-	anim_obj ANIM_OBJ_GROWTH, 48, 108, $38
-	anim_wait 40
+	anim_2gfx ANIM_GFX_HAZE, ANIM_GFX_SHINE
+	anim_sound 0, 0, SFX_MILK_DRINK
+	.loop
+	anim_obj ANIM_OBJ_MIST, 48, 56, $0
+	anim_wait 8
+	anim_loop 10, .loop
+	anim_wait 96
 	anim_call BattleAnimSub_Glimmer2
 	anim_ret
 
@@ -2215,7 +2211,7 @@ BattleAnim_Mist:
 	anim_1gfx ANIM_GFX_HAZE
 	anim_sound 0, 0, SFX_SURF
 .loop
-	anim_obj ANIM_OBJ_MIST, 48, 56, $0
+	anim_obj ANIM_OBJ_HAZE, 48, 56, $0
 	anim_wait 8
 	anim_loop 10, .loop
 	anim_wait 96
@@ -2990,19 +2986,19 @@ BattleAnim_Waterfall:
 	anim_obj ANIM_OBJ_AGILITY, 8, 80, $4
 	anim_obj ANIM_OBJ_AGILITY, 8, 104, $e
 	anim_sound 0, 1, SFX_LICK
-	anim_obj ANIM_OBJ_HIT_YFIX, 136, 56, $0
+	anim_obj ANIM_OBJ_SONICBOOM_JP_UNUSED, 136, 56, $0
 	anim_bgeffect ANIM_BG_WATER, $1c, $0, $0
 	anim_wait 3
 	anim_sound 0, 1, SFX_LICK
-	anim_obj ANIM_OBJ_HIT_YFIX, 136, 48, $0
+	anim_obj ANIM_OBJ_SONICBOOM_JP_UNUSED, 136, 48, $0
 	anim_bgeffect ANIM_BG_WATER, $8, $0, $0
 	anim_wait 3
 	anim_sound 0, 1, SFX_LICK
-	anim_obj ANIM_OBJ_HIT_YFIX, 136, 40, $0
+	anim_obj ANIM_OBJ_SONICBOOM_JP_UNUSED, 136, 40, $0
 	anim_bgeffect ANIM_BG_WATER, $30, $0, $0
 	anim_wait 3
 	anim_sound 0, 1, SFX_LICK
-	anim_obj ANIM_OBJ_HIT_YFIX, 136, 32, $0
+	anim_obj ANIM_OBJ_SONICBOOM_JP_UNUSED, 136, 32, $0
 	anim_bgeffect ANIM_BG_WATER, $1c, $0, $0
 	anim_wait 3
 	anim_call BattleAnim_ShowMon_1
@@ -3884,22 +3880,29 @@ BattleAnim_Spark:
 	anim_ret
 
 BattleAnim_FuryCutter:
-	anim_3gfx ANIM_GFX_SHINE, ANIM_GFX_CUT, ANIM_GFX_WIND
-	anim_obp0 $fc
+	anim_3gfx ANIM_GFX_SHINE, ANIM_GFX_CUT, ANIM_GFX_SPEED
 	anim_call BattleAnim_TargetObj_1Row
 	anim_bgeffect ANIM_BG_FADE_MON_TO_LIGHT_REPEATING, $0, BG_EFFECT_USER, $40
-	anim_obj ANIM_OBJ_AGILITY, 8, 24, $10
-	anim_obj ANIM_OBJ_AGILITY, 8, 48, $2
-	anim_obj ANIM_OBJ_AGILITY, 8, 88, $8
-	anim_wait 4
-	anim_obj ANIM_OBJ_AGILITY, 8, 32, $6
-	anim_obj ANIM_OBJ_AGILITY, 8, 56, $c
-	anim_obj ANIM_OBJ_AGILITY, 8, 80, $4
-	anim_obj ANIM_OBJ_AGILITY, 8, 104, $e
 .loop
-	anim_sound 0, 0, SFX_RAZOR_WIND
-	anim_wait 4
-	anim_loop 18, .loop
+	anim_sound 0, 0, SFX_SHARPEN
+	anim_obj ANIM_OBJ_FOCUS, 44, 108, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_FOCUS, 36, 108, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_FOCUS, 52, 108, $8
+	anim_wait 2
+	anim_obj ANIM_OBJ_FOCUS, 28, 108, $8
+	anim_wait 2
+	anim_obj ANIM_OBJ_FOCUS, 60, 108, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_FOCUS, 20, 108, $8
+	anim_wait 2
+	anim_obj ANIM_OBJ_FOCUS, 68, 108, $8
+	anim_wait 2
+	anim_loop 3, .loop
+	anim_wait 8
+	anim_bgp $f8
+	anim_obp0 $27
 	anim_incbgeffect ANIM_BG_FADE_MON_TO_LIGHT_REPEATING
 	anim_call BattleAnim_ShowMon_0
 	anim_bgeffect ANIM_BG_CYCLE_MID_OBPALS_GRAY_AND_YELLOW, $0, $0, $0
@@ -4011,14 +4014,28 @@ BattleAnim_Return:
 	anim_ret
 
 BattleAnim_Present:
-	anim_1gfx ANIM_GFX_FLOWER
-	anim_bgp $90
-.loop
-	anim_sound 0, 1, SFX_SWEET_SCENT_2
-	anim_obj ANIM_OBJ_PETAL_DANCE, 48, 56, $0
-	anim_wait 11
-	anim_loop 8, .loop
-	anim_wait 128
+	anim_1gfx ANIM_GFX_WIND
+	anim_bgeffect ANIM_BG_WHITE_HUES, $0, $8, $0
+	anim_bgeffect ANIM_BG_PSYCHIC, $0, $0, $0
+	anim_sound 0, 0, SFX_LICK
+	anim_obj ANIM_OBJ_RAZOR_WIND1, 44, 112, $0
+	anim_wait 20
+	anim_sound 0, 0, SFX_LICK
+	anim_obj ANIM_OBJ_SKY_ATTACK, 44, 112, $0
+	anim_wait 20
+	anim_sound 0, 0, SFX_LICK
+	anim_obj ANIM_OBJ_RAZOR_WIND1, 44, 112, $0
+	anim_wait 20
+	anim_sound 0, 0, SFX_LICK
+	anim_obj ANIM_OBJ_SKY_ATTACK, 44, 112, $0
+	anim_wait 20
+	anim_sound 0, 0, SFX_LICK
+	anim_obj ANIM_OBJ_RAZOR_WIND1, 44, 112, $0
+	anim_wait 20
+	anim_sound 0, 0, SFX_LICK
+	anim_obj ANIM_OBJ_SKY_ATTACK, 44, 112, $0
+	anim_wait 20
+	anim_incbgeffect ANIM_BG_PSYCHIC
 	anim_ret
 
 BattleAnim_Frustration:
@@ -4224,17 +4241,13 @@ BattleAnim_RapidSpin:
 	anim_ret
 
 BattleAnim_SweetScent:
-	anim_2gfx ANIM_GFX_FLOWER, ANIM_GFX_MISC
-	anim_sound 0, 0, SFX_SWEET_SCENT
-	anim_obj ANIM_OBJ_FLOWER, 64, 96, $2
-	anim_wait 2
-	anim_obj ANIM_OBJ_FLOWER, 64, 80, $2
-	anim_wait 96
-	anim_obp0 $54
+	anim_1gfx ANIM_GFX_FLOWER
+	anim_bgp $90
+.loop
 	anim_sound 0, 1, SFX_SWEET_SCENT_2
-	anim_obj ANIM_OBJ_COTTON, 136, 40, $15
-	anim_obj ANIM_OBJ_COTTON, 136, 40, $2a
-	anim_obj ANIM_OBJ_COTTON, 136, 40, $3f
+	anim_obj ANIM_OBJ_PRESENT, 48, 56, $0
+	anim_wait 11
+	anim_loop 8, .loop
 	anim_wait 128
 	anim_ret
 
@@ -4472,11 +4485,11 @@ BattleAnim_SunnyDay:
 	anim_1gfx ANIM_GFX_WATER
 	anim_bgp $90
 	anim_sound 0, 1, SFX_MORNING_SUN
-	anim_obj ANIM_OBJ_RAIN, 88, 0, $2
+	anim_obj ANIM_OBJ_CAKE_UNUSED, 88, 0, $2
 	anim_wait 8
-	anim_obj ANIM_OBJ_RAIN, 88, 0, $2
+	anim_obj ANIM_OBJ_CAKE_UNUSED, 88, 0, $2
 	anim_wait 8
-	anim_obj ANIM_OBJ_RAIN, 88, 0, $2
+	anim_obj ANIM_OBJ_CAKE_UNUSED, 88, 0, $2
 	anim_wait 128
 	anim_ret
 

@@ -24,7 +24,7 @@ CharmanderEggMoves:
 	db ROCK_SLIDE
 	db BITE
 	db OUTRAGE
-	db BEAT_UP
+	db PRESENT
 	db -1 ; end
 
 SquirtleEggMoves:
@@ -144,7 +144,7 @@ DiglettEggMoves:
 
 MeowthEggMoves:
 	db SPITE
-	db PRESENT
+	db SWEET_SCENT
 	db HYPNOSIS
 	db AMNESIA
 	db -1 ; end
@@ -153,7 +153,7 @@ PsyduckEggMoves:
 	db ICE_BEAM
 	db HYPNOSIS
 	db PSYBEAM
-	db PRESENT
+	db SWEET_SCENT
 	db LIGHT_SCREEN
 	db FUTURE_SIGHT
 	db PSYCHIC_M
@@ -341,7 +341,7 @@ RhyhornEggMoves:
 	db -1 ; end
 
 ChanseyEggMoves:
-	db PRESENT
+	db SWEET_SCENT
 	db METRONOME
 	db HEAL_BELL
 	db -1 ; end
@@ -357,12 +357,13 @@ TangelaEggMoves:
 KangaskhanEggMoves:
 	db STOMP
 	db FORESIGHT
-	db FOCUS_ENERGY
+	db PRESENT
 	db SAFEGUARD
 	db DISABLE
 	db -1 ; end
 
 HorseaEggMoves:
+	db PRESENT
 	db FLAIL
 	db BUBBLEBEAM
 	db OCTAZOOKA
@@ -438,6 +439,8 @@ DratiniEggMoves:
 	db MIST
 	db HAZE
 	db SUPERSONIC
+	db PRESENT
+	db EXTREMESPEED
 	db -1 ; end
 
 ChikoritaEggMoves:
@@ -470,7 +473,7 @@ SentretEggMoves:
 	db DOUBLE_EDGE
 	db PURSUIT
 	db SLASH
-	db PRESENT
+	db SWEET_SCENT
 	db REVERSAL
 	db -1 ; end
 
@@ -512,7 +515,7 @@ PichuEggMoves:
 	db -1 ; end
 
 CleffaEggMoves:
-	db PRESENT
+	db SWEET_SCENT
 	db METRONOME
 	db AMNESIA
 	db BELLY_DRUM
@@ -522,12 +525,12 @@ CleffaEggMoves:
 
 IgglybuffEggMoves:
 	db PERISH_SONG
-	db PRESENT
+	db SWEET_SCENT
 	db FAINT_ATTACK
 	db -1 ; end
 
 TogepiEggMoves:
-	db PRESENT
+	db SWEET_SCENT
 	db MIRROR_MOVE
 	db PECK
 	db FORESIGHT
@@ -549,11 +552,12 @@ MareepEggMoves:
 	db SAFEGUARD
 	db SCREECH
 	db REFLECT
+	db PRESENT
 	db -1 ; end
 
 MarillEggMoves:
 	db LIGHT_SCREEN
-	db PRESENT
+	db SWEET_SCENT
 	db AMNESIA
 	db FUTURE_SIGHT
 	db BELLY_DRUM
@@ -591,7 +595,6 @@ QwilfishEggMoves:
     db VINE_WHIP
 	db SPORE
 	db ANCIENTPOWER
-	db PRESENT
 	db GROWTH
 	db -1 ; end
 
@@ -634,7 +637,6 @@ SnubbullEggMoves:
 	db METRONOME
 	db FAINT_ATTACK
 	db REFLECT
-	db PRESENT
 	db CRUNCH
 	db HEAL_BELL
 	db LICK
@@ -682,7 +684,7 @@ SwinubEggMoves:
 
 CorsolaEggMoves:
 	db COUNTER
-	db FLAME_WHEEL
+	db PRESENT
 	db MIST
 	db OUTRAGE
 	db PURSUIT
@@ -759,7 +761,6 @@ MagbyEggMoves:
 	db -1 ; end
 
 MiltankEggMoves:
-	db PRESENT
 	db REVERSAL
 	db SEISMIC_TOSS
 	db -1 ; end
@@ -767,6 +768,7 @@ MiltankEggMoves:
 LarvitarEggMoves:
 	db PURSUIT
 	db STOMP
+	db PRESENT
 	db OUTRAGE
 	db FOCUS_ENERGY
 	db ANCIENTPOWER
