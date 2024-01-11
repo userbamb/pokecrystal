@@ -262,7 +262,7 @@ Moves:
 	move ANCIENTPOWER, EFFECT_ALL_UP_HIT,         60, ROCK,          SPECIAL,    100, 15,  20
 	move SHADOW_BALL,  EFFECT_SP_DEF_DOWN_HIT,    80, GHOST,         SPECIAL,    100, 15,  20
 	move FUTURE_SIGHT, EFFECT_FUTURE_SIGHT,      120, PSYCHIC_TYPE,  SPECIAL,    100, 15,   0
-	move ROCK_SMASH,   EFFECT_FLINCH_HIT,         65, FIGHTING,      PHYSICAL,   100, 15,    30
+	move ROCK_SMASH,   EFFECT_FLINCH_HIT,         75, FIGHTING,      PHYSICAL,   100, 15,   34
 	move WHIRLPOOL,    EFFECT_WHIRLPOOL,        15, WATER,         PHYSICAL,    70, 15,   0
 	move BEAT_UP,      EFFECT_BEAT_UP,            10, DARK,          PHYSICAL,   100, 10,   0
 	move DIVE,         EFFECT_FLY,  		  80, WATER,        PHYSICAL,   100, 10, 100

@@ -4607,8 +4607,10 @@ BattleAnim_FutureSight:
 
 BattleAnim_RockSmash:
 	anim_2gfx ANIM_GFX_ROCKS, ANIM_GFX_HIT
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $6, $2
 	anim_sound 0, 1, SFX_SPARK
-	anim_obj ANIM_OBJ_HIT_YFIX, 128, 56, $0
+	anim_obj ANIM_OBJ_PALM, 128, 56, $0
+	anim_obj ANIM_OBJ_HIT_BIG_YFIX, 128, 56, $0
 	anim_sound 0, 1, SFX_SPARK
 	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $28
 	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $5c
