@@ -1324,7 +1324,6 @@ BattleAnim_RazorWind:
 	anim_wait 8
 	anim_loop 10, .loop
 	anim_wait 96
-	anim_call BattleAnimSub_Glimmer2
 	anim_ret
 
 BattleAnim_Gust:
@@ -2607,22 +2606,26 @@ BattleAnim_SkyAttack:
 	anim_bgeffect ANIM_BG_HIDE_MON, $0, BG_EFFECT_USER, $0
 	anim_call BattleAnimSub_WarpAway
 	anim_wait 64
-	anim_bgeffect ANIM_BG_SHOW_MON, $0, BG_EFFECT_USER, $0
-	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $3
-	anim_sound 0, 1, SFX_WING_ATTACK
-	anim_obj ANIM_OBJ_HIT_BIG_YFIX, 148, 56, $0
-	anim_obj ANIM_OBJ_HIT_BIG_YFIX, 116, 56, $0
-	anim_wait 6
-	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $3
-	anim_sound 0, 1, SFX_WING_ATTACK
-	anim_obj ANIM_OBJ_HIT_BIG_YFIX, 144, 56, $0
-	anim_obj ANIM_OBJ_HIT_BIG_YFIX, 120, 56, $0
-	anim_wait 6
-	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $3
-	anim_sound 0, 1, SFX_WING_ATTACK
-	anim_obj ANIM_OBJ_HIT_BIG_YFIX, 140, 56, $0
-	anim_obj ANIM_OBJ_HIT_BIG_YFIX, 124, 56, $0
+	.loop
+	anim_bgeffect BATTLE_BG_EFFECT_FLASH_INVERTED, $0, $4, $2
+	anim_sound 0, 1, SFX_RAZOR_WIND
+	anim_obj ANIM_OBJ_SONICBOOM_JP, 152, 40, $3
+	anim_wait 4
+	anim_sound 0, 1, SFX_RAZOR_WIND
+	anim_obj ANIM_OBJ_SONICBOOM_JP, 136, 56, $3
+	anim_wait 4
+	anim_sound 0, 1, SFX_RAZOR_WIND
+	anim_obj ANIM_OBJ_SONICBOOM_JP, 152, 64, $3
+	anim_wait 4
+	anim_sound 0, 1, SFX_RAZOR_WIND
+	anim_obj ANIM_OBJ_STRENGTH, 120, 40, $83
+	anim_wait 4
+	anim_sound 0, 1, SFX_RAZOR_WIND
+	anim_obj ANIM_OBJ_STRENGTH, 120, 64, $83
+	anim_wait 4
+	anim_loop 3, .loop
 	anim_wait 24
+	anim_bgeffect ANIM_BG_SHOW_MON, $0, BG_EFFECT_USER, $0
 	anim_ret
 
 
@@ -3883,21 +3886,21 @@ BattleAnim_FuryCutter:
 	anim_3gfx ANIM_GFX_SHINE, ANIM_GFX_CUT, ANIM_GFX_SPEED
 	anim_call BattleAnim_TargetObj_1Row
 	anim_bgeffect ANIM_BG_FADE_MON_TO_LIGHT_REPEATING, $0, BG_EFFECT_USER, $40
+	anim_sound 0, 2, SFX_RAGE
 .loop
-	anim_sound 0, 0, SFX_SHARPEN
-	anim_obj ANIM_OBJ_FOCUS, 44, 108, $6
+	anim_obj ANIM_OBJ_RAZOR_WIND2, 44, 108, $6
 	anim_wait 2
-	anim_obj ANIM_OBJ_FOCUS, 36, 108, $6
+	anim_obj ANIM_OBJ_RAZOR_WIND2, 36, 108, $6
 	anim_wait 2
-	anim_obj ANIM_OBJ_FOCUS, 52, 108, $8
+	anim_obj ANIM_OBJ_RAZOR_WIND2, 52, 108, $8
 	anim_wait 2
-	anim_obj ANIM_OBJ_FOCUS, 28, 108, $8
+	anim_obj ANIM_OBJ_RAZOR_WIND2, 28, 108, $8
 	anim_wait 2
-	anim_obj ANIM_OBJ_FOCUS, 60, 108, $6
+	anim_obj ANIM_OBJ_RAZOR_WIND2, 60, 108, $6
 	anim_wait 2
-	anim_obj ANIM_OBJ_FOCUS, 20, 108, $8
+	anim_obj ANIM_OBJ_RAZOR_WIND2, 20, 108, $8
 	anim_wait 2
-	anim_obj ANIM_OBJ_FOCUS, 68, 108, $8
+	anim_obj ANIM_OBJ_RAZOR_WIND2, 68, 108, $8
 	anim_wait 2
 	anim_loop 3, .loop
 	anim_wait 8
@@ -4034,7 +4037,7 @@ BattleAnim_Present:
 	anim_wait 20
 	anim_sound 0, 0, SFX_LICK
 	anim_obj ANIM_OBJ_SKY_ATTACK, 44, 112, $0
-	anim_wait 20
+	anim_wait 40
 	anim_incbgeffect ANIM_BG_PSYCHIC
 	anim_ret
 

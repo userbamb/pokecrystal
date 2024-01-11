@@ -359,7 +359,6 @@ PikachuEvosAttacks:
 	db 15, DOUBLE_TEAM
 	db 20, SPARK
 	db 26, THUNDERBOLT
-	db 33, METRONOME
 	db 41, THUNDER
 	db 50, LIGHT_SCREEN
 	db 0 ; no more level-up moves
@@ -367,7 +366,7 @@ PikachuEvosAttacks:
 RaichuEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, DOUBLE_TEAM
-	db 1, METRONOME
+	db 1, THUNDERSHOCK
 	db 1, SPARK
 	db 1, QUICK_ATTACK
 	db 0 ; no more level-up moves
@@ -2212,13 +2211,14 @@ FeraligatrEvosAttacks:
 	db 0 ; no more level-up moves
 
 SentretEvosAttacks:
-	db EVOLVE_ITEM, LEAF_STONE, FURRET
+	db EVOLVE_HAPPINESS, TR_ANYTIME, FURRET
 	db 0 ; no more evolutions
+	db 1, TACKLE
 	db 5, DEFENSE_CURL
-	db 11, VINE_WHIP
 	db 17, FURY_SWIPES
 	db 25, LEECH_SEED
 	db 33, ENCORE
+	db 39, METRONOME
 	db 41, TRANSFORM
 	db 0 ; no more level-up moves
 
@@ -2226,12 +2226,13 @@ FurretEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, DEFENSE_CURL
-	db 1, VINE_WHIP
+	db 1, TACKLE
 	db 5, DEFENSE_CURL
 	db 11, QUICK_ATTACK
 	db 18, FURY_SWIPES
 	db 28, LEECH_SEED
 	db 38, ENCORE
+	db 43, METRONOME
 	db 48, EXTREMESPEED
 	db 53, TRANSFORM
 	db 0 ; no more level-up moves
@@ -2483,6 +2484,7 @@ AmpharosEvosAttacks:
 	db 27, COTTON_SPORE
 	db 30, REFLECT
 	db 42, LIGHT_SCREEN
+	db 45, PRESENT
 	db 57, THUNDER
 	db 0 ; no more level-up moves
 
@@ -2496,7 +2498,7 @@ BellossomEvosAttacks:
 	db 0 ; no more level-up moves
 
 MarillEvosAttacks:
-	db EVOLVE_HAPPINESS, TR_ANYTIME, AZUMARILL
+	db EVOLVE_LEVEL, 23, AZUMARILL
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 3, DEFENSE_CURL

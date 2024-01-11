@@ -1,6 +1,6 @@
 	db OCTILLERY ; 224 REMORAID
 
-	db  35,  65,  35,  65,  65,  35
+	db  35,  65,  55,  65,  65,  35
 	;   hp  atk  def  spd  sat  sdf
 
 	db WATER, WATER ; type

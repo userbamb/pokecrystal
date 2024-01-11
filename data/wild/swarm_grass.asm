@@ -5,27 +5,27 @@ SwarmGrassWildMons:
 	map_id ROUTE_26
     db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 15, CHANSEY
 	db 28, PONYTA
 	db 32, PONYTA
 	db 28, PONYTA
 	db 23, PONYTA
 	db 27, SCYTHER
 	db 31, PONYTA
-	; day
 	db 30, CHANSEY
+	; day
 	db 28, PONYTA
 	db 32, PONYTA
 	db 28, PONYTA
 	db 28, SCYTHER
 	db 23, PONYTA
 	db 31, PONYTA
+	db 30, CHANSEY
 	; nite
 	db 30, PONYTA
 	db 28, PONYTA
 	db 32, PONYTA
 	db 23, PONYTA
-	db 28, CHANSEY
+	db 28, MEOWTH
 	db 27, ARBOK
 	db 31, PONYTA
 ; TEDDIURSA swarm
@@ -59,43 +59,43 @@ SwarmGrassWildMons:
 	map_id RUINS_OF_ALPH_OUTSIDE
     db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 20, NATU
-	db 22, CLEFAIRY
 	db 18, SMEARGLE
 	db 24, SMEARGLE
-	db 20, ELEKID
+	db 20, NATU
+	db 22, CLEFAIRY
+	db 20, SMEARGLE
 	db 22, ELEKID
 	db 22, SMEARGLE
 	; day
-	db 20, CHANSEY
-	db 22, CLEFAIRY
 	db 18, SMEARGLE
 	db 24, SMEARGLE
+	db 18, SMEARGLE
+	db 24, NATU
 	db 20, ELEKID
-	db 22, ELEKID
+	db 22, CHANSEY
 	db 22, SMEARGLE
 	; nite
-	db 20, NATU
-	db 22, CLEFAIRY
+	db 18, SMEARGLE
+	db 24, SMEARGLE
 	db 18, CLEFAIRY
 	db 24, CLEFAIRY
 	db 22, SMEARGLE
 	db 22, SMEARGLE
-	db 22, ELEKID
+	db 22, SUNFLORA
 ; MILTANK swarm
 	map_id ROUTE_38
     db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
+	db 13, MARILL
+	db 13, MARILL
 	db 16, TYROGUE
 	db 16, PINECO
 	db 16, PIKACHU
 	db 16, MARILL
 	db 13, TAUROS
-	db 13, MARILL
-	db 13, MARILL
 	; day
-	db 16, TYROGUE
-	db 16, PIKACHU
+	db 13, MARILL
+	db 13, MARILL
 	db 16, MARILL
 	db 16, MARILL
 	db 13, TAUROS
@@ -122,43 +122,43 @@ SwarmGrassWildMons:
 	db 10, DITTO
 	; day
 	db 10, DITTO
-	db 12, MAGBY
 	db 12, JIGGLYPUFF
 	db 14, JIGGLYPUFF
 	db 14, DITTO
 	db 10, DITTO
 	db 10, DITTO
+	db 12, MAGBY
 	; nite
 	db 10, DITTO
 	db 12, ABRA
+	db 14, DITTO
+	db 14, DITTO
+	db 10, DITTO
+	db 10, DITTO
 	db 12, MAGBY
-	db 14, DITTO
-	db 14, DITTO
-	db 10, DITTO
-	db 10, DITTO
 ; Mareep swarm
 	map_id ROUTE_43
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 17, GIRAFARIG
+	db 15, MAREEP
 	db 17, MAREEP
 	db 17, GIRAFARIG
-	db 16, GIRAFARIG
+	db 16, DUNSPARCE
 	db 13, MAREEP
 	db 14, MAREEP
 	db 13, MAREEP
 	; day
+	db 15, MAREEP
 	db 15, GIRAFARIG
 	db 17, MAREEP
 	db 17, GIRAFARIG
-	db 16, GIRAFARIG
-	db 15, MAREEP
+	db 16, DUNSPARCE
 	db 15, MAREEP
 	db 16, MAREEP
 	; nite
 	db 17, WOBBUFFET
 	db 15, MAREEP
-	db 15, DUNSPARCE
+	db 15, MAREEP
 	db 17, GIRAFARIG
 	db 15, MAREEP
 	db 16, MAREEP
@@ -175,18 +175,18 @@ SwarmGrassWildMons:
 	db 10, PICHU
 	db 10, DITTO
 	; day
-	db 12, NIDORAN_M
-	db 12, NIDORAN_F
 	db 12, YANMA
 	db 14, YANMA
+	db 12, NIDORAN_M
+	db 12, NIDORAN_F
 	db 14, PIDGEY
 	db 10, PICHU
 	db 10, DITTO
 	; nite
-	db 12, NIDORAN_M
-	db 12, NIDORAN_F
 	db 12, YANMA
 	db 14, YANMA
+	db 12, NIDORAN_M
+	db 12, NIDORAN_F
 	db 14, HOOTHOOT
 	db 10, PICHU
 	db 10, DITTO
@@ -233,15 +233,15 @@ SwarmGrassWildMons:
 	db 22, DUNSPARCE
 	db 22, DUNSPARCE
 	db 24, DUNSPARCE
+	db 26, LICKITUNG
 	db 24, CHANSEY
 	db 26, KANGASKHAN
-	db 26, LICKITUNG
 	; nite
 	db 23, TANGELA
 	db 22, POLIWAG
 	db 22, DUNSPARCE
 	db 24, KANGASKHAN
 	db 24, DUNSPARCE
-	db 26, CHANSEY
 	db 26, DUNSPARCE
+	db 26, CHANSEY
 	db -1 ; end

@@ -508,7 +508,7 @@ ChinchouEggMoves:
 
 PichuEggMoves:
 	db REVERSAL
-	db BIDE
+	db METRONOME
 	db SUPER_FANG
 	db ENCORE
 	db DOUBLESLAP
