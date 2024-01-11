@@ -230,7 +230,7 @@ Moves:
 	move SLEEP_TALK,   EFFECT_SLEEP_TALK,          0, NORMAL,        STATUS,     100, 10,   0
 	move HEAL_BELL,    EFFECT_HEAL_BELL,           0, NORMAL,        STATUS,     100,  5,   0
 	move RETURN,       EFFECT_RETURN,              1, NORMAL,        PHYSICAL,    100, 20,   0
-	move PRESENT,      EFFECT_ALL_UP_HIT,          10, DRAGON,       PHYSICAL,       100, 15, 100
+	move PRESENT,      EFFECT_ALL_UP_HIT,          10, DRAGON,       SPECIAL,       100, 15, 100
 	move FRUSTRATION,  EFFECT_FRUSTRATION,         1, NORMAL,        PHYSICAL,   100, 20,   0
 	move SAFEGUARD,    EFFECT_SAFEGUARD,           0, NORMAL,        STATUS,     100, 25,   0
 	move PAIN_SPLIT,   EFFECT_PAIN_SPLIT,          0, NORMAL,        STATUS,     100, 20,   0

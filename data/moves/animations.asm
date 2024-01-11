@@ -2601,13 +2601,13 @@ BattleAnim_Minimize:
 	anim_ret
 
 BattleAnim_SkyAttack:
-	anim_2gfx ANIM_GFX_HIT, ANIM_GFX_SPEED
+	anim_2gfx ANIM_GFX_WHIP, ANIM_GFX_SPEED
 	anim_bgeffect ANIM_BG_CYCLE_OBPALS_GRAY_AND_YELLOW, $0, $1, $0
 	anim_bgeffect ANIM_BG_HIDE_MON, $0, BG_EFFECT_USER, $0
 	anim_call BattleAnimSub_WarpAway
 	anim_wait 64
 	.loop
-	anim_bgeffect BATTLE_BG_EFFECT_FLASH_INVERTED, $0, $4, $2
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $2
 	anim_sound 0, 1, SFX_RAZOR_WIND
 	anim_obj ANIM_OBJ_SONICBOOM_JP, 152, 40, $3
 	anim_wait 4
@@ -3886,8 +3886,9 @@ BattleAnim_FuryCutter:
 	anim_3gfx ANIM_GFX_SHINE, ANIM_GFX_CUT, ANIM_GFX_SPEED
 	anim_call BattleAnim_TargetObj_1Row
 	anim_bgeffect ANIM_BG_FADE_MON_TO_LIGHT_REPEATING, $0, BG_EFFECT_USER, $40
-	anim_sound 0, 2, SFX_RAGE
+	
 .loop
+	anim_sound 0, 2, SFX_MENU
 	anim_obj ANIM_OBJ_RAZOR_WIND2, 44, 108, $6
 	anim_wait 2
 	anim_obj ANIM_OBJ_RAZOR_WIND2, 36, 108, $6
@@ -3902,8 +3903,7 @@ BattleAnim_FuryCutter:
 	anim_wait 2
 	anim_obj ANIM_OBJ_RAZOR_WIND2, 68, 108, $8
 	anim_wait 2
-	anim_loop 3, .loop
-	anim_wait 8
+	anim_loop 4, .loop
 	anim_bgp $f8
 	anim_obp0 $27
 	anim_incbgeffect ANIM_BG_FADE_MON_TO_LIGHT_REPEATING
@@ -4037,7 +4037,7 @@ BattleAnim_Present:
 	anim_wait 20
 	anim_sound 0, 0, SFX_LICK
 	anim_obj ANIM_OBJ_SKY_ATTACK, 44, 112, $0
-	anim_wait 40
+	anim_wait 60
 	anim_incbgeffect ANIM_BG_PSYCHIC
 	anim_ret
 
