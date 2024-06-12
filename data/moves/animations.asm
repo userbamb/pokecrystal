@@ -3970,7 +3970,7 @@ BattleAnim_SleepTalk:
 	anim_1gfx ANIM_GFX_STATUS
 .loop
 	anim_sound 0, 0, SFX_STRENGTH
-	anim_obj ANIM_OBJ_ASLEEP, 64, 80, $0
+	anim_obj ANIM_OBJ_RAZOR_WIND1, 64, 80, $0
 	anim_wait 40
 	anim_loop 2, .loop
 	anim_wait 32
@@ -4017,28 +4017,15 @@ BattleAnim_Return:
 	anim_ret
 
 BattleAnim_Present:
-	anim_1gfx ANIM_GFX_WIND
-	anim_bgeffect ANIM_BG_WHITE_HUES, $0, $8, $0
-	anim_bgeffect ANIM_BG_PSYCHIC, $0, $0, $0
-	anim_sound 0, 0, SFX_LICK
-	anim_obj ANIM_OBJ_RAZOR_WIND1, 44, 112, $0
-	anim_wait 20
-	anim_sound 0, 0, SFX_LICK
-	anim_obj ANIM_OBJ_SKY_ATTACK, 44, 112, $0
-	anim_wait 20
-	anim_sound 0, 0, SFX_LICK
-	anim_obj ANIM_OBJ_RAZOR_WIND1, 44, 112, $0
-	anim_wait 20
-	anim_sound 0, 0, SFX_LICK
-	anim_obj ANIM_OBJ_SKY_ATTACK, 44, 112, $0
-	anim_wait 20
-	anim_sound 0, 0, SFX_LICK
-	anim_obj ANIM_OBJ_RAZOR_WIND1, 44, 112, $0
-	anim_wait 20
-	anim_sound 0, 0, SFX_LICK
-	anim_obj ANIM_OBJ_SKY_ATTACK, 44, 112, $0
-	anim_wait 60
-	anim_incbgeffect ANIM_BG_PSYCHIC
+	anim_1gfx ANIM_GFX_HIT
+	anim_bgp $90
+	anim_call BattleAnim_TargetObj_1Row
+	anim_sound 0, 0, SFX_PROTECT
+	anim_bgeffect ANIM_BG_WAVE_DEFORM_MON, $0, BG_EFFECT_USER, $0
+	anim_wait 48
+	anim_incbgeffect ANIM_BG_WAVE_DEFORM_MON
+	anim_wait 48
+	anim_call BattleAnim_ShowMon_0
 	anim_ret
 
 BattleAnim_Frustration:

@@ -72,6 +72,7 @@ DragonsDenB1F_ClairScene:
 	promptbutton
 	writetext ClairText_WhatsTheMatterDragonDen
 	waitbutton
+	loadmem wLevelCap, 70
 	closetext
 	sjump .FinishClair
 
