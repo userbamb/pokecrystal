@@ -571,7 +571,7 @@ JohtoGrassWildMons:
 	db 7, KAKUNA
 	db 7, PIDGEY
 	db 6, PARAS
-	db 6, PARAS
+	db 6, PIKACHU
 	; day
 	db 5, CATERPIE
 	db 5, WEEDLE
