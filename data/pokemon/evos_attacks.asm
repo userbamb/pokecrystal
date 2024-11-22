@@ -3071,9 +3071,9 @@ RemoraidEvosAttacks: ;WARWOLF
 	db 0 ; no more level-up moves
 
 OctilleryEvosAttacks: ;REMORAID
-    db EVOLVE_STAT, 24, ATK_LT_DEF, MANTINE
-	db EVOLVE_STAT, 24, ATK_GT_DEF, DELIBIRD
-	db EVOLVE_STAT, 24, ATK_EQ_DEF, MANTINE
+    db EVOLVE_STAT, 32, ATK_LT_DEF, MANTINE
+	db EVOLVE_STAT, 32, ATK_GT_DEF, DELIBIRD
+	db EVOLVE_STAT, 32, ATK_EQ_DEF, MANTINE
 	db 0 ; no more evolutions
 	db 1, WATER_GUN
 	db 7, PSYBEAM

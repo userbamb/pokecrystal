@@ -10,7 +10,7 @@ GenerateSwarmShiny:
 	jr z, .mareep
 	cp LANDMARK_ROUTE_37
 	jr z, .vulpix
-	cp LANDMARK_NATIONAL_PARK
+	cp LANDMARK_ROUTE_42
 	jr z, .kotora
 	cp LANDMARK_ROUTE_34
    jr z, .ditto
