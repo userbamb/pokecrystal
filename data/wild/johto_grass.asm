@@ -351,9 +351,9 @@ JohtoGrassWildMons:
 	; day
 	db 12, NIDORAN_F
 	db 12, NIDORAN_M
-	db 14, QWILFISH
+	db 14, DUNSPARCE
 	db 13, PIDGEY
-	db 10, CATERPIE
+	db 10, DUNSPARCE
 	db 10, WEEDLE
 	db 10, QWILFISH
 	; nite
