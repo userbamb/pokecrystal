@@ -550,7 +550,7 @@ ScientistGroup:
 	; SCIENTIST (1)
 	db "ROSS@", TRAINERTYPE_NORMAL
 	db 22, KOFFING
-	db 22, KOFFING
+	db 22, EKANS
 	db -1 ; end
 
 	; SCIENTIST (2)
@@ -562,14 +562,14 @@ ScientistGroup:
 	db "JED@", TRAINERTYPE_NORMAL
 	db 20, MAGNEMITE
 	db 20, MAGNEMITE
-	db 20, MAGNEMITE
+	db 20, SCYTHER
 	db -1 ; end
 
 	; SCIENTIST (4)
 	db "MARC@", TRAINERTYPE_NORMAL
 	db 27, MAGNEMITE
 	db 27, MAGNEMITE
-	db 27, MAGNEMITE
+	db 27, PORYGON
 	db -1 ; end
 
 	; SCIENTIST (5)
@@ -602,10 +602,10 @@ YoungsterGroup:
 
 	; YOUNGSTER (5)
 	db "SAMUEL@", TRAINERTYPE_NORMAL
-	db  7, RATTATA
+	db  7, LEDYBA
 	db 10, SANDSHREW
 	db  8, SPEAROW
-	db  8, SPEAROW
+	db  8, GROWLITHE
 	db -1 ; end
 
 	; YOUNGSTER (6)
@@ -1147,7 +1147,7 @@ BirdKeeperGroup:
 	; BIRD_KEEPER (1)
 	db "ROD@", TRAINERTYPE_NORMAL
 	db  7, PIDGEY
-	db  7, PIDGEY
+	db  7, SPEAROW
 	db -1 ; end
 
 	; BIRD_KEEPER (2)
@@ -1165,9 +1165,9 @@ BirdKeeperGroup:
 	db "THEO@", TRAINERTYPE_NORMAL
 	db 17, PIDGEY
 	db 15, PIDGEY
-	db 19, PIDGEY
+	db 19, PIDGEOTTO
 	db 15, PIDGEY
-	db 15, PIDGEY
+	db 15, HOOTHOOT
 	db -1 ; end
 
 	; BIRD_KEEPER (5)
@@ -1181,7 +1181,7 @@ BirdKeeperGroup:
 	db "DENIS@", TRAINERTYPE_NORMAL
 	db 18, SPEAROW
 	db 20, FEAROW
-	db 18, SPEAROW
+	db 18, PIDGEOTTO
 	db -1 ; end
 
 	; BIRD_KEEPER (7)
@@ -1268,15 +1268,15 @@ LassGroup:
 	; LASS (2)
 	db "BRIDGET@", TRAINERTYPE_NORMAL
 	db 15, JIGGLYPUFF
-	db 15, JIGGLYPUFF
-	db 15, JIGGLYPUFF
+	db 15, MARILL
+	db 15, PIKACHU
 	db -1 ; end
 
 	; LASS (3)
 	db "ALICE@", TRAINERTYPE_NORMAL
 	db 50, GLOOM
 	db 54, ARBOK
-	db 50, GLOOM
+	db 50, RAICHU
 	db -1 ; end
 
 	; LASS (4)
@@ -1870,7 +1870,7 @@ CooltrainerMGroup:
 	db "PAUL@", TRAINERTYPE_NORMAL
 	db 34, DRATINI
 	db 34, DRATINI
-	db 34, DRATINI
+	db 34, SEADRA
 	db -1 ; end
 
 	; COOLTRAINERM (4)
