@@ -154,70 +154,59 @@ FossilScientist:
 	db "CANCEL@"
 
 FossilScientistIntroText:
-	text "Hiya!"
+	text "BILL: Hi, <PLAYER>!"
+	line "Sometimes I come"
+	cont "here to work on"
 
-	para "I am important"
-	line "doctor!"
+	para "cool projects. I"
+	line "am testing the"
+	cont "FOSSIL MACHINE"
 
-	para "I study here rare"
-	line "#MON fossils!"
+	para "that was damaged"
+	line "by the eruption on"
 
-	para "You! Have you a"
-	line "fossil for me?"
+	para "CINNABAR ISLAND."
+	line "It can regenerate"
+
+	para "#MON from fossils!"
+	line "Have you ever"
+	cont "found one?"
 	done
 
 FossilScientistNoText:
-	text "No! Is too bad!"
+	text "Come see me here"
 
-	para "You come again!"
+	line "if you find one!"
 	done
 
 FossilScientistPartyFullText:
-	text "No! Is too bad!"
-
-	para "Your party is"
-	line "already full!"
+	text "Whoa, wait. You"
+	line "can't carry any"
+	cont "more #MON."
 	done
 
 FossilScientistTimeText:
-	text "I take a little"
-	line "time!"
+	text "BILL: The process"
+	line "will take some"
 
-	para "You go for walk a"
-	line "little while!"
+	para "time. Come again"
+	line "in a little while!"
 	done
 
 FossilScientistDoneText:
-	text "Where were you?"
-
-	para "Your fossil is"
+	text "Your fossil is"
 	line "back to life!"
 	done
 
 FossilScientistMonText:
-	text "Oh! That is"
-	line "a fossil!"
-
-	para "It is fossil of"
-	line "@"
-	text_ram wStringBuffer3
-	text ", a"
-
-
-	para "#MON that is"
-	line "already extinct!"
-
-	para "My Resurrection"
-	line "Machine will make"
-	cont "that #MON live"
-	cont "again!"
+	text "BILL: Trust me!"
+	line "I will regenerate"
+	cont "that #MON for"
+	cont "sure!"
 	done
 
 FossilScientistGiveText:
-	text "So! You hurry and"
-	line "give me that!"
-
-	para "<PLAYER> handed"
+	text "<PLAYER> handed"
 	line "over the fossil."
 	done
 
@@ -252,5 +241,5 @@ PewterLab_MapEvents:
 	def_bg_events
 	
 	def_object_events
-	object_event  9,  5, SPRITE_SCIENTIST, SPRITEMOVEDATA_WANDER, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, FossilScientist, -1
+	object_event  9,  5, SPRITE_BILL, SPRITEMOVEDATA_WANDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FossilScientist, -1
     object_event  7,  4, SPRITE_STARMIE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PewterStaryuScript, -1
