@@ -56,13 +56,13 @@ SpearowEggMoves:
 	db FALSE_SWIPE
 	db SCARY_FACE
 	db QUICK_ATTACK
-	db TRI_ATTACK
+	db SING
 	db -1 ; end
 
 EkansEggMoves:
 	db PURSUIT
 	db SLAM
-	db SPITE
+	db PRESENT
 	db BEAT_UP
 	db CRUNCH
 	db -1 ; end
@@ -81,7 +81,7 @@ NidoranFEggMoves:
 	db TAKE_DOWN
 	db FOCUS_ENERGY
 	db CHARM
-	db COUNTER
+	db SING
 	db BEAT_UP
 	db -1 ; end
 
@@ -91,7 +91,7 @@ NidoranMEggMoves:
 	db TAKE_DOWN
 	db CONFUSION
 	db AMNESIA
-	db COUNTER
+	db PRESENT
 	db BEAT_UP
 	db -1 ; end
 
@@ -256,7 +256,7 @@ SeelEggMoves:
 	db PERISH_SONG
 	db DISABLE
 	db PECK
-	db SLAM
+	db SING
 	db ENCORE
 	db -1 ; end
 
@@ -438,7 +438,7 @@ DratiniEggMoves:
 	db LIGHT_SCREEN
 	db MIST
 	db HAZE
-	db SUPERSONIC
+	db SING
 	db PRESENT
 	db EXTREMESPEED
 	db -1 ; end
@@ -540,7 +540,7 @@ TogepiEggMoves:
 NatuEggMoves:
 	db HAZE
 	db DRILL_PECK
-	db QUICK_ATTACK
+	db SING
 	db FAINT_ATTACK
 	db STEEL_WING
 	db -1 ; end
@@ -559,7 +559,7 @@ MarillEggMoves:
 	db LIGHT_SCREEN
 	db SWEET_SCENT
 	db AMNESIA
-	db FUTURE_SIGHT
+	db SING
 	db BELLY_DRUM
 	db PERISH_SONG
 	db SUPERSONIC

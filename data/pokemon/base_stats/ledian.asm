@@ -1,6 +1,6 @@
 	db LEDIAN ; 166
 
-	db  75, 105,  65, 100,  55, 110
+	db  75, 105,  75, 100,  55, 110
 	;   hp  atk  def  spd  sat  sdf
 
 	db BUG, FIRE ; type

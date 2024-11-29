@@ -193,7 +193,7 @@ ButterfreeEvosAttacks:
 	db 23, WHIRLWIND
 	db 28, GUST
 	db 34, PSYBEAM
-	db 40, SPORE
+	db 36, SPORE
 	db 0 ; no more level-up moves
 
 WeedleEvosAttacks:
@@ -895,7 +895,7 @@ MachokeEvosAttacks:
 	db 1, LOW_KICK
 	db 1, LEER
 	db 1, FOCUS_ENERGY
-	db 8, FOCUS_ENERGY
+	db 8, MEDITATE
 	db 15, KARATE_CHOP
 	db 19, SEISMIC_TOSS
 	db 25, FORESIGHT
@@ -2216,7 +2216,7 @@ SentretEvosAttacks:
 	db 1, TACKLE
 	db 5, DEFENSE_CURL
 	db 17, FURY_SWIPES
-	db 25, LEECH_SEED
+	db 25, EXTREMESPEED
 	db 33, ENCORE
 	db 39, METRONOME
 	db 41, TRANSFORM
@@ -2228,13 +2228,12 @@ FurretEvosAttacks:
 	db 1, DEFENSE_CURL
 	db 1, TACKLE
 	db 5, DEFENSE_CURL
-	db 11, QUICK_ATTACK
 	db 18, FURY_SWIPES
-	db 28, LEECH_SEED
+	db 28, EXTREMESPEED
+	db 32, TRANSFORM
+	db 36, SING
 	db 38, ENCORE
 	db 43, METRONOME
-	db 48, EXTREMESPEED
-	db 53, TRANSFORM
 	db 0 ; no more level-up moves
 
 HoothootEvosAttacks:
@@ -2705,7 +2704,7 @@ QuagsireEvosAttacks:
 	db 11, SLAM
 	db 23, AMNESIA
 	db 35, EARTHQUAKE
-	db 47, ENCORE
+	db 47, MEDITATE
 	db 59, MIST
 	db 59, HAZE
 	db 0 ; no more level-up moves
