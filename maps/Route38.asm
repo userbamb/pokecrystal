@@ -444,13 +444,13 @@ Route38_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 35,  8, ROUTE_38_ECRUTEAK_GATE, 1
-	warp_event 35,  9, ROUTE_38_ECRUTEAK_GATE, 2
+	warp_event 35, 14, ROUTE_38_ECRUTEAK_GATE, 1
+	warp_event 35, 15, ROUTE_38_ECRUTEAK_GATE, 2
 
 	def_coord_events
 
 	def_bg_events
-	bg_event 32,  6, BGEVENT_READ, Route38Sign
+	bg_event 30,  6, BGEVENT_READ, Route38Sign
 	bg_event  5, 13, BGEVENT_READ, Route38TrainerTips
 
 	def_object_events

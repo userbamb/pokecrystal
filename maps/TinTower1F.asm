@@ -525,7 +525,7 @@ TinTower1F_MapEvents:
 
 	def_warp_events
 	warp_event  9, 15, ECRUTEAK_CITY, 12
-	warp_event 10, 15, ECRUTEAK_CITY, 12
+	warp_event 10, 15, ECRUTEAK_CITY, 17
 	warp_event 10,  2, TIN_TOWER_2F, 2
 
 	def_coord_events

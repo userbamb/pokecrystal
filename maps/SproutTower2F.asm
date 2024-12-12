@@ -29,9 +29,12 @@ TrainerSageEdmond:
 	waitbutton
 	closetext
 	end
+	
+SproutTower2FStatuetenta:
+	jumptext SproutTower2FStatuetentaText
 
 SproutTower2FStatue:
-	jumptext SproutTower2FStatueText
+	jumptext jumptext SproutTower2FStatueText
 
 SproutTower2FXAccuracy:
 	itemball X_ACCURACY
@@ -76,17 +79,45 @@ SageEdmondAfterBattleText:
 	done
 
 SproutTower2FStatueText:
-	text "A #MON statue…"
+	text "This is a statue"
+	line "of a PIKACHU."
+	para "PIKACHU reminds"
+	line "us that even the"
+	para "most popular of"
+	line "#MON still"
+	para "deserve to be"
+	line "treated with honor"
+	para "and respect, and"
+	line "not just viewed"
+	para "as some sort of"
+	line "status symbol."
+	done
 
-	para "It looks very"
-	line "distinguished."
+SproutTower2FStatuetentaText:
+	text "This is a statue"
+	line "of a TENTACRUEL."
+	para "Despite its large"
+	line "and intimidating"
+	para "appearance,"
+	line "TENTACRUEL teaches"
+	para "us that all"
+	line "#MON have pure"
+	cont "hearts."
+	para "This statue is"
+	line "dedicated to a"
+	para "TENTACRUEL that"
+	line "used its tentacles"
+	para "to lift a drowning"
+	line "child out of the"
+	para "river next to this"
+	line "tower."
 	done
 
 SproutTower2F_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  6,  4, SPROUT_TOWER_1F, 3
+	warp_event  7,  5, SPROUT_TOWER_1F, 3
 	warp_event  2,  6, SPROUT_TOWER_1F, 4
 	warp_event 17,  3, SPROUT_TOWER_1F, 5
 	warp_event 10, 14, SPROUT_TOWER_3F, 1
@@ -94,7 +125,8 @@ SproutTower2F_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 12, 15, BGEVENT_READ, SproutTower2FStatue
+	bg_event  9,  0, BGEVENT_READ, SproutTower2FStatue
+	bg_event  3,  6, BGEVENT_READ, SproutTower2FStatuetenta
 
 	def_object_events
 	object_event 12,  3, SPRITE_SAGE, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerSageNico, -1

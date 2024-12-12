@@ -323,8 +323,7 @@ SproutTower3FPaintingText:
 SproutTower3FStatueText:
 	text "A #MON statue…"
 
-	para "It looks very"
-	line "distinguished."
+	para "It looks real!"
 	done
 
 SproutTower3F_MapEvents:
@@ -341,8 +340,8 @@ SproutTower3F_MapEvents:
 	bg_event 11,  1, BGEVENT_READ, SproutTower3FStatue
 	bg_event  9,  0, BGEVENT_READ, SproutTower3FPainting
 	bg_event 10,  0, BGEVENT_READ, SproutTower3FPainting
-	bg_event  5, 15, BGEVENT_READ, SproutTower3FStatue
-	bg_event 14, 15, BGEVENT_READ, SproutTower3FStatue
+	bg_event  3, 15, BGEVENT_READ, SproutTower3FStatue
+	bg_event 16, 15, BGEVENT_READ, SproutTower3FStatue
 
 	def_object_events
 	object_event  8, 13, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSageJin, -1

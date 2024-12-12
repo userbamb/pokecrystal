@@ -37,6 +37,18 @@ _AnimateTileset::
 
 Tileset0Anim:
 TilesetJohtoModernAnim:
+	dw vTiles2 tile $14, AnimateWaterTile
+    dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
+	dw NULL,  AnimateWaterPalette
+	dw NULL,  WaitTileAnimation
+	dw NULL,  AnimateFlowerJTile
+	dw NULL,  WaitTileAnimation
+	dw NULL,  WaitTileAnimation
+	dw NULL,  StandingTileFrame8
+	dw NULL,  DoneTileAnimation
+
 TilesetKantoModernAnim:
 	dw vTiles2 tile $14, AnimateWaterTile
     dw NULL,  WaitTileAnimation
@@ -70,7 +82,7 @@ TilesetParkAnim:
 	dw NULL,  WaitTileAnimation
 	dw NULL,  AnimateWaterPalette
 	dw NULL,  WaitTileAnimation
-	dw NULL,  AnimateFlowerTile
+	dw NULL,  AnimateFlowerJTile
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
 	dw NULL,  StandingTileFrame8
@@ -110,7 +122,7 @@ TilesetJohtoAnim:
 	dw NULL,  WaitTileAnimation
 	dw NULL,  AnimateWaterPalette
 	dw NULL,  WaitTileAnimation
-	dw NULL,  AnimateFlowerTile
+	dw NULL,  AnimateFlowerJTile
 	dw WhirlpoolFrames1, AnimateWhirlpoolTile
 	dw WhirlpoolFrames2, AnimateWhirlpoolTile
 	dw WhirlpoolFrames3, AnimateWhirlpoolTile
@@ -758,6 +770,41 @@ AnimateFlowerTile:
 	INCBIN "gfx/tilesets/flower/cgb_1.2bpp"
 	INCBIN "gfx/tilesets/flower/dmg_2.2bpp"
 	INCBIN "gfx/tilesets/flower/cgb_2.2bpp"
+
+AnimateFlowerJTile:
+; Save the stack pointer in bc for WriteTile to restore
+	ld hl, sp+0
+	ld b, h
+	ld c, l
+
+; A cycle of 2 frames, updating every other tick
+	ld a, [wTileAnimationTimer]
+	and %10
+
+; CGB has different tile graphics for flowers
+	ld e, a
+	ldh a, [hCGB]
+	and 1
+	add e
+
+; hl = .FlowerJTileFrames + a * 16
+	swap a
+	ld e, a
+	ld d, 0
+	ld hl, .FlowerJTileFrames
+	add hl, de
+
+; Write the tile graphic from hl (now sp) to tile $03 (now hl)
+	ld sp, hl
+	ld hl, vTiles2 tile $03
+	jp WriteTile
+
+.FlowerJTileFrames:
+	INCBIN "gfx/tilesets/flowerj/dmgj_1.2bpp"
+	INCBIN "gfx/tilesets/flowerj/cgbj_1.2bpp"
+	INCBIN "gfx/tilesets/flowerj/dmgj_2.2bpp"
+	INCBIN "gfx/tilesets/flowerj/cgbj_2.2bpp"
+
 
 AnimateLavaBubbleTile1:
 ; Save the stack pointer in bc for WriteTile to restore
