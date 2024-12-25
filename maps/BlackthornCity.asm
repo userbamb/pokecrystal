@@ -121,6 +121,19 @@ SantosScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_SCHOOLBOY_SANTOS
+	clearevent EVENT_BEAT_LASS_FRIEDA
+	clearevent EVENT_BEAT_YOUNGSTER_SUNNY
+	clearevent EVENT_BEAT_BEAUTY_MONICA
+	clearevent EVENT_BEAT_TEACHER_TUSCANY
+	clearevent EVENT_BEAT_PSYCHIC_WESLEY
+	clearevent EVENT_BEAT_SCHOOLBOY_ARTHUR
+	opentext
+	writetext Text_ReceivedRarecandy
+	promptbutton
+	verbosegiveitem RARE_CANDY, 7
+	iffalse .no
+	waitbutton
+	closetext
 	end
 .no:
     writetext SantosNoFightText ;next time
@@ -131,13 +144,8 @@ SantosScript:
     readvar VAR_WEEKDAY
 	ifnotequal SATURDAY, .NotSaturday
 	writetext SantosSaturdayText
-	yesorno
-	iffalse .no
+	waitbutton
 	closetext
-	winlosstext SantosWinLossText, 0
-	loadtrainer SCHOOLBOY, SANTOS
-	startbattle
-	reloadmapafterbattle
 	end
 
 .NotSaturday:
@@ -275,18 +283,14 @@ SantosGaveGiftText:
 	done
 
 SantosFightText:
-    text "SANTOS: Me and"
-	line "my siblings train"
+    text "SANTOS: …"
+	para "…"
 
-	para "very hard to help"
-	line "other trainers b-"
+	para "We should battle"
+	line "…"
 
-	para "ecoming strong… I"
-	line "can be your opp-"
-	cont "onent today…"
-
-	para "Do you want to"
-	line "battle?…"
+	para "I will do my…"
+	line "best…"
 	done
 
 SantosNoFightText:
@@ -301,8 +305,18 @@ SantosWinLossText:
 SantosSaturdayText:
 	text "SANTOS: …"
 
-	para "…Rematch?……"
+	para "See you again on"
+	line "another Saturday…"
+
+	para "Maybe we can do"
+	line "a rematch…"
 	done
+
+Text_ReceivedRarecandy:
+	text "SANTOS: …"
+	para "I have another"
+	line "gift…"
+    done
 
 SantosNotSaturdayText:
 	text "SANTOS: Today's"

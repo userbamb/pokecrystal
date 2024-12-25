@@ -104,10 +104,17 @@ SunnySundayScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_YOUNGSTER_SUNNY
+	clearevent EVENT_BEAT_BEAUTY_MONICA
+	clearevent EVENT_BEAT_TEACHER_TUSCANY
+	clearevent EVENT_BEAT_LASS_FRIEDA
+	clearevent EVENT_BEAT_PSYCHIC_WESLEY
+	clearevent EVENT_BEAT_SCHOOLBOY_ARTHUR
+	clearevent EVENT_BEAT_SCHOOLBOY_SANTOS
 	opentext
 	writetext Text_ReceivedRarecandy
 	promptbutton
-	giveitem RARE_CANDY, 7
+	verbosegiveitem RARE_CANDY, 7
+	iffalse .no
 	waitbutton
 	closetext
 	end
@@ -255,15 +262,20 @@ SunnyFightText:
 	line "now!"
 
 	para "You can challenge"
-	cont "me today!"
+	line "me today!"
 
 	para "Do you want to"
-	line "… battle?"
+	line "… Battle?"
 	done
 
 SunnyNoFightText:
     text "SUNNY: Maybe…"
 	line "next time!"
+    done
+
+Text_ReceivedRarecandy:
+	text "SUNNY: Please…"
+	line "Accept this!"
     done
 
 SunnyWinLossText:

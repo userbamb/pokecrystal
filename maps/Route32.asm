@@ -483,7 +483,21 @@ FriedaScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_LASS_FRIEDA
+	clearevent EVENT_BEAT_YOUNGSTER_SUNNY
+	clearevent EVENT_BEAT_BEAUTY_MONICA
+	clearevent EVENT_BEAT_TEACHER_TUSCANY
+	clearevent EVENT_BEAT_PSYCHIC_WESLEY
+	clearevent EVENT_BEAT_SCHOOLBOY_ARTHUR
+	clearevent EVENT_BEAT_SCHOOLBOY_SANTOS
+	opentext
+	writetext Text_ReceivedRarecandy
+	promptbutton
+	verbosegiveitem RARE_CANDY, 7
+	iffalse .no
+	waitbutton
+	closetext
 	end
+
 .no:
     writetext FriedaNoFightText ;next time
 	waitbutton
@@ -493,13 +507,8 @@ FriedaScript:
     readvar VAR_WEEKDAY
 	ifnotequal FRIDAY, .NotFriday
 	writetext FriedaFridayText
-	yesorno
-	iffalse .no
 	closetext
-	winlosstext FriedaWinLossText, 0
-	loadtrainer LASS, FRIEDA
-	startbattle
-	reloadmapafterbattle
+	waitbutton
 	end
 
 .NotFriday:
@@ -894,18 +903,11 @@ FriedaGivesGiftText:
 	done
 
 FriedaFightText:
-    text "FRIEDA: Me and"
-	line "my siblings train"
+    text "FRIEDA: YAHOO!"
+	line "It's Friday!"
 
-	para "very hard to help"
-	line "other trainers b-"
-
-	para "ecoming strong! I"
-	line "can be your opp-"
-	cont "onent today."
-
-	para "Do you want to"
-	line "battle?"
+	para "What about a"
+	line "nice battle?"
 	done
 
 FriedaNoFightText:
@@ -931,11 +933,20 @@ FriedaGaveGiftText:
 	cont "poison moves!"
 	done
 
-FriedaFridayText:
-	text "FRIEDA: Hiya! You"
-	line "want another "
+Text_ReceivedRarecandy:
+	text "FRIEDA: Oh!"
+	line "Take this!"
+    done
 
-	cont "match?"
+FriedaFridayText:
+	text "FRIEDA: Hiya! What"
+	line "day do you like?"
+
+	para "I love Friday. No"
+	line "doubt about it!"
+
+	para "Don't you think"
+	line "it's great too?"
 	done
 
 FriedaNotFridayText:

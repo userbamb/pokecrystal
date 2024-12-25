@@ -235,6 +235,19 @@ WesleyWednesdayScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_PSYCHIC_WESLEY
+	clearevent EVENT_BEAT_YOUNGSTER_SUNNY
+	clearevent EVENT_BEAT_BEAUTY_MONICA
+	clearevent EVENT_BEAT_TEACHER_TUSCANY
+	clearevent EVENT_BEAT_LASS_FRIEDA
+	clearevent EVENT_BEAT_SCHOOLBOY_ARTHUR
+	clearevent EVENT_BEAT_SCHOOLBOY_SANTOS
+	opentext
+	writetext Text_ReceivedRarecandy
+	promptbutton
+	verbosegiveitem RARE_CANDY, 7
+	iffalse .no
+	waitbutton
+	closetext
 	end
 .no:
     writetext WesleyNoFightText ;next time
@@ -246,13 +259,8 @@ WesleyWednesdayScript:
     readvar VAR_WEEKDAY
 	ifnotequal WEDNESDAY, WesleyNotWednesdayScript
 	writetext WesleyWednesdayText
-	yesorno
-	iffalse .no
+	waitbutton
 	closetext
-	winlosstext WesleyWinLossText, 0
-	loadtrainer PSYCHIC_T, WESLEY
-	startbattle
-	reloadmapafterbattle
 	end
 
 WesleyNotWednesdayScript:
@@ -496,23 +504,20 @@ WesleyGivesGiftText:
 	done
 
 WesleyFightText:
-    text "WESLEY: Me and"
-	line "my siblings train"
+    text "WESLEY: Since you"
+	line "found me, I must"
 
-	para "very hard to help"
-	line "other trainers b-"
-
-	para "ecoming strong! I"
-	line "can be your opp-"
-	cont "onent today."
-
-	para "Do you want to"
-	line "battle?"
+	para "ask you if you"
+	line "want to fight me."
 	done
+
+Text_ReceivedRarecandy:
+	text "WESLEY: Accept"
+	line "this!"
 
 WesleyNoFightText:
     text "WESLEY: Maybe"
-	line "next time!"
+	line "next time, then."
     done
 
 WesleyWinLossText:
@@ -527,10 +532,13 @@ WesleyGaveGiftText:
 
 WesleyWednesdayText:
 	text "WESLEY: Since you"
-	line "are training,"
+	line "found me, you must"
 
-	para "do you want to"
-	line "battle again?"
+	para "have met my broth-"
+	line "ers and sisters."
+
+	para "Or did you just"
+	line "get lucky?"
 	done
 
 WesleyNotWednesdayText:

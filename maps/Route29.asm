@@ -206,6 +206,19 @@ TuscanyTuesdayScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_TEACHER_TUSCANY
+	clearevent EVENT_BEAT_YOUNGSTER_SUNNY
+	clearevent EVENT_BEAT_BEAUTY_MONICA
+	clearevent EVENT_BEAT_PSYCHIC_WESLEY
+	clearevent EVENT_BEAT_LASS_FRIEDA
+	clearevent EVENT_BEAT_SCHOOLBOY_ARTHUR
+	clearevent EVENT_BEAT_SCHOOLBOY_SANTOS
+	opentext
+	writetext Text_ReceivedRarecandy
+	promptbutton
+	verbosegiveitem RARE_CANDY, 7
+	iffalse .no
+	waitbutton
+	closetext
 	end
 .no:
     writetext TuscanyNoFightTuesdayText ;next time
@@ -217,13 +230,7 @@ TuscanyTuesdayScript:
     readvar VAR_WEEKDAY
 	ifnotequal TUESDAY, TuscanyNotTuesdayScript
     writetext TuscanyTuesdayText
-	yesorno
-	iffalse .no
 	closetext
-	winlosstext TuscanyWinLossText, 0
-	loadtrainer TEACHER, TUSCANY
-	startbattle
-	reloadmapafterbattle
 	end
 
 TuscanyNotTuesdayScript:
@@ -402,18 +409,13 @@ TuscanyGivesGiftText:
 	done
 
 TuscanyFightTuesdayText:
-    text "TUSCANY: Me and"
-	line "my siblings train"
+    text "TUSCANY: I can"
+	line "also be your ch-"
 
-	para "very hard to help"
-	line "other trainers b-"
+	para "allenger today!"
+	line "Do you want to"
 
-	para "ecoming strong! I"
-	line "can be your opp-"
-	cont "onent today."
-
-	para "Do you want to"
-	line "battle?"
+	cont "battle?"
 	done
 
 TuscanyNoFightTuesdayText:
@@ -439,13 +441,21 @@ TuscanyGaveGiftText:
 	line "will be of use."
 	done
 
+Text_ReceivedRarecandy:
+	text "TUSCANY: You"
+	line "earned this too."
+    done
+
 TuscanyTuesdayText:
 	text "TUSCANY: Have you"
-	line "learnt something?"
-	para "Do you want to"
+	line "met MONICA, my"
+	cont "older sister?"
 
-	line "battle with me"
-	cont "again?"
+	para "Or my younger"
+	line "brother, WESLEY?"
+
+	para "I am the second of"
+	line "seven children."
 	done
 
 TuscanyNotTuesdayText:

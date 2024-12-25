@@ -34,7 +34,7 @@ SproutTower2FStatuetenta:
 	jumptext SproutTower2FStatuetentaText
 
 SproutTower2FStatue:
-	jumptext jumptext SproutTower2FStatueText
+	jumptext SproutTower2FStatueText
 
 SproutTower2FXAccuracy:
 	itemball X_ACCURACY
@@ -126,7 +126,7 @@ SproutTower2F_MapEvents:
 
 	def_bg_events
 	bg_event  9,  0, BGEVENT_READ, SproutTower2FStatue
-	bg_event  3,  6, BGEVENT_READ, SproutTower2FStatuetenta
+	bg_event  7, 12, BGEVENT_READ, SproutTower2FStatuetenta
 
 	def_object_events
 	object_event 12,  3, SPRITE_SAGE, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerSageNico, -1

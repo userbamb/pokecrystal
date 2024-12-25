@@ -334,6 +334,19 @@ ArthurScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_SCHOOLBOY_ARTHUR
+	clearevent EVENT_BEAT_LASS_FRIEDA
+	clearevent EVENT_BEAT_YOUNGSTER_SUNNY
+	clearevent EVENT_BEAT_BEAUTY_MONICA
+	clearevent EVENT_BEAT_TEACHER_TUSCANY
+	clearevent EVENT_BEAT_PSYCHIC_WESLEY
+	clearevent EVENT_BEAT_SCHOOLBOY_SANTOS
+	opentext
+	writetext Text_ReceivedRarecandy
+	promptbutton
+	verbosegiveitem RARE_CANDY, 7
+	iffalse .no
+	waitbutton
+	closetext
 	end
 .no:
     writetext ArthurNoFightText ;next time
@@ -345,13 +358,8 @@ ArthurScript:
     readvar VAR_WEEKDAY
 	ifnotequal THURSDAY, ArthurNotThursdayScript
 	writetext ArthurThursdayText
-	yesorno
-	iffalse .no
+	waitbutton
 	closetext
-	winlosstext ArthurWinLossText, 0
-	loadtrainer SCHOOLBOY, ARTHUR
-	startbattle
-	reloadmapafterbattle
 	end
 
 ArthurNotThursdayScript:
@@ -616,26 +624,18 @@ ArthurGaveGiftText:
 
 ArthurThursdayText:
 	text "ARTHUR: I'm ARTHUR"
-	line "of Thursday. I"
+	line "of Thursday. I'm"
 
-	para "am very resilient!"
-	line "Want to fight with"
-	cont  "me again?"
+	para "the second son out"
+	line "of seven children."
 	done
 
 ArthurFightText:
-    text "ARTHUR: Me and"
-	line "my siblings train"
+    text "ARTHUR: Today I"
+	line "can show you how"
 
-	para "very hard to help"
-	line "other trainers b-"
-
-	para "ecoming strong! I"
-	line "can be your opp-"
-	cont "onent today."
-
-	para "Do you want to"
-	line "battle?"
+	para "I fight. Are you"
+	line "up for a battle?"
 	done
 
 ArthurNoFightText:
@@ -646,6 +646,11 @@ ArthurNoFightText:
 ArthurWinLossText:
     text "Rock hard!"
 	done
+
+Text_ReceivedRarecandy:
+	text "ARTHUR: Oh!"
+	line "Take this!"
+    done
 
 ArthurNotThursdayText:
 	text "ARTHUR: Today's"

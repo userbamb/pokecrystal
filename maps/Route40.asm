@@ -126,6 +126,19 @@ MonicaScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_BEAUTY_MONICA
+	clearevent EVENT_BEAT_YOUNGSTER_SUNNY
+	clearevent EVENT_BEAT_TEACHER_TUSCANY
+	clearevent EVENT_BEAT_PSYCHIC_WESLEY
+	clearevent EVENT_BEAT_LASS_FRIEDA
+	clearevent EVENT_BEAT_SCHOOLBOY_ARTHUR
+	clearevent EVENT_BEAT_SCHOOLBOY_SANTOS
+	opentext
+	writetext Text_ReceivedRarecandy
+	promptbutton
+	verbosegiveitem RARE_CANDY, 7
+	iffalse .no
+	waitbutton
+	closetext
 	end
 .no:
     writetext MonicaNoFightMondayText ;next time
@@ -137,13 +150,8 @@ MonicaScript:
     readvar VAR_WEEKDAY
 	ifnotequal MONDAY, .NotMonday
     writetext MonicaMondayText ;PARLA DEI FRATELLI
-	yesorno
-	iffalse .no
+	waitbutton
 	closetext
-	winlosstext MonicaWinLossText, 0
-	loadtrainer BEAUTY, MONICA
-	startbattle
-	reloadmapafterbattle
 	end
 
 .NotMonday:
@@ -346,6 +354,11 @@ MonicaWinLossText:
     text "Flyin' high!"
 	done
 
+Text_ReceivedRarecandy:
+	text "MONICA: I hope"
+	line "this helps you."
+    done
+
 MonicaFightMondayText:
  	text "MONICA: My broth-"
 	line "ers and sisters"
@@ -365,11 +378,14 @@ MonicaFightMondayText:
 	done
 
 MonicaMondayText:
-	text "MONICA: Do you"
-	line "need to fight"
+	text "MONICA: My broth-"
+	line "ers and sisters"
 
-	cont "with me again?"
-	
+	para "are all over the"
+	line "place."
+
+	para "See if you could"
+	line "find them all!"
 	done
 
 MonicaNotMondayText:
