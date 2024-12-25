@@ -70,7 +70,7 @@ KeyOpenedDoorText:
 	text "The wall has"
 	line "collapsed!"
 	para "Discovered a small"
-	line "cavern!"
+	line "entrance!"
 	done
 
 

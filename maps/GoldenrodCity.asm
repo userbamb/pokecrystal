@@ -553,35 +553,35 @@ GoldenrodCity_MapEvents:
 	def_warp_events
 	warp_event 24,  7, GOLDENROD_GYM, 1
 	warp_event 29, 29, GOLDENROD_BIKE_SHOP, 1
-	warp_event 31, 19, GOLDENROD_HAPPINESS_RATER, 1
-	warp_event  5, 25, BILLS_FAMILYS_HOUSE, 1
-	warp_event  9, 13, GOLDENROD_MAGNET_TRAIN_STATION, 2
+	warp_event 31, 21, GOLDENROD_HAPPINESS_RATER, 1
+	warp_event  5, 27, BILLS_FAMILYS_HOUSE, 1
+	warp_event 10, 13, GOLDENROD_MAGNET_TRAIN_STATION, 2
 	warp_event 29,  5, GOLDENROD_FLOWER_SHOP, 1
 	warp_event 33,  9, GOLDENROD_PP_SPEECH_HOUSE, 1
-	warp_event 15,  7, GOLDENROD_NAME_RATER, 1
+	warp_event 13,  7, GOLDENROD_NAME_RATER, 1
 	warp_event 24, 27, GOLDENROD_DEPT_STORE_1F, 1
 	warp_event 14, 21, GOLDENROD_GAME_CORNER, 1
 	warp_event  5, 15, RADIO_TOWER_1F, 1
 	warp_event 19,  1, ROUTE_35_GOLDENROD_GATE, 3
 	warp_event  9,  5, GOLDENROD_UNDERGROUND_SWITCH_ROOM_ENTRANCES, 8
-	warp_event 11, 29, GOLDENROD_UNDERGROUND_SWITCH_ROOM_ENTRANCES, 5
+	warp_event  9, 21, GOLDENROD_UNDERGROUND_SWITCH_ROOM_ENTRANCES, 5
 	warp_event 14, 27, GOLDENROD_POKECENTER_1F, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event 10, 14, BGEVENT_READ, GoldenrodCityStationSign
+	bg_event  8, 14, BGEVENT_READ, GoldenrodCityStationSign
 	bg_event  4, 16, BGEVENT_READ, GoldenrodCityRadioTowerSign
 	bg_event 26, 27, BGEVENT_READ, GoldenrodDeptStoreSign
 	bg_event 26,  8, BGEVENT_READ, GoldenrodGymSign
 	bg_event 23, 11, BGEVENT_READ, GoldenrodCitySign
-	bg_event 28, 30, BGEVENT_READ, GoldenrodCityBikeShopSign
+	bg_event 32, 29, BGEVENT_READ, GoldenrodCityBikeShopSign
 	bg_event 16, 22, BGEVENT_READ, GoldenrodCityGameCornerSign
-	bg_event 12,  7, BGEVENT_READ, GoldenrodCityNameRaterSign
-	bg_event  8,  6, BGEVENT_READ, GoldenrodCityUndergroundSignNorth
-	bg_event 12, 30, BGEVENT_READ, GoldenrodCityUndergroundSignSouth
+	bg_event 16,  7, BGEVENT_READ, GoldenrodCityNameRaterSign
+	bg_event  8,  7, BGEVENT_READ, GoldenrodCityUndergroundSignNorth
+	bg_event  8, 23, BGEVENT_READ, GoldenrodCityUndergroundSignSouth
 	bg_event 17, 27, BGEVENT_UP, GoldenrodCityPokecenterSign
-	bg_event 30,  6, BGEVENT_READ, GoldenrodCityFlowerShopSign
+	bg_event 32,  5, BGEVENT_READ, GoldenrodCityFlowerShopSign
 
 	def_object_events
 	object_event  7, 18, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodCityPokefanMScript, EVENT_GOLDENROD_CITY_CIVILIANS
@@ -596,6 +596,6 @@ GoldenrodCity_MapEvents:
 	object_event  8, 15, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodCityRocket2Script, EVENT_GOLDENROD_CITY_ROCKET_TAKEOVER
 	object_event 16, 23, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodCityRocket3Script, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
 	object_event 29, 20, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodCityRocket4Script, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
-	object_event 29,  7, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodCityRocket5Script, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
+	object_event 29,  6, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodCityRocket5Script, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
 	object_event 31, 10, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodCityRocket6Script, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
 	object_event 13, 22, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, MoveTutorScript, EVENT_GOLDENROD_CITY_MOVE_TUTOR

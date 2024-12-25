@@ -128,7 +128,7 @@ FuchsiaCity_MapEvents:
 	def_warp_events
 	warp_event  5, 13, FUCHSIA_MART, 2
 	warp_event 22, 13, SAFARI_ZONE_MAIN_OFFICE, 1
-	warp_event  8, 27, FUCHSIA_GYM, 1
+	warp_event  8, 29, FUCHSIA_GYM, 1
 	warp_event 11, 27, BILLS_BROTHERS_HOUSE, 1
 	warp_event 19, 27, FUCHSIA_POKECENTER_1F, 1
 	warp_event 27, 27, SAFARI_ZONE_WARDENS_HOME, 1
@@ -142,7 +142,7 @@ FuchsiaCity_MapEvents:
 
 	def_bg_events
 	bg_event 21, 15, BGEVENT_READ, FuchsiaCitySign
-	bg_event  5, 29, BGEVENT_READ, FuchsiaGymSign
+	bg_event  7, 33, BGEVENT_READ, FuchsiaGymSign
 	bg_event 25, 15, BGEVENT_READ, SafariZoneOfficeSign
 	bg_event 27, 29, BGEVENT_READ, WardensHomeSign
 	bg_event 17,  5, BGEVENT_READ, SafariZoneClosedSign

@@ -942,8 +942,8 @@ IlexForest_MapEvents:
 	warp_event  3, 52, ILEX_FOREST_AZALEA_GATE, 1
 	warp_event  3, 53, ILEX_FOREST_AZALEA_GATE, 2
 	warp_event  3, 53, ILEX_FOREST_AZALEA_GATE, 2
-	warp_event 24, 31, LUCKY_SPOT, 1
-	warp_event 25, 31, LUCKY_SPOT, 2
+	warp_event 25, 50, LUCKY_SPOT, 1
+	warp_event 25, 51, LUCKY_SPOT, 2
 	def_coord_events
 
 	def_bg_events

@@ -32,6 +32,6 @@ Route23_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  7,  7, BGEVENT_READ, IndigoPlateauSign
+	bg_event  7,  5, BGEVENT_READ, IndigoPlateauSign
 
 	def_object_events

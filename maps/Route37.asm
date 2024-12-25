@@ -104,6 +104,12 @@ SunnySundayScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_YOUNGSTER_SUNNY
+	opentext
+	writetext Text_ReceivedRarecandy
+	promptbutton
+	giveitem RARE_CANDY, 7
+	waitbutton
+	closetext
 	end
 .no:
     writetext SunnyNoFightText ;next time
@@ -115,13 +121,8 @@ SunnySundayScript:
     readvar VAR_WEEKDAY
 	ifnotequal SUNDAY, SunnyNotSundayScript
 	writetext SunnySundayText
-	yesorno
-	iffalse .no
+	waitbutton
 	closetext
-	winlosstext SunnyWinLossText, 0
-	loadtrainer YOUNGSTER, SUNNY
-	startbattle
-	reloadmapafterbattle
 	end
 
 
@@ -247,32 +248,32 @@ SunnyGaveGiftText:
 	done
 
 SunnyFightText:
-    text "SUNNY: Me and"
-	line "my siblings train"
+    text "SUNNY: Um…"
+	line "… What was it now…"
+ 
+	para "Oh! I remember"
+	line "now!"
 
-	para "very hard to help"
-	line "other trainers b-"
-
-	para "ecoming strong! I"
-	line "can be your opp-"
-	cont "onent today."
+	para "You can challenge"
+	cont "me today!"
 
 	para "Do you want to"
-	line "battle?"
+	line "… battle?"
 	done
 
 SunnyNoFightText:
-    text "SUNNY: Maybe"
+    text "SUNNY: Maybe…"
 	line "next time!"
     done
 
 SunnyWinLossText:
-    text "You are strong!"
+    text "You…"
+	line "are strong!"
 	done
 
 SunnySundayText:
-	text "SUNNY: Fight,"
-	line "fight, fight!"
+	text "SUNNY: Um…"
+	line "What was I doing?"
 	done
 
 SunnyNotSundayText:
