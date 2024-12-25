@@ -490,7 +490,7 @@ FriedaScript:
 	clearevent EVENT_BEAT_SCHOOLBOY_ARTHUR
 	clearevent EVENT_BEAT_SCHOOLBOY_SANTOS
 	opentext
-	writetext Text_ReceivedRarecandy
+	writetext Text_ReceivedRare6
 	promptbutton
 	verbosegiveitem RARE_CANDY, 7
 	iffalse .no
@@ -933,7 +933,7 @@ FriedaGaveGiftText:
 	cont "poison moves!"
 	done
 
-Text_ReceivedRarecandy:
+Text_ReceivedRare6:
 	text "FRIEDA: Oh!"
 	line "Take this!"
     done

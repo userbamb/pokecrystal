@@ -133,7 +133,7 @@ MonicaScript:
 	clearevent EVENT_BEAT_SCHOOLBOY_ARTHUR
 	clearevent EVENT_BEAT_SCHOOLBOY_SANTOS
 	opentext
-	writetext Text_ReceivedRarecandy
+	writetext Text_ReceivedRare2
 	promptbutton
 	verbosegiveitem RARE_CANDY, 7
 	iffalse .no
@@ -354,7 +354,7 @@ MonicaWinLossText:
     text "Flyin' high!"
 	done
 
-Text_ReceivedRarecandy:
+Text_ReceivedRare2:
 	text "MONICA: I hope"
 	line "this helps you."
     done

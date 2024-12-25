@@ -341,7 +341,7 @@ ArthurScript:
 	clearevent EVENT_BEAT_PSYCHIC_WESLEY
 	clearevent EVENT_BEAT_SCHOOLBOY_SANTOS
 	opentext
-	writetext Text_ReceivedRarecandy
+	writetext Text_ReceivedRare5
 	promptbutton
 	verbosegiveitem RARE_CANDY, 7
 	iffalse .no
@@ -647,7 +647,7 @@ ArthurWinLossText:
     text "Rock hard!"
 	done
 
-Text_ReceivedRarecandy:
+Text_ReceivedRare5:
 	text "ARTHUR: Oh!"
 	line "Take this!"
     done

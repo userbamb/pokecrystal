@@ -242,7 +242,7 @@ WesleyWednesdayScript:
 	clearevent EVENT_BEAT_SCHOOLBOY_ARTHUR
 	clearevent EVENT_BEAT_SCHOOLBOY_SANTOS
 	opentext
-	writetext Text_ReceivedRarecandy
+	writetext Text_ReceivedRare4
 	promptbutton
 	verbosegiveitem RARE_CANDY, 7
 	iffalse .no
@@ -511,7 +511,7 @@ WesleyFightText:
 	line "want to fight me."
 	done
 
-Text_ReceivedRarecandy:
+Text_ReceivedRare4:
 	text "WESLEY: Accept"
 	line "this!"
 

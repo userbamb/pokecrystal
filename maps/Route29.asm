@@ -213,7 +213,7 @@ TuscanyTuesdayScript:
 	clearevent EVENT_BEAT_SCHOOLBOY_ARTHUR
 	clearevent EVENT_BEAT_SCHOOLBOY_SANTOS
 	opentext
-	writetext Text_ReceivedRarecandy
+	writetext Text_ReceivedRare3
 	promptbutton
 	verbosegiveitem RARE_CANDY, 7
 	iffalse .no
@@ -441,7 +441,7 @@ TuscanyGaveGiftText:
 	line "will be of use."
 	done
 
-Text_ReceivedRarecandy:
+Text_ReceivedRare3:
 	text "TUSCANY: You"
 	line "earned this too."
     done

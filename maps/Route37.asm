@@ -111,7 +111,7 @@ SunnySundayScript:
 	clearevent EVENT_BEAT_SCHOOLBOY_ARTHUR
 	clearevent EVENT_BEAT_SCHOOLBOY_SANTOS
 	opentext
-	writetext Text_ReceivedRarecandy
+	writetext Text_ReceivedRare1
 	promptbutton
 	verbosegiveitem RARE_CANDY, 7
 	iffalse .no
@@ -273,7 +273,7 @@ SunnyNoFightText:
 	line "next time!"
     done
 
-Text_ReceivedRarecandy:
+Text_ReceivedRare1:
 	text "SUNNY: Please…"
 	line "Accept this!"
     done
