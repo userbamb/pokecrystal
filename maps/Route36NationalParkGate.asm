@@ -256,7 +256,7 @@ Route36Officer_ContestHasConcluded:
 .Everstone:
 	writetext Route36NationalParkGateOfficer1HeresThePrizeText
 	promptbutton
-	verbosegiveitem EVERSTONE
+	verbosegiveitem EXP_SHARE
 	iffalse .BagFull
 	clearevent EVENT_CONTEST_OFFICER_HAS_EVERSTONE
 	closetext

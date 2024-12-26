@@ -460,7 +460,6 @@ AideScript_WalkPotion1:
 	applymovement ELMSLAB_ELMS_AIDE, AideWalksRight1
 	turnobject PLAYER, DOWN
 	scall AideScript_GivePotion
-	scall AideScript_GiveExpShare
 	applymovement ELMSLAB_ELMS_AIDE, AideWalksLeft1
 	end
 
@@ -468,7 +467,6 @@ AideScript_WalkPotion2:
 	applymovement ELMSLAB_ELMS_AIDE, AideWalksRight2
 	turnobject PLAYER, DOWN
 	scall AideScript_GivePotion
-	scall AideScript_GiveExpShare
 	applymovement ELMSLAB_ELMS_AIDE, AideWalksLeft2
 	end
 
@@ -478,16 +476,6 @@ AideScript_GivePotion:
 	promptbutton
 	verbosegiveitem POTION
 	writetext AideText_AlwaysBusy
-	waitbutton
-	closetext
-	end
-
-AideScript_GiveExpShare:
-	opentext
-	writetext AideText_GetExpShareText
-	promptbutton
-	giveitem EXP_SHARE
-	writetext AideText_ExpShareInfoText
 	waitbutton
 	closetext
 	setscene SCENE_ELMSLAB_NOOP
@@ -1378,18 +1366,6 @@ ElmsLabPCText:
 
 	para "…It says on the"
 	line "screen…"
-	done
-
-AideText_GetExpShareText:
-	text "Oh, I have this"
-	line "for you too."
-
-	para "It's a EXP SHARE!"
-	done
-	
-AideText_ExpShareInfoText:
-	text "Use this to train"
-	line "your party."
 	done
 
 ElmsLab_MapEvents:

@@ -450,7 +450,7 @@ CherrygroveRivalText_Seen:
 	para "<……> <……> <……>"
 
 	para "Don't you get what"
-	line "I'm saying?"
+	line "I'm saying?" 
 
 	para "Well, I too, have"
 	line "a good #MON."
