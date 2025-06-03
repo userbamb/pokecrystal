@@ -1,6 +1,6 @@
-	db DRAGONHIGH ; 253
+	db DRAGONHIGH ; 253 
 
-	db  95,  45,  75,  30, 115,  95
+	db  95,  45,  100,  30, 120,  110
 	;   hp  atk  def  spd  sat  sdf
 
 	db GRASS, GRASS ; type

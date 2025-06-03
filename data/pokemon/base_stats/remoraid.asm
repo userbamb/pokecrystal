@@ -1,6 +1,6 @@
-	db REMORAID ; 223 wolfman
+	db REMORAID ; 223 wolfman 
 
-	db 110,  90, 90, 85,  65,  115
+	db 110,  90, 80, 80,  95,  115
 	;   hp  atk  def  spd  sat  sdf
 
 	db ICE, ICE ; type
