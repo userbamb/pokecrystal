@@ -587,8 +587,8 @@ PetalDanceDescription:
 	next "and confuses user.@"
 
 StringShotDescription:
-	db   "A move that lowers"
-	next "the foe's SPEED.@"
+	db   "An attack that may"
+	next "lower SPEED.@"
 
 DragonRageDescription:
 	db   "Always inflicts"

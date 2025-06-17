@@ -89,12 +89,12 @@ Moves:
 	move LEECH_SEED,   EFFECT_LEECH_SEED,          0, GRASS,         STATUS,      90, 10,   0
 	move GROWTH,       EFFECT_SP_ATK_UP_2,         0, GRASS,         STATUS,     100, 40,   0
 	move RAZOR_LEAF,   EFFECT_FLINCH_HIT,         65, GRASS,         SPECIAL,     95, 25,  33
-	move SOLARBEAM,    EFFECT_SOLARBEAM,         120, GRASS,         SPECIAL,    100, 10,   0
+	move SOLARBEAM,    EFFECT_SOLARBEAM,         140, GRASS,         SPECIAL,    100, 10,   0
 	move POISONPOWDER, EFFECT_POISON,              0, POISON,        STATUS,      85, 35,   0
 	move STUN_SPORE,   EFFECT_PARALYZE,            0, GRASS,         STATUS,      85, 30,   0
 	move SLEEP_POWDER, EFFECT_SLEEP,               0, GRASS,         STATUS,      85, 15,   0
 	move PETAL_DANCE,  EFFECT_RAMPAGE,            70, GRASS,         SPECIAL,    100, 20,   0
-	move STRING_SHOT,  EFFECT_SPEED_DOWN_HIT,     70, BUG,           SPECIAL,     100, 20,   0
+	move STRING_SHOT,  EFFECT_SPEED_DOWN_HIT,     70, BUG,           SPECIAL,     100, 20,  40
 	move DRAGON_RAGE,  EFFECT_STATIC_DAMAGE,      40, DRAGON,        SPECIAL,    100, 10,   0
 	move FIRE_SPIN,    EFFECT_TRAP_TARGET,        15, FIRE,          SPECIAL,    100, 15,   0
 	move THUNDERSHOCK, EFFECT_PARALYZE_HIT,       65, ELECTRIC,      SPECIAL,    100, 30,  10

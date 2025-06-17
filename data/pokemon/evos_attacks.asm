@@ -408,7 +408,7 @@ NidoranFEvosAttacks:
 	db 17, POISON_STING
 	db 23, MOONLIGHT
 	db 30, CRUNCH
-	db 38, FURY_SWIPES
+	db 38, MEGAHORN
 	db 0 ; no more level-up moves
 
 NidorinaEvosAttacks:
@@ -421,7 +421,7 @@ NidorinaEvosAttacks:
 	db 19, POISON_STING
 	db 27, MOONLIGHT
 	db 36, CRUNCH
-	db 46, FURY_SWIPES
+	db 46, MEGAHORN
 	db 0 ; no more level-up moves
 
 NidoqueenEvosAttacks:
@@ -1760,7 +1760,7 @@ TaurosEvosAttacks:
 	db 19, SCARY_FACE
 	db 26, PURSUIT
 	db 34, REST
-	db 43, THRASH
+	db 43, MEGAHORN
 	db 53, TAKE_DOWN
 	db 0 ; no more level-up moves
 
@@ -1913,7 +1913,7 @@ KabutoEvosAttacks:
 	db 1, HARDEN
 	db 10, LEECH_LIFE
 	db 19, LEER
-	db 28, SAND_ATTACK
+	db 28, ROCK_THROW
 	db 37, ENDURE
 	db 46, MEGA_DRAIN
 	db 55, ROCK_SLIDE
@@ -1926,7 +1926,7 @@ KabutopsEvosAttacks:
 	db 1, LEECH_LIFE
 	db 10, LEECH_LIFE
 	db 19, LEER
-	db 28, SAND_ATTACK
+	db 28, ROCK_THROW
 	db 37, ENDURE
 	db 40, SLASH
 	db 51, MEGA_DRAIN
@@ -2323,7 +2323,7 @@ AriadosEvosAttacks:
 	db 34, FURY_SWIPES
 	db 43, SPIDER_WEB
 	db 53, AGILITY
-	db 63, PSYCHIC_M
+	db 63, TWINEEDLE
 	db 0 ; no more level-up moves
 
 CrobatEvosAttacks:
