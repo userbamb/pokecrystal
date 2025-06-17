@@ -116,8 +116,8 @@ JohtoWaterWildMons:
 
 	def_water_wildmons DRAGONS_DEN_B1F
 	db 4 percent ; encounter rate
-	db 15, MAGIKARP
-	db 10, MAGIKARP
+	db 15, DRATINI
+	db 10, DRATINI
 	db 10, DRATINI
 	end_water_wildmons
 
@@ -166,7 +166,7 @@ JohtoWaterWildMons:
 	def_water_wildmons ROUTE_40
 	db 6 percent ; encounter rate
 	db 20, TENTACOOL
-	db 15, TENTACOOL
+	db 15, OCTILLERY
 	db 20, TENTACRUEL
 	end_water_wildmons
 
