@@ -507,8 +507,8 @@ FriedaScript:
     readvar VAR_WEEKDAY
 	ifnotequal FRIDAY, .NotFriday
 	writetext FriedaFridayText
-	closetext
 	waitbutton
+	closetext
 	end
 
 .NotFriday:
