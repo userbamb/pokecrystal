@@ -282,7 +282,7 @@ LakeOfRageHiddenRareCandy:
 	hiddenitem RARE_CANDY, EVENT_LAKE_OF_RAGE_HIDDEN_RARE_CANDY
 
 LakeOfRageHiddenMaxPotion:
-	hiddenitem MAX_POTION, EVENT_LAKE_OF_RAGE_HIDDEN_MAX_POTION
+	hiddenitem ITEM_88, EVENT_LAKE_OF_RAGE_HIDDEN_MAX_POTION
 
 LakeOfRageLanceTeleportIntoSkyMovement:
 	teleport_from

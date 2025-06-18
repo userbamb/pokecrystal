@@ -135,7 +135,7 @@ ItemNames::
 	li "BASEMENT KEY"
 	li "PASS"
 	li "OLD MAP"
-	li "SHINY ORB"
+	li "ROCKET DEV."
 	li "MIST STONE"
 	li "CHARCOAL"
 	li "BERRY JUICE"

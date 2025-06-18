@@ -791,8 +791,8 @@ RoofKeyDesc:
 	next "CITY MAP.@"
 
 TeruSama10Desc:
-	db   "A strange, shiny"
-	next "orb.@"
+	db   "Forces #MON"
+	next "to change colors.@"
 
 TeruSama11Desc:
 	db   "A rare stone.@"

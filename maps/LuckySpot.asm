@@ -9,11 +9,16 @@ LuckySpot_MapScripts:
 
 
 LuckySpotMon1Script:
+	readvar VAR_WEEKDAY
+	ifequal SUNDAY, _DVUP
+	ifequal MONDAY, _DVUP
+	ifequal WEDNESDAY, _DVUP
+	ifequal FRIDAY, _DVUP
 	opentext
 	writetext LuckySpotMon1Text
 	cry POLIWAG
 	waitbutton
-	verbosegiveitem RARE_CANDY
+	verbosegiveitem ITEM_88
 	iffalse .BagFull
 	waitbutton
 	closetext
@@ -23,6 +28,20 @@ LuckySpotMon1Script:
 	closetext
 	end
 	
+_DVUP:
+	opentext
+	writetext LuckySpotMon1Text
+	cry POLIWAG
+	waitbutton
+	verbosegiveitem ITEM_78
+	iffalse .BagFull2
+	waitbutton
+	closetext
+	end
+
+.BagFull2:
+	closetext
+	end
 
 
 LuckySpotMon1Text:
