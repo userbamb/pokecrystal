@@ -410,9 +410,9 @@ TuscanyGivesGiftText:
 
 TuscanyFightTuesdayText:
     text "TUSCANY: I can"
-	line "also be your ch-"
+	line "be your chal-"
 
-	para "allenger today!"
+	para "lenger today!"
 	line "Do you want to"
 
 	cont "battle?"
