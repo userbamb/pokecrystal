@@ -123,7 +123,7 @@ IlexForestFarfetchdScript:
 	waitbutton
 	closetext
 	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetchd_Pos1_Pos2
-	moveobject ILEXFOREST_FARFETCHD, 15, 25
+	moveobject ILEXFOREST_FARFETCHD, 15, 35
 	disappear ILEXFOREST_FARFETCHD
 	appear ILEXFOREST_FARFETCHD
 	loadmem wFarfetchdPosition, 2
@@ -133,7 +133,7 @@ IlexForestFarfetchdScript:
 	scall .CryAndCheckFacing
 	ifequal DOWN, .Position2_Down
 	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetchd_Pos2_Pos3
-	moveobject ILEXFOREST_FARFETCHD, 20, 24
+	moveobject ILEXFOREST_FARFETCHD, 20, 34
 	disappear ILEXFOREST_FARFETCHD
 	appear ILEXFOREST_FARFETCHD
 	loadmem wFarfetchdPosition, 3
@@ -141,7 +141,7 @@ IlexForestFarfetchdScript:
 
 .Position2_Down:
 	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetchd_Pos2_Pos8
-	moveobject ILEXFOREST_FARFETCHD, 15, 29
+	moveobject ILEXFOREST_FARFETCHD, 15, 39
 	disappear ILEXFOREST_FARFETCHD
 	appear ILEXFOREST_FARFETCHD
 	loadmem wFarfetchdPosition, 8
@@ -151,7 +151,7 @@ IlexForestFarfetchdScript:
 	scall .CryAndCheckFacing
 	ifequal LEFT, .Position3_Left
 	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetchd_Pos3_Pos4
-	moveobject ILEXFOREST_FARFETCHD, 29, 22
+	moveobject ILEXFOREST_FARFETCHD, 29, 32
 	disappear ILEXFOREST_FARFETCHD
 	appear ILEXFOREST_FARFETCHD
 	loadmem wFarfetchdPosition, 4
@@ -159,7 +159,7 @@ IlexForestFarfetchdScript:
 
 .Position3_Left:
 	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetchd_Pos3_Pos2
-	moveobject ILEXFOREST_FARFETCHD, 15, 25
+	moveobject ILEXFOREST_FARFETCHD, 15, 35
 	disappear ILEXFOREST_FARFETCHD
 	appear ILEXFOREST_FARFETCHD
 	loadmem wFarfetchdPosition, 2
@@ -169,7 +169,7 @@ IlexForestFarfetchdScript:
 	scall .CryAndCheckFacing
 	ifequal UP, .Position4_Up
 	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetchd_Pos4_Pos5
-	moveobject ILEXFOREST_FARFETCHD, 28, 31
+	moveobject ILEXFOREST_FARFETCHD, 28, 41
 	disappear ILEXFOREST_FARFETCHD
 	appear ILEXFOREST_FARFETCHD
 	loadmem wFarfetchdPosition, 5
@@ -177,7 +177,7 @@ IlexForestFarfetchdScript:
 
 .Position4_Up:
 	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetchd_Pos4_Pos3
-	moveobject ILEXFOREST_FARFETCHD, 20, 24
+	moveobject ILEXFOREST_FARFETCHD, 20, 34
 	disappear ILEXFOREST_FARFETCHD
 	appear ILEXFOREST_FARFETCHD
 	loadmem wFarfetchdPosition, 3
@@ -189,7 +189,7 @@ IlexForestFarfetchdScript:
 	ifequal LEFT, .Position5_Left
 	ifequal RIGHT, .Position5_Right
 	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetchd_Pos5_Pos6
-	moveobject ILEXFOREST_FARFETCHD, 24, 35
+	moveobject ILEXFOREST_FARFETCHD, 24, 45
 	disappear ILEXFOREST_FARFETCHD
 	appear ILEXFOREST_FARFETCHD
 	loadmem wFarfetchdPosition, 6
@@ -197,7 +197,7 @@ IlexForestFarfetchdScript:
 
 .Position5_Left:
 	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetchd_Pos5_Pos7
-	moveobject ILEXFOREST_FARFETCHD, 22, 31
+	moveobject ILEXFOREST_FARFETCHD, 22, 41
 	disappear ILEXFOREST_FARFETCHD
 	appear ILEXFOREST_FARFETCHD
 	loadmem wFarfetchdPosition, 7
@@ -205,7 +205,7 @@ IlexForestFarfetchdScript:
 
 .Position5_Up:
 	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetched_Pos5_Pos4_Up
-	moveobject ILEXFOREST_FARFETCHD, 29, 22
+	moveobject ILEXFOREST_FARFETCHD, 29, 32
 	disappear ILEXFOREST_FARFETCHD
 	appear ILEXFOREST_FARFETCHD
 	loadmem wFarfetchdPosition, 4
@@ -213,7 +213,7 @@ IlexForestFarfetchdScript:
 
 .Position5_Right:
 	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetched_Pos5_Pos4_Right
-	moveobject ILEXFOREST_FARFETCHD, 29, 22
+	moveobject ILEXFOREST_FARFETCHD, 29, 32
 	disappear ILEXFOREST_FARFETCHD
 	appear ILEXFOREST_FARFETCHD
 	loadmem wFarfetchdPosition, 4
@@ -223,7 +223,7 @@ IlexForestFarfetchdScript:
 	scall .CryAndCheckFacing
 	ifequal RIGHT, .Position6_Right
 	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetched_Pos6_Pos7
-	moveobject ILEXFOREST_FARFETCHD, 22, 31
+	moveobject ILEXFOREST_FARFETCHD, 22, 41
 	disappear ILEXFOREST_FARFETCHD
 	appear ILEXFOREST_FARFETCHD
 	loadmem wFarfetchdPosition, 7
@@ -231,7 +231,7 @@ IlexForestFarfetchdScript:
 
 .Position6_Right:
 	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetched_Pos6_Pos5
-	moveobject ILEXFOREST_FARFETCHD, 28, 31
+	moveobject ILEXFOREST_FARFETCHD, 28, 41
 	disappear ILEXFOREST_FARFETCHD
 	appear ILEXFOREST_FARFETCHD
 	loadmem wFarfetchdPosition, 5
@@ -242,7 +242,7 @@ IlexForestFarfetchdScript:
 	ifequal DOWN, .Position7_Down
 	ifequal LEFT, .Position7_Left
 	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetched_Pos7_Pos8
-	moveobject ILEXFOREST_FARFETCHD, 15, 29
+	moveobject ILEXFOREST_FARFETCHD, 15, 39
 	disappear ILEXFOREST_FARFETCHD
 	appear ILEXFOREST_FARFETCHD
 	loadmem wFarfetchdPosition, 8
@@ -250,7 +250,7 @@ IlexForestFarfetchdScript:
 
 .Position7_Left:
 	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetched_Pos7_Pos6
-	moveobject ILEXFOREST_FARFETCHD, 24, 35
+	moveobject ILEXFOREST_FARFETCHD, 24, 45
 	disappear ILEXFOREST_FARFETCHD
 	appear ILEXFOREST_FARFETCHD
 	loadmem wFarfetchdPosition, 6
@@ -258,7 +258,7 @@ IlexForestFarfetchdScript:
 
 .Position7_Down:
 	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetched_Pos7_Pos5
-	moveobject ILEXFOREST_FARFETCHD, 28, 31
+	moveobject ILEXFOREST_FARFETCHD, 28, 41
 	disappear ILEXFOREST_FARFETCHD
 	appear ILEXFOREST_FARFETCHD
 	loadmem wFarfetchdPosition, 5
@@ -270,7 +270,7 @@ IlexForestFarfetchdScript:
 	ifequal LEFT, .Position8_Left
 	ifequal RIGHT, .Position8_Right
 	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetched_Pos8_Pos9
-	moveobject ILEXFOREST_FARFETCHD, 10, 35
+	moveobject ILEXFOREST_FARFETCHD, 10, 45
 	disappear ILEXFOREST_FARFETCHD
 	appear ILEXFOREST_FARFETCHD
 	loadmem wFarfetchdPosition, 9
@@ -278,7 +278,7 @@ IlexForestFarfetchdScript:
 
 .Position8_Right:
 	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetched_Pos8_Pos7
-	moveobject ILEXFOREST_FARFETCHD, 22, 31
+	moveobject ILEXFOREST_FARFETCHD, 22, 41
 	disappear ILEXFOREST_FARFETCHD
 	appear ILEXFOREST_FARFETCHD
 	loadmem wFarfetchdPosition, 7
@@ -287,7 +287,7 @@ IlexForestFarfetchdScript:
 .Position8_Up:
 .Position8_Left:
 	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetched_Pos8_Pos2
-	moveobject ILEXFOREST_FARFETCHD, 15, 25
+	moveobject ILEXFOREST_FARFETCHD, 15, 35
 	disappear ILEXFOREST_FARFETCHD
 	appear ILEXFOREST_FARFETCHD
 	loadmem wFarfetchdPosition, 2
@@ -298,7 +298,7 @@ IlexForestFarfetchdScript:
 	ifequal DOWN, .Position9_Down
 	ifequal RIGHT, .Position9_Right
 	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetched_Pos9_Pos10
-	moveobject ILEXFOREST_FARFETCHD, 6, 28
+	moveobject ILEXFOREST_FARFETCHD, 6, 38
 	disappear ILEXFOREST_FARFETCHD
 	appear ILEXFOREST_FARFETCHD
 	loadmem wFarfetchdPosition, 10
@@ -309,7 +309,7 @@ IlexForestFarfetchdScript:
 
 .Position9_Right:
 	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetched_Pos9_Pos8_Right
-	moveobject ILEXFOREST_FARFETCHD, 15, 29
+	moveobject ILEXFOREST_FARFETCHD, 15, 39
 	disappear ILEXFOREST_FARFETCHD
 	appear ILEXFOREST_FARFETCHD
 	loadmem wFarfetchdPosition, 8
@@ -317,7 +317,7 @@ IlexForestFarfetchdScript:
 
 .Position9_Down:
 	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetched_Pos9_Pos8_Down
-	moveobject ILEXFOREST_FARFETCHD, 15, 29
+	moveobject ILEXFOREST_FARFETCHD, 15, 39
 	disappear ILEXFOREST_FARFETCHD
 	appear ILEXFOREST_FARFETCHD
 	loadmem wFarfetchdPosition, 8
