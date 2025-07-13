@@ -9,28 +9,28 @@ GenerateSwarmShiny:
    cp LANDMARK_ROUTE_43
 	jr z, .mareep
 	cp LANDMARK_ROUTE_37
-	jr z, .vulpix
+	jr z, .scyther
 	cp LANDMARK_ROUTE_42
 	jr z, .kotora
 	cp LANDMARK_ROUTE_34
    jr z, .ditto
 	cp LANDMARK_ROUTE_38
-   jr z, .miltank
+   jr z, .marill
    cp LANDMARK_CHERRYGROVE_CITY
    jr z, .horsea
    cp LANDMARK_RUINS_OF_ALPH
-   jr z, .clefairy
+   jr z, .smeargle
    cp LANDMARK_ROUTE_45
    jr z, .teddiursa
    cp LANDMARK_OLIVINE_CITY
    jr z, .chinchouz
-   cp LANDMARK_ROUTE_26
-   jr z, .ponyta
+   cp LANDMARK_ROUTE_40
+   jr z, .goldeen
    jr .skipshine
 
-.ponyta
+.goldeen
    ld a, [wCurPartySpecies]
-   cp PONYTA
+   cp GOLDEEN
    jr nz, .skipshine
    jr .rollshiny
 .chinchouz
@@ -43,9 +43,9 @@ GenerateSwarmShiny:
    cp MAREEP
    jr nz, .skipshine
    jr .rollshiny
-.vulpix
+.scyther
    ld a, [wCurPartySpecies]
-   cp VULPIX
+   cp SCYTHER
    jr nz, .skipshine
    jr .rollshiny
 .teddiursa
@@ -58,12 +58,12 @@ GenerateSwarmShiny:
    cp HORSEA
    jr nz, .skipshine
    jr .rollshiny
-.clefairy
+.smeargle
    ld a, [wCurPartySpecies]
    cp SMEARGLE
    jr nz, .skipshine
    jr .rollshiny
-.miltank
+.marill
    ld a, [wCurPartySpecies]
    cp MARILL
    jr nz, .skipshine

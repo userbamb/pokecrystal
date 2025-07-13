@@ -1607,7 +1607,7 @@ JohtoGrassWildMons:
 	db 24, WEEPINBELL
 	db 24, GIRAFARIG
 	db 26, LICKITUNG
-	db 26, LICKITUNG
+	db 26, CHANSEY
 	; day
 	db 23, TANGELA
 	db 22, TANGELA
@@ -1615,15 +1615,15 @@ JohtoGrassWildMons:
 	db 24, WEEPINBELL
 	db 24, LICKITUNG
 	db 26, LICKITUNG
-	db 26, SCYTHER
+	db 26, LICKITUNG
 	; nite
 	db 23, TANGELA
 	db 22, LICKITUNG
 	db 22, BELLSPROUT
 	db 24, WEEPINBELL
 	db 24, TANGELA
-	db 26, SCYTHER
-	db 26, SCYTHER
+	db 26, CHANSEY
+	db 26, CHANSEY
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_45

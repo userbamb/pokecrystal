@@ -1,33 +1,6 @@
 ; Pokémon swarms in grass
 
 SwarmGrassWildMons:
-; PONYTA swarm
-	map_id ROUTE_26
-    db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
-	; morn
-	db 28, PONYTA
-	db 32, PONYTA
-	db 28, PONYTA
-	db 23, PONYTA
-	db 27, SCYTHER
-	db 31, PONYTA
-	db 30, CHANSEY
-	; day
-	db 28, PONYTA
-	db 32, PONYTA
-	db 28, PONYTA
-	db 28, SCYTHER
-	db 23, PONYTA
-	db 31, PONYTA
-	db 30, CHANSEY
-	; nite
-	db 30, PONYTA
-	db 28, PONYTA
-	db 32, PONYTA
-	db 23, PONYTA
-	db 28, MEOWTH
-	db 27, ARBOK
-	db 31, PONYTA
 ; TEDDIURSA swarm
 	map_id ROUTE_45
     db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -55,24 +28,24 @@ SwarmGrassWildMons:
 	db 23,  ZUBAT
 	db 22, TEDDIURSA
 	db 22, WOBBUFFET
-; CLEFAIRY swarm
+; SMEARGLE swarm
 	map_id RUINS_OF_ALPH_OUTSIDE
     db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 18, SMEARGLE
 	db 24, SMEARGLE
 	db 20, NATU
-	db 22, CLEFAIRY
+	db 22, SMEARGLE
 	db 20, SMEARGLE
-	db 22, ELEKID
+	db 22, CLEFAIRY
 	db 22, SMEARGLE
 	; day
 	db 18, SMEARGLE
 	db 24, SMEARGLE
 	db 18, SMEARGLE
 	db 24, NATU
-	db 20, ELEKID
-	db 22, CHANSEY
+	db 20, SMEARGLE
+	db 22, CLEFAIRY
 	db 22, SMEARGLE
 	; nite
 	db 18, SMEARGLE
@@ -82,13 +55,13 @@ SwarmGrassWildMons:
 	db 22, SMEARGLE
 	db 22, SMEARGLE
 	db 22, SUNFLORA
-; MILTANK swarm
+; MARILL swarm
 	map_id ROUTE_38
     db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 13, MARILL
 	db 13, MARILL
-	db 16, TYROGUE
+	db 16, PIKACHU
 	db 16, PINECO
 	db 16, PIKACHU
 	db 16, MARILL
@@ -115,22 +88,22 @@ SwarmGrassWildMons:
 	; morn
 	db 10, DITTO
 	db 12, SNUBBULL
-	db 12, MAGBY
-	db 14, JIGGLYPUFF
+	db 12, TYROGUE
+	db 14, TYROGUE
 	db 14, DITTO
 	db 10, DITTO
 	db 10, DITTO
 	; day
 	db 10, DITTO
-	db 12, JIGGLYPUFF
-	db 14, JIGGLYPUFF
+	db 12, IGGLYBUFF
+	db 14, IGGLYBUFF
 	db 14, DITTO
 	db 10, DITTO
-	db 10, DITTO
+	db 10, ELEKID
 	db 12, MAGBY
 	; nite
 	db 10, DITTO
-	db 12, ABRA
+	db 12, ELEKID
 	db 14, DITTO
 	db 14, DITTO
 	db 10, DITTO
@@ -171,7 +144,7 @@ SwarmGrassWildMons:
 	db 12, NIDORAN_F
 	db 12, YANMA
 	db 14, YANMA
-	db 14, PIDGEY
+	db 14, YANMA
 	db 10, PICHU
 	db 10, DITTO
 	; day
@@ -179,7 +152,7 @@ SwarmGrassWildMons:
 	db 14, YANMA
 	db 12, NIDORAN_M
 	db 12, NIDORAN_F
-	db 14, PIDGEY
+	db 14, YANMA
 	db 10, PICHU
 	db 10, DITTO
 	; nite
@@ -187,33 +160,33 @@ SwarmGrassWildMons:
 	db 14, YANMA
 	db 12, NIDORAN_M
 	db 12, NIDORAN_F
-	db 14, HOOTHOOT
+	db 14, YANMA
 	db 10, PICHU
 	db 10, DITTO
-; Vulpix swarm
+; SCYTHER swarm
 	map_id ROUTE_37
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 13, LEDYBA
-	db 14, VULPIX
-	db 15, VULPIX
-	db 16, VULPIX
-	db 15, PIDGEOTTO
+	db 13, SCYTHER
+	db 14, SCYTHER
+	db 15, SCYTHER
+	db 16, SCYTHER
+	db 15, SCYTHER
 	db 15, VULPIX
 	db 15, HOPPIP
 	; day
-	db 13, PIDGEY
-	db 14, VULPIX
-	db 15, PIDGEY
-	db 16, VULPIX
-	db 15, PIDGEOTTO
+	db 13, SCYTHER
+	db 14, SCYTHER
+	db 15, SCYTHER
+	db 16, SCYTHER
+	db 15, SCYTHER
 	db 15, VULPIX
 	db 15, VULPIX
 	; nite
-	db 13, SPINARAK
-	db 14, VULPIX
-	db 15, HOOTHOOT
-	db 16, VULPIX
+	db 13, SCYTHER
+	db 14, SCYTHER
+	db 15, SCYTHER
+	db 16, SCYTHER
 	db 15, VULPIX
 	db 15, VULPIX
 	db 15, ARIADOS

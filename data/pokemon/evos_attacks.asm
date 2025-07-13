@@ -1623,7 +1623,7 @@ GoldeenEvosAttacks:
 	db 15, HORN_ATTACK
 	db 24, FLAIL
 	db 29, FURY_ATTACK
-	db 38, WATERFALL
+	db 31, WATER_GUN
 	db 43, HORN_DRILL
 	db 52, AGILITY
 	db 0 ; no more level-up moves
@@ -1637,7 +1637,7 @@ SeakingEvosAttacks:
 	db 15, HORN_ATTACK
 	db 24, FLAIL
 	db 29, FURY_ATTACK
-	db 41, WATERFALL
+	db 34, MEGAHORN
 	db 49, HORN_DRILL
 	db 61, AGILITY
 	db 0 ; no more level-up moves

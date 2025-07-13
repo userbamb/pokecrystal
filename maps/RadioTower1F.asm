@@ -20,20 +20,20 @@ SwarmGrampsScript:
 	random 11
 	ifequal 0, .mareep
 	ifequal 1, .yanma
-	ifequal 2, .vulpix
+	ifequal 2, .scyther
 	ifequal 3, .kotora
 	ifequal 4, .ditto
-	ifequal 5, .miltank
+	ifequal 5, .marill
 	ifequal 6, .horsea
-	ifequal 7, .clefairy
+	ifequal 7, .smeargle
 	ifequal 8, .teddiursa
 	ifequal 9, .chinchouz
-	ifequal 10, .ponyta
+	ifequal 10, .goldeen
 
-.ponyta
+.goldeen
 	setflag ENGINE_SWARM
-	swarm ROUTE_26
-	writetext SwarmPonytaText
+	swarm ROUTE_40
+	writetext SwarmGoldeenText
 	waitbutton
 	closetext
 	end
@@ -54,10 +54,10 @@ SwarmGrampsScript:
 	closetext
 	end
 
-.clefairy
+.smeargle
 	setflag ENGINE_SWARM
 	swarm RUINS_OF_ALPH_OUTSIDE
-	writetext SwarmClefairyText
+	writetext SwarmSmeargleText
 	waitbutton
 	closetext
 	end
@@ -70,10 +70,10 @@ SwarmGrampsScript:
 	closetext
 	end
 
-.miltank
+.marill
 	setflag ENGINE_SWARM
 	swarm ROUTE_38
-	writetext SwarmMiltankText
+	writetext SwarmMarillText
 	waitbutton
 	closetext
 	end
@@ -102,10 +102,10 @@ SwarmGrampsScript:
 	closetext
 	end
 
-.vulpix
+.scyther
 	setflag ENGINE_SWARM
 	swarm ROUTE_37
-	writetext SwarmVulpixText
+	writetext SwarmScytherText
 	waitbutton
 	closetext
 	end
@@ -134,7 +134,7 @@ SwarmKotoraText:
 	cont "on ROUTE 42."
 	done
 
-SwarmMiltankText:
+SwarmMarillText:
 	text "Let me see…"
 	line "What did the news"
 	cont "say?"
@@ -184,14 +184,14 @@ SwarmYanmaText:
 	cont "on ROUTE 35."
 	done
 
-SwarmPonytaText:
+SwarmGoldeenText:
 	text "Let me see…"
 	line "What did the news"
 	cont "say?"
 
-	para "Oh yes! PONYTA"
+	para "Oh yes! GOLDEEN"
 	line "is swarming on"
-	cont "ROUTE 26."
+	cont "ROUTE 40."
 	done
 
 SwarmChinchouzText:
@@ -214,7 +214,7 @@ SwarmTeddiursaText:
 	cont "ROUTE 45."
 	done
 
-SwarmClefairyText:
+SwarmSmeargleText:
 	text "Let me see…"
 	line "What did the news"
 	cont "say?"
@@ -225,13 +225,13 @@ SwarmClefairyText:
 	line "ALPH?!"
 	done
 	
-SwarmVulpixText:
+SwarmScytherText:
 	text "Let me see…"
 	line "What did the news" 
 	cont "say?"
 
 	para "Oh yes! There's a"
-	line "swarm of VULPIX"
+	line "swarm of SCYTHER"
 	cont "on ROUTE 37."
 	done
 
