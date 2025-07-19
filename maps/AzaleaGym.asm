@@ -58,8 +58,8 @@ AzaleaGymBugsyScript:
 	end
 
 AzaleaGymActivateRockets:
-	ifequal 7, .RadioTowerRockets
-	ifequal 6, .GoldenrodRockets
+	ifequal 6, .RadioTowerRockets
+	ifequal 5, .GoldenrodRockets
 	end
 
 .GoldenrodRockets:

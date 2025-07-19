@@ -52,7 +52,7 @@ CianwoodGymChuckScript:
 .FightDone:
 	checkevent EVENT_GOT_TM01_DYNAMICPUNCH
 	iftrue .AlreadyGotTM
-	loadmem wLevelCap, 45
+	loadmem wLevelCap, 50
 	setevent EVENT_BEAT_BLACKBELT_YOSHI
 	setevent EVENT_BEAT_BLACKBELT_LAO
 	setevent EVENT_BEAT_BLACKBELT_NOB
@@ -75,8 +75,8 @@ CianwoodGymChuckScript:
 	end
 
 CianwoodGymActivateRockets:
-	ifequal 7, .RadioTowerRockets
-	ifequal 6, .GoldenrodRockets
+	ifequal 6, .RadioTowerRockets
+	ifequal 5, .GoldenrodRockets
 	end
 
 .GoldenrodRockets:
