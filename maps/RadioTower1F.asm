@@ -17,8 +17,8 @@ SwarmGrampsScript:
 	opentext
 	checkflag ENGINE_SWARM
 	iftrue .skiprandomswarm
-	random 11
-	ifequal 0, .mareep
+	random 10
+	ifequal 0, .goldeen
 	ifequal 1, .yanma
 	ifequal 2, .scyther
 	ifequal 3, .kotora
@@ -28,7 +28,6 @@ SwarmGrampsScript:
 	ifequal 7, .smeargle
 	ifequal 8, .teddiursa
 	ifequal 9, .chinchouz
-	ifequal 10, .goldeen
 
 .goldeen
 	setflag ENGINE_SWARM
@@ -86,13 +85,6 @@ SwarmGrampsScript:
 	closetext
 	end
 
-.mareep
-	setflag ENGINE_SWARM
-	swarm ROUTE_43
-	writetext SwarmMareepText
-	waitbutton
-	closetext
-	end
 
 .yanma
 	setflag ENGINE_SWARM
@@ -164,15 +156,6 @@ SwarmDittoText:
 	cont "on ROUTE 34."
 	done
 
-SwarmMareepText:
-	text "Let me see…"
-	line "What did the news"
-	cont "say?"
-
-	para "Oh yes! There's a"
-	line "swarm of MAREEP"
-	cont "on ROUTE 43."
-	done
 	
 SwarmYanmaText:
 	text "Let me see…"

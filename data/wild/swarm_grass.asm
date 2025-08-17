@@ -109,33 +109,6 @@ SwarmGrassWildMons:
 	db 10, DITTO
 	db 10, DITTO
 	db 12, MAGBY
-; Mareep swarm
-	map_id ROUTE_43
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
-	; morn
-	db 15, MAREEP
-	db 17, MAREEP
-	db 17, GIRAFARIG
-	db 16, DUNSPARCE
-	db 13, MAREEP
-	db 14, MAREEP
-	db 13, MAREEP
-	; day
-	db 15, MAREEP
-	db 15, GIRAFARIG
-	db 17, MAREEP
-	db 17, GIRAFARIG
-	db 16, DUNSPARCE
-	db 15, MAREEP
-	db 16, MAREEP
-	; nite
-	db 17, WOBBUFFET
-	db 15, MAREEP
-	db 15, MAREEP
-	db 17, GIRAFARIG
-	db 15, MAREEP
-	db 16, MAREEP
-	db 14, MAREEP
 ; Yanma swarm
 	map_id ROUTE_35
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite

@@ -6,8 +6,6 @@ GenerateSwarmShiny:
 	call GetWorldMapLocation
    cp LANDMARK_ROUTE_35
    jr z, .yanma
-   cp LANDMARK_ROUTE_43
-	jr z, .mareep
 	cp LANDMARK_ROUTE_37
 	jr z, .scyther
 	cp LANDMARK_ROUTE_42
@@ -36,11 +34,6 @@ GenerateSwarmShiny:
 .chinchouz
    ld a, [wCurPartySpecies]
    cp CHINCHOU
-   jr nz, .skipshine
-   jr .rollshiny
-.mareep
-   ld a, [wCurPartySpecies]
-   cp MAREEP
    jr nz, .skipshine
    jr .rollshiny
 .scyther
